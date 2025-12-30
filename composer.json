@@ -1,6 +1,6 @@
 {
     "name": "toppy/sendcloud-client",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles",
     "keywords": [
         "openapitools",
@@ -35,7 +35,7 @@
         "psr/http-client-implementation": "^1.0",
         "psr/http-factory": "^1.0",
         "psr/http-factory-implementation": "^1.0",
-        "psr/http-message": "^1.0"
+        "psr/http-message": "^1.0 || ^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0 || ^9.0",
