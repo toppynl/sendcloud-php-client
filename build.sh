@@ -69,5 +69,10 @@ else
     npx @openapitools/openapi-generator-cli generate
 fi
 
+# Step 5: Upgrade PHP syntax with Rector
+echo ""
+echo "Upgrading PHP syntax with Rector..."
+./vendor/bin/rector process --no-progress-bar
+
 echo ""
 echo "Build complete!"
