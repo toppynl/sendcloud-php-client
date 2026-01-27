@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,7 +170,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsAddressChange
      *
-     * Create ticket for an address change
+     * Create a ticket for an address change
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -187,7 +187,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsAddressChangeWithHttpInfo
      *
-     * Create ticket for an address change
+     * Create a ticket for an address change
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -315,7 +315,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsAddressChangeAsync
      *
-     * Create ticket for an address change
+     * Create a ticket for an address change
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -335,7 +335,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsAddressChangeAsyncWithHttpInfo
      *
-     * Create ticket for an address change
+     * Create a ticket for an address change
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -471,7 +471,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDamage
      *
-     * Create ticket for a damaged parcel
+     * Create a ticket for a damaged parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -488,7 +488,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDamageWithHttpInfo
      *
-     * Create ticket for a damaged parcel
+     * Create a ticket for a damaged parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -616,7 +616,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDamageAsync
      *
-     * Create ticket for a damaged parcel
+     * Create a ticket for a damaged parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -636,7 +636,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDamageAsyncWithHttpInfo
      *
-     * Create ticket for a damaged parcel
+     * Create a ticket for a damaged parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -772,7 +772,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDelay
      *
-     * Create ticket for a delayed parcel
+     * Create a ticket for a delayed parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -789,7 +789,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDelayWithHttpInfo
      *
-     * Create ticket for a delayed parcel
+     * Create a ticket for a delayed parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -917,7 +917,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDelayAsync
      *
-     * Create ticket for a delayed parcel
+     * Create a ticket for a delayed parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -937,7 +937,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDelayAsyncWithHttpInfo
      *
-     * Create ticket for a delayed parcel
+     * Create a ticket for a delayed parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1073,7 +1073,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDeliveredButNotReceived
      *
-     * Create ticket for a delivered but not received parcel
+     * Create a ticket for a delivered but not received parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1090,7 +1090,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDeliveredButNotReceivedWithHttpInfo
      *
-     * Create ticket for a delivered but not received parcel
+     * Create a ticket for a delivered but not received parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1218,7 +1218,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDeliveredButNotReceivedAsync
      *
-     * Create ticket for a delivered but not received parcel
+     * Create a ticket for a delivered but not received parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1238,7 +1238,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsDeliveredButNotReceivedAsyncWithHttpInfo
      *
-     * Create ticket for a delivered but not received parcel
+     * Create a ticket for a delivered but not received parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1374,7 +1374,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsLost
      *
-     * Create ticket for a lost parcel
+     * Create a ticket for a lost parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1391,7 +1391,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsLostWithHttpInfo
      *
-     * Create ticket for a lost parcel
+     * Create a ticket for a lost parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1519,7 +1519,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsLostAsync
      *
-     * Create ticket for a lost parcel
+     * Create a ticket for a lost parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1539,7 +1539,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsLostAsyncWithHttpInfo
      *
-     * Create ticket for a lost parcel
+     * Create a ticket for a lost parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1675,7 +1675,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsUnjustReturn
      *
-     * Create ticket for an unjustly returned parcel
+     * Create a ticket for an unjustly returned parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1692,7 +1692,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsUnjustReturnWithHttpInfo
      *
-     * Create ticket for an unjustly returned parcel
+     * Create a ticket for an unjustly returned parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1820,7 +1820,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsUnjustReturnAsync
      *
-     * Create ticket for an unjustly returned parcel
+     * Create a ticket for an unjustly returned parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
@@ -1840,7 +1840,7 @@ class CreateTicketApi
     /**
      * Operation scPublicV3DsfPostTicketsUnjustReturnAsyncWithHttpInfo
      *
-     * Create ticket for an unjustly returned parcel
+     * Create a ticket for an unjustly returned parcel
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *

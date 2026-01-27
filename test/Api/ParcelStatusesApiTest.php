@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class ParcelStatusesApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpGetAllParcelStatuses
      *
-     * Retrieve a list of all possible parcel statuses.
+     * Retrieve a list of parcel statuses.
      *
      */
     public function testScPublicV3ScpGetAllParcelStatuses()

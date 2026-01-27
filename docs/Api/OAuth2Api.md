@@ -4,18 +4,18 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**oauth2TokenExchange()**](OAuth2Api.md#oauth2TokenExchange) | **POST** /oauth2/token | The OAuth 2.0 Token Endpoint
+[**oAuth2TokenExchange()**](OAuth2Api.md#oAuth2TokenExchange) | **POST** /oauth2/token | OAuth 2.0 token
 
 
-## `oauth2TokenExchange()`
+## `oAuth2TokenExchange()`
 
 ```php
-oauth2TokenExchange($grantType, $clientId, $code, $redirectUri, $refreshToken): \Toppy\Sendcloud\Model\OAuth2TokenExchange
+oAuth2TokenExchange($grantType, $clientId, $code, $redirectUri, $refreshToken): \Toppy\Sendcloud\Model\OAuth2TokenExchange
 ```
 
-The OAuth 2.0 Token Endpoint
+OAuth 2.0 token
 
-Use open source libraries to perform OAuth 2.0 available for any programming language.  You can find a list of libraries here https://oauth.net/code/
+Use this endpoint to get a new OAuth 2.0 access token.
 
 ### Example
 
@@ -43,10 +43,10 @@ $redirectUri = 'redirectUri_example'; // string
 $refreshToken = 'refreshToken_example'; // string
 
 try {
-    $result = $apiInstance->oauth2TokenExchange($grantType, $clientId, $code, $redirectUri, $refreshToken);
+    $result = $apiInstance->oAuth2TokenExchange($grantType, $clientId, $code, $redirectUri, $refreshToken);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OAuth2Api->oauth2TokenExchange: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OAuth2Api->oAuth2TokenExchange: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

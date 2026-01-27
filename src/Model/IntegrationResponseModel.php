@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -690,7 +690,7 @@ class IntegrationResponseModel implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets startedFailingAt
      *
-     * @param \DateTime|null $startedFailingAt Timestamp from when the integration is failing to fetch orders or to send feedback. This value will be in the [ISO8601 format](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). In Integrations API V2, this attribute was referred to as `failing_since`.
+     * @param \DateTime|null $startedFailingAt Timestamp from when the integration is failing to fetch orders or to send feedback. This value will be in the [ISO8601 format](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). In the Integrations API V2, this attribute was referred to as `failing_since`.
      *
      * @return self
      */
@@ -718,7 +718,7 @@ class IntegrationResponseModel implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets lastFetchedAt
      *
-     * @param \DateTime|null $lastFetchedAt The last time we managed to fetch data from this integration, used for rate limiting purposes. This value will be in the [ISO8601 format](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). In Integrations API V2, this attribute was referred to as `last_fetch`.
+     * @param \DateTime|null $lastFetchedAt The last time we managed to fetch data from this integration, used for rate limiting purposes. This value will be in the [ISO8601 format](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). In the Integrations API V2, this attribute was referred to as `last_fetch`.
      *
      * @return self
      */

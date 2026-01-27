@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -101,18 +101,18 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'addressLine1' => true,
-        'addressLine2' => true,
-        'city' => true,
-        'companyName' => true,
+        'addressLine1' => false,
+        'addressLine2' => false,
+        'city' => false,
+        'companyName' => false,
         'countryCode' => false,
-        'email' => true,
-        'houseNumber' => true,
-        'name' => true,
-        'phoneNumber' => true,
+        'email' => false,
+        'houseNumber' => false,
+        'name' => false,
+        'phoneNumber' => false,
         'poBox' => false,
         'postalCode' => false,
-        'stateProvinceCode' => true
+        'stateProvinceCode' => false
     ];
 
     /**
@@ -148,16 +148,6 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static function openAPINullables(): array
     {
         return self::$openAPINullables;
-    }
-
-    /**
-     * Setter - Array of nullable field names deliberately set to null
-     *
-     * @param boolean[] $openAPINullablesSetToNull
-     */
-    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
-    {
-        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
     }
 
     /**
@@ -385,14 +375,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setAddressLine1($addressLine1)
     {
         if (is_null($addressLine1)) {
-            $this->openAPINullablesSetToNull[] = 'addressLine1';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('addressLine1', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable addressLine1 cannot be null');
         }
 
         $this->container['addressLine1'] = $addressLine1;
@@ -420,14 +403,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setAddressLine2($addressLine2)
     {
         if (is_null($addressLine2)) {
-            $this->openAPINullablesSetToNull[] = 'addressLine2';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('addressLine2', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable addressLine2 cannot be null');
         }
 
         $this->container['addressLine2'] = $addressLine2;
@@ -455,14 +431,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setCity($city)
     {
         if (is_null($city)) {
-            $this->openAPINullablesSetToNull[] = 'city';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('city', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable city cannot be null');
         }
 
         $this->container['city'] = $city;
@@ -490,14 +459,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setCompanyName($companyName)
     {
         if (is_null($companyName)) {
-            $this->openAPINullablesSetToNull[] = 'companyName';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('companyName', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable companyName cannot be null');
         }
 
         $this->container['companyName'] = $companyName;
@@ -557,14 +519,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setEmail($email)
     {
         if (is_null($email)) {
-            $this->openAPINullablesSetToNull[] = 'email';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('email', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
 
         $this->container['email'] = $email;
@@ -592,14 +547,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setHouseNumber($houseNumber)
     {
         if (is_null($houseNumber)) {
-            $this->openAPINullablesSetToNull[] = 'houseNumber';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('houseNumber', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable houseNumber cannot be null');
         }
 
         $this->container['houseNumber'] = $houseNumber;
@@ -627,14 +575,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setName($name)
     {
         if (is_null($name)) {
-            $this->openAPINullablesSetToNull[] = 'name';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('name', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
 
         $this->container['name'] = $name;
@@ -662,14 +603,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setPhoneNumber($phoneNumber)
     {
         if (is_null($phoneNumber)) {
-            $this->openAPINullablesSetToNull[] = 'phoneNumber';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('phoneNumber', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable phoneNumber cannot be null');
         }
 
         $this->container['phoneNumber'] = $phoneNumber;
@@ -757,14 +691,7 @@ class ParcelTrackingAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setStateProvinceCode($stateProvinceCode)
     {
         if (is_null($stateProvinceCode)) {
-            $this->openAPINullablesSetToNull[] = 'stateProvinceCode';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('stateProvinceCode', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable stateProvinceCode cannot be null');
         }
 
         $this->container['stateProvinceCode'] = $stateProvinceCode;

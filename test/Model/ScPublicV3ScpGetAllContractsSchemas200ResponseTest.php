@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * ScPublicV3ScpGetAllContractsSchemas200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Retrieve contracts schemas.
+ * @description Retrieve contract schemas.
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

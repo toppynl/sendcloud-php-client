@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -421,7 +421,7 @@ class Documents implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets link
      *
-     * @param string|null $link A link to the document, which allows downloading of the document in PDF, PNG and ZPL and various DPI. Read more HERE.
+     * @param string|null $link A link to the document, which allows downloading of the document in PDF, PNG and ZPL and various DPI.
      *
      * @return self
      */

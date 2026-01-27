@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -36,7 +36,7 @@ use \Toppy\Sendcloud\ObjectSerializer;
  * CreateLabelsSync Class Doc Comment
  *
  * @category Class
- * @description Payload for creating labels for order. It interacts with the chosen [sender address](https://sendcloud.dev/docs/getting-started/sender-address/).  The API can set the sender address for parcels in two different ways: 1. Leaving the request unspecified, then it uses the Default Sender address. 2. Providing the ID of an existing Sender Address.
+ * @description Payload for creating labels for orders.  Note that if the &#x60;sender_address_id&#x60; is not specified, the API will use the default [sender address](/docs/getting-started/sender-addresses) associated with your account.
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -322,7 +322,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets integrationId
      *
-     * @param int $integrationId ID of the integration your orders belong to.
+     * @param int $integrationId The ID of the integration your orders belong to.
      *
      * @return self
      */
@@ -350,7 +350,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets senderAddressId
      *
-     * @param int|null $senderAddressId ID of sender address. Address can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/addresses/sender) and be retrieved through the [Sender address API](https://api.sendcloud.dev/docs/sendcloud-public-api/sender-addresses/operations/get-a-user-address-sender).
+     * @param int|null $senderAddressId The ID of the sender address you would like to ship from. If not specified, your default sender address will be used.  A sender address can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/addresses/sender) and be retrieved using the [Retrieve a list of sender addresses](/api/v3/sender-addresses/retrieve-a-list-of-sender-addresses) endpoint.
      *
      * @return self
      */
@@ -378,7 +378,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets brandId
      *
-     * @param int|null $brandId ID of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands).
+     * @param int|null $brandId The ID of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved using the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint.  > **Note:** The Brands API is currently only available in API v2. This reference will be updated when a v3 version becomes available.
      *
      * @return self
      */

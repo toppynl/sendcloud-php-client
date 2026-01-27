@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **dimensions** | [**\Toppy\Sendcloud\Model\Dimension**](Dimension.md) |  | [optional]
 **weight** | [**\Toppy\Sendcloud\Model\Weight**](Weight.md) |  |
 **colloCount** | **int** | The number of collos this return consists of | [optional] [default to 1]
-**parcelItems** | [**\Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]**](ParcelItemReturnsDetails.md) | List of items contained in this return. Required outside EU. | [optional]
-**sendTrackingEmails** | **bool** | When true Sendcloud will send out the default track and trace emails | [default to false]
+**parcelItems** | [**\Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]**](ParcelItemReturnsDetails.md) | List of items contained in this return. Required outside the EU. | [optional]
+**sendTrackingEmails** | **bool** | When &#x60;true&#x60;, Sendcloud will send out the default track and trace emails | [default to false]
 **brandId** | **int** | The ID of the brand this Return belongs to. | [optional]
 **labelUrl** | **string** | URL to download the label. This can be &#x60;null&#x60; because it might not be announced yet. **Deprecated** in favour of the &#x60;label&#x60; field. | [optional]
 **label** | [**\Toppy\Sendcloud\Model\ReturnLabel**](ReturnLabel.md) |  | [optional]
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **insurance** | **bool** | Whether the return parcel is insured | [optional]
 **trackingNumber** | **string** | This can be null because it might not be announced yet. | [optional]
 **trackingUrl** | **string** | URL to track your return. This can be null because it might not be announced yet. | [optional]
-**isCancellable** | **bool** | the incoming parcel of this return can be cancelled |
+**isCancellable** | **bool** | Whether the incoming parcel of this return can be cancelled |
 **statusHistory** | [**\Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]**](DetailedTrackingBlobStatus.md) | List with the timeline of your return status |
 **createdAt** | **\DateTime** | Date and time of creation of this return |
 **deliveredAt** | **float** | A unix timestamp indicating the delivery time of this return. **Deprecated** in favour of the &#x60;delivered_at_iso&#x60; field. | [optional]

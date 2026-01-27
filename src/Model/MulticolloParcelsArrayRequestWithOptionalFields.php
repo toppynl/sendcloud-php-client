@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -283,7 +283,7 @@ class MulticolloParcelsArrayRequestWithOptionalFields implements ModelInterface,
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represent each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
+     * @param \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represents each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
      *
      * @return self
      */

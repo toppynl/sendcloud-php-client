@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderId** | **string** | External order ID assigned by shop system. Used to identify an order to be shipped. |
+**orderId** | **string** | An external order ID assigned by the shop system. Used to identify an order to be shipped. |
 **orderNumber** | **string** | An identification of an order in a shop system (often unique). Used to identify an order to be shipped. | [optional]
 **applyShippingRules** | **bool** | Apply shipping rules for this order. | [optional] [default to false]
 

@@ -4,7 +4,7 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3ScpPostShippingOptions()**](ShippingOptionsApi.md#scPublicV3ScpPostShippingOptions) | **POST** /shipping-options | Return a list of available shipping options [BETA]
+[**scPublicV3ScpPostShippingOptions()**](ShippingOptionsApi.md#scPublicV3ScpPostShippingOptions) | **POST** /shipping-options | Return a list of available shipping options
 [**scPublicV3ScpPostShippingOptionsSimple()**](ShippingOptionsApi.md#scPublicV3ScpPostShippingOptionsSimple) | **POST** /fetch-shipping-options | Create a list of shipping options
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV3ScpPostShippingOptions($shippingOptionFilter): \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response
 ```
 
-Return a list of available shipping options [BETA]
+Return a list of available shipping options
 
-This API endpoint allows you to retrieve available shipping options along with their corresponding prices for entire shipments, supporting multicollo as well.  Unlike the fetch-shipping-options endpoint, this endpoint: - Accepts multiple parcels with individual dimensions and weights - Returns total pricing for the entire shipment  You must have either [**enabled a carrier**](https://sendcloud.dev/docs/getting-started/) in your Sendcloud account, or connected your own direct [**carrier contract**](https://sendcloud.dev/docs/getting-started/carrier-contracts/), in order to be able to retrieve shipping options related to that carrier via this endpoint.  When shipping to a remote area, it's possible that a remote surcharge will be invoiced. Make sure to provide the `from_country_code`, `to_country_code` and `to_postal_code` to see remote surcharges in the price breakdown. Similarly, to access **zonal prices**, provide `from_country_code`, `to_country_code`, `from_postal_code`, and `to_postal_code`.  When neither `to_country_code` nor `from_country_code` are provided, the shipping options will be returned without quotes irrespective of the value you pass into `calculate_quotes`.  ### Development status This endpoint is currently in <a href=\"https://support.sendcloud.com/hc/en-us/articles/4417167140756-What-is-beta-\">**beta**</a>, meaning that it is still under development. During this phase, we continually monitor and test the API to improve its performance, review the requested and the returned data, and uncover any potential bugs that could have a future impact on our users.   <!-- theme: warning --> >**Please note that there is a possibility of experiencing breaking changes while it is still in beta**.  Last updated at: 17-09-2025.
+Retrieve available shipping options along with their corresponding prices for entire shipments, supporting multicollo as well.
 
 ### Example
 
@@ -78,7 +78,7 @@ scPublicV3ScpPostShippingOptionsSimple($singleParcelShippingOptionFilter): \Topp
 
 Create a list of shipping options
 
-This API endpoint allows you to retrieve available shipping options along with their corresponding prices, referred to as shipping quotes.  A shipping option is a shipping product that the carrier offers in combination with a unique set of shipping functionalities.  The quotes serve to indicate the cost of this shipping option.   You must have either [**enabled a carrier**](https://sendcloud.dev/docs/getting-started/) in your Sendcloud account, or connected your own direct [**carrier contract**](https://sendcloud.dev/docs/getting-started/carrier-contracts/), in order to be able to retrieve shipping options related to that carrier via this endpoint.   When shipping to a remote area, it's possible that a remote surcharge will be invoiced. Make sure to provide the `from_country_code`, `to_country_code` and `to_postal_code` to see remote surcharges in the price breakdown. Similarly, to access **zonal prices**, provide `from_country_code`, `to_country_code`, `from_postal_code`, and `to_postal_code`. This information ensures accurate and customized pricing based on the specific location, enabling you to understand any additional charges associated with remote areas and access pricing based on their designated zones.
+Allows you to retrieve available shipping options along with their corresponding prices, referred to as shipping quotes.
 
 ### Example
 

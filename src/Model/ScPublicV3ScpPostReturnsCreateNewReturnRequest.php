@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -638,7 +638,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets brandId
      *
-     * @param int|null $brandId The ID of the brand this Return belongs to. To find the brand ID, refer to the <a href=\"https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands\">Retrieve a list of brands</a> section.
+     * @param int|null $brandId The ID of the brand this return belongs to. To find the brand ID, refer to the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint.
      *
      * @return self
      */
@@ -866,7 +866,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets applyRules
      *
-     * @param bool|null $applyRules When set to true, return rules will be applied.  Note that rules take precedence over the values provided in the request.  For instance, if a contract is specified in one of the applied rules,  the contract value provided in the request will be ignored.
+     * @param bool|null $applyRules When set to `true`, return rules will be applied.   Note that rules take precedence over the values provided in the request.   For instance, if a contract is specified in one of the applied rules, the contract value provided in the request will be ignored.
      *
      * @return self
      */

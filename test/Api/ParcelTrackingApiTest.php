@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class ParcelTrackingApiTest extends TestCase
     /**
      * Test case for scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber
      *
-     * Retrieve tracking information of a parcel.
+     * Retrieve tracking information for a parcel.
      *
      */
     public function testScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber()

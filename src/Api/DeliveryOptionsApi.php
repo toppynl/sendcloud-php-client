@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -175,14 +175,14 @@ class DeliveryOptionsApi
      * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
      * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
      * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
-     * @param  mixed $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  mixed $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt; (optional, default to 'shipping_option_code')
-     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to show or hide delivery options for specific locations. (optional)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
      * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
-     * @param  string $checkoutMetadata An arbitrary text field that can be used with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -202,14 +202,14 @@ class DeliveryOptionsApi
      * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
      * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
      * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
-     * @param  mixed $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  mixed $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt; (optional, default to 'shipping_option_code')
-     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to show or hide delivery options for specific locations. (optional)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
      * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
-     * @param  string $checkoutMetadata An arbitrary text field that can be used with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -322,14 +322,14 @@ class DeliveryOptionsApi
      * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
      * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
      * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
-     * @param  mixed $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  mixed $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt; (optional, default to 'shipping_option_code')
-     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to show or hide delivery options for specific locations. (optional)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
      * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
-     * @param  string $checkoutMetadata An arbitrary text field that can be used with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -352,14 +352,14 @@ class DeliveryOptionsApi
      * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
      * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
      * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
-     * @param  mixed $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  mixed $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt; (optional, default to 'shipping_option_code')
-     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to show or hide delivery options for specific locations. (optional)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
      * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
-     * @param  string $checkoutMetadata An arbitrary text field that can be used with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -407,14 +407,14 @@ class DeliveryOptionsApi
      * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
      * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
      * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
-     * @param  mixed $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  mixed $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
-     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt; (optional, default to 'shipping_option_code')
-     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to show or hide delivery options for specific locations. (optional)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
      * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
-     * @param  string $checkoutMetadata An arbitrary text field that can be used with &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules\&quot;&gt;Checkout Rules&lt;/a&gt; to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -692,6 +692,9 @@ class DeliveryOptionsApi
         return $request;
     }
 
+    /**
+     * @param array<string, string>|array<string, int>|array<string, float> $queryParams
+     */
     private function createUri(
         string $operationHost,
         string $resourcePath,

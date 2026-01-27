@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -395,7 +395,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetListIntegrations
      *
-     * List all integrations
+     * Retrieve a list of integrations
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
@@ -412,7 +412,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetListIntegrationsWithHttpInfo
      *
-     * List all integrations
+     * Retrieve a list of integrations
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
@@ -497,7 +497,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetListIntegrationsAsync
      *
-     * List all integrations
+     * Retrieve a list of integrations
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
@@ -517,7 +517,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetListIntegrationsAsyncWithHttpInfo
      *
-     * List all integrations
+     * Retrieve a list of integrations
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
@@ -931,7 +931,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetShopOrderStatuses
      *
-     * Retrieve available shop order statuses for a given integration.
+     * Retrieve shop order statuses for an integration
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      * @param  string $language Get a response for the specified language. (optional)
@@ -950,7 +950,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetShopOrderStatusesWithHttpInfo
      *
-     * Retrieve available shop order statuses for a given integration.
+     * Retrieve shop order statuses for an integration
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      * @param  string $language Get a response for the specified language. (optional)
@@ -1053,7 +1053,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetShopOrderStatusesAsync
      *
-     * Retrieve available shop order statuses for a given integration.
+     * Retrieve shop order statuses for an integration
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      * @param  string $language Get a response for the specified language. (optional)
@@ -1075,7 +1075,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsGetShopOrderStatusesAsyncWithHttpInfo
      *
-     * Retrieve available shop order statuses for a given integration.
+     * Retrieve shop order statuses for an integration
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      * @param  string $language Get a response for the specified language. (optional)
@@ -1440,7 +1440,7 @@ class IntegrationsApi
             );
         }
 
-        $resourcePath = '/shop-order-statuses/mapping/';
+        $resourcePath = '/shop-order-statuses/mapping';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1763,7 +1763,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsPostShopOrderStatuses
      *
-     * Create or overwrite the whole list of available shop order statuses.
+     * Create or overwrite shop order statuses
      *
      * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses postShopOrderStatuses (optional)
      *
@@ -1780,7 +1780,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsPostShopOrderStatusesWithHttpInfo
      *
-     * Create or overwrite the whole list of available shop order statuses.
+     * Create or overwrite shop order statuses
      *
      * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
@@ -1881,7 +1881,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsPostShopOrderStatusesAsync
      *
-     * Create or overwrite the whole list of available shop order statuses.
+     * Create or overwrite shop order statuses
      *
      * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
@@ -1901,7 +1901,7 @@ class IntegrationsApi
     /**
      * Operation scPublicV3IntegrationsPostShopOrderStatusesAsyncWithHttpInfo
      *
-     * Create or overwrite the whole list of available shop order statuses.
+     * Create or overwrite shop order statuses
      *
      * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
@@ -2224,7 +2224,7 @@ class IntegrationsApi
     public function scPublicV3IntegrationsPostShopOrderStatusesMappingRequest($createCustomStatusMapping = null)
     {
 
-        $resourcePath = '/shop-order-statuses/mapping/';
+        $resourcePath = '/shop-order-statuses/mapping';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

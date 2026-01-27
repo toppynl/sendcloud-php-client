@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -92,7 +92,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
         'weight' => false,
         'additionalInsuredPrice' => true,
         'labelNotes' => false,
-        'sscc' => true,
+        'sscc' => false,
         'parcelItems' => false
     ];
 
@@ -434,7 +434,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets labelNotes
      *
-     * @param string[]|null $labelNotes Custom messages printed on the shipping label. Use this field to include custom text - such as invoice numbers, product IDs, or internal reference codes - on the package’s shipping label.   **Note that support for label messages varies by carrier; some carriers may ignore this field or offer alternatives, such as delivery instructions, which are communicated to the carrier but not printed on the label. Some carriers may apply label notes at the shipment level rather than per individual parcel.**
+     * @param string[]|null $labelNotes Custom messages printed on the shipping label. Use this field to include custom text - such as invoice numbers, product IDs, or internal reference codes - on the package's shipping label.   **Note that support for label messages varies by carrier; some carriers may ignore this field or offer alternatives, such as delivery instructions, which are communicated to the carrier but not printed on the label. Some carriers may apply label notes at the shipment level rather than per individual parcel.**
      *
      * @return self
      */
@@ -466,32 +466,25 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets sscc
      *
-     * @param string|null $sscc sscc
+     * @param string|null $sscc The Serial Shipping Container Code (SSCC) serves as a globally unique identifier for a logistic unit, functioning as a digital \"license plate\" for tracking and managing goods throughout the supply chain.
      *
      * @return self
      */
     public function setSscc($sscc)
     {
         if (is_null($sscc)) {
-            $this->openAPINullablesSetToNull[] = 'sscc';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('sscc', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable sscc cannot be null');
         }
 
-        if (!is_null($sscc) && (mb_strlen($sscc) > 18)) {
+        if ((mb_strlen($sscc) > 18)) {
             throw new \InvalidArgumentException('invalid length for $sscc when calling CreateLabelParcel., must be smaller than or equal to 18.');
         }
 
-        if (!is_null($sscc) && (mb_strlen($sscc) < 18)) {
+        if ((mb_strlen($sscc) < 18)) {
             throw new \InvalidArgumentException('invalid length for $sscc when calling CreateLabelParcel., must be bigger than or equal to 18.');
         }
 
-        if (!is_null($sscc) && (!preg_match("/^\\d{18}$/", ObjectSerializer::toString($sscc)))) {
+        if ((!preg_match("/^\\d{18}$/", ObjectSerializer::toString($sscc)))) {
             throw new \InvalidArgumentException("invalid value for \$sscc when calling CreateLabelParcel., must conform to the pattern /^\\d{18}$/.");
         }
 
@@ -513,7 +506,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\OrderItem[] $parcelItems List of items / products from the order that the parcel contains.
+     * @param \Toppy\Sendcloud\Model\OrderItem[] $parcelItems List of items/products from the order that the parcel contains.
      *
      * @return self
      */

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ParcelStatusChangedWebhookParcelStatus
+ * MeasurementPartialUpdateWeight
  *
  * PHP version 8.1
  *
@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\ObjectSerializer;
 
 /**
- * ParcelStatusChangedWebhookParcelStatus Class Doc Comment
+ * MeasurementPartialUpdateWeight Class Doc Comment
  *
  * @category Class
- * @description An object containing an id and the name of the status.
+ * @description Weight in the specified unit
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class MeasurementPartialUpdateWeight implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ParcelStatusChangedWebhook_parcel_status';
+    protected static $openAPIModelName = 'measurement_partial_update_weight';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'message' => 'string'
+        'value' => 'float',
+        'unit' => \Toppy\Sendcloud\Model\WeightUnits::class
     ];
 
     /**
@@ -71,8 +71,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'message' => null
+        'value' => null,
+        'unit' => null
     ];
 
     /**
@@ -81,8 +81,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'message' => false
+        'value' => false,
+        'unit' => false
     ];
 
     /**
@@ -143,8 +143,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'message' => 'message'
+        'value' => 'value',
+        'unit' => 'unit'
     ];
 
     /**
@@ -153,8 +153,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'message' => 'setMessage'
+        'value' => 'setValue',
+        'unit' => 'setUnit'
     ];
 
     /**
@@ -163,8 +163,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'message' => 'getMessage'
+        'value' => 'getValue',
+        'unit' => 'getUnit'
     ];
 
     /**
@@ -224,8 +224,8 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
+        $this->setIfExists('unit', $data ?? [], null);
     }
 
     /**
@@ -268,57 +268,57 @@ class ParcelStatusChangedWebhookParcelStatus implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets id
+     * Gets value
      *
-     * @return int|null
+     * @return float|null
      */
-    public function getId()
+    public function getValue()
     {
-        return $this->container['id'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets id
+     * Sets value
      *
-     * @param int|null $id The Sendcloud unique identifier of the status
+     * @param float|null $value Weight value
      *
      * @return self
      */
-    public function setId($id)
+    public function setValue($value)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
 
-        $this->container['id'] = $id;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets unit
      *
-     * @return string|null
+     * @return \Toppy\Sendcloud\Model\WeightUnits|null
      */
-    public function getMessage()
+    public function getUnit()
     {
-        return $this->container['message'];
+        return $this->container['unit'];
     }
 
     /**
-     * Sets message
+     * Sets unit
      *
-     * @param string|null $message The description of the status
+     * @param \Toppy\Sendcloud\Model\WeightUnits|null $unit unit
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setUnit($unit)
     {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if (is_null($unit)) {
+            throw new \InvalidArgumentException('non-nullable unit cannot be null');
         }
 
-        $this->container['message'] = $message;
+        $this->container['unit'] = $unit;
 
         return $this;
     }

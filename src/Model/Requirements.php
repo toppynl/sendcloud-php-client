@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -350,7 +350,7 @@ class Requirements implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets exportDocuments
      *
-     * @param bool|null $exportDocuments When true, custom documents must be provided for this shipment as it crosses economic zones (i.e EU to non-EU), whether by attaching the necessary documents to the parcel or using [Paperless Trade](https://support.sendcloud.com/hc/en-us/articles/4417349714452-Send-your-customs-documents-digitally-via-Paperless-Trade).
+     * @param bool|null $exportDocuments When true, custom documents must be provided for this shipment as it crosses economic zones (i.e. EU to non-EU), whether by attaching the necessary documents to the parcel or using [Paperless Trade](https://support.sendcloud.com/hc/en-us/articles/4417349714452-Send-your-customs-documents-digitally-via-Paperless-Trade).
      *
      * @return self
      */

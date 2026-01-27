@@ -1,6 +1,6 @@
 <?php
 /**
- * ReturnCreatedWebhookDataItemsInnerTest
+ * MeasurementPartialUpdateDimensionTest
  *
  * PHP version 8.1
  *
@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ReturnCreatedWebhookDataItemsInnerTest Class Doc Comment
+ * MeasurementPartialUpdateDimensionTest Class Doc Comment
  *
  * @category    Class
- * @description ReturnCreatedWebhookDataItemsInner
+ * @description Dimension in the specified unit
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ReturnCreatedWebhookDataItemsInnerTest extends TestCase
+class MeasurementPartialUpdateDimensionTest extends TestCase
 {
 
     /**
@@ -72,63 +72,45 @@ class ReturnCreatedWebhookDataItemsInnerTest extends TestCase
     }
 
     /**
-     * Test "ReturnCreatedWebhookDataItemsInner"
+     * Test "MeasurementPartialUpdateDimension"
      */
-    public function testReturnCreatedWebhookDataItemsInner()
+    public function testMeasurementPartialUpdateDimension()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "itemId"
+     * Test attribute "length"
      */
-    public function testPropertyItemId()
+    public function testPropertyLength()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "width"
      */
-    public function testPropertyDescription()
+    public function testPropertyWidth()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "quantity"
+     * Test attribute "height"
      */
-    public function testPropertyQuantity()
+    public function testPropertyHeight()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sku"
+     * Test attribute "unit"
      */
-    public function testPropertySku()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "hsCode"
-     */
-    public function testPropertyHsCode()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "returnReasonId"
-     */
-    public function testPropertyReturnReasonId()
+    public function testPropertyUnit()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

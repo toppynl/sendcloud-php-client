@@ -30,7 +30,6 @@ docs/Model/BasePickupItem.md
 docs/Model/BasePickupRequest.md
 docs/Model/BasePickupResponse.md
 docs/Model/BaseShipmentResponse.md
-docs/Model/BaseShipmentResponseAllOfCarrier.md
 docs/Model/BilledWeightType.md
 docs/Model/BrtPickupRequest.md
 docs/Model/BrtPickupResponse.md
@@ -150,8 +149,6 @@ docs/Model/IntegrationGetResponse.md
 docs/Model/IntegrationListResponse.md
 docs/Model/IntegrationModel.md
 docs/Model/IntegrationResponseModel.md
-docs/Model/IntegrationWebhook.md
-docs/Model/IntegrationWebhookIntegration.md
 docs/Model/InteriorPhotoField.md
 docs/Model/LabelAsync.md
 docs/Model/LabelBase.md
@@ -162,6 +159,10 @@ docs/Model/LeadTimeFilter.md
 docs/Model/ListPickupResponse.md
 docs/Model/LocationInner.md
 docs/Model/Measurement.md
+docs/Model/MeasurementPartialUpdate.md
+docs/Model/MeasurementPartialUpdateDimension.md
+docs/Model/MeasurementPartialUpdateVolume.md
+docs/Model/MeasurementPartialUpdateWeight.md
 docs/Model/ModelReturn.md
 docs/Model/MulticolloParcelsArrayRequest.md
 docs/Model/MulticolloParcelsArrayRequestWithOptionalFields.md
@@ -206,13 +207,6 @@ docs/Model/ParcelItemReturnsDetails.md
 docs/Model/ParcelItemWithOptionalFields.md
 docs/Model/ParcelItemWithSourceId.md
 docs/Model/ParcelStatus.md
-docs/Model/ParcelStatusChangedWebhook.md
-docs/Model/ParcelStatusChangedWebhookParcel.md
-docs/Model/ParcelStatusChangedWebhookParcelAddressDivided.md
-docs/Model/ParcelStatusChangedWebhookParcelCountry.md
-docs/Model/ParcelStatusChangedWebhookParcelLabel.md
-docs/Model/ParcelStatusChangedWebhookParcelShipment.md
-docs/Model/ParcelStatusChangedWebhookParcelStatus.md
 docs/Model/ParcelTrackingAddress.md
 docs/Model/ParcelTrackingCreateRequest.md
 docs/Model/ParcelTrackingCreateResponse.md
@@ -234,9 +228,6 @@ docs/Model/PriceWithAnyCurrency.md
 docs/Model/PurchaseInvoiceField.md
 docs/Model/RequiredPrice.md
 docs/Model/Requirements.md
-docs/Model/ReturnCreatedWebhook.md
-docs/Model/ReturnCreatedWebhookData.md
-docs/Model/ReturnCreatedWebhookDataItemsInner.md
 docs/Model/ReturnImagesInner.md
 docs/Model/ReturnLabel.md
 docs/Model/ReturnReason.md
@@ -378,7 +369,6 @@ src/Model/BasePickupItem.php
 src/Model/BasePickupRequest.php
 src/Model/BasePickupResponse.php
 src/Model/BaseShipmentResponse.php
-src/Model/BaseShipmentResponseAllOfCarrier.php
 src/Model/BilledWeightType.php
 src/Model/BrtPickupRequest.php
 src/Model/BrtPickupResponse.php
@@ -498,8 +488,6 @@ src/Model/IntegrationGetResponse.php
 src/Model/IntegrationListResponse.php
 src/Model/IntegrationModel.php
 src/Model/IntegrationResponseModel.php
-src/Model/IntegrationWebhook.php
-src/Model/IntegrationWebhookIntegration.php
 src/Model/InteriorPhotoField.php
 src/Model/LabelAsync.php
 src/Model/LabelBase.php
@@ -510,6 +498,10 @@ src/Model/LeadTimeFilter.php
 src/Model/ListPickupResponse.php
 src/Model/LocationInner.php
 src/Model/Measurement.php
+src/Model/MeasurementPartialUpdate.php
+src/Model/MeasurementPartialUpdateDimension.php
+src/Model/MeasurementPartialUpdateVolume.php
+src/Model/MeasurementPartialUpdateWeight.php
 src/Model/ModelInterface.php
 src/Model/ModelReturn.php
 src/Model/MulticolloParcelsArrayRequest.php
@@ -555,13 +547,6 @@ src/Model/ParcelItemReturnsDetails.php
 src/Model/ParcelItemWithOptionalFields.php
 src/Model/ParcelItemWithSourceId.php
 src/Model/ParcelStatus.php
-src/Model/ParcelStatusChangedWebhook.php
-src/Model/ParcelStatusChangedWebhookParcel.php
-src/Model/ParcelStatusChangedWebhookParcelAddressDivided.php
-src/Model/ParcelStatusChangedWebhookParcelCountry.php
-src/Model/ParcelStatusChangedWebhookParcelLabel.php
-src/Model/ParcelStatusChangedWebhookParcelShipment.php
-src/Model/ParcelStatusChangedWebhookParcelStatus.php
 src/Model/ParcelTrackingAddress.php
 src/Model/ParcelTrackingCreateRequest.php
 src/Model/ParcelTrackingCreateResponse.php
@@ -583,9 +568,6 @@ src/Model/PriceWithAnyCurrency.php
 src/Model/PurchaseInvoiceField.php
 src/Model/RequiredPrice.php
 src/Model/Requirements.php
-src/Model/ReturnCreatedWebhook.php
-src/Model/ReturnCreatedWebhookData.php
-src/Model/ReturnCreatedWebhookDataItemsInner.php
 src/Model/ReturnImagesInner.php
 src/Model/ReturnLabel.php
 src/Model/ReturnReason.php
@@ -720,7 +702,6 @@ test/Model/BaseContractRequestTest.php
 test/Model/BasePickupItemTest.php
 test/Model/BasePickupRequestTest.php
 test/Model/BasePickupResponseTest.php
-test/Model/BaseShipmentResponseAllOfCarrierTest.php
 test/Model/BaseShipmentResponseTest.php
 test/Model/BilledWeightTypeTest.php
 test/Model/BrtPickupRequestTest.php
@@ -841,8 +822,6 @@ test/Model/IntegrationGetResponseTest.php
 test/Model/IntegrationListResponseTest.php
 test/Model/IntegrationModelTest.php
 test/Model/IntegrationResponseModelTest.php
-test/Model/IntegrationWebhookIntegrationTest.php
-test/Model/IntegrationWebhookTest.php
 test/Model/InteriorPhotoFieldTest.php
 test/Model/LabelAsyncTest.php
 test/Model/LabelBaseTest.php
@@ -852,6 +831,10 @@ test/Model/LabelSyncTest.php
 test/Model/LeadTimeFilterTest.php
 test/Model/ListPickupResponseTest.php
 test/Model/LocationInnerTest.php
+test/Model/MeasurementPartialUpdateDimensionTest.php
+test/Model/MeasurementPartialUpdateTest.php
+test/Model/MeasurementPartialUpdateVolumeTest.php
+test/Model/MeasurementPartialUpdateWeightTest.php
 test/Model/MeasurementTest.php
 test/Model/ModelReturnTest.php
 test/Model/MulticolloParcelsArrayRequestTest.php
@@ -896,13 +879,6 @@ test/Model/ParcelItemReturnsDetailsTest.php
 test/Model/ParcelItemTest.php
 test/Model/ParcelItemWithOptionalFieldsTest.php
 test/Model/ParcelItemWithSourceIdTest.php
-test/Model/ParcelStatusChangedWebhookParcelAddressDividedTest.php
-test/Model/ParcelStatusChangedWebhookParcelCountryTest.php
-test/Model/ParcelStatusChangedWebhookParcelLabelTest.php
-test/Model/ParcelStatusChangedWebhookParcelShipmentTest.php
-test/Model/ParcelStatusChangedWebhookParcelStatusTest.php
-test/Model/ParcelStatusChangedWebhookParcelTest.php
-test/Model/ParcelStatusChangedWebhookTest.php
 test/Model/ParcelStatusTest.php
 test/Model/ParcelTrackingAddressTest.php
 test/Model/ParcelTrackingCreateRequestTest.php
@@ -925,9 +901,6 @@ test/Model/PriceWithAnyCurrencyTest.php
 test/Model/PurchaseInvoiceFieldTest.php
 test/Model/RequiredPriceTest.php
 test/Model/RequirementsTest.php
-test/Model/ReturnCreatedWebhookDataItemsInnerTest.php
-test/Model/ReturnCreatedWebhookDataTest.php
-test/Model/ReturnCreatedWebhookTest.php
 test/Model/ReturnImagesInnerTest.php
 test/Model/ReturnLabelTest.php
 test/Model/ReturnReasonTest.php

@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -369,7 +369,7 @@ class ParcelEventResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets eventType
      *
-     * @param string|null $eventType The event type to indicate where the event update is from (e.g., a smart event, carrier event, etc.)
+     * @param string|null $eventType The event type to indicate where the event update is from (e.g. a smart event, carrier event, etc.)
      *
      * @return self
      */

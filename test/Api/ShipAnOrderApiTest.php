@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class ShipAnOrderApiTest extends TestCase
     /**
      * Test case for scPublicV3OrdersLabelsPostCreateLabelsAsync
      *
-     * Request a label for given orders asynchronously..
+     * Request a label for one or more orders asynchronously.
      *
      */
     public function testScPublicV3OrdersLabelsPostCreateLabelsAsync()
@@ -87,7 +87,7 @@ class ShipAnOrderApiTest extends TestCase
     /**
      * Test case for scPublicV3OrdersLabelsPostCreateLabelsSync
      *
-     * Request a label for given order synchronously..
+     * Request a label for a single order synchronously.
      *
      */
     public function testScPublicV3OrdersLabelsPostCreateLabelsSync()

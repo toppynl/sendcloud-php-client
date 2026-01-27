@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -307,7 +307,7 @@ class ParcelDetailResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets brandId
      *
-     * @param int|null $brandId ID of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands)
+     * @param int|null $brandId ID of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) through the [Brands API](/api/v2/brands/retrieve-a-list-of-brands).
      *
      * @return self
      */

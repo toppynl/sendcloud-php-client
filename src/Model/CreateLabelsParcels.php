@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -283,7 +283,7 @@ class CreateLabelsParcels implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\CreateLabelParcel[]|null $parcels Represent each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default). If left empty one parcel will be created from an entire order.
+     * @param \Toppy\Sendcloud\Model\CreateLabelParcel[]|null $parcels Represents each package in the shipment. Each carrier can have its own limit for the number of parcels per shipment, otherwise there is a default maximum of 50 parcels. If left empty, one parcel will be created from an entire order.
      *
      * @return self
      */

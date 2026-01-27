@@ -16,7 +16,7 @@ scPublicV3AddressesGetAllSenderAddresses($cursor, $pageSize): \Toppy\Sendcloud\M
 
 Retrieve a list of sender addresses
 
-This endpoint returns a list of all the sender addresses which have been saved to your account. The response will include the `id` of each address.
+Returns a list of all the sender addresses which have been saved to your account.
 
 ### Example
 
@@ -37,7 +37,7 @@ $apiInstance = new Toppy\Sendcloud\Api\SenderAddressApi(
     new GuzzleHttp\Client(),
     $config
 );
-$cursor = cj0xJnA9MzAw; // string | The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - `o`: Offset     - `r`: Reverse     - `p`: Position   Combine into GET parameters, for example: `r=1&p=300`   Base 64 encoded it would become: `cj0xJnA9MzAw`   GET parameter in URL would be `https://some.url.com/api/endpoint/?cursor=cj0xJnA9MzAw`
+$cursor = cj0xJnA9MzAw; // string | The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - `o`: Offset - `r`: Reverse - `p`: Position    For example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.
 $pageSize = 100; // int | The size of the page to fetch
 
 try {
@@ -52,7 +52,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cursor** | **string**| The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; | [optional]
+ **cursor** | **string**| The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. | [optional]
  **pageSize** | **int**| The size of the page to fetch | [optional]
 
 ### Return type
@@ -80,7 +80,7 @@ scPublicV3AddressesGetSenderAddressById($id): \Toppy\Sendcloud\Model\ScPublicV3A
 
 Retrieve a sender address
 
-You can retrieve information about a specific sender address saved to your account via this endpoint. Sender address `id` can be obtained via the [**Get sender address**](https://api.sendcloud.dev/docs/sendcloud-public-api/sender-addresses/operations/get-a-user-address-sender) endpoint.
+Retrieve information about a specific sender address saved to your account.
 
 ### Example
 

@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -174,9 +174,9 @@ class ParcelDocumentsApi
      *
      * @param  int $id Identifier of the parcel which you want to retrieve a document from (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  int $dpi DPI refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;File format&lt;/th&gt;       &lt;th&gt;Default DPI&lt;/th&gt;       &lt;th&gt;Valid DPI&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;pdf&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;png&lt;/td&gt;       &lt;td&gt;300&lt;/td&gt;       &lt;td&gt;150, 300&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
-     * @param  string $accept The returned format of the document. **Note**: If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  int $dpi DPI, or dots per inch, refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Use the following table to find the appropriate DPI for each file format:  | File format | Default DPI | Valid DPI | |-------------|-------------|-----------| | pdf         | 72          | 72        | | png         | 300         | 150, 300  |  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
+     * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -195,9 +195,9 @@ class ParcelDocumentsApi
      *
      * @param  int $id Identifier of the parcel which you want to retrieve a document from (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  int $dpi DPI refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;File format&lt;/th&gt;       &lt;th&gt;Default DPI&lt;/th&gt;       &lt;th&gt;Valid DPI&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;pdf&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;png&lt;/td&gt;       &lt;td&gt;300&lt;/td&gt;       &lt;td&gt;150, 300&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
-     * @param  string $accept The returned format of the document. **Note**: If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  int $dpi DPI, or dots per inch, refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Use the following table to find the appropriate DPI for each file format:  | File format | Default DPI | Valid DPI | |-------------|-------------|-----------| | pdf         | 72          | 72        | | png         | 300         | 150, 300  |  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
+     * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -309,9 +309,9 @@ class ParcelDocumentsApi
      *
      * @param  int $id Identifier of the parcel which you want to retrieve a document from (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  int $dpi DPI refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;File format&lt;/th&gt;       &lt;th&gt;Default DPI&lt;/th&gt;       &lt;th&gt;Valid DPI&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;pdf&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;png&lt;/td&gt;       &lt;td&gt;300&lt;/td&gt;       &lt;td&gt;150, 300&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
-     * @param  string $accept The returned format of the document. **Note**: If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  int $dpi DPI, or dots per inch, refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Use the following table to find the appropriate DPI for each file format:  | File format | Default DPI | Valid DPI | |-------------|-------------|-----------| | pdf         | 72          | 72        | | png         | 300         | 150, 300  |  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
+     * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -333,9 +333,9 @@ class ParcelDocumentsApi
      *
      * @param  int $id Identifier of the parcel which you want to retrieve a document from (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  int $dpi DPI refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;File format&lt;/th&gt;       &lt;th&gt;Default DPI&lt;/th&gt;       &lt;th&gt;Valid DPI&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;pdf&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;png&lt;/td&gt;       &lt;td&gt;300&lt;/td&gt;       &lt;td&gt;150, 300&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
-     * @param  string $accept The returned format of the document. **Note**: If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  int $dpi DPI, or dots per inch, refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Use the following table to find the appropriate DPI for each file format:  | File format | Default DPI | Valid DPI | |-------------|-------------|-----------| | pdf         | 72          | 72        | | png         | 300         | 150, 300  |  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
+     * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -382,9 +382,9 @@ class ParcelDocumentsApi
      *
      * @param  int $id Identifier of the parcel which you want to retrieve a document from (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  int $dpi DPI refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: &lt;table&gt;   &lt;thead&gt;     &lt;tr&gt;       &lt;th&gt;File format&lt;/th&gt;       &lt;th&gt;Default DPI&lt;/th&gt;       &lt;th&gt;Valid DPI&lt;/th&gt;     &lt;/tr&gt;   &lt;/thead&gt;   &lt;tbody&gt;     &lt;tr&gt;       &lt;td&gt;pdf&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;       &lt;td&gt;72&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;png&lt;/td&gt;       &lt;td&gt;300&lt;/td&gt;       &lt;td&gt;150, 300&lt;/td&gt;     &lt;/tr&gt;   &lt;/tbody&gt; &lt;/table&gt; ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
-     * @param  string $accept The returned format of the document. **Note**: If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  int $dpi DPI, or dots per inch, refers to the printing resolution of your shipping labels. Labels must be printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Use the following table to find the appropriate DPI for each file format:  | File format | Default DPI | Valid DPI | |-------------|-------------|-----------| | pdf         | 72          | 72        | | png         | 300         | 150, 300  |  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities. (optional, default to 72)
+     * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -526,7 +526,7 @@ class ParcelDocumentsApi
      *
      * @param  int[] $parcels Parcels for which you want to retrieve the documents (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -545,7 +545,7 @@ class ParcelDocumentsApi
      *
      * @param  int[] $parcels Parcels for which you want to retrieve the documents (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -657,7 +657,7 @@ class ParcelDocumentsApi
      *
      * @param  int[] $parcels Parcels for which you want to retrieve the documents (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -679,7 +679,7 @@ class ParcelDocumentsApi
      *
      * @param  int[] $parcels Parcels for which you want to retrieve the documents (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -726,7 +726,7 @@ class ParcelDocumentsApi
      *
      * @param  int[] $parcels Parcels for which you want to retrieve the documents (required)
      * @param  string $type Document type you want to retrieve. (required)
-     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:   - A4   - A5   - A6 Omitting this query parameter leads to the internal paper size of the document being used, generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
+     * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

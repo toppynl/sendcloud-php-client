@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -36,7 +36,7 @@ use \Toppy\Sendcloud\ObjectSerializer;
  * OrderPartialUpdateServicePointDetails Class Doc Comment
  *
  * @category Class
- * @description Node for service point information. The service point information can be retrieved after calling the relevant Sendcloud service point [endpoint](https://api.sendcloud.dev/docs/sendcloud-public-api/service-points)
+ * @description Node for service point information. The service point information can be retrieved using the [Service points API](/api/v2/service-points).  &gt; **Note:** The Service Points API is currently only available in API v2. This reference will be updated when a v3 version becomes available.
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**brandId** | **int** | ID of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their &#x60;id&#x60;) through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands) | [optional]
+**brandId** | **int** | ID of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their &#x60;id&#x60;) through the [Brands API](/api/v2/brands/retrieve-a-list-of-brands). | [optional]
 **expectedDeliveryDate** | **\DateTime** | Day when the parcel will be delivered (estimate, no timestamp) | [optional]
 **integrationId** | **int** | The shop integration ID to which the provided parcel belongs | [optional]
 **isMailBox** | **bool** | Indicates whether this parcel will be delivered to a mail box | [optional]

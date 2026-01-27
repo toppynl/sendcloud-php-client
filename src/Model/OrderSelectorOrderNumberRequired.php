@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -380,7 +380,7 @@ class OrderSelectorOrderNumberRequired implements ModelInterface, ArrayAccess, \
     /**
      * Sets applyShippingRules
      *
-     * @param bool|null $applyShippingRules Apply shipping rules for this order.
+     * @param bool|null $applyShippingRules Apply shipping rules to this order.
      *
      * @return self
      */

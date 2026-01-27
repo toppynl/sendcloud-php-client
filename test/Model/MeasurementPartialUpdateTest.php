@@ -1,6 +1,6 @@
 <?php
 /**
- * IntegrationWebhookTest
+ * MeasurementPartialUpdateTest
  *
  * PHP version 8.1
  *
@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * IntegrationWebhookTest Class Doc Comment
+ * MeasurementPartialUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description The webhook payload when an integration is added to Sendcloud
+ * @description This object provides essential information for accurate packing, shipping, and inventory management
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class IntegrationWebhookTest extends TestCase
+class MeasurementPartialUpdateTest extends TestCase
 {
 
     /**
@@ -72,36 +72,36 @@ class IntegrationWebhookTest extends TestCase
     }
 
     /**
-     * Test "IntegrationWebhook"
+     * Test "MeasurementPartialUpdate"
      */
-    public function testIntegrationWebhook()
+    public function testMeasurementPartialUpdate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "action"
+     * Test attribute "dimension"
      */
-    public function testPropertyAction()
+    public function testPropertyDimension()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "timestamp"
+     * Test attribute "weight"
      */
-    public function testPropertyTimestamp()
+    public function testPropertyWeight()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "integration"
+     * Test attribute "volume"
      */
-    public function testPropertyIntegration()
+    public function testPropertyVolume()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

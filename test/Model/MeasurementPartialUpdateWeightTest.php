@@ -1,6 +1,6 @@
 <?php
 /**
- * ReturnCreatedWebhookTest
+ * MeasurementPartialUpdateWeightTest
  *
  * PHP version 8.1
  *
@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ReturnCreatedWebhookTest Class Doc Comment
+ * MeasurementPartialUpdateWeightTest Class Doc Comment
  *
  * @category    Class
- * @description The webhook payload when a return is created. This is emitted when a return is created either via the API or the Return Portal.  Creating a return manually via Return Form does NOT trigger the webhook.
+ * @description Weight in the specified unit
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ReturnCreatedWebhookTest extends TestCase
+class MeasurementPartialUpdateWeightTest extends TestCase
 {
 
     /**
@@ -72,36 +72,27 @@ class ReturnCreatedWebhookTest extends TestCase
     }
 
     /**
-     * Test "ReturnCreatedWebhook"
+     * Test "MeasurementPartialUpdateWeight"
      */
-    public function testReturnCreatedWebhook()
+    public function testMeasurementPartialUpdateWeight()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "action"
+     * Test attribute "value"
      */
-    public function testPropertyAction()
+    public function testPropertyValue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "timestamp"
+     * Test attribute "unit"
      */
-    public function testPropertyTimestamp()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyUnit()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -418,7 +418,7 @@ class LabelSyncAllOfLabelDetails implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets dpi
      *
-     * @param int|null $dpi DPI refers to the printing resolution of your shipping labels. It's important that labels are printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes. Use following amounts for appropriate result: <table>   <thead>     <tr>       <th>File format</th>       <th>Default DPI</th>       <th>Valid DPI</th>     </tr>   </thead>   <tbody>     <tr>       <td>pdf</td>       <td>72</td>       <td>72</td>     </tr>     <tr>       <td>png</td>       <td>300</td>       <td>150, 300</td>     </tr>   </tbody> </table> ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities.
+     * @param int|null $dpi DPI refers to the printing resolution of your shipping labels. It's important that labels are printed at a high enough resolution to ensure the clarity of address details and the barcode for scanning purposes.  Refer to the following table for DPI settings per file format:  File format | Default DPI | Valid DPI ----------- | ----------- | --------- pdf         | 72          | 72 png         | 300         | 150, 300  ZPL labels are not affected by the DPI setting, as the resolution is determined by the carrier itself. Most carriers use a resolution of 203 DPI. Zebra printers need to be configured to print at the specific DPI of the label if they have higher resolution capabilities.
      *
      * @return self
      */

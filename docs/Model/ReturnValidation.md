@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **weight** | **float** | Total weight in kilograms |
 **colloCount** | **int** | The number of collos this return consists of | [optional] [default to 1]
 **parcelItems** | [**\Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]**](ParcelItemReturnsCreate.md) | List of items contained in this return. Required outside EU. | [optional]
-**sendTrackingEmails** | **bool** | When true Sendcloud will send out the default track and trace emails | [optional] [default to false]
-**brandId** | **int** | The ID of the brand this Return belongs to. | [optional]
+**sendTrackingEmails** | **bool** | When &#x60;true&#x60;, Sendcloud will send out the default track and trace emails | [optional] [default to false]
+**brandId** | **int** | The ID of the brand this return belongs to. | [optional]
 **totalInsuredValue** | [**\Toppy\Sendcloud\Model\Price**](Price.md) |  | [optional]
 **orderNumber** | **string** | Identifier of the order associated with this return | [optional]
 **totalOrderValue** | [**\Toppy\Sendcloud\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]

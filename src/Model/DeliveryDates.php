@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -81,8 +81,8 @@ class DeliveryDates implements ModelInterface, ArrayAccess, \JsonSerializable, \
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'handoverAt' => true,
-        'deliverAt' => true
+        'handoverAt' => false,
+        'deliverAt' => false
     ];
 
     /**
@@ -118,16 +118,6 @@ class DeliveryDates implements ModelInterface, ArrayAccess, \JsonSerializable, \
     protected static function openAPINullables(): array
     {
         return self::$openAPINullables;
-    }
-
-    /**
-     * Setter - Array of nullable field names deliberately set to null
-     *
-     * @param boolean[] $openAPINullablesSetToNull
-     */
-    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
-    {
-        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
     }
 
     /**
@@ -297,14 +287,7 @@ class DeliveryDates implements ModelInterface, ArrayAccess, \JsonSerializable, \
     public function setHandoverAt($handoverAt)
     {
         if (is_null($handoverAt)) {
-            $this->openAPINullablesSetToNull[] = 'handoverAt';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('handoverAt', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable handoverAt cannot be null');
         }
 
         $this->container['handoverAt'] = $handoverAt;
@@ -332,14 +315,7 @@ class DeliveryDates implements ModelInterface, ArrayAccess, \JsonSerializable, \
     public function setDeliverAt($deliverAt)
     {
         if (is_null($deliverAt)) {
-            $this->openAPINullablesSetToNull[] = 'deliverAt';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('deliverAt', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable deliverAt cannot be null');
         }
 
         $this->container['deliverAt'] = $deliverAt;

@@ -5,13 +5,13 @@ All URIs are relative to https://account.sendcloud.com.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**scPublicV3IntegrationsDeleteDeleteIntegration()**](IntegrationsApi.md#scPublicV3IntegrationsDeleteDeleteIntegration) | **DELETE** /integrations/{id} | Delete an integration
-[**scPublicV3IntegrationsGetListIntegrations()**](IntegrationsApi.md#scPublicV3IntegrationsGetListIntegrations) | **GET** /integrations | List all integrations
+[**scPublicV3IntegrationsGetListIntegrations()**](IntegrationsApi.md#scPublicV3IntegrationsGetListIntegrations) | **GET** /integrations | Retrieve a list of integrations
 [**scPublicV3IntegrationsGetRetrieveIntegration()**](IntegrationsApi.md#scPublicV3IntegrationsGetRetrieveIntegration) | **GET** /integrations/{id} | Retrieve an integration
-[**scPublicV3IntegrationsGetShopOrderStatuses()**](IntegrationsApi.md#scPublicV3IntegrationsGetShopOrderStatuses) | **GET** /shop-order-statuses | Retrieve available shop order statuses for a given integration.
-[**scPublicV3IntegrationsGetShopOrderStatusesMapping()**](IntegrationsApi.md#scPublicV3IntegrationsGetShopOrderStatusesMapping) | **GET** /shop-order-statuses/mapping/ | Retrieve custom status mapping for an integration
+[**scPublicV3IntegrationsGetShopOrderStatuses()**](IntegrationsApi.md#scPublicV3IntegrationsGetShopOrderStatuses) | **GET** /shop-order-statuses | Retrieve shop order statuses for an integration
+[**scPublicV3IntegrationsGetShopOrderStatusesMapping()**](IntegrationsApi.md#scPublicV3IntegrationsGetShopOrderStatusesMapping) | **GET** /shop-order-statuses/mapping | Retrieve custom status mapping for an integration
 [**scPublicV3IntegrationsPatchUpdateIntegration()**](IntegrationsApi.md#scPublicV3IntegrationsPatchUpdateIntegration) | **PATCH** /integrations/{id} | Update certain parts of an integration
-[**scPublicV3IntegrationsPostShopOrderStatuses()**](IntegrationsApi.md#scPublicV3IntegrationsPostShopOrderStatuses) | **POST** /shop-order-statuses | Create or overwrite the whole list of available shop order statuses.
-[**scPublicV3IntegrationsPostShopOrderStatusesMapping()**](IntegrationsApi.md#scPublicV3IntegrationsPostShopOrderStatusesMapping) | **POST** /shop-order-statuses/mapping/ | Create or update custom status mapping for an integration
+[**scPublicV3IntegrationsPostShopOrderStatuses()**](IntegrationsApi.md#scPublicV3IntegrationsPostShopOrderStatuses) | **POST** /shop-order-statuses | Create or overwrite shop order statuses
+[**scPublicV3IntegrationsPostShopOrderStatusesMapping()**](IntegrationsApi.md#scPublicV3IntegrationsPostShopOrderStatusesMapping) | **POST** /shop-order-statuses/mapping | Create or update custom status mapping for an integration
 
 
 ## `scPublicV3IntegrationsDeleteDeleteIntegration()`
@@ -22,7 +22,7 @@ scPublicV3IntegrationsDeleteDeleteIntegration($id)
 
 Delete an integration
 
-Safely delete one of your integrations from the Sendcloud System
+Safely delete one of your integrations from the Sendcloud system
 
 ### Example
 
@@ -81,9 +81,9 @@ void (empty response body)
 scPublicV3IntegrationsGetListIntegrations($sort): \Toppy\Sendcloud\Model\IntegrationListResponse
 ```
 
-List all integrations
+Retrieve a list of integrations
 
-Retrieve all valid integrations from the Sendcloud System for a given user.
+Retrieve all valid integrations from the Sendcloud system for a given user.
 
 ### Example
 
@@ -145,7 +145,7 @@ scPublicV3IntegrationsGetRetrieveIntegration($id): \Toppy\Sendcloud\Model\Integr
 
 Retrieve an integration
 
-Get a valid integration from the Sendcloud System
+Get a valid integration from the Sendcloud system
 
 ### Example
 
@@ -205,9 +205,9 @@ Name | Type | Description  | Notes
 scPublicV3IntegrationsGetShopOrderStatuses($integrationId, $language, $showDeleted): \Toppy\Sendcloud\Model\GetShopOrderStatuses
 ```
 
-Retrieve available shop order statuses for a given integration.
+Retrieve shop order statuses for an integration
 
-Get the list of statuses for the integration. - Only Prestashop V2 integrations are supported. - If the user hasn't picked a language, they will receive the status in the default language, `en-gb`. - If `en-gb` is not present, the user receives the status in the first language of the alphabetically ordered list.
+Fetch all available shop order statuses for the Prestashop v2 integration, in the default or selected language.
 
 ### Example
 
@@ -273,7 +273,7 @@ scPublicV3IntegrationsGetShopOrderStatusesMapping($integrationId): \Toppy\Sendcl
 
 Retrieve custom status mapping for an integration
 
-Fetch a map of available shop order statuses and Sendcloud's internal status category for the integration. - Only Prestashop V2 integrations are supported.
+Fetch a map of available shop order statuses and Sendcloud's internal status category for the integration.
 
 ### Example
 
@@ -335,7 +335,7 @@ scPublicV3IntegrationsPatchUpdateIntegration($id, $integrationModel)
 
 Update certain parts of an integration
 
-##### The following endpoint allows you to make changes for an integration: - Update the shop name of an integration. - Update the shop URL of an integration. - Enable service points and select the appropriate service point carriers. - Enable webhooks and set the webhook URL. - Change the type of feedback you would like the integration to follow
+Update the shop name, shop URL, service point settings, webhook settings, and feedback type of an integration.
 
 ### Example
 
@@ -396,9 +396,9 @@ void (empty response body)
 scPublicV3IntegrationsPostShopOrderStatuses($postShopOrderStatuses): Null
 ```
 
-Create or overwrite the whole list of available shop order statuses.
+Create or overwrite shop order statuses
 
-Insert shop-specific custom statuses into the Sendcloud system. - Integrations can have their own custom shop statuses. - To get your order updates in time, Sendcloud needs to know what statuses are available. - This endpoint updates all existing statuses. That includes creating new statuses, changing existing ones, and deleting ones that no longer exist. - Only Prestashop V2 integrations are supported.
+Insert shop-specific custom statuses into the Sendcloud system.
 
 ### Example
 
@@ -460,7 +460,7 @@ scPublicV3IntegrationsPostShopOrderStatusesMapping($createCustomStatusMapping): 
 
 Create or update custom status mapping for an integration
 
-Upsert a map of available shop order statuses and Sendcloud's internal status category for an integration - Only Prestashop V2 integrations are supported.
+Upsert a map of available shop order statuses and Sendcloud's internal status category for an integration
 
 ### Example
 

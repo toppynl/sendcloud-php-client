@@ -4,7 +4,7 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3ScpGetUserAuthMetadata()**](UserApi.md#scPublicV3ScpGetUserAuthMetadata) | **GET** /user/auth/metadata | Retrieve information about the metadata associated with the authentication used in the request.
+[**scPublicV3ScpGetUserAuthMetadata()**](UserApi.md#scPublicV3ScpGetUserAuthMetadata) | **GET** /user/auth/metadata | Retrieve metadata associated with the authentication method
 
 
 ## `scPublicV3ScpGetUserAuthMetadata()`
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 scPublicV3ScpGetUserAuthMetadata(): \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response
 ```
 
-Retrieve information about the metadata associated with the authentication used in the request.
+Retrieve metadata associated with the authentication method
 
-This endpoint will retrieve information associated with the authentication method used in the request
+Retrieve information about the metadata associated with the authentication method used in the request
 
 ### Example
 

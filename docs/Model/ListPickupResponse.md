@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional]
 **createdAt** | **\DateTime** | ISO 8601 DateTime at which the pickup is created. | [optional]
 **cancelledAt** | **\DateTime** | ISO 8601 DateTime at which the pickup is cancelled. | [optional]
-**contractId** | **int** | Id of the contract that is used to create the pickup. | [optional]
+**contractId** | **int** | ID of the contract that is used to create the pickup. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

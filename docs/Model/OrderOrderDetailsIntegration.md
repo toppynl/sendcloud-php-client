@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Sendcloud Integration ID. To obtain the integration ID, you can utilize the integration [endpoint](https://api.sendcloud.dev/docs/sendcloud-public-api/integrations/operations/list-integrations) listings. |
+**id** | **int** | Sendcloud Integration ID. To obtain the integration ID, you can use the [Retrieve a list of integrations](/api/v3/integrations/retrieve-a-list-of-integrations) endpoint. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -4,7 +4,7 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3DsfPostFiles()**](FileUploadApi.md#scPublicV3DsfPostFiles) | **POST** /dsf/files | Upload File
+[**scPublicV3DsfPostFiles()**](FileUploadApi.md#scPublicV3DsfPostFiles) | **POST** /dsf/files | Upload a file
 
 
 ## `scPublicV3DsfPostFiles()`
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 scPublicV3DsfPostFiles($file): \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response
 ```
 
-Upload File
+Upload a file
 
-API for uploading a file required for ticket creation.  The uploaded file is stored in the system, and a unique file token is returned in response.  The API is using rate limits.
+API for uploading a file required for ticket creation. The uploaded file is stored in the system, and a unique file token is returned in response.
 
 ### Example
 

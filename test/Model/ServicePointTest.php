@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * ServicePointTest Class Doc Comment
  *
  * @category    Class
- * @description Node for service point information. The service point information can be retrieved after calling the relevant Sendcloud service point [endpoint](https://api.sendcloud.dev/docs/sendcloud-public-api/service-points)
+ * @description Node for service point information. Use the [Retrieve a list of service points](/api/v2/service-points/retrieve-a-list-of-service-points) endpoint to find service points.
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

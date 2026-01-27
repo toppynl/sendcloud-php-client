@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -283,7 +283,7 @@ class MulticolloParcelsArrayRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCommon[]|null $parcels Represent each package of the shipment. There is a restriction to a maximum number of percels per shipment.  * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment Note: each carrier can have a lower than the max number of parcels limit per shipment.
+     * @param \Toppy\Sendcloud\Model\ParcelCommon[]|null $parcels Represent each package of the shipment.  There is a restriction to a maximum number of percels per shipment.   * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment  Note: each carrier can have a lower than the max number of parcels limit per shipment.
      *
      * @return self
      */

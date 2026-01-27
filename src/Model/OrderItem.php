@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -297,7 +297,7 @@ class OrderItem implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets itemId
      *
-     * @param string $itemId Order Item external ID in shop system. `item_id` can be obtained via [Orders API](https://api.sendcloud.dev/docs/sendcloud-public-api/orders/operations/get-a-order).
+     * @param string $itemId The order item's external ID in the shop system. This `item_id` can be obtained via the [Retrieve an order](/api/v3/orders/retrieve-an-order) endpoint.
      *
      * @return self
      */

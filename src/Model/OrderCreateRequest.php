@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -337,7 +337,7 @@ class OrderCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets sourceExternalId
      *
-     * @param string|null $sourceExternalId The External ID of the order as present in the client's system
+     * @param string|null $sourceExternalId The external ID of the order as present in the client's system
      *
      * @return self
      */

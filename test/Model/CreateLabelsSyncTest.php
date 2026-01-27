@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * CreateLabelsSyncTest Class Doc Comment
  *
  * @category    Class
- * @description Payload for creating labels for order. It interacts with the chosen [sender address](https://sendcloud.dev/docs/getting-started/sender-address/).  The API can set the sender address for parcels in two different ways: 1. Leaving the request unspecified, then it uses the Default Sender address. 2. Providing the ID of an existing Sender Address.
+ * @description Payload for creating labels for orders.  Note that if the &#x60;sender_address_id&#x60; is not specified, the API will use the default [sender address](/docs/getting-started/sender-addresses) associated with your account.
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

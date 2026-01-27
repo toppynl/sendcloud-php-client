@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ReturnCreatedWebhookData
+ * MeasurementPartialUpdateDimension
  *
  * PHP version 8.1
  *
@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\ObjectSerializer;
 
 /**
- * ReturnCreatedWebhookData Class Doc Comment
+ * MeasurementPartialUpdateDimension Class Doc Comment
  *
  * @category Class
- * @description Information about the return
+ * @description Dimension in the specified unit
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class MeasurementPartialUpdateDimension implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ReturnCreatedWebhook_data';
+    protected static $openAPIModelName = 'measurement_partial_update_dimension';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,15 +59,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'float',
-        'brandId' => 'int',
-        'orderNumber' => 'string',
-        'returnReasonId' => 'int',
-        'returnAddressId' => 'int',
-        'paidReturn' => 'bool',
-        'deliveryChoice' => 'string',
-        'refundType' => 'string',
-        'items' => '\Toppy\Sendcloud\Model\ReturnCreatedWebhookDataItemsInner[]'
+        'length' => 'float',
+        'width' => 'float',
+        'height' => 'float',
+        'unit' => \Toppy\Sendcloud\Model\DimensionUnits::class
     ];
 
     /**
@@ -78,15 +73,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'brandId' => null,
-        'orderNumber' => null,
-        'returnReasonId' => null,
-        'returnAddressId' => null,
-        'paidReturn' => null,
-        'deliveryChoice' => null,
-        'refundType' => null,
-        'items' => null
+        'length' => null,
+        'width' => null,
+        'height' => null,
+        'unit' => null
     ];
 
     /**
@@ -95,15 +85,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'brandId' => false,
-        'orderNumber' => false,
-        'returnReasonId' => false,
-        'returnAddressId' => false,
-        'paidReturn' => false,
-        'deliveryChoice' => false,
-        'refundType' => false,
-        'items' => false
+        'length' => false,
+        'width' => false,
+        'height' => false,
+        'unit' => false
     ];
 
     /**
@@ -164,15 +149,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'brandId' => 'brand_id',
-        'orderNumber' => 'order_number',
-        'returnReasonId' => 'return_reason_id',
-        'returnAddressId' => 'return_address_id',
-        'paidReturn' => 'paid_return',
-        'deliveryChoice' => 'delivery_choice',
-        'refundType' => 'refund_type',
-        'items' => 'items'
+        'length' => 'length',
+        'width' => 'width',
+        'height' => 'height',
+        'unit' => 'unit'
     ];
 
     /**
@@ -181,15 +161,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'brandId' => 'setBrandId',
-        'orderNumber' => 'setOrderNumber',
-        'returnReasonId' => 'setReturnReasonId',
-        'returnAddressId' => 'setReturnAddressId',
-        'paidReturn' => 'setPaidReturn',
-        'deliveryChoice' => 'setDeliveryChoice',
-        'refundType' => 'setRefundType',
-        'items' => 'setItems'
+        'length' => 'setLength',
+        'width' => 'setWidth',
+        'height' => 'setHeight',
+        'unit' => 'setUnit'
     ];
 
     /**
@@ -198,15 +173,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'brandId' => 'getBrandId',
-        'orderNumber' => 'getOrderNumber',
-        'returnReasonId' => 'getReturnReasonId',
-        'returnAddressId' => 'getReturnAddressId',
-        'paidReturn' => 'getPaidReturn',
-        'deliveryChoice' => 'getDeliveryChoice',
-        'refundType' => 'getRefundType',
-        'items' => 'getItems'
+        'length' => 'getLength',
+        'width' => 'getWidth',
+        'height' => 'getHeight',
+        'unit' => 'getUnit'
     ];
 
     /**
@@ -266,15 +236,10 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('brandId', $data ?? [], null);
-        $this->setIfExists('orderNumber', $data ?? [], null);
-        $this->setIfExists('returnReasonId', $data ?? [], null);
-        $this->setIfExists('returnAddressId', $data ?? [], null);
-        $this->setIfExists('paidReturn', $data ?? [], null);
-        $this->setIfExists('deliveryChoice', $data ?? [], null);
-        $this->setIfExists('refundType', $data ?? [], null);
-        $this->setIfExists('items', $data ?? [], null);
+        $this->setIfExists('length', $data ?? [], null);
+        $this->setIfExists('width', $data ?? [], null);
+        $this->setIfExists('height', $data ?? [], null);
+        $this->setIfExists('unit', $data ?? [], null);
     }
 
     /**
@@ -303,8 +268,16 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if (!is_null($this->container['length']) && ($this->container['length'] < 0)) {
+            $invalidProperties[] = "invalid value for 'length', must be bigger than or equal to 0.";
+        }
+
+        if (!is_null($this->container['width']) && ($this->container['width'] < 0)) {
+            $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 0.";
+        }
+
+        if (!is_null($this->container['height']) && ($this->container['height'] < 0)) {
+            $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
@@ -323,253 +296,125 @@ class ReturnCreatedWebhookData implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets id
+     * Gets length
      *
-     * @return float
+     * @return float|null
      */
-    public function getId()
+    public function getLength()
     {
-        return $this->container['id'];
+        return $this->container['length'];
     }
 
     /**
-     * Sets id
+     * Sets length
      *
-     * @param float $id The id of the return
+     * @param float|null $length length in specified unit
      *
      * @return self
      */
-    public function setId($id)
+    public function setLength($length)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($length)) {
+            throw new \InvalidArgumentException('non-nullable length cannot be null');
         }
 
-        $this->container['id'] = $id;
+        if (($length < 0)) {
+            throw new \InvalidArgumentException('invalid value for $length when calling MeasurementPartialUpdateDimension., must be bigger than or equal to 0.');
+        }
+
+        $this->container['length'] = $length;
 
         return $this;
     }
 
     /**
-     * Gets brandId
+     * Gets width
      *
-     * @return int|null
+     * @return float|null
      */
-    public function getBrandId()
+    public function getWidth()
     {
-        return $this->container['brandId'];
+        return $this->container['width'];
     }
 
     /**
-     * Sets brandId
+     * Sets width
      *
-     * @param int|null $brandId brandId
+     * @param float|null $width width in specified unit
      *
      * @return self
      */
-    public function setBrandId($brandId)
+    public function setWidth($width)
     {
-        if (is_null($brandId)) {
-            throw new \InvalidArgumentException('non-nullable brandId cannot be null');
+        if (is_null($width)) {
+            throw new \InvalidArgumentException('non-nullable width cannot be null');
         }
 
-        $this->container['brandId'] = $brandId;
+        if (($width < 0)) {
+            throw new \InvalidArgumentException('invalid value for $width when calling MeasurementPartialUpdateDimension., must be bigger than or equal to 0.');
+        }
+
+        $this->container['width'] = $width;
 
         return $this;
     }
 
     /**
-     * Gets orderNumber
+     * Gets height
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getOrderNumber()
+    public function getHeight()
     {
-        return $this->container['orderNumber'];
+        return $this->container['height'];
     }
 
     /**
-     * Sets orderNumber
+     * Sets height
      *
-     * @param string|null $orderNumber orderNumber
+     * @param float|null $height height in specified unit
      *
      * @return self
      */
-    public function setOrderNumber($orderNumber)
+    public function setHeight($height)
     {
-        if (is_null($orderNumber)) {
-            throw new \InvalidArgumentException('non-nullable orderNumber cannot be null');
+        if (is_null($height)) {
+            throw new \InvalidArgumentException('non-nullable height cannot be null');
         }
 
-        $this->container['orderNumber'] = $orderNumber;
+        if (($height < 0)) {
+            throw new \InvalidArgumentException('invalid value for $height when calling MeasurementPartialUpdateDimension., must be bigger than or equal to 0.');
+        }
+
+        $this->container['height'] = $height;
 
         return $this;
     }
 
     /**
-     * Gets returnReasonId
+     * Gets unit
      *
-     * @return int|null
+     * @return \Toppy\Sendcloud\Model\DimensionUnits|null
      */
-    public function getReturnReasonId()
+    public function getUnit()
     {
-        return $this->container['returnReasonId'];
+        return $this->container['unit'];
     }
 
     /**
-     * Sets returnReasonId
+     * Sets unit
      *
-     * @param int|null $returnReasonId returnReasonId
+     * @param \Toppy\Sendcloud\Model\DimensionUnits|null $unit unit
      *
      * @return self
      */
-    public function setReturnReasonId($returnReasonId)
+    public function setUnit($unit)
     {
-        if (is_null($returnReasonId)) {
-            throw new \InvalidArgumentException('non-nullable returnReasonId cannot be null');
+        if (is_null($unit)) {
+            throw new \InvalidArgumentException('non-nullable unit cannot be null');
         }
 
-        $this->container['returnReasonId'] = $returnReasonId;
-
-        return $this;
-    }
-
-    /**
-     * Gets returnAddressId
-     *
-     * @return int|null
-     */
-    public function getReturnAddressId()
-    {
-        return $this->container['returnAddressId'];
-    }
-
-    /**
-     * Sets returnAddressId
-     *
-     * @param int|null $returnAddressId returnAddressId
-     *
-     * @return self
-     */
-    public function setReturnAddressId($returnAddressId)
-    {
-        if (is_null($returnAddressId)) {
-            throw new \InvalidArgumentException('non-nullable returnAddressId cannot be null');
-        }
-
-        $this->container['returnAddressId'] = $returnAddressId;
-
-        return $this;
-    }
-
-    /**
-     * Gets paidReturn
-     *
-     * @return bool|null
-     */
-    public function getPaidReturn()
-    {
-        return $this->container['paidReturn'];
-    }
-
-    /**
-     * Sets paidReturn
-     *
-     * @param bool|null $paidReturn paidReturn
-     *
-     * @return self
-     */
-    public function setPaidReturn($paidReturn)
-    {
-        if (is_null($paidReturn)) {
-            throw new \InvalidArgumentException('non-nullable paidReturn cannot be null');
-        }
-
-        $this->container['paidReturn'] = $paidReturn;
-
-        return $this;
-    }
-
-    /**
-     * Gets deliveryChoice
-     *
-     * @return string|null
-     */
-    public function getDeliveryChoice()
-    {
-        return $this->container['deliveryChoice'];
-    }
-
-    /**
-     * Sets deliveryChoice
-     *
-     * @param string|null $deliveryChoice deliveryChoice
-     *
-     * @return self
-     */
-    public function setDeliveryChoice($deliveryChoice)
-    {
-        if (is_null($deliveryChoice)) {
-            throw new \InvalidArgumentException('non-nullable deliveryChoice cannot be null');
-        }
-
-        $this->container['deliveryChoice'] = $deliveryChoice;
-
-        return $this;
-    }
-
-    /**
-     * Gets refundType
-     *
-     * @return string|null
-     */
-    public function getRefundType()
-    {
-        return $this->container['refundType'];
-    }
-
-    /**
-     * Sets refundType
-     *
-     * @param string|null $refundType refundType
-     *
-     * @return self
-     */
-    public function setRefundType($refundType)
-    {
-        if (is_null($refundType)) {
-            throw new \InvalidArgumentException('non-nullable refundType cannot be null');
-        }
-
-        $this->container['refundType'] = $refundType;
-
-        return $this;
-    }
-
-    /**
-     * Gets items
-     *
-     * @return \Toppy\Sendcloud\Model\ReturnCreatedWebhookDataItemsInner[]|null
-     */
-    public function getItems()
-    {
-        return $this->container['items'];
-    }
-
-    /**
-     * Sets items
-     *
-     * @param \Toppy\Sendcloud\Model\ReturnCreatedWebhookDataItemsInner[]|null $items List of items for this return
-     *
-     * @return self
-     */
-    public function setItems($items)
-    {
-        if (is_null($items)) {
-            throw new \InvalidArgumentException('non-nullable items cannot be null');
-        }
-
-        $this->container['items'] = $items;
+        $this->container['unit'] = $unit;
 
         return $this;
     }

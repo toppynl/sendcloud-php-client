@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class RequestedDataApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfGetRequestedData
      *
-     * Retrieve requested data..
+     * Retrieve requested data for open tickets.
      *
      */
     public function testScPublicV3DsfGetRequestedData()
@@ -87,7 +87,7 @@ class RequestedDataApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostRequestedData
      *
-     * Provide a requested data..
+     * Provide requested data.
      *
      */
     public function testScPublicV3DsfPostRequestedData()

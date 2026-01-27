@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -535,10 +535,6 @@ class Configuration
             [
                 "url" => "https://panel.sendcloud.sc/api/v3",
                 "description" => "Sendcloud Production",
-            ],
-            [
-                "url" => "https://www.shop_url.com/webhook",
-                "description" => "User API endpoint",
             ]
         ];
     }

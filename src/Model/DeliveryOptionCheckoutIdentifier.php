@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -36,7 +36,7 @@ use \Toppy\Sendcloud\ObjectSerializer;
  * DeliveryOptionCheckoutIdentifier Class Doc Comment
  *
  * @category Class
- * @description An object containing the type and value of the checkout identifier.  The type is determined by the &#x60;checkout_identifier_type&#x60; query parameter, and the value depends on the specified type. For example, if &#x60;shipping_option_code&#x60; is used, the value contains the shipping option code needed to &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/shipments/operations/create-a-shipment\&quot;&gt;create a shipment&lt;/a&gt;
+ * @description An object containing the type and value of the checkout identifier.  The type is determined by the &#x60;checkout_identifier_type&#x60; query parameter, and the value depends on the specified type. For example, if &#x60;shipping_option_code&#x60; is used, the value contains the shipping option code needed to [create a shipment](/api/v3/shipments/create-and-announce-a-shipment-asynchronously) with the Shipments API.
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

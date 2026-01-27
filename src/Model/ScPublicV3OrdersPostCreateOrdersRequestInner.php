@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -382,7 +382,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets id
      *
-     * @param string|null $id Sendcloud's internal ID for the order. - In **responses**: Returned as an integer (e.g., `669`) - In **requests**: Optional field for explicitly updating a specific order. Must be provided as a string (e.g., `\"669\"`) - If omitted in requests, the upsert logic uses the combination of `order_id` + `integration.id` to match existing orders
+     * @param string|null $id Sendcloud's internal ID for the order.  - In **responses**: Returned as an integer (e.g., `669`) - In **requests**: Optional field for explicitly updating a specific order. Must be provided as a string (e.g., `\"669\"`) - If omitted in requests, the upsert logic uses the combination of `order_id` + `integration.id` to match existing orders
      *
      * @return self
      */

@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -328,7 +328,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
     /**
      * Sets type
      *
-     * @param string|null $type The way the shipping method and carrier will be selected. The default is `shipping_product_code`,  but the `shipping_option_code` is a new and the preferred way.
+     * @param string|null $type The way the shipping method and carrier will be selected. The default is `shipping_product_code`,  but the `shipping_option_code` is the new and preferred way.
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
     /**
      * Sets shippingOptionCode
      *
-     * @param string|null $shippingOptionCode Shipping option code as provided by the [shipping options API](https://api.sendcloud.dev/docs/sendcloud-public-api/branches/v3/shipping-options/operations/create-a-fetch-shipping-option)  and the `code` property of the corresponding response. Required if `type` is `shipping_option_code`.
+     * @param string|null $shippingOptionCode Shipping option code as provided by the [Shipping options API](/api/v3/shipping-options)  and the `code` property of the corresponding response.  Required if `type` is `shipping_option_code`.
      *
      * @return self
      */
@@ -395,7 +395,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
     /**
      * Sets shippingProductCode
      *
-     * @param string|null $shippingProductCode Shipping product code as provided by the [shipping products API](https://api.sendcloud.dev/docs/sendcloud-public-api/shipping-products/operations/list-shipping-products) and the `code` property of the corresponding response. Required if `type` is `shipping_product_code`.
+     * @param string|null $shippingProductCode Shipping product code as provided by the [Shipping products API](/api/v2/shipping-products/retrieve-a-list-of-shipping-products) and the `code` property of the corresponding response.  Required if `type` is `shipping_product_code`.
      *
      * @return self
      */

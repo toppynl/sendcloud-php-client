@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -73,12 +73,12 @@ class OAuth2ApiTest extends TestCase
     }
 
     /**
-     * Test case for oauth2TokenExchange
+     * Test case for oAuth2TokenExchange
      *
-     * The OAuth 2.0 Token Endpoint.
+     * OAuth 2.0 token.
      *
      */
-    public function testOauth2TokenExchange()
+    public function testOAuth2TokenExchange()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

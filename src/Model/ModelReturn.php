@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -781,7 +781,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]|null $parcelItems List of items contained in this return. Required outside EU.
+     * @param \Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]|null $parcelItems List of items contained in this return. Required outside the EU.
      *
      * @return self
      */
@@ -809,7 +809,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets sendTrackingEmails
      *
-     * @param bool $sendTrackingEmails When true Sendcloud will send out the default track and trace emails
+     * @param bool $sendTrackingEmails When `true`, Sendcloud will send out the default track and trace emails
      *
      * @return self
      */
@@ -1039,7 +1039,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets isCancellable
      *
-     * @param bool $isCancellable the incoming parcel of this return can be cancelled
+     * @param bool $isCancellable Whether the incoming parcel of this return can be cancelled
      *
      * @return self
      */

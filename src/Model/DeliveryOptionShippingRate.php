@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -36,7 +36,7 @@ use \Toppy\Sendcloud\ObjectSerializer;
  * DeliveryOptionShippingRate Class Doc Comment
  *
  * @category Class
- * @description A price object containing the shipping rate shown to the customer at checkout. This rate is calculated based on the cart&#39;s weight, value, and the &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/4414673031700-How-to-add-Dynamic-Checkout-rates\&quot;&gt;configured shipping rates&lt;/a&gt; for the matched delivery method.
+ * @description A price object containing the shipping rate shown to the customer at checkout. This rate is calculated based on the cart&#39;s weight, value, and the [configured shipping rates](https://support.sendcloud.com/hc/en-us/articles/4414673031700-How-to-add-Dynamic-Checkout-rates) for the matched delivery method.
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -81,7 +81,7 @@ class DeliveryOptionShippingRate implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'value' => true,
+        'value' => false,
         'currency' => false
     ];
 
@@ -118,16 +118,6 @@ class DeliveryOptionShippingRate implements ModelInterface, ArrayAccess, \JsonSe
     protected static function openAPINullables(): array
     {
         return self::$openAPINullables;
-    }
-
-    /**
-     * Setter - Array of nullable field names deliberately set to null
-     *
-     * @param boolean[] $openAPINullablesSetToNull
-     */
-    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
-    {
-        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
     }
 
     /**
@@ -264,7 +254,7 @@ class DeliveryOptionShippingRate implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['value'] === null && !$this->isNullableSetToNull('value')) {
+        if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
 
@@ -294,7 +284,7 @@ class DeliveryOptionShippingRate implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets value
      *
-     * @return string|null
+     * @return string
      */
     public function getValue()
     {
@@ -304,24 +294,17 @@ class DeliveryOptionShippingRate implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets value
      *
-     * @param string|null $value The calculated shipping rate price displayed to the end customer, based on the cart or order details, such as weight and value, and the configured shipping rates for the delivery method. * A value greater than `0` indicates the shipping rate based on the configured weight classes and rates * A value of `0` means free shipping applies, either because the cart value exceeds the free shipping threshold or a zero rate is explicitly configured * A `null` value means shipping rates are not configured for this delivery method
+     * @param string $value The calculated shipping rate price displayed to the end customer, based on the cart or order details, such as weight and value, and the configured shipping rates for the delivery method. * A value greater than `0` indicates the shipping rate based on the configured weight classes and rates * A value of `0` means free shipping applies, either because the cart value exceeds the free shipping threshold or a zero rate is explicitly configured * A `null` value means shipping rates are not configured for this delivery method
      *
      * @return self
      */
     public function setValue($value)
     {
         if (is_null($value)) {
-            $this->openAPINullablesSetToNull[] = 'value';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('value', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
 
-        if (!is_null($value) && (mb_strlen($value) < 1)) {
+        if ((mb_strlen($value) < 1)) {
             throw new \InvalidArgumentException('invalid length for $value when calling DeliveryOptionShippingRate., must be bigger than or equal to 1.');
         }
 

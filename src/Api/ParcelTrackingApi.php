@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,7 +170,7 @@ class ParcelTrackingApi
     /**
      * Operation scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber
      *
-     * Retrieve tracking information of a parcel
+     * Retrieve tracking information for a parcel
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *
@@ -187,7 +187,7 @@ class ParcelTrackingApi
     /**
      * Operation scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberWithHttpInfo
      *
-     * Retrieve tracking information of a parcel
+     * Retrieve tracking information for a parcel
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *
@@ -302,7 +302,7 @@ class ParcelTrackingApi
     /**
      * Operation scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberAsync
      *
-     * Retrieve tracking information of a parcel
+     * Retrieve tracking information for a parcel
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *
@@ -322,7 +322,7 @@ class ParcelTrackingApi
     /**
      * Operation scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberAsyncWithHttpInfo
      *
-     * Retrieve tracking information of a parcel
+     * Retrieve tracking information for a parcel
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *

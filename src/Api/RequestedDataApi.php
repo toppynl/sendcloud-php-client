@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,7 +170,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfGetRequestedData
      *
-     * Retrieve requested data.
+     * Retrieve requested data for open tickets
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -186,7 +186,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfGetRequestedDataWithHttpInfo
      *
-     * Retrieve requested data.
+     * Retrieve requested data for open tickets
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -270,7 +270,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfGetRequestedDataAsync
      *
-     * Retrieve requested data.
+     * Retrieve requested data for open tickets
      *
      *
      * @throws \InvalidArgumentException
@@ -289,7 +289,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfGetRequestedDataAsyncWithHttpInfo
      *
-     * Retrieve requested data.
+     * Retrieve requested data for open tickets
      *
      *
      * @throws \InvalidArgumentException
@@ -411,7 +411,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfPostRequestedData
      *
-     * Provide a requested data.
+     * Provide requested data
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest scPublicV3DsfPostRequestedDataRequest (required)
      *
@@ -427,7 +427,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfPostRequestedDataWithHttpInfo
      *
-     * Provide a requested data.
+     * Provide requested data
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
@@ -495,7 +495,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfPostRequestedDataAsync
      *
-     * Provide a requested data.
+     * Provide requested data
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
@@ -515,7 +515,7 @@ class RequestedDataApi
     /**
      * Operation scPublicV3DsfPostRequestedDataAsyncWithHttpInfo
      *
-     * Provide a requested data.
+     * Provide requested data
      *
      * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *

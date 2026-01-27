@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -285,7 +285,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\LabelAsync[]|null $data Array of parcel IDs. When documents are generated, they will show up here.
+     * @param \Toppy\Sendcloud\Model\LabelAsync[]|null $data An array containing the created parcel IDs and other order information.
      *
      * @return self
      */

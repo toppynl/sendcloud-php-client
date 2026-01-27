@@ -1,6 +1,6 @@
 <?php
 /**
- * ParcelStatusChangedWebhookParcelLabelTest
+ * MeasurementPartialUpdateVolumeTest
  *
  * PHP version 8.1
  *
@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ParcelStatusChangedWebhookParcelLabelTest Class Doc Comment
+ * MeasurementPartialUpdateVolumeTest Class Doc Comment
  *
  * @category    Class
- * @description Labels array. More information in &lt;a     href&#x3D;\&quot;https://www.sendcloud.com/shipping-label/\&quot; target&#x3D;\&quot;_blank\&quot;&gt;Labels&lt;/a&gt;
+ * @description Volume in the specified unit
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ParcelStatusChangedWebhookParcelLabelTest extends TestCase
+class MeasurementPartialUpdateVolumeTest extends TestCase
 {
 
     /**
@@ -72,27 +72,27 @@ class ParcelStatusChangedWebhookParcelLabelTest extends TestCase
     }
 
     /**
-     * Test "ParcelStatusChangedWebhookParcelLabel"
+     * Test "MeasurementPartialUpdateVolume"
      */
-    public function testParcelStatusChangedWebhookParcelLabel()
+    public function testMeasurementPartialUpdateVolume()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "normalPrinter"
+     * Test attribute "value"
      */
-    public function testPropertyNormalPrinter()
+    public function testPropertyValue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "labelPrinter"
+     * Test attribute "unit"
      */
-    public function testPropertyLabelPrinter()
+    public function testPropertyUnit()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -4,8 +4,8 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3OrdersLabelsPostCreateLabelsAsync()**](ShipAnOrderApi.md#scPublicV3OrdersLabelsPostCreateLabelsAsync) | **POST** /orders/create-labels-async | Request a label for given orders asynchronously.
-[**scPublicV3OrdersLabelsPostCreateLabelsSync()**](ShipAnOrderApi.md#scPublicV3OrdersLabelsPostCreateLabelsSync) | **POST** /orders/create-label-sync | Request a label for given order synchronously.
+[**scPublicV3OrdersLabelsPostCreateLabelsAsync()**](ShipAnOrderApi.md#scPublicV3OrdersLabelsPostCreateLabelsAsync) | **POST** /orders/create-labels-async | Request a label for one or more orders asynchronously
+[**scPublicV3OrdersLabelsPostCreateLabelsSync()**](ShipAnOrderApi.md#scPublicV3OrdersLabelsPostCreateLabelsSync) | **POST** /orders/create-label-sync | Request a label for a single order synchronously
 
 
 ## `scPublicV3OrdersLabelsPostCreateLabelsAsync()`
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV3OrdersLabelsPostCreateLabelsAsync($sendcloudPartnerId, $createLabelsAsync): \Toppy\Sendcloud\Model\ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response
 ```
 
-Request a label for given orders asynchronously.
+Request a label for one or more orders asynchronously
 
-Request a label for a single or multiple orders. To retrieve your documents or view the announcement errors, call the `/shipments/{id}` endpoint to find out their location, for more detail visit <a href=\"https://api.sendcloud.dev/docs/sendcloud-public-api/branches/v3/shipments/operations/get-a-shipment\">**ShipmentAPI**</a>  To apply shipping rules on the provided orders a `apply_shipping_rules` needs to be set to true. Each label will be tried to be generated. If a request for a label runs into an error, other labels will still be attempted to be generated. Because of this, both generated labels and errors can be returned in a single request. Use the errors source -> pointer to see which labels encountered a problem.
+Request a label for a single or multiple orders. This endpoint will fail gracefully if some orders cannot be processed, returning any successfully created labels along with error details for the orders that failed.
 
 ### Example
 
@@ -37,7 +37,7 @@ $apiInstance = new Toppy\Sendcloud\Api\ShipAnOrderApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | Send an additional request header for the system to recognize you if you are an official <a href=\"https://www.sendcloud.com/ecosystem/\" target=\"_blank\">**Sendcloud Tech Partner**</a>. Sendcloud Partner UUID is provided to Sendcloud partners.
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $createLabelsAsync = {"integration_id":70,"orders":[{"order_number":"ORDER-25763","apply_shipping_rules":false}]}; // \Toppy\Sendcloud\Model\CreateLabelsAsync
 
 try {
@@ -52,7 +52,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendcloudPartnerId** | **string**| Send an additional request header for the system to recognize you if you are an official &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt;**Sendcloud Tech Partner**&lt;/a&gt;. Sendcloud Partner UUID is provided to Sendcloud partners. | [optional]
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **createLabelsAsync** | [**\Toppy\Sendcloud\Model\CreateLabelsAsync**](../Model/CreateLabelsAsync.md)|  | [optional]
 
 ### Return type
@@ -78,9 +78,9 @@ Name | Type | Description  | Notes
 scPublicV3OrdersLabelsPostCreateLabelsSync($sendcloudPartnerId, $createLabelsSync): \Toppy\Sendcloud\Model\ScPublicV3OrdersLabelsPostCreateLabelsSync201Response
 ```
 
-Request a label for given order synchronously.
+Request a label for a single order synchronously
 
-Request a label for an order, the documents will be provided in response to this request.
+Request a label for a single order and wait for the results. The label and any other documents will be provided in the response to this request.
 
 ### Example
 
@@ -101,7 +101,7 @@ $apiInstance = new Toppy\Sendcloud\Api\ShipAnOrderApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | Send an additional request header for the system to recognize you if you are an official <a href=\"https://www.sendcloud.com/ecosystem/\" target=\"_blank\">**Sendcloud Tech Partner**</a>. Sendcloud Partner UUID is provided to Sendcloud partners.
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $createLabelsSync = {"integration_id":70,"label_details":{"mime_type":"application/pdf","dpi":72},"order":{"order_number":"ORDER-25763","apply_shipping_rules":false}}; // \Toppy\Sendcloud\Model\CreateLabelsSync
 
 try {
@@ -116,7 +116,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendcloudPartnerId** | **string**| Send an additional request header for the system to recognize you if you are an official &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt;**Sendcloud Tech Partner**&lt;/a&gt;. Sendcloud Partner UUID is provided to Sendcloud partners. | [optional]
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **createLabelsSync** | [**\Toppy\Sendcloud\Model\CreateLabelsSync**](../Model/CreateLabelsSync.md)|  | [optional]
 
 ### Return type

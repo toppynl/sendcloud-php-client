@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,7 +170,7 @@ class UserApi
     /**
      * Operation scPublicV3ScpGetUserAuthMetadata
      *
-     * Retrieve information about the metadata associated with the authentication used in the request.
+     * Retrieve metadata associated with the authentication method
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -186,7 +186,7 @@ class UserApi
     /**
      * Operation scPublicV3ScpGetUserAuthMetadataWithHttpInfo
      *
-     * Retrieve information about the metadata associated with the authentication used in the request.
+     * Retrieve metadata associated with the authentication method
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -270,7 +270,7 @@ class UserApi
     /**
      * Operation scPublicV3ScpGetUserAuthMetadataAsync
      *
-     * Retrieve information about the metadata associated with the authentication used in the request.
+     * Retrieve metadata associated with the authentication method
      *
      *
      * @throws \InvalidArgumentException
@@ -289,7 +289,7 @@ class UserApi
     /**
      * Operation scPublicV3ScpGetUserAuthMetadataAsyncWithHttpInfo
      *
-     * Retrieve information about the metadata associated with the authentication used in the request.
+     * Retrieve metadata associated with the authentication method
      *
      *
      * @throws \InvalidArgumentException

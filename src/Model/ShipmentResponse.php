@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -72,7 +72,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]',
         'deliveryDates' => 'object',
-        'carrier' => \Toppy\Sendcloud\Model\BaseShipmentResponseAllOfCarrier::class,
         'parcels' => '\Toppy\Sendcloud\Model\ParcelsArrayResponse[]'
     ];
 
@@ -97,7 +96,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'errors' => null,
         'deliveryDates' => null,
-        'carrier' => null,
         'parcels' => null
     ];
 
@@ -120,7 +118,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
         'errors' => false,
         'deliveryDates' => false,
-        'carrier' => false,
         'parcels' => false
     ];
 
@@ -205,7 +202,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'errors' => 'errors',
         'deliveryDates' => 'delivery-dates',
-        'carrier' => 'carrier',
         'parcels' => 'parcels'
     ];
 
@@ -228,7 +224,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'errors' => 'setErrors',
         'deliveryDates' => 'setDeliveryDates',
-        'carrier' => 'setCarrier',
         'parcels' => 'setParcels'
     ];
 
@@ -251,7 +246,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'errors' => 'getErrors',
         'deliveryDates' => 'getDeliveryDates',
-        'carrier' => 'getCarrier',
         'parcels' => 'getParcels'
     ];
 
@@ -325,7 +319,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('errors', $data ?? [], null);
         $this->setIfExists('deliveryDates', $data ?? [], null);
-        $this->setIfExists('carrier', $data ?? [], null);
         $this->setIfExists('parcels', $data ?? [], null);
     }
 
@@ -395,7 +388,7 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets brandId
      *
-     * @param int|null $brandId `id` of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands)
+     * @param int|null $brandId The `id` of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) from the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint.
      *
      * @return self
      */
@@ -598,7 +591,7 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reference
      *
-     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to Carriers.
+     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to the carrier.
      *
      * @return self
      */
@@ -749,34 +742,6 @@ class ShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['deliveryDates'] = $deliveryDates;
-
-        return $this;
-    }
-
-    /**
-     * Gets carrier
-     *
-     * @return \Toppy\Sendcloud\Model\BaseShipmentResponseAllOfCarrier|null
-     */
-    public function getCarrier()
-    {
-        return $this->container['carrier'];
-    }
-
-    /**
-     * Sets carrier
-     *
-     * @param \Toppy\Sendcloud\Model\BaseShipmentResponseAllOfCarrier|null $carrier carrier
-     *
-     * @return self
-     */
-    public function setCarrier($carrier)
-    {
-        if (is_null($carrier)) {
-            throw new \InvalidArgumentException('non-nullable carrier cannot be null');
-        }
-
-        $this->container['carrier'] = $carrier;
 
         return $this;
     }

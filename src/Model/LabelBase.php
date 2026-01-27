@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -293,7 +293,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets shipmentId
      *
-     * @param string|null $shipmentId ID of the shipment that was created for the provided order.
+     * @param string|null $shipmentId The ID of the shipment that was created for the provided order.
      *
      * @return self
      */
@@ -321,7 +321,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets orderId
      *
-     * @param string|null $orderId ID of your order.
+     * @param string|null $orderId The ID of your order.
      *
      * @return self
      */
@@ -349,7 +349,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets orderNumber
      *
-     * @param string|null $orderNumber Human readable order number.
+     * @param string|null $orderNumber A human-readable order number.
      *
      * @return self
      */

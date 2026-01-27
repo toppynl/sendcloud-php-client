@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -70,7 +70,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
         'externalReferenceId' => 'string',
         'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformationWithOptionalFields::class,
         'labelDetails' => \Toppy\Sendcloud\Model\LabelDetails::class,
-        'deliveryDates' => 'object',
+        'deliveryDates' => \Toppy\Sendcloud\Model\DeliveryDates::class,
         'parcels' => '\Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]',
         'applyShippingDefaults' => 'bool',
         'applyShippingRules' => 'bool',
@@ -120,7 +120,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
         'externalReferenceId' => false,
         'customsInformation' => false,
         'labelDetails' => false,
-        'deliveryDates' => false,
+        'deliveryDates' => true,
         'parcels' => false,
         'applyShippingDefaults' => false,
         'applyShippingRules' => false,
@@ -402,7 +402,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets brandId
      *
-     * @param int|null $brandId `id` of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands)
+     * @param int|null $brandId The `id` of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) from the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint.
      *
      * @return self
      */
@@ -605,7 +605,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets reference
      *
-     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to Carriers.
+     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to the carrier.
      *
      * @return self
      */
@@ -707,7 +707,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets deliveryDates
      *
-     * @return object|null
+     * @return \Toppy\Sendcloud\Model\DeliveryDates|null
      */
     public function getDeliveryDates()
     {
@@ -717,14 +717,21 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets deliveryDates
      *
-     * @param object|null $deliveryDates deliveryDates
+     * @param \Toppy\Sendcloud\Model\DeliveryDates|null $deliveryDates deliveryDates
      *
      * @return self
      */
     public function setDeliveryDates($deliveryDates)
     {
         if (is_null($deliveryDates)) {
-            throw new \InvalidArgumentException('non-nullable deliveryDates cannot be null');
+            $this->openAPINullablesSetToNull[] = 'deliveryDates';
+        } else {
+            $nullablesSetToNull = $this->openAPINullablesSetToNull;
+            $index = array_search('deliveryDates', $nullablesSetToNull, true);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
 
         $this->container['deliveryDates'] = $deliveryDates;
@@ -745,7 +752,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represent each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
+     * @param \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represents each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
      *
      * @return self
      */
@@ -781,7 +788,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets applyShippingDefaults
      *
-     * @param bool|null $applyShippingDefaults When set to true, \"Default weight\", \"Preferred shipping method\" and \"Default export reason\" [shipping defaults](https://app.sendcloud.com/v2/shipping/shipping-defaults) will be applied, whenever they were not provided by the request payload.  **Note that the request payload values and shipping rules take precedence over these defaults.**
+     * @param bool|null $applyShippingDefaults When set to `true`, the \"Default weight\", \"Preferred shipping method\" and \"Default export reason\" [shipping defaults](https://app.sendcloud.com/v2/shipping/shipping-defaults) will be applied, if they were not provided by the request payload.  **Note that the request payload values and shipping rules take precedence over these defaults.**
      *
      * @return self
      */
@@ -809,7 +816,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets applyShippingRules
      *
-     * @param bool|null $applyShippingRules When set to true, [shipping rules](https://app.sendcloud.com/v2/shipping/rules) will be applied.  **Note that rules take precedence over the values provided in the request payload and over the [shipping defaults](https://app.sendcloud.com/v2/shipping/shipping-defaults). For instance, if a contract is specified in one of the applicable rules for the shipment that is being requested, the contract value provided in the request payload will be ignored. Also keep in mind that since orders are not created in IOV by this API, not all shipping rules can be applied.**
+     * @param bool|null $applyShippingRules When set to `true`, [shipping rules](https://app.sendcloud.com/v2/shipping/rules) will be applied.  <Info>   **Note that rules take precedence over the values provided in the request payload and over the [shipping defaults](https://app.sendcloud.com/v2/shipping/shipping-defaults).**      For instance, if a contract is specified in one of the applicable rules for the shipment that is being requested, the contract value provided in the request payload will be ignored.      Also keep in mind that since orders created by the API do not appear in the Sendcloud platform's Incoming Orders overview, not all shipping rules can be applied. </Info>
      *
      * @return self
      */
@@ -837,7 +844,7 @@ class ShipmentRequestWithRules implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets deliveryIndicator
      *
-     * @param string|null $deliveryIndicator A free text that is intended for applying the **Checkout Delivery Method** condition in shipping rules. - Learn more about the [Shipping rules](https://sendcloud.dev/docs/shipping/shipping-rules/).
+     * @param string|null $deliveryIndicator Free text that is intended for applying the **Checkout Delivery Method** condition in shipping rules.  Learn more about [Shipping rules](/docs/shipping/shipping-rules/).
      *
      * @return self
      */

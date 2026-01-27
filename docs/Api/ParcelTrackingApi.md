@@ -4,7 +4,7 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber()**](ParcelTrackingApi.md#scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber) | **GET** /parcels/tracking/{tracking_number} | Retrieve tracking information of a parcel
+[**scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber()**](ParcelTrackingApi.md#scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber) | **GET** /parcels/tracking/{tracking_number} | Retrieve tracking information for a parcel
 [**scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking()**](ParcelTrackingApi.md#scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking) | **POST** /parcels/tracking | Create a tracking-only parcel
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber): \Toppy\Sendcloud\Model\ParcelTrackingResponse
 ```
 
-Retrieve tracking information of a parcel
+Retrieve tracking information for a parcel
 
-This endpoint will retrieve information of a Parcel based on its Tracking Number
+Get information about a parcel, including its current status and recent tracking events, using its tracking number
 
 ### Example
 
@@ -78,7 +78,7 @@ scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackin
 
 Create a tracking-only parcel
 
-This endpoint will register a Parcel for Tracking-Only based on the provided details. It requires a valid tracking number and associated parcel information
+Register a parcel in the Sendcloud system for Tracking-Only, based on the provided details. It requires a valid tracking number and parcel information.
 
 ### Example
 

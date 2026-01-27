@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -111,7 +111,7 @@ class ShipmentsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpPostAnnounceShipmentWithRules
      *
-     * Create a shipment with rules and / or defaults and announce it synchronously.
+     * Create a shipment with rules and/or defaults and announce it synchronously.
      *
      */
     public function testScPublicV3ScpPostAnnounceShipmentWithRules()
@@ -147,7 +147,7 @@ class ShipmentsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpPostCreateShipmentWithRules
      *
-     * Create a shipment with rules and / or defaults and announce it asynchronously.
+     * Create a shipment with rules and/or defaults and announce it asynchronously.
      *
      */
     public function testScPublicV3ScpPostCreateShipmentWithRules()

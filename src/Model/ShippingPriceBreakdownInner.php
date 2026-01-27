@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -370,7 +370,7 @@ class ShippingPriceBreakdownInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets type
      *
-     * @param string|null $type Type of the price. It is an identifier of category of the price.
+     * @param string|null $type Type of price. It is an identifier for the category of the price.
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class ShippingPriceBreakdownInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets label
      *
-     * @param string|null $label This label is a friendly name for type of the price type and can be used to represent it.
+     * @param string|null $label Friendly name for the price type.
      *
      * @return self
      */

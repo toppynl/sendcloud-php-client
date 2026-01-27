@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -286,7 +286,7 @@ class ScPublicV3ScpGetReturnsGetReturns200Response implements ModelInterface, Ar
     /**
      * Sets next
      *
-     * @param string|null $next cursor based pagination url to go forward
+     * @param string|null $next A cursor-based pagination url to go forward
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class ScPublicV3ScpGetReturnsGetReturns200Response implements ModelInterface, Ar
     /**
      * Sets previous
      *
-     * @param string|null $previous A cursor based pagination url to go backwards
+     * @param string|null $previous A cursor-based pagination url to go backwards
      *
      * @return self
      */

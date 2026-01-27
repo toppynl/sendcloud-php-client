@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -34,7 +34,7 @@ use \Toppy\Sendcloud\ObjectSerializer;
  * DeliveryOption Class Doc Comment
  *
  * @category Class
- * @description The options the customer has for returning this parcel: * drop\\_off\\_point: At a drop-off point - Print at home * drop\\_off\\_labelless: At a drop-off point - No printer needed * in\\_store: Return in store * pickup: Arrange a pick-up
+ * @description The options the customer has for returning this parcel:  - &#x60;drop_off_point&#x60;: At a drop-off point - Print at home - &#x60;drop_off_labelless&#x60;: At a drop-off point - No printer needed - &#x60;in_store&#x60;: Return in store - &#x60;pickup&#x60;: Arrange a pick-up
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

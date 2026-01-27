@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -94,8 +94,8 @@ class ScPublicV3DsfGetRequestedData200ResponseDataInner implements ModelInterfac
         'requestId' => false,
         'title' => false,
         'description' => false,
-        'trackingNumber' => true,
-        'orderNumber' => true,
+        'trackingNumber' => false,
+        'orderNumber' => false,
         'dataType' => false
     ];
 
@@ -132,16 +132,6 @@ class ScPublicV3DsfGetRequestedData200ResponseDataInner implements ModelInterfac
     protected static function openAPINullables(): array
     {
         return self::$openAPINullables;
-    }
-
-    /**
-     * Setter - Array of nullable field names deliberately set to null
-     *
-     * @param boolean[] $openAPINullablesSetToNull
-     */
-    private function setOpenAPINullablesSetToNull(array $openAPINullablesSetToNull): void
-    {
-        $this->openAPINullablesSetToNull = $openAPINullablesSetToNull;
     }
 
     /**
@@ -573,14 +563,7 @@ class ScPublicV3DsfGetRequestedData200ResponseDataInner implements ModelInterfac
     public function setTrackingNumber($trackingNumber)
     {
         if (is_null($trackingNumber)) {
-            $this->openAPINullablesSetToNull[] = 'trackingNumber';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('trackingNumber', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable trackingNumber cannot be null');
         }
 
         $this->container['trackingNumber'] = $trackingNumber;
@@ -608,14 +591,7 @@ class ScPublicV3DsfGetRequestedData200ResponseDataInner implements ModelInterfac
     public function setOrderNumber($orderNumber)
     {
         if (is_null($orderNumber)) {
-            $this->openAPINullablesSetToNull[] = 'orderNumber';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('orderNumber', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable orderNumber cannot be null');
         }
 
         $this->container['orderNumber'] = $orderNumber;

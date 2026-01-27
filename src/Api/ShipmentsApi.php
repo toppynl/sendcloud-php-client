@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -172,17 +172,17 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Parcel statuses](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-statuses/operations/list-parcel-statuses) endpoint (optional)
+     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
      * @param  string $integrationId Returns all shipments that matches a specific &#x60;integration_id&#x60; property from your shipments (optional)
-     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $ids Filter results using a list of shipments IDs. This is a comma separated list of IDs, it may not contain more then 100 IDs. (optional)
-     * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:    - o: Offset    - r: Reverse    - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
+     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -200,17 +200,17 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Parcel statuses](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-statuses/operations/list-parcel-statuses) endpoint (optional)
+     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
      * @param  string $integrationId Returns all shipments that matches a specific &#x60;integration_id&#x60; property from your shipments (optional)
-     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $ids Filter results using a list of shipments IDs. This is a comma separated list of IDs, it may not contain more then 100 IDs. (optional)
-     * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:    - o: Offset    - r: Reverse    - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
+     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -321,17 +321,17 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Parcel statuses](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-statuses/operations/list-parcel-statuses) endpoint (optional)
+     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
      * @param  string $integrationId Returns all shipments that matches a specific &#x60;integration_id&#x60; property from your shipments (optional)
-     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $ids Filter results using a list of shipments IDs. This is a comma separated list of IDs, it may not contain more then 100 IDs. (optional)
-     * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:    - o: Offset    - r: Reverse    - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
+     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
@@ -352,17 +352,17 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Parcel statuses](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-statuses/operations/list-parcel-statuses) endpoint (optional)
+     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
      * @param  string $integrationId Returns all shipments that matches a specific &#x60;integration_id&#x60; property from your shipments (optional)
-     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $ids Filter results using a list of shipments IDs. This is a comma separated list of IDs, it may not contain more then 100 IDs. (optional)
-     * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:    - o: Offset    - r: Reverse    - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
+     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
@@ -408,17 +408,17 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpGetAllShipments'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Parcel statuses](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-statuses/operations/list-parcel-statuses) endpoint (optional)
+     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
      * @param  string $integrationId Returns all shipments that matches a specific &#x60;integration_id&#x60; property from your shipments (optional)
-     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. You can use the value of ISO 8601 DateTime string like this (optional)
-     * @param  string $ids Filter results using a list of shipments IDs. This is a comma separated list of IDs, it may not contain more then 100 IDs. (optional)
-     * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:    - o: Offset    - r: Reverse    - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
+     * @param  string $updatedBefore Returns all shipments which have been updated in our system before a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $updatedAfter Returns all shipments which have been updated in our system after a given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
+     * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
@@ -907,7 +907,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -925,7 +925,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1036,7 +1036,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1057,7 +1057,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1103,7 +1103,7 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostAnnounceShipment'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1191,9 +1191,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostAnnounceShipmentWithRules
      *
-     * Create a shipment with rules and / or defaults and announce it synchronously
+     * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1209,9 +1209,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo
      *
-     * Create a shipment with rules and / or defaults and announce it synchronously
+     * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1320,9 +1320,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostAnnounceShipmentWithRulesAsync
      *
-     * Create a shipment with rules and / or defaults and announce it synchronously
+     * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1341,9 +1341,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo
      *
-     * Create a shipment with rules and / or defaults and announce it synchronously
+     * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1389,7 +1389,7 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostAnnounceShipmentWithRules'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1771,7 +1771,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1789,7 +1789,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1900,7 +1900,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1921,7 +1921,7 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
@@ -1967,7 +1967,7 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCreateShipment'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
@@ -2055,9 +2055,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostCreateShipmentWithRules
      *
-     * Create a shipment with rules and / or defaults and announce it asynchronously
+     * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -2073,9 +2073,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo
      *
-     * Create a shipment with rules and / or defaults and announce it asynchronously
+     * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -2184,9 +2184,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostCreateShipmentWithRulesAsync
      *
-     * Create a shipment with rules and / or defaults and announce it asynchronously
+     * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
@@ -2205,9 +2205,9 @@ class ShipmentsApi
     /**
      * Operation scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo
      *
-     * Create a shipment with rules and / or defaults and announce it asynchronously
+     * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
@@ -2253,7 +2253,7 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCreateShipmentWithRules'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;, you can provide this additional request header for the system to recognize you. Sendcloud Partner UUID is provided to Sendcloud partners. The token is not required but if the header is set, the system will try to validate it. An unknown UUID will cause the 404 return, whilst an invalid one will return 400. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException

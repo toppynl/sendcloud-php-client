@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -322,7 +322,7 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets deliveryIndicator
      *
-     * @param string|null $deliveryIndicator A free text field to indicate how a specific order should be shipped. - The field is intended for applying the Checkout Delivery Method condition in shipping rules. - Learn more about the [Shipping rules](https://sendcloud.dev/docs/shipping/shipping-rules/).
+     * @param string|null $deliveryIndicator A free text field to indicate how a specific order should be shipped.  - The field is intended for applying the Checkout Delivery Method condition in shipping rules. - Learn more about [shipping rules](/docs/shipping/shipping-rules/).
      *
      * @return self
      */

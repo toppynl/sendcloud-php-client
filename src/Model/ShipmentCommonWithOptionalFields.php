@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -345,7 +345,7 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
     /**
      * Sets brandId
      *
-     * @param int|null $brandId `id` of the brand. Brands can be added through the [Sendcloud Panel](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) through the [Brands API](https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands)
+     * @param int|null $brandId The `id` of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their `id`) from the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint.
      *
      * @return self
      */
@@ -548,7 +548,7 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
     /**
      * Sets reference
      *
-     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to Carriers.
+     * @param string|null $reference A reference that will be stored on the Shipment and returned in your responses. This is not sent to the carrier.
      *
      * @return self
      */

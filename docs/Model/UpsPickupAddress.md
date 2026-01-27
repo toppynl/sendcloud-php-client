@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **phoneNumber** | **string** | Phone number of the contact person in the E.164 format. | [optional]
 **floor** | **string** | Floor of the pickup place. | [optional]
 **room** | **string** | Room of the pickup place. | [optional]
-**isAlternateAddress** | **bool** | Indicates if pickup address is a different address than that specified in a customer&#39;s profile. | [optional] [default to false]
+**isAlternateAddress** | **bool** | Indicates if the pickup address is a different address than that specified in a customer&#39;s profile. | [optional] [default to false]
 **isResidential** | **bool** | Indicates if the pickup address is commercial or residential. | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,8 +1,8 @@
 # toppy/sendcloud-client
 
-Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
 
-For more information, please visit [https://www.sendcloud.dev](https://www.sendcloud.dev).
+For more information, please visit [https://sendcloud.dev](https://sendcloud.dev).
 
 ## Installation & Usage
 
@@ -89,69 +89,69 @@ All URIs are relative to *https://account.sendcloud.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CarrierSupportContactsApi* | [**scPublicV3DsfDeleteCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfdeletecarriersupportcontacts) | **DELETE** /dsf/carrier-support-contacts/{id} | Delete carrier support contact
-*CarrierSupportContactsApi* | [**scPublicV3DsfGetCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfgetcarriersupportcontacts) | **GET** /dsf/carrier-support-contacts | Get carrier support contacts
-*CarrierSupportContactsApi* | [**scPublicV3DsfPatchCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfpatchcarriersupportcontacts) | **PATCH** /dsf/carrier-support-contacts/{id} | Update carrier support contact
+*CarrierSupportContactsApi* | [**scPublicV3DsfDeleteCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfdeletecarriersupportcontacts) | **DELETE** /dsf/carrier-support-contacts/{id} | Delete a carrier support contact
+*CarrierSupportContactsApi* | [**scPublicV3DsfGetCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfgetcarriersupportcontacts) | **GET** /dsf/carrier-support-contacts | Retrieve carrier support contacts
+*CarrierSupportContactsApi* | [**scPublicV3DsfPatchCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfpatchcarriersupportcontacts) | **PATCH** /dsf/carrier-support-contacts/{id} | Update a carrier support contact
 *CarrierSupportContactsApi* | [**scPublicV3DsfPostCarrierSupportContacts**](docs/Api/CarrierSupportContactsApi.md#scpublicv3dsfpostcarriersupportcontacts) | **POST** /dsf/carrier-support-contacts | Create carrier support contact
 *CompatShippingOptionsApi* | [**scPublicV3ScpPostCompatShippingOptions**](docs/Api/CompatShippingOptionsApi.md#scpublicv3scppostcompatshippingoptions) | **POST** /compat/shipping-options | Retrieve a list of shipping options
 *ContractsApi* | [**scPublicV3ScpDeleteContract**](docs/Api/ContractsApi.md#scpublicv3scpdeletecontract) | **DELETE** /contracts/{id} | Delete a contract
 *ContractsApi* | [**scPublicV3ScpGetAllContracts**](docs/Api/ContractsApi.md#scpublicv3scpgetallcontracts) | **GET** /contracts | Retrieve a list of contracts
-*ContractsApi* | [**scPublicV3ScpGetAllContractsSchemas**](docs/Api/ContractsApi.md#scpublicv3scpgetallcontractsschemas) | **GET** /contracts/schemas | Retrieve a list of contracts schemas
+*ContractsApi* | [**scPublicV3ScpGetAllContractsSchemas**](docs/Api/ContractsApi.md#scpublicv3scpgetallcontractsschemas) | **GET** /contracts/schemas | Retrieve a list of contract schemas
 *ContractsApi* | [**scPublicV3ScpGetSpecificContract**](docs/Api/ContractsApi.md#scpublicv3scpgetspecificcontract) | **GET** /contracts/{id} | Retrieve a contract
 *ContractsApi* | [**scPublicV3ScpPatchContract**](docs/Api/ContractsApi.md#scpublicv3scppatchcontract) | **PATCH** /contracts/{id} | Update a contract
-*ContractsApi* | [**scPublicV3ScpPostCreateContract**](docs/Api/ContractsApi.md#scpublicv3scppostcreatecontract) | **POST** /contracts | Create a contract for carrier
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsAddressChange**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsaddresschange) | **POST** /dsf/tickets/address-change | Create ticket for an address change
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsDamage**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdamage) | **POST** /dsf/tickets/damage | Create ticket for a damaged parcel
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsDelay**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdelay) | **POST** /dsf/tickets/delay | Create ticket for a delayed parcel
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsDeliveredButNotReceived**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdeliveredbutnotreceived) | **POST** /dsf/tickets/delivered-but-not-received | Create ticket for a delivered but not received parcel
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsLost**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketslost) | **POST** /dsf/tickets/lost | Create ticket for a lost parcel
-*CreateTicketApi* | [**scPublicV3DsfPostTicketsUnjustReturn**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsunjustreturn) | **POST** /dsf/tickets/unjust-return | Create ticket for an unjustly returned parcel
+*ContractsApi* | [**scPublicV3ScpPostCreateContract**](docs/Api/ContractsApi.md#scpublicv3scppostcreatecontract) | **POST** /contracts | Create a contract for a carrier
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsAddressChange**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsaddresschange) | **POST** /dsf/tickets/address-change | Create a ticket for an address change
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsDamage**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdamage) | **POST** /dsf/tickets/damage | Create a ticket for a damaged parcel
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsDelay**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdelay) | **POST** /dsf/tickets/delay | Create a ticket for a delayed parcel
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsDeliveredButNotReceived**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsdeliveredbutnotreceived) | **POST** /dsf/tickets/delivered-but-not-received | Create a ticket for a delivered but not received parcel
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsLost**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketslost) | **POST** /dsf/tickets/lost | Create a ticket for a lost parcel
+*CreateTicketApi* | [**scPublicV3DsfPostTicketsUnjustReturn**](docs/Api/CreateTicketApi.md#scpublicv3dsfpostticketsunjustreturn) | **POST** /dsf/tickets/unjust-return | Create a ticket for an unjustly returned parcel
 *DeliveryOptionsApi* | [**scPublicV3CheckoutApiGetDeliveryOptions**](docs/Api/DeliveryOptionsApi.md#scpublicv3checkoutapigetdeliveryoptions) | **GET** /checkout/configurations/{configuration_id}/delivery-options | Retrieve a list of delivery options
-*FileUploadApi* | [**scPublicV3DsfPostFiles**](docs/Api/FileUploadApi.md#scpublicv3dsfpostfiles) | **POST** /dsf/files | Upload File
+*FileUploadApi* | [**scPublicV3DsfPostFiles**](docs/Api/FileUploadApi.md#scpublicv3dsfpostfiles) | **POST** /dsf/files | Upload a file
 *IntegrationsApi* | [**scPublicV3IntegrationsDeleteDeleteIntegration**](docs/Api/IntegrationsApi.md#scpublicv3integrationsdeletedeleteintegration) | **DELETE** /integrations/{id} | Delete an integration
-*IntegrationsApi* | [**scPublicV3IntegrationsGetListIntegrations**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetlistintegrations) | **GET** /integrations | List all integrations
+*IntegrationsApi* | [**scPublicV3IntegrationsGetListIntegrations**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetlistintegrations) | **GET** /integrations | Retrieve a list of integrations
 *IntegrationsApi* | [**scPublicV3IntegrationsGetRetrieveIntegration**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetretrieveintegration) | **GET** /integrations/{id} | Retrieve an integration
-*IntegrationsApi* | [**scPublicV3IntegrationsGetShopOrderStatuses**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetshoporderstatuses) | **GET** /shop-order-statuses | Retrieve available shop order statuses for a given integration.
-*IntegrationsApi* | [**scPublicV3IntegrationsGetShopOrderStatusesMapping**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetshoporderstatusesmapping) | **GET** /shop-order-statuses/mapping/ | Retrieve custom status mapping for an integration
+*IntegrationsApi* | [**scPublicV3IntegrationsGetShopOrderStatuses**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetshoporderstatuses) | **GET** /shop-order-statuses | Retrieve shop order statuses for an integration
+*IntegrationsApi* | [**scPublicV3IntegrationsGetShopOrderStatusesMapping**](docs/Api/IntegrationsApi.md#scpublicv3integrationsgetshoporderstatusesmapping) | **GET** /shop-order-statuses/mapping | Retrieve custom status mapping for an integration
 *IntegrationsApi* | [**scPublicV3IntegrationsPatchUpdateIntegration**](docs/Api/IntegrationsApi.md#scpublicv3integrationspatchupdateintegration) | **PATCH** /integrations/{id} | Update certain parts of an integration
-*IntegrationsApi* | [**scPublicV3IntegrationsPostShopOrderStatuses**](docs/Api/IntegrationsApi.md#scpublicv3integrationspostshoporderstatuses) | **POST** /shop-order-statuses | Create or overwrite the whole list of available shop order statuses.
-*IntegrationsApi* | [**scPublicV3IntegrationsPostShopOrderStatusesMapping**](docs/Api/IntegrationsApi.md#scpublicv3integrationspostshoporderstatusesmapping) | **POST** /shop-order-statuses/mapping/ | Create or update custom status mapping for an integration
-*OAuth2Api* | [**oauth2TokenExchange**](docs/Api/OAuth2Api.md#oauth2tokenexchange) | **POST** /oauth2/token | The OAuth 2.0 Token Endpoint
+*IntegrationsApi* | [**scPublicV3IntegrationsPostShopOrderStatuses**](docs/Api/IntegrationsApi.md#scpublicv3integrationspostshoporderstatuses) | **POST** /shop-order-statuses | Create or overwrite shop order statuses
+*IntegrationsApi* | [**scPublicV3IntegrationsPostShopOrderStatusesMapping**](docs/Api/IntegrationsApi.md#scpublicv3integrationspostshoporderstatusesmapping) | **POST** /shop-order-statuses/mapping | Create or update custom status mapping for an integration
+*OAuth2Api* | [**oAuth2TokenExchange**](docs/Api/OAuth2Api.md#oauth2tokenexchange) | **POST** /oauth2/token | OAuth 2.0 token
 *OrdersApi* | [**scPublicV3OrdersDeleteDeleteOrder**](docs/Api/OrdersApi.md#scpublicv3ordersdeletedeleteorder) | **DELETE** /orders/{id} | Delete an order
-*OrdersApi* | [**scPublicV3OrdersGetListOrders**](docs/Api/OrdersApi.md#scpublicv3ordersgetlistorders) | **GET** /orders | Retrieve orders from integrations
-*OrdersApi* | [**scPublicV3OrdersGetRetrieveOrder**](docs/Api/OrdersApi.md#scpublicv3ordersgetretrieveorder) | **GET** /orders/{id} | Retrieving a specific order
+*OrdersApi* | [**scPublicV3OrdersGetListOrders**](docs/Api/OrdersApi.md#scpublicv3ordersgetlistorders) | **GET** /orders | Retrieve a list of orders
+*OrdersApi* | [**scPublicV3OrdersGetRetrieveOrder**](docs/Api/OrdersApi.md#scpublicv3ordersgetretrieveorder) | **GET** /orders/{id} | Retrieve an order
 *OrdersApi* | [**scPublicV3OrdersPatchPartialUpdateOrder**](docs/Api/OrdersApi.md#scpublicv3orderspatchpartialupdateorder) | **PATCH** /orders/{id} | Update an order
 *OrdersApi* | [**scPublicV3OrdersPostCreateOrders**](docs/Api/OrdersApi.md#scpublicv3orderspostcreateorders) | **POST** /orders | Create/Update orders in batch
 *ParcelDocumentsApi* | [**scPublicV3ScpGetRetrieveParcelDocuments**](docs/Api/ParcelDocumentsApi.md#scpublicv3scpgetretrieveparceldocuments) | **GET** /parcels/{id}/documents/{type} | Retrieve a parcel document
 *ParcelDocumentsApi* | [**scPublicV3ScpGetRetrieveParcelDocumentsBulk**](docs/Api/ParcelDocumentsApi.md#scpublicv3scpgetretrieveparceldocumentsbulk) | **GET** /parcel-documents/{type} | Retrieve multiple parcel documents
-*ParcelStatusesApi* | [**scPublicV3ScpGetAllParcelStatuses**](docs/Api/ParcelStatusesApi.md#scpublicv3scpgetallparcelstatuses) | **GET** /parcels/statuses | Retrieve a list of all possible parcel statuses
-*ParcelTrackingApi* | [**scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber**](docs/Api/ParcelTrackingApi.md#scpublicv3shippingintelligenceenginegetgetparcelbytrackingnumber) | **GET** /parcels/tracking/{tracking_number} | Retrieve tracking information of a parcel
+*ParcelStatusesApi* | [**scPublicV3ScpGetAllParcelStatuses**](docs/Api/ParcelStatusesApi.md#scpublicv3scpgetallparcelstatuses) | **GET** /parcels/statuses | Retrieve a list of parcel statuses
+*ParcelTrackingApi* | [**scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber**](docs/Api/ParcelTrackingApi.md#scpublicv3shippingintelligenceenginegetgetparcelbytrackingnumber) | **GET** /parcels/tracking/{tracking_number} | Retrieve tracking information for a parcel
 *ParcelTrackingApi* | [**scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking**](docs/Api/ParcelTrackingApi.md#scpublicv3shippingintelligenceenginepostregisterparcelfortracking) | **POST** /parcels/tracking | Create a tracking-only parcel
 *PickupsApi* | [**scPublicV3ScpGetAllPickups**](docs/Api/PickupsApi.md#scpublicv3scpgetallpickups) | **GET** /pickups | Retrieve a list of pickups
 *PickupsApi* | [**scPublicV3ScpGetPickup**](docs/Api/PickupsApi.md#scpublicv3scpgetpickup) | **GET** /pickups/{id} | Retrieve a pickup
 *PickupsApi* | [**scPublicV3ScpPostPickup**](docs/Api/PickupsApi.md#scpublicv3scppostpickup) | **POST** /pickups | Create a pickup
-*RequestedDataApi* | [**scPublicV3DsfGetRequestedData**](docs/Api/RequestedDataApi.md#scpublicv3dsfgetrequesteddata) | **GET** /support/dsf/tickets/requested-data | Retrieve requested data.
-*RequestedDataApi* | [**scPublicV3DsfPostRequestedData**](docs/Api/RequestedDataApi.md#scpublicv3dsfpostrequesteddata) | **POST** /support/dsf/tickets/requested-data | Provide a requested data.
-*ReturnsApi* | [**scPublicV3ScpGetReturnsGetDetails**](docs/Api/ReturnsApi.md#scpublicv3scpgetreturnsgetdetails) | **GET** /returns/{id} | Retrieve a Return
-*ReturnsApi* | [**scPublicV3ScpGetReturnsGetReturns**](docs/Api/ReturnsApi.md#scpublicv3scpgetreturnsgetreturns) | **GET** /returns | Retrieve a list of Returns
-*ReturnsApi* | [**scPublicV3ScpPatchReturnsCancel**](docs/Api/ReturnsApi.md#scpublicv3scppatchreturnscancel) | **PATCH** /returns/{id}/cancel | Request cancellation of a specific Return
+*RequestedDataApi* | [**scPublicV3DsfGetRequestedData**](docs/Api/RequestedDataApi.md#scpublicv3dsfgetrequesteddata) | **GET** /support/dsf/tickets/requested-data | Retrieve requested data for open tickets
+*RequestedDataApi* | [**scPublicV3DsfPostRequestedData**](docs/Api/RequestedDataApi.md#scpublicv3dsfpostrequesteddata) | **POST** /support/dsf/tickets/requested-data | Provide requested data
+*ReturnsApi* | [**scPublicV3ScpGetReturnsGetDetails**](docs/Api/ReturnsApi.md#scpublicv3scpgetreturnsgetdetails) | **GET** /returns/{id} | Retrieve a return
+*ReturnsApi* | [**scPublicV3ScpGetReturnsGetReturns**](docs/Api/ReturnsApi.md#scpublicv3scpgetreturnsgetreturns) | **GET** /returns | Retrieve a list of returns
+*ReturnsApi* | [**scPublicV3ScpPatchReturnsCancel**](docs/Api/ReturnsApi.md#scpublicv3scppatchreturnscancel) | **PATCH** /returns/{id}/cancel | Request cancellation of a return
 *ReturnsApi* | [**scPublicV3ScpPostReturnsCreateNewReturn**](docs/Api/ReturnsApi.md#scpublicv3scppostreturnscreatenewreturn) | **POST** /returns | Create a return
 *ReturnsApi* | [**scPublicV3ScpPostReturnsCreateNewReturnSynchronously**](docs/Api/ReturnsApi.md#scpublicv3scppostreturnscreatenewreturnsynchronously) | **POST** /returns/announce-synchronously | Create a return synchronously
 *ReturnsApi* | [**scPublicV3ScpPostReturnsValidate**](docs/Api/ReturnsApi.md#scpublicv3scppostreturnsvalidate) | **POST** /returns/validate | Validate a return
 *SenderAddressApi* | [**scPublicV3AddressesGetAllSenderAddresses**](docs/Api/SenderAddressApi.md#scpublicv3addressesgetallsenderaddresses) | **GET** /addresses/sender-addresses | Retrieve a list of sender addresses
 *SenderAddressApi* | [**scPublicV3AddressesGetSenderAddressById**](docs/Api/SenderAddressApi.md#scpublicv3addressesgetsenderaddressbyid) | **GET** /addresses/sender-addresses/{id} | Retrieve a sender address
-*ShipAnOrderApi* | [**scPublicV3OrdersLabelsPostCreateLabelsAsync**](docs/Api/ShipAnOrderApi.md#scpublicv3orderslabelspostcreatelabelsasync) | **POST** /orders/create-labels-async | Request a label for given orders asynchronously.
-*ShipAnOrderApi* | [**scPublicV3OrdersLabelsPostCreateLabelsSync**](docs/Api/ShipAnOrderApi.md#scpublicv3orderslabelspostcreatelabelssync) | **POST** /orders/create-label-sync | Request a label for given order synchronously.
+*ShipAnOrderApi* | [**scPublicV3OrdersLabelsPostCreateLabelsAsync**](docs/Api/ShipAnOrderApi.md#scpublicv3orderslabelspostcreatelabelsasync) | **POST** /orders/create-labels-async | Request a label for one or more orders asynchronously
+*ShipAnOrderApi* | [**scPublicV3OrdersLabelsPostCreateLabelsSync**](docs/Api/ShipAnOrderApi.md#scpublicv3orderslabelspostcreatelabelssync) | **POST** /orders/create-label-sync | Request a label for a single order synchronously
 *ShipmentsApi* | [**scPublicV3ScpGetAllShipments**](docs/Api/ShipmentsApi.md#scpublicv3scpgetallshipments) | **GET** /shipments | Retrieve shipments
 *ShipmentsApi* | [**scPublicV3ScpGetShipmentById**](docs/Api/ShipmentsApi.md#scpublicv3scpgetshipmentbyid) | **GET** /shipments/{id} | Retrieve a shipment
 *ShipmentsApi* | [**scPublicV3ScpPostAnnounceShipment**](docs/Api/ShipmentsApi.md#scpublicv3scppostannounceshipment) | **POST** /shipments/announce | Create and announce a shipment synchronously
-*ShipmentsApi* | [**scPublicV3ScpPostAnnounceShipmentWithRules**](docs/Api/ShipmentsApi.md#scpublicv3scppostannounceshipmentwithrules) | **POST** /shipments/announce-with-shipping-rules | Create a shipment with rules and / or defaults and announce it synchronously
+*ShipmentsApi* | [**scPublicV3ScpPostAnnounceShipmentWithRules**](docs/Api/ShipmentsApi.md#scpublicv3scppostannounceshipmentwithrules) | **POST** /shipments/announce-with-shipping-rules | Create a shipment with rules and/or defaults and announce it synchronously
 *ShipmentsApi* | [**scPublicV3ScpPostCancelShipment**](docs/Api/ShipmentsApi.md#scpublicv3scppostcancelshipment) | **POST** /shipments/{id}/cancel | Cancel a shipment
 *ShipmentsApi* | [**scPublicV3ScpPostCreateShipment**](docs/Api/ShipmentsApi.md#scpublicv3scppostcreateshipment) | **POST** /shipments | Create and announce a shipment asynchronously
-*ShipmentsApi* | [**scPublicV3ScpPostCreateShipmentWithRules**](docs/Api/ShipmentsApi.md#scpublicv3scppostcreateshipmentwithrules) | **POST** /shipments/create-with-shipping-rules | Create a shipment with rules and / or defaults and announce it asynchronously
-*ShippingOptionsApi* | [**scPublicV3ScpPostShippingOptions**](docs/Api/ShippingOptionsApi.md#scpublicv3scppostshippingoptions) | **POST** /shipping-options | Return a list of available shipping options [BETA]
+*ShipmentsApi* | [**scPublicV3ScpPostCreateShipmentWithRules**](docs/Api/ShipmentsApi.md#scpublicv3scppostcreateshipmentwithrules) | **POST** /shipments/create-with-shipping-rules | Create a shipment with rules and/or defaults and announce it asynchronously
+*ShippingOptionsApi* | [**scPublicV3ScpPostShippingOptions**](docs/Api/ShippingOptionsApi.md#scpublicv3scppostshippingoptions) | **POST** /shipping-options | Return a list of available shipping options
 *ShippingOptionsApi* | [**scPublicV3ScpPostShippingOptionsSimple**](docs/Api/ShippingOptionsApi.md#scpublicv3scppostshippingoptionssimple) | **POST** /fetch-shipping-options | Create a list of shipping options
-*UserApi* | [**scPublicV3ScpGetUserAuthMetadata**](docs/Api/UserApi.md#scpublicv3scpgetuserauthmetadata) | **GET** /user/auth/metadata | Retrieve information about the metadata associated with the authentication used in the request.
+*UserApi* | [**scPublicV3ScpGetUserAuthMetadata**](docs/Api/UserApi.md#scpublicv3scpgetuserauthmetadata) | **GET** /user/auth/metadata | Retrieve metadata associated with the authentication method
 
 ## Models
 
@@ -165,7 +165,6 @@ Class | Method | HTTP request | Description
 - [BasePickupRequest](docs/Model/BasePickupRequest.md)
 - [BasePickupResponse](docs/Model/BasePickupResponse.md)
 - [BaseShipmentResponse](docs/Model/BaseShipmentResponse.md)
-- [BaseShipmentResponseAllOfCarrier](docs/Model/BaseShipmentResponseAllOfCarrier.md)
 - [BilledWeightType](docs/Model/BilledWeightType.md)
 - [BrtPickupRequest](docs/Model/BrtPickupRequest.md)
 - [BrtPickupResponse](docs/Model/BrtPickupResponse.md)
@@ -285,8 +284,6 @@ Class | Method | HTTP request | Description
 - [IntegrationListResponse](docs/Model/IntegrationListResponse.md)
 - [IntegrationModel](docs/Model/IntegrationModel.md)
 - [IntegrationResponseModel](docs/Model/IntegrationResponseModel.md)
-- [IntegrationWebhook](docs/Model/IntegrationWebhook.md)
-- [IntegrationWebhookIntegration](docs/Model/IntegrationWebhookIntegration.md)
 - [InteriorPhotoField](docs/Model/InteriorPhotoField.md)
 - [LabelAsync](docs/Model/LabelAsync.md)
 - [LabelBase](docs/Model/LabelBase.md)
@@ -297,6 +294,10 @@ Class | Method | HTTP request | Description
 - [ListPickupResponse](docs/Model/ListPickupResponse.md)
 - [LocationInner](docs/Model/LocationInner.md)
 - [Measurement](docs/Model/Measurement.md)
+- [MeasurementPartialUpdate](docs/Model/MeasurementPartialUpdate.md)
+- [MeasurementPartialUpdateDimension](docs/Model/MeasurementPartialUpdateDimension.md)
+- [MeasurementPartialUpdateVolume](docs/Model/MeasurementPartialUpdateVolume.md)
+- [MeasurementPartialUpdateWeight](docs/Model/MeasurementPartialUpdateWeight.md)
 - [ModelReturn](docs/Model/ModelReturn.md)
 - [MulticolloParcelsArrayRequest](docs/Model/MulticolloParcelsArrayRequest.md)
 - [MulticolloParcelsArrayRequestWithOptionalFields](docs/Model/MulticolloParcelsArrayRequestWithOptionalFields.md)
@@ -341,13 +342,6 @@ Class | Method | HTTP request | Description
 - [ParcelItemWithOptionalFields](docs/Model/ParcelItemWithOptionalFields.md)
 - [ParcelItemWithSourceId](docs/Model/ParcelItemWithSourceId.md)
 - [ParcelStatus](docs/Model/ParcelStatus.md)
-- [ParcelStatusChangedWebhook](docs/Model/ParcelStatusChangedWebhook.md)
-- [ParcelStatusChangedWebhookParcel](docs/Model/ParcelStatusChangedWebhookParcel.md)
-- [ParcelStatusChangedWebhookParcelAddressDivided](docs/Model/ParcelStatusChangedWebhookParcelAddressDivided.md)
-- [ParcelStatusChangedWebhookParcelCountry](docs/Model/ParcelStatusChangedWebhookParcelCountry.md)
-- [ParcelStatusChangedWebhookParcelLabel](docs/Model/ParcelStatusChangedWebhookParcelLabel.md)
-- [ParcelStatusChangedWebhookParcelShipment](docs/Model/ParcelStatusChangedWebhookParcelShipment.md)
-- [ParcelStatusChangedWebhookParcelStatus](docs/Model/ParcelStatusChangedWebhookParcelStatus.md)
 - [ParcelTrackingAddress](docs/Model/ParcelTrackingAddress.md)
 - [ParcelTrackingCreateRequest](docs/Model/ParcelTrackingCreateRequest.md)
 - [ParcelTrackingCreateResponse](docs/Model/ParcelTrackingCreateResponse.md)
@@ -369,9 +363,6 @@ Class | Method | HTTP request | Description
 - [PurchaseInvoiceField](docs/Model/PurchaseInvoiceField.md)
 - [RequiredPrice](docs/Model/RequiredPrice.md)
 - [Requirements](docs/Model/Requirements.md)
-- [ReturnCreatedWebhook](docs/Model/ReturnCreatedWebhook.md)
-- [ReturnCreatedWebhookData](docs/Model/ReturnCreatedWebhookData.md)
-- [ReturnCreatedWebhookDataItemsInner](docs/Model/ReturnCreatedWebhookDataItemsInner.md)
 - [ReturnImagesInner](docs/Model/ReturnImagesInner.md)
 - [ReturnLabel](docs/Model/ReturnLabel.md)
 - [ReturnReason](docs/Model/ReturnReason.md)

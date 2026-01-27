@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -639,7 +639,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sendTrackingEmails
      *
-     * @param bool|null $sendTrackingEmails When true Sendcloud will send out the default track and trace emails
+     * @param bool|null $sendTrackingEmails When `true`, Sendcloud will send out the default track and trace emails
      *
      * @return self
      */
@@ -667,7 +667,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets brandId
      *
-     * @param int|null $brandId The ID of the brand this Return belongs to.
+     * @param int|null $brandId The ID of the brand this return belongs to.
      *
      * @return self
      */

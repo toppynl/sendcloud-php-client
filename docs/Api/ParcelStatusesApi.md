@@ -4,7 +4,7 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3ScpGetAllParcelStatuses()**](ParcelStatusesApi.md#scPublicV3ScpGetAllParcelStatuses) | **GET** /parcels/statuses | Retrieve a list of all possible parcel statuses
+[**scPublicV3ScpGetAllParcelStatuses()**](ParcelStatusesApi.md#scPublicV3ScpGetAllParcelStatuses) | **GET** /parcels/statuses | Retrieve a list of parcel statuses
 
 
 ## `scPublicV3ScpGetAllParcelStatuses()`
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 scPublicV3ScpGetAllParcelStatuses(): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllParcelStatuses200Response
 ```
 
-Retrieve a list of all possible parcel statuses
+Retrieve a list of parcel statuses
 
-This endpoint will retrieve information about all possible Parcel Statuses
+Get a list of all parcel statuses available in the Sendcloud system, with their unique code and friendly description.
 
 ### Example
 

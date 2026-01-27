@@ -15,7 +15,7 @@ scPublicV3ScpPostCompatShippingOptions($scPublicV3ScpPostCompatShippingOptionsRe
 
 Retrieve a list of shipping options
 
-<!-- theme: warning --> >**This API is deprecated and intended for compatibility purposes only. It may be removed in the future, so it is recommended to transition to the new API as soon as possible.**  This endpoint allows you to retrieve a list of shipping options based on the provided shipping methods. Ordering of the shipping options is not guaranteed, and the response may contain null values for shipping methods that do not have a corresponding shipping option. Shipping methods that do not exist will not be returned in the response.
+Retrieve a list of shipping options based on the provided shipping method ids.
 
 ### Example
 

@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -60,8 +60,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'carrierCode' => 'string',
-        'trackingNumber' => 'string',
         'trackingIdentifier' => 'string',
+        'trackingNumber' => 'string',
         'trackingUrl' => 'string'
     ];
 
@@ -74,8 +74,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'carrierCode' => null,
-        'trackingNumber' => null,
         'trackingIdentifier' => null,
+        'trackingNumber' => null,
         'trackingUrl' => null
     ];
 
@@ -86,8 +86,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'carrierCode' => false,
-        'trackingNumber' => false,
         'trackingIdentifier' => false,
+        'trackingNumber' => false,
         'trackingUrl' => false
     ];
 
@@ -150,8 +150,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'carrierCode' => 'carrier_code',
-        'trackingNumber' => 'tracking_number',
         'trackingIdentifier' => 'tracking_identifier',
+        'trackingNumber' => 'tracking_number',
         'trackingUrl' => 'tracking_url'
     ];
 
@@ -162,8 +162,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'carrierCode' => 'setCarrierCode',
-        'trackingNumber' => 'setTrackingNumber',
         'trackingIdentifier' => 'setTrackingIdentifier',
+        'trackingNumber' => 'setTrackingNumber',
         'trackingUrl' => 'setTrackingUrl'
     ];
 
@@ -174,8 +174,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'carrierCode' => 'getCarrierCode',
-        'trackingNumber' => 'getTrackingNumber',
         'trackingIdentifier' => 'getTrackingIdentifier',
+        'trackingNumber' => 'getTrackingNumber',
         'trackingUrl' => 'getTrackingUrl'
     ];
 
@@ -237,8 +237,8 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(?array $data = null)
     {
         $this->setIfExists('carrierCode', $data ?? [], null);
-        $this->setIfExists('trackingNumber', $data ?? [], null);
         $this->setIfExists('trackingIdentifier', $data ?? [], null);
+        $this->setIfExists('trackingNumber', $data ?? [], null);
         $this->setIfExists('trackingUrl', $data ?? [], null);
     }
 
@@ -272,6 +272,14 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
             $invalidProperties[] = "'carrierCode' can't be null";
         }
 
+        if (!is_null($this->container['trackingIdentifier']) && (mb_strlen($this->container['trackingIdentifier']) > 255)) {
+            $invalidProperties[] = "invalid value for 'trackingIdentifier', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['trackingIdentifier']) && (mb_strlen($this->container['trackingIdentifier']) < 1)) {
+            $invalidProperties[] = "invalid value for 'trackingIdentifier', the character length must be bigger than or equal to 1.";
+        }
+
         if ($this->container['trackingNumber'] === null) {
             $invalidProperties[] = "'trackingNumber' can't be null";
         }
@@ -282,14 +290,6 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
 
         if ((mb_strlen((string) $this->container['trackingNumber']) < 1)) {
             $invalidProperties[] = "invalid value for 'trackingNumber', the character length must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['trackingIdentifier']) && (mb_strlen($this->container['trackingIdentifier']) > 255)) {
-            $invalidProperties[] = "invalid value for 'trackingIdentifier', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['trackingIdentifier']) && (mb_strlen($this->container['trackingIdentifier']) < 1)) {
-            $invalidProperties[] = "invalid value for 'trackingIdentifier', the character length must be bigger than or equal to 1.";
         }
 
         if (!is_null($this->container['trackingUrl']) && (mb_strlen($this->container['trackingUrl']) < 1)) {
@@ -340,42 +340,6 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets trackingNumber
-     *
-     * @return string
-     */
-    public function getTrackingNumber()
-    {
-        return $this->container['trackingNumber'];
-    }
-
-    /**
-     * Sets trackingNumber
-     *
-     * @param string $trackingNumber The tracking number of the parcel
-     *
-     * @return self
-     */
-    public function setTrackingNumber($trackingNumber)
-    {
-        if (is_null($trackingNumber)) {
-            throw new \InvalidArgumentException('non-nullable trackingNumber cannot be null');
-        }
-
-        if ((mb_strlen($trackingNumber) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $trackingNumber when calling TrackingNumberResponse., must be smaller than or equal to 255.');
-        }
-
-        if ((mb_strlen($trackingNumber) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $trackingNumber when calling TrackingNumberResponse., must be bigger than or equal to 1.');
-        }
-
-        $this->container['trackingNumber'] = $trackingNumber;
-
-        return $this;
-    }
-
-    /**
      * Gets trackingIdentifier
      *
      * @return string|null
@@ -407,6 +371,42 @@ class TrackingNumberResponse implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         $this->container['trackingIdentifier'] = $trackingIdentifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets trackingNumber
+     *
+     * @return string
+     */
+    public function getTrackingNumber()
+    {
+        return $this->container['trackingNumber'];
+    }
+
+    /**
+     * Sets trackingNumber
+     *
+     * @param string $trackingNumber The tracking number of the parcel
+     *
+     * @return self
+     */
+    public function setTrackingNumber($trackingNumber)
+    {
+        if (is_null($trackingNumber)) {
+            throw new \InvalidArgumentException('non-nullable trackingNumber cannot be null');
+        }
+
+        if ((mb_strlen($trackingNumber) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $trackingNumber when calling TrackingNumberResponse., must be smaller than or equal to 255.');
+        }
+
+        if ((mb_strlen($trackingNumber) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $trackingNumber when calling TrackingNumberResponse., must be bigger than or equal to 1.');
+        }
+
+        $this->container['trackingNumber'] = $trackingNumber;
 
         return $this;
     }

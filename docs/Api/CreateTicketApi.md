@@ -4,12 +4,12 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3DsfPostTicketsAddressChange()**](CreateTicketApi.md#scPublicV3DsfPostTicketsAddressChange) | **POST** /dsf/tickets/address-change | Create ticket for an address change
-[**scPublicV3DsfPostTicketsDamage()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDamage) | **POST** /dsf/tickets/damage | Create ticket for a damaged parcel
-[**scPublicV3DsfPostTicketsDelay()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDelay) | **POST** /dsf/tickets/delay | Create ticket for a delayed parcel
-[**scPublicV3DsfPostTicketsDeliveredButNotReceived()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDeliveredButNotReceived) | **POST** /dsf/tickets/delivered-but-not-received | Create ticket for a delivered but not received parcel
-[**scPublicV3DsfPostTicketsLost()**](CreateTicketApi.md#scPublicV3DsfPostTicketsLost) | **POST** /dsf/tickets/lost | Create ticket for a lost parcel
-[**scPublicV3DsfPostTicketsUnjustReturn()**](CreateTicketApi.md#scPublicV3DsfPostTicketsUnjustReturn) | **POST** /dsf/tickets/unjust-return | Create ticket for an unjustly returned parcel
+[**scPublicV3DsfPostTicketsAddressChange()**](CreateTicketApi.md#scPublicV3DsfPostTicketsAddressChange) | **POST** /dsf/tickets/address-change | Create a ticket for an address change
+[**scPublicV3DsfPostTicketsDamage()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDamage) | **POST** /dsf/tickets/damage | Create a ticket for a damaged parcel
+[**scPublicV3DsfPostTicketsDelay()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDelay) | **POST** /dsf/tickets/delay | Create a ticket for a delayed parcel
+[**scPublicV3DsfPostTicketsDeliveredButNotReceived()**](CreateTicketApi.md#scPublicV3DsfPostTicketsDeliveredButNotReceived) | **POST** /dsf/tickets/delivered-but-not-received | Create a ticket for a delivered but not received parcel
+[**scPublicV3DsfPostTicketsLost()**](CreateTicketApi.md#scPublicV3DsfPostTicketsLost) | **POST** /dsf/tickets/lost | Create a ticket for a lost parcel
+[**scPublicV3DsfPostTicketsUnjustReturn()**](CreateTicketApi.md#scPublicV3DsfPostTicketsUnjustReturn) | **POST** /dsf/tickets/unjust-return | Create a ticket for an unjustly returned parcel
 
 
 ## `scPublicV3DsfPostTicketsAddressChange()`
@@ -18,9 +18,9 @@ Method | HTTP request | Description
 scPublicV3DsfPostTicketsAddressChange($scPublicV3DsfPostTicketsAddressChangeRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for an address change
+Create a ticket for an address change
 
-This method allows you to create a ticket for an address change. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for an address change. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 
@@ -80,9 +80,9 @@ Name | Type | Description  | Notes
 scPublicV3DsfPostTicketsDamage($scPublicV3DsfPostTicketsDamageRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for a damaged parcel
+Create a ticket for a damaged parcel
 
-This method allows you to create a ticket for a damaged parcel. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for a damaged parcel. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 
@@ -142,9 +142,9 @@ Name | Type | Description  | Notes
 scPublicV3DsfPostTicketsDelay($scPublicV3DsfPostTicketsDelayRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for a delayed parcel
+Create a ticket for a delayed parcel
 
-This method allows you to create a ticket for a delayed parcel. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for a delayed parcel. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 
@@ -204,9 +204,9 @@ Name | Type | Description  | Notes
 scPublicV3DsfPostTicketsDeliveredButNotReceived($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for a delivered but not received parcel
+Create a ticket for a delivered but not received parcel
 
-This method allows you to create a ticket for a delivered but not received parcel. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for a delivered but not received parcel. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 
@@ -266,9 +266,9 @@ Name | Type | Description  | Notes
 scPublicV3DsfPostTicketsLost($scPublicV3DsfPostTicketsLostRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for a lost parcel
+Create a ticket for a lost parcel
 
-This method allows you to create a ticket for a lost parcel. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for a lost parcel. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 
@@ -328,9 +328,9 @@ Name | Type | Description  | Notes
 scPublicV3DsfPostTicketsUnjustReturn($scPublicV3DsfPostTicketsUnjustReturnRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
 ```
 
-Create ticket for an unjustly returned parcel
+Create a ticket for an unjustly returned parcel
 
-This method allows you to create a ticket for an unjustly returned parcel. It works with both your own contract and parcels created using Sendcloud rates.  The API is using rate limits.
+Create a ticket for an unjustly returned parcel. It works with both your own contract and parcels created using Sendcloud rates.
 
 ### Example
 

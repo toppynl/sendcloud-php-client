@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -397,7 +397,7 @@ class ContractsApi
      * @param  string $clientId Filter direct contracts based on the client id. (optional)
      * @param  string $name Filter direct contracts based on the contract&#39;s name. Will search for a case-sensitive exact match. (optional)
      * @param  string $countryCode Filter contracts based on the country of the contract, it should be in the ISO 3166-1 alpha-2 format. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -420,7 +420,7 @@ class ContractsApi
      * @param  string $clientId Filter direct contracts based on the client id. (optional)
      * @param  string $name Filter direct contracts based on the contract&#39;s name. Will search for a case-sensitive exact match. (optional)
      * @param  string $countryCode Filter contracts based on the country of the contract, it should be in the ISO 3166-1 alpha-2 format. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -527,7 +527,7 @@ class ContractsApi
      * @param  string $clientId Filter direct contracts based on the client id. (optional)
      * @param  string $name Filter direct contracts based on the contract&#39;s name. Will search for a case-sensitive exact match. (optional)
      * @param  string $countryCode Filter contracts based on the country of the contract, it should be in the ISO 3166-1 alpha-2 format. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
@@ -553,7 +553,7 @@ class ContractsApi
      * @param  string $clientId Filter direct contracts based on the client id. (optional)
      * @param  string $name Filter direct contracts based on the contract&#39;s name. Will search for a case-sensitive exact match. (optional)
      * @param  string $countryCode Filter contracts based on the country of the contract, it should be in the ISO 3166-1 alpha-2 format. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
@@ -604,7 +604,7 @@ class ContractsApi
      * @param  string $clientId Filter direct contracts based on the client id. (optional)
      * @param  string $name Filter direct contracts based on the contract&#39;s name. Will search for a case-sensitive exact match. (optional)
      * @param  string $countryCode Filter contracts based on the country of the contract, it should be in the ISO 3166-1 alpha-2 format. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
@@ -765,7 +765,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpGetAllContractsSchemas
      *
-     * Retrieve a list of contracts schemas
+     * Retrieve a list of contract schemas
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
@@ -782,7 +782,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpGetAllContractsSchemasWithHttpInfo
      *
-     * Retrieve a list of contracts schemas
+     * Retrieve a list of contract schemas
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
@@ -883,7 +883,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpGetAllContractsSchemasAsync
      *
-     * Retrieve a list of contracts schemas
+     * Retrieve a list of contract schemas
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
@@ -903,7 +903,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpGetAllContractsSchemasAsyncWithHttpInfo
      *
-     * Retrieve a list of contracts schemas
+     * Retrieve a list of contract schemas
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
@@ -1590,7 +1590,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpPostCreateContract
      *
-     * Create a contract for carrier
+     * Create a contract for a carrier
      *
      * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest createContractRequest (optional)
      *
@@ -1607,7 +1607,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpPostCreateContractWithHttpInfo
      *
-     * Create a contract for carrier
+     * Create a contract for a carrier
      *
      * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
      *
@@ -1708,7 +1708,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpPostCreateContractAsync
      *
-     * Create a contract for carrier
+     * Create a contract for a carrier
      *
      * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
      *
@@ -1728,7 +1728,7 @@ class ContractsApi
     /**
      * Operation scPublicV3ScpPostCreateContractAsyncWithHttpInfo
      *
-     * Create a contract for carrier
+     * Create a contract for a carrier
      *
      * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
      *

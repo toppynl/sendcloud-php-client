@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -293,7 +293,7 @@ class ReturnImagesInner implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets productId
      *
-     * @param string|null $productId The ID of product that this image is related to.
+     * @param string|null $productId The ID of the product that this image is related to.
      *
      * @return self
      */
@@ -321,7 +321,7 @@ class ReturnImagesInner implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets uploadedImage
      *
-     * @param string|null $uploadedImage The temporary publicly accessible URL of the originally uploaded image
+     * @param string|null $uploadedImage The temporary publicly-accessible URL of the originally uploaded image
      *
      * @return self
      */
@@ -349,7 +349,7 @@ class ReturnImagesInner implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets thumbnailImage
      *
-     * @param string|null $thumbnailImage The temporary publicly accessible URL of the image thumbnail
+     * @param string|null $thumbnailImage The temporary publicly-accessible URL of the image thumbnail
      *
      * @return self
      */

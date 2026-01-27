@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,9 +170,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetDetails
      *
-     * Retrieve a Return
+     * Retrieve a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -187,9 +187,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetDetailsWithHttpInfo
      *
-     * Retrieve a Return
+     * Retrieve a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -272,9 +272,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetDetailsAsync
      *
-     * Retrieve a Return
+     * Retrieve a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -292,9 +292,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetDetailsAsyncWithHttpInfo
      *
-     * Retrieve a Return
+     * Retrieve a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -339,7 +339,7 @@ class ReturnsApi
     /**
      * Create request for operation 'scPublicV3ScpGetReturnsGetDetails'
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -428,11 +428,11 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetReturns
      *
-     * Retrieve a list of Returns
+     * Retrieve a list of returns
      *
      * @param  string $fromDate Excludes all returns before this datetime (required)
      * @param  string $toDate Excludes all returns after this datetime (required)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
@@ -449,11 +449,11 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetReturnsWithHttpInfo
      *
-     * Retrieve a list of Returns
+     * Retrieve a list of returns
      *
      * @param  string $fromDate Excludes all returns before this datetime (required)
      * @param  string $toDate Excludes all returns after this datetime (required)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
@@ -538,11 +538,11 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetReturnsAsync
      *
-     * Retrieve a list of Returns
+     * Retrieve a list of returns
      *
      * @param  string $fromDate Excludes all returns before this datetime (required)
      * @param  string $toDate Excludes all returns after this datetime (required)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
@@ -562,11 +562,11 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpGetReturnsGetReturnsAsyncWithHttpInfo
      *
-     * Retrieve a list of Returns
+     * Retrieve a list of returns
      *
      * @param  string $fromDate Excludes all returns before this datetime (required)
      * @param  string $toDate Excludes all returns after this datetime (required)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
@@ -615,7 +615,7 @@ class ReturnsApi
      *
      * @param  string $fromDate Excludes all returns before this datetime (required)
      * @param  string $toDate Excludes all returns after this datetime (required)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters, for example:   For a cursor string, there are 3 possible parameters to encode:     - &#x60;o&#x60;: Offset     - &#x60;r&#x60;: Reverse     - &#x60;p&#x60;: Position   Combine into GET parameters, for example: &#x60;r&#x3D;1&amp;p&#x3D;300&#x60;   Base 64 encoded it would become: &#x60;cj0xJnA9MzAw&#x60;   GET parameter in URL would be &#x60;https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw&#x60; (optional)
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
@@ -771,9 +771,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpPatchReturnsCancel
      *
-     * Request cancellation of a specific Return
+     * Request cancellation of a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -788,9 +788,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpPatchReturnsCancelWithHttpInfo
      *
-     * Request cancellation of a specific Return
+     * Request cancellation of a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -889,9 +889,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpPatchReturnsCancelAsync
      *
-     * Request cancellation of a specific Return
+     * Request cancellation of a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -909,9 +909,9 @@ class ReturnsApi
     /**
      * Operation scPublicV3ScpPatchReturnsCancelAsyncWithHttpInfo
      *
-     * Request cancellation of a specific Return
+     * Request cancellation of a return
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -956,7 +956,7 @@ class ReturnsApi
     /**
      * Create request for operation 'scPublicV3ScpPatchReturnsCancel'
      *
-     * @param  int $id The internal sendcloud id of this return (Required) (required)
+     * @param  int $id The internal Sendcloud id of this return (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1047,7 +1047,7 @@ class ReturnsApi
      *
      * Create a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1065,7 +1065,7 @@ class ReturnsApi
      *
      * Create a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1167,7 +1167,7 @@ class ReturnsApi
      *
      * Create a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1188,7 +1188,7 @@ class ReturnsApi
      *
      * Create a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1234,7 +1234,7 @@ class ReturnsApi
     /**
      * Create request for operation 'scPublicV3ScpPostReturnsCreateNewReturn'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1324,7 +1324,7 @@ class ReturnsApi
      *
      * Create a return synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1342,7 +1342,7 @@ class ReturnsApi
      *
      * Create a return synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1444,7 +1444,7 @@ class ReturnsApi
      *
      * Create a return synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1465,7 +1465,7 @@ class ReturnsApi
      *
      * Create a return synchronously
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1511,7 +1511,7 @@ class ReturnsApi
     /**
      * Create request for operation 'scPublicV3ScpPostReturnsCreateNewReturnSynchronously'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1601,7 +1601,7 @@ class ReturnsApi
      *
      * Validate a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1619,7 +1619,7 @@ class ReturnsApi
      *
      * Validate a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -1721,7 +1721,7 @@ class ReturnsApi
      *
      * Validate a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1742,7 +1742,7 @@ class ReturnsApi
      *
      * Validate a return
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
@@ -1788,7 +1788,7 @@ class ReturnsApi
     /**
      * Create request for operation 'scPublicV3ScpPostReturnsValidate'
      *
-     * @param  string $sendcloudPartnerId If you are &lt;a href&#x3D;\&quot;https://www.sendcloud.com/ecosystem/\&quot; target&#x3D;\&quot;_blank\&quot;&gt; an official Sendcloud Tech Partner&lt;/a&gt;,  you can provide this additional request header for the system to recognize you.  Sendcloud Partner UUID is provided to Sendcloud partners. The header is not required but if it is set,  the system will validate it. An unknown or invalid UUID will cause a 400 error. (optional)
+     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException

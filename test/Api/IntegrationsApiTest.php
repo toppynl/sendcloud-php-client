@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -87,7 +87,7 @@ class IntegrationsApiTest extends TestCase
     /**
      * Test case for scPublicV3IntegrationsGetListIntegrations
      *
-     * List all integrations.
+     * Retrieve a list of integrations.
      *
      */
     public function testScPublicV3IntegrationsGetListIntegrations()
@@ -111,7 +111,7 @@ class IntegrationsApiTest extends TestCase
     /**
      * Test case for scPublicV3IntegrationsGetShopOrderStatuses
      *
-     * Retrieve available shop order statuses for a given integration..
+     * Retrieve shop order statuses for an integration.
      *
      */
     public function testScPublicV3IntegrationsGetShopOrderStatuses()
@@ -147,7 +147,7 @@ class IntegrationsApiTest extends TestCase
     /**
      * Test case for scPublicV3IntegrationsPostShopOrderStatuses
      *
-     * Create or overwrite the whole list of available shop order statuses..
+     * Create or overwrite shop order statuses.
      *
      */
     public function testScPublicV3IntegrationsPostShopOrderStatuses()

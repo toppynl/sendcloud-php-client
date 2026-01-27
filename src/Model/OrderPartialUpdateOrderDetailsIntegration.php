@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -279,7 +279,7 @@ class OrderPartialUpdateOrderDetailsIntegration implements ModelInterface, Array
     /**
      * Sets id
      *
-     * @param int|null $id Sendcloud Integration ID. To obtain the integration ID, you can utilize the integration [endpoint](https://api.sendcloud.dev/docs/sendcloud-public-api/integrations/operations/list-integrations) listings.'
+     * @param int|null $id Sendcloud Integration ID. To obtain the integration ID, you can use the [Retrieve a list of integrations](/api/v3/integrations/retrieve-a-list-of-integrations) endpoint.'
      *
      * @return self
      */

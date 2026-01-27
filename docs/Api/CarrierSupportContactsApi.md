@@ -4,9 +4,9 @@ All URIs are relative to https://account.sendcloud.com.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV3DsfDeleteCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfDeleteCarrierSupportContacts) | **DELETE** /dsf/carrier-support-contacts/{id} | Delete carrier support contact
-[**scPublicV3DsfGetCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfGetCarrierSupportContacts) | **GET** /dsf/carrier-support-contacts | Get carrier support contacts
-[**scPublicV3DsfPatchCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfPatchCarrierSupportContacts) | **PATCH** /dsf/carrier-support-contacts/{id} | Update carrier support contact
+[**scPublicV3DsfDeleteCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfDeleteCarrierSupportContacts) | **DELETE** /dsf/carrier-support-contacts/{id} | Delete a carrier support contact
+[**scPublicV3DsfGetCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfGetCarrierSupportContacts) | **GET** /dsf/carrier-support-contacts | Retrieve carrier support contacts
+[**scPublicV3DsfPatchCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfPatchCarrierSupportContacts) | **PATCH** /dsf/carrier-support-contacts/{id} | Update a carrier support contact
 [**scPublicV3DsfPostCarrierSupportContacts()**](CarrierSupportContactsApi.md#scPublicV3DsfPostCarrierSupportContacts) | **POST** /dsf/carrier-support-contacts | Create carrier support contact
 
 
@@ -16,9 +16,9 @@ Method | HTTP request | Description
 scPublicV3DsfDeleteCarrierSupportContacts($id)
 ```
 
-Delete carrier support contact
+Delete a carrier support contact
 
-API for deleting existing carrier support contacts.  A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract. By providing this information, we know where to forward the claim.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
+A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract so that we can forward the claim correctly.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
 
 ### Example
 
@@ -77,9 +77,9 @@ void (empty response body)
 scPublicV3DsfGetCarrierSupportContacts(): \Toppy\Sendcloud\Model\CarrierSupportContact
 ```
 
-Get carrier support contacts
+Retrieve carrier support contacts
 
-API for retrieving carrier support contacts.  A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract. By providing this information, we know where to forward the claim.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
+A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract so that we can forward the claim correctly.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
 
 ### Example
 
@@ -136,9 +136,9 @@ This endpoint does not need any parameter.
 scPublicV3DsfPatchCarrierSupportContacts($id, $patchSupportContactRequest): \Toppy\Sendcloud\Model\CarrierSupportContact
 ```
 
-Update carrier support contact
+Update a carrier support contact
 
-API for updating existing carrier support contacts.  A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract. By providing this information, we know where to forward the claim.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
+A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract so that we can forward the claim correctly.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
 
 ### Example
 
@@ -202,7 +202,7 @@ scPublicV3DsfPostCarrierSupportContacts($createSupportContactRequest): \Toppy\Se
 
 Create carrier support contact
 
-API for creating carrier support contacts.  A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract. By providing this information, we know where to forward the claim.  Ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
+A carrier support contact is required in order to create tickets for shipments sent under your own carrier contract so that we can forward the claim correctly.  Note that ticket creation will fail if a carrier support contact is missing for a carrier you use with your own contract.
 
 ### Example
 

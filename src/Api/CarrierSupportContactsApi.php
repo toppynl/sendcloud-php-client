@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -170,7 +170,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfDeleteCarrierSupportContacts
      *
-     * Delete carrier support contact
+     * Delete a carrier support contact
      *
      * @param  int $id Support contact id (required)
      *
@@ -186,7 +186,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfDeleteCarrierSupportContactsWithHttpInfo
      *
-     * Delete carrier support contact
+     * Delete a carrier support contact
      *
      * @param  int $id Support contact id (required)
      *
@@ -238,7 +238,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfDeleteCarrierSupportContactsAsync
      *
-     * Delete carrier support contact
+     * Delete a carrier support contact
      *
      * @param  int $id Support contact id (required)
      *
@@ -258,7 +258,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfDeleteCarrierSupportContactsAsyncWithHttpInfo
      *
-     * Delete carrier support contact
+     * Delete a carrier support contact
      *
      * @param  int $id Support contact id (required)
      *
@@ -383,7 +383,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfGetCarrierSupportContacts
      *
-     * Get carrier support contacts
+     * Retrieve carrier support contacts
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -399,7 +399,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfGetCarrierSupportContactsWithHttpInfo
      *
-     * Get carrier support contacts
+     * Retrieve carrier support contacts
      *
      *
      * @throws \Toppy\Sendcloud\ApiException on non-2xx response
@@ -483,7 +483,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfGetCarrierSupportContactsAsync
      *
-     * Get carrier support contacts
+     * Retrieve carrier support contacts
      *
      *
      * @throws \InvalidArgumentException
@@ -502,7 +502,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfGetCarrierSupportContactsAsyncWithHttpInfo
      *
-     * Get carrier support contacts
+     * Retrieve carrier support contacts
      *
      *
      * @throws \InvalidArgumentException
@@ -624,7 +624,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfPatchCarrierSupportContacts
      *
-     * Update carrier support contact
+     * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
      * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest patchSupportContactRequest (required)
@@ -642,7 +642,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfPatchCarrierSupportContactsWithHttpInfo
      *
-     * Update carrier support contact
+     * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
      * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
@@ -744,7 +744,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfPatchCarrierSupportContactsAsync
      *
-     * Update carrier support contact
+     * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
      * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
@@ -765,7 +765,7 @@ class CarrierSupportContactsApi
     /**
      * Operation scPublicV3DsfPatchCarrierSupportContactsAsyncWithHttpInfo
      *
-     * Update carrier support contact
+     * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
      * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)

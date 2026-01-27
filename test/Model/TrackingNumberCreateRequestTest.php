@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -90,18 +90,18 @@ class TrackingNumberCreateRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "trackingNumber"
+     * Test attribute "trackingIdentifier"
      */
-    public function testPropertyTrackingNumber()
+    public function testPropertyTrackingIdentifier()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "trackingIdentifier"
+     * Test attribute "trackingNumber"
      */
-    public function testPropertyTrackingIdentifier()
+    public function testPropertyTrackingNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

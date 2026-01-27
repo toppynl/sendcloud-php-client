@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsAddressChange
      *
-     * Create ticket for an address change.
+     * Create a ticket for an address change.
      *
      */
     public function testScPublicV3DsfPostTicketsAddressChange()
@@ -87,7 +87,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsDamage
      *
-     * Create ticket for a damaged parcel.
+     * Create a ticket for a damaged parcel.
      *
      */
     public function testScPublicV3DsfPostTicketsDamage()
@@ -99,7 +99,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsDelay
      *
-     * Create ticket for a delayed parcel.
+     * Create a ticket for a delayed parcel.
      *
      */
     public function testScPublicV3DsfPostTicketsDelay()
@@ -111,7 +111,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsDeliveredButNotReceived
      *
-     * Create ticket for a delivered but not received parcel.
+     * Create a ticket for a delivered but not received parcel.
      *
      */
     public function testScPublicV3DsfPostTicketsDeliveredButNotReceived()
@@ -123,7 +123,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsLost
      *
-     * Create ticket for a lost parcel.
+     * Create a ticket for a lost parcel.
      *
      */
     public function testScPublicV3DsfPostTicketsLost()
@@ -135,7 +135,7 @@ class CreateTicketApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPostTicketsUnjustReturn
      *
-     * Create ticket for an unjustly returned parcel.
+     * Create a ticket for an unjustly returned parcel.
      *
      */
     public function testScPublicV3DsfPostTicketsUnjustReturn()

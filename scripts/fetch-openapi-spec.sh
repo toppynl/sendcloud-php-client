@@ -1,38 +1,55 @@
 #!/usr/bin/env bash
 
 #
-# Fetches Sendcloud API v3 specification from Stoplight bundled OpenAPI files
+# Fetches Sendcloud API v3 specification from sendcloud.dev OpenAPI files
 # and merges them into a single complete specification.
 #
 # How it works:
-# 1. Fetches the Table of Contents from Stoplight's API to discover all API sections
-# 2. For each http_service section, fetches the bundled OpenAPI YAML file
-#    URL pattern: /projects/{project}/nodes/api-build-assets/bundles/{section}/openapi.yaml
-# 3. Converts YAML to JSON using yq
-# 4. Merges all paths, components/schemas, and tags into a single spec using jq
+# 1. Fetches OpenAPI YAML files for each v3 resource from sendcloud.dev
+#    URL pattern: https://sendcloud.dev/.openapi/v3/{resource}/openapi.yaml
+# 2. Converts YAML to JSON using yq
+# 3. Merges all paths, components/schemas, and tags into a single spec using jq
 #
 # Requirements: curl, jq, yq (https://github.com/mikefarah/yq)
 #
-# Usage: ./scripts/fetch-sendcloud-openapi.sh
-# Output: docs/api/sendcloud-openapi-v3.json
+# Usage: ./scripts/fetch-openapi-spec.sh
+# Output: openapi.json
 #
 
 set -euo pipefail
 
 # Configuration
-PROJECT_ID="cHJqOjE0MjMwNA"
-PROJECT_SLUG="sendcloud/sendcloud-public-api"
-BRANCH="v3"
-BASE_URL="https://stoplight.io/api/v1/projects"
-OUTPUT_DIR="docs/api"
+BASE_URL="https://sendcloud.dev/.openapi/v3"
 TEMP_DIR=$(mktemp -d)
+
+# V3 Resources to fetch (from sendcloud.dev documentation)
+V3_RESOURCES=(
+  "auth"              # OAuth2 token endpoint
+  "compat"            # Compatibility API
+  "contracts"         # Carrier contracts
+  "dynamic-checkout"  # Checkout delivery options [BETA]
+  "integrations"      # Shop integrations
+  "orders"            # Order management
+  "parcel-documents"  # Label/document retrieval
+  "parcel-statuses"   # Parcel status codes
+  "parcel-tracking"   # Tracking API
+  "pickups"           # Carrier pickups
+  "returns"           # Returns management
+  "sender-addresses"  # Sender address management
+  "ship-an-order"     # Order label creation
+  "shipments"         # Shipment creation/management
+  "shipping-options"  # Shipping option queries
+  "support"           # Support ticket creation
+  "user"              # User metadata
+  # "webhooks"        # Skip: has empty paths (webhook schemas only)
+)
 
 # Cleanup on exit
 trap "rm -rf $TEMP_DIR" EXIT
 
 echo "Sendcloud OpenAPI v3 Specification Fetcher"
 echo "=========================================="
-echo "Using bundled OpenAPI approach for complete specs"
+echo "Fetching from: $BASE_URL"
 echo ""
 
 # Check dependencies
@@ -43,52 +60,25 @@ for cmd in curl jq yq; do
     fi
 done
 
-# Create output directory
-mkdir -p "$OUTPUT_DIR"
-
-# Step 1: Fetch Table of Contents
-echo "Step 1: Fetching Table of Contents..."
-TOC_URL="${BASE_URL}/${PROJECT_ID}/table-of-contents?branch=${BRANCH}"
-echo "  URL: $TOC_URL"
-
-curl -s "$TOC_URL" > "$TEMP_DIR/toc.json"
-cp "$TEMP_DIR/toc.json" "$OUTPUT_DIR/sendcloud-v3-toc.json"
-echo "  Saved: $OUTPUT_DIR/sendcloud-v3-toc.json"
-echo ""
-
-# Step 2: Extract http_service sections
-echo "Step 2: Extracting API sections..."
-SECTIONS=$(jq -r '
-  [.. | objects | select(.type == "http_service" and .slug != null) | .slug] | unique | .[]
-' "$TEMP_DIR/toc.json")
-
-SECTION_COUNT=$(echo "$SECTIONS" | wc -l)
-echo "  Found $SECTION_COUNT sections:"
-echo "$SECTIONS" | while read -r section; do
-    echo "    - $section"
-done
-echo ""
-
-# Step 3: Fetch OpenAPI bundles
-echo "Step 3: Fetching OpenAPI bundles..."
-FETCHED=0
+# Step 1: Fetch OpenAPI specs for each resource
+echo "Step 1: Fetching OpenAPI specs..."
 BUNDLE_DIR="$TEMP_DIR/bundles"
 mkdir -p "$BUNDLE_DIR"
 
-echo "$SECTIONS" | while read -r section; do
-    BUNDLE_URL="${BASE_URL}/${PROJECT_SLUG}/nodes/api-build-assets/bundles/${section}/openapi.yaml?branch=${BRANCH}"
-    OUTPUT_FILE="$BUNDLE_DIR/${section}.json"
+for resource in "${V3_RESOURCES[@]}"; do
+    SPEC_URL="${BASE_URL}/${resource}/openapi.yaml"
+    OUTPUT_FILE="$BUNDLE_DIR/${resource}.json"
 
-    HTTP_CODE=$(curl -s -w "%{http_code}" -o "$TEMP_DIR/temp.yaml" "$BUNDLE_URL")
+    HTTP_CODE=$(curl -s -w "%{http_code}" -o "$TEMP_DIR/temp.yaml" "$SPEC_URL")
 
     if [ "$HTTP_CODE" = "200" ]; then
         # Convert YAML to JSON
         yq -o=json "$TEMP_DIR/temp.yaml" > "$OUTPUT_FILE"
         PATHS=$(jq -r '.paths | keys | length' "$OUTPUT_FILE")
         SCHEMAS=$(jq -r '.components.schemas // {} | keys | length' "$OUTPUT_FILE")
-        echo "  [OK] $section - $PATHS paths, $SCHEMAS schemas"
+        echo "  [OK] $resource - $PATHS paths, $SCHEMAS schemas"
     else
-        echo "  [SKIP] $section - HTTP $HTTP_CODE"
+        echo "  [SKIP] $resource - HTTP $HTTP_CODE"
     fi
 
     # Small delay to be nice to the API
@@ -97,8 +87,8 @@ done
 
 echo ""
 
-# Step 4: Merge specifications
-echo "Step 4: Merging specifications..."
+# Step 2: Merge specifications
+echo "Step 2: Merging specifications..."
 
 # Create base merged spec
 cat > "$TEMP_DIR/merged.json" << 'EOF'
@@ -107,17 +97,17 @@ cat > "$TEMP_DIR/merged.json" << 'EOF'
   "info": {
     "title": "Sendcloud Public REST API",
     "version": "3.0.0",
-    "description": "Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles",
+    "description": "Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation",
     "contact": {
       "name": "Sendcloud API Support",
-      "url": "https://www.sendcloud.dev",
+      "url": "https://sendcloud.dev",
       "email": "contact@sendcloud.com"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-source": "https://api.sendcloud.dev/docs/sendcloud-public-api/",
+    "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3"
   },
   "servers": [],
@@ -223,7 +213,7 @@ BUNDLE_COUNT=$(ls -1 "$BUNDLE_DIR"/*.json 2>/dev/null | wc -l)
 echo "  Saved: ./openapi.json"
 echo ""
 echo "Statistics:"
-echo "  - API sections: $BUNDLE_COUNT"
+echo "  - API resources: $BUNDLE_COUNT"
 echo "  - Total paths: $TOTAL_PATHS"
 echo "  - Total schemas: $TOTAL_SCHEMAS"
 echo "  - Total tags: $TOTAL_TAGS"

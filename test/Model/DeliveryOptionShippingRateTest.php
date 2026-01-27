@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * DeliveryOptionShippingRateTest Class Doc Comment
  *
  * @category    Class
- * @description A price object containing the shipping rate shown to the customer at checkout. This rate is calculated based on the cart&#39;s weight, value, and the &lt;a href&#x3D;\&quot;https://support.sendcloud.com/hc/en-us/articles/4414673031700-How-to-add-Dynamic-Checkout-rates\&quot;&gt;configured shipping rates&lt;/a&gt; for the matched delivery method.
+ * @description A price object containing the shipping rate shown to the customer at checkout. This rate is calculated based on the cart&#39;s weight, value, and the [configured shipping rates](https://support.sendcloud.com/hc/en-us/articles/4414673031700-How-to-add-Dynamic-Checkout-rates) for the matched delivery method.
  * @package     Toppy\Sendcloud
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -111,7 +111,7 @@ class ParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'weight' => false,
         'additionalInsuredPrice' => true,
         'labelNotes' => false,
-        'sscc' => true,
+        'sscc' => false,
         'parcelItems' => false,
         'createdAt' => false,
         'updatedAt' => false,
@@ -526,32 +526,25 @@ class ParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets sscc
      *
-     * @param string|null $sscc sscc
+     * @param string|null $sscc The Serial Shipping Container Code (SSCC) serves as a globally unique identifier for a logistic unit, functioning as a digital \"license plate\" for tracking and managing goods throughout the supply chain.
      *
      * @return self
      */
     public function setSscc($sscc)
     {
         if (is_null($sscc)) {
-            $this->openAPINullablesSetToNull[] = 'sscc';
-        } else {
-            $nullablesSetToNull = $this->openAPINullablesSetToNull;
-            $index = array_search('sscc', $nullablesSetToNull, true);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable sscc cannot be null');
         }
 
-        if (!is_null($sscc) && (mb_strlen($sscc) > 18)) {
+        if ((mb_strlen($sscc) > 18)) {
             throw new \InvalidArgumentException('invalid length for $sscc when calling ParcelsArrayResponse., must be smaller than or equal to 18.');
         }
 
-        if (!is_null($sscc) && (mb_strlen($sscc) < 18)) {
+        if ((mb_strlen($sscc) < 18)) {
             throw new \InvalidArgumentException('invalid length for $sscc when calling ParcelsArrayResponse., must be bigger than or equal to 18.');
         }
 
-        if (!is_null($sscc) && (!preg_match("/^\\d{18}$/", ObjectSerializer::toString($sscc)))) {
+        if ((!preg_match("/^\\d{18}$/", ObjectSerializer::toString($sscc)))) {
             throw new \InvalidArgumentException("invalid value for \$sscc when calling ParcelsArrayResponse., must conform to the pattern /^\\d{18}$/.");
         }
 
@@ -573,7 +566,7 @@ class ParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems List of items / products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
+     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems List of items/products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
      *
      * @return self
      */

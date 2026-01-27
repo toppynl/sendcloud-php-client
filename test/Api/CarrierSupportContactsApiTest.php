@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class CarrierSupportContactsApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfDeleteCarrierSupportContacts
      *
-     * Delete carrier support contact.
+     * Delete a carrier support contact.
      *
      */
     public function testScPublicV3DsfDeleteCarrierSupportContacts()
@@ -87,7 +87,7 @@ class CarrierSupportContactsApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfGetCarrierSupportContacts
      *
-     * Get carrier support contacts.
+     * Retrieve carrier support contacts.
      *
      */
     public function testScPublicV3DsfGetCarrierSupportContacts()
@@ -99,7 +99,7 @@ class CarrierSupportContactsApiTest extends TestCase
     /**
      * Test case for scPublicV3DsfPatchCarrierSupportContacts
      *
-     * Update carrier support contact.
+     * Update a carrier support contact.
      *
      */
     public function testScPublicV3DsfPatchCarrierSupportContacts()

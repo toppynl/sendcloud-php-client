@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -824,7 +824,7 @@ class UpsPickupAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets isAlternateAddress
      *
-     * @param bool|null $isAlternateAddress Indicates if pickup address is a different address than that specified in a customer's profile.
+     * @param bool|null $isAlternateAddress Indicates if the pickup address is a different address than that specified in a customer's profile.
      *
      * @return self
      */

@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -75,7 +75,7 @@ class ReturnsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpGetReturnsGetDetails
      *
-     * Retrieve a Return.
+     * Retrieve a return.
      *
      */
     public function testScPublicV3ScpGetReturnsGetDetails()
@@ -87,7 +87,7 @@ class ReturnsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpGetReturnsGetReturns
      *
-     * Retrieve a list of Returns.
+     * Retrieve a list of returns.
      *
      */
     public function testScPublicV3ScpGetReturnsGetReturns()
@@ -99,7 +99,7 @@ class ReturnsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpPatchReturnsCancel
      *
-     * Request cancellation of a specific Return.
+     * Request cancellation of a return.
      *
      */
     public function testScPublicV3ScpPatchReturnsCancel()

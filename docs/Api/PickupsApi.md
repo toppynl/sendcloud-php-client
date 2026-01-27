@@ -17,7 +17,7 @@ scPublicV3ScpGetAllPickups($pageSize): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAl
 
 Retrieve a list of pickups
 
-This endpoint retrieves information about all the pickups which have been created from your account. This is limited to the carriers which support pickups via the API. The response includes information about when the pickup was scheduled, the latest status, the parcel tracking number and the time frame in which the pickup is due to take place.
+Get information about all the pickups which have been created from your account.
 
 ### Example
 
@@ -79,7 +79,7 @@ scPublicV3ScpGetPickup($id): \Toppy\Sendcloud\Model\ScPublicV3ScpGetPickup200Res
 
 Retrieve a pickup
 
-This endpoint allows you to retrieve information about a specific pickup based on the pickup `id`.
+Retrieve information about a specific pickup based on the pickup `id`.
 
 ### Example
 
@@ -141,7 +141,7 @@ scPublicV3ScpPostPickup($scPublicV3ScpPostPickupRequest): \Toppy\Sendcloud\Model
 
 Create a pickup
 
-This endpoint allows you to schedule a pickup with a [**supporting carrier**](https://api.sendcloud.dev/docs/sendcloud-public-api/branches/v3/pickups#which-carriers-support-pickups-via-the-api). Schedule a pickup time and choose a location, and include any additional instructions to the driver by including the `special_instructions` parameter. When a pickup is successfully scheduled a pickup `id` will be returned.  <!-- theme: warning --> > If you have more than one added active contracts for specific carrier, you must fill `contract` attribute with your desired contract's ID in your request. You can get your contracts ID from [**Retrieve a list of contracts**](https://api.sendcloud.dev/docs/sendcloud-public-api/contracts/operations/list-contracts).
+Schedule a one-time pickup with a supported carrier.
 
 ### Example
 

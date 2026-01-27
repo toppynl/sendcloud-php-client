@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **colloCount** | **int** | The number of collos this return consists of | [optional] [default to 1]
 **parcelItems** | [**\Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]**](ParcelItemReturnsCreate.md) | List of items contained in this return. Required outside EU. | [optional]
 **sendTrackingEmails** | **bool** | When true Sendcloud will send out the default track and trace emails | [optional] [default to false]
-**brandId** | **int** | The ID of the brand this Return belongs to. To find the brand ID, refer to the &lt;a href&#x3D;\&quot;https://api.sendcloud.dev/docs/sendcloud-public-api/brands/operations/list-brands\&quot;&gt;Retrieve a list of brands&lt;/a&gt; section. | [optional]
+**brandId** | **int** | The ID of the brand this return belongs to. To find the brand ID, refer to the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint. | [optional]
 **totalInsuredValue** | [**\Toppy\Sendcloud\Model\Price**](Price.md) |  | [optional]
 **orderNumber** | **string** | Identifier of the order associated with this return | [optional]
 **totalOrderValue** | [**\Toppy\Sendcloud\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]
@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **customsInvoiceNr** | **string** | Customs invoice number. **This field is required if it&#39;s an international return** | [optional]
 **deliveryOption** | [**\Toppy\Sendcloud\Model\DeliveryOption**](DeliveryOption.md) |  | [optional]
 **customsInformation** | [**\Toppy\Sendcloud\Model\ParcelCustomsInformation**](ParcelCustomsInformation.md) |  | [optional]
-**applyRules** | **bool** | When set to true, return rules will be applied.  Note that rules take precedence over the values provided in the request.  For instance, if a contract is specified in one of the applied rules,  the contract value provided in the request will be ignored. | [optional] [default to false]
+**applyRules** | **bool** | When set to &#x60;true&#x60;, return rules will be applied.   Note that rules take precedence over the values provided in the request.   For instance, if a contract is specified in one of the applied rules, the contract value provided in the request will be ignored. | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

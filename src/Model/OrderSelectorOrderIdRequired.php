@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -308,7 +308,7 @@ class OrderSelectorOrderIdRequired implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets orderId
      *
-     * @param string $orderId External order ID assigned by shop system. Used to identify an order to be shipped.
+     * @param string $orderId An external order ID assigned by the shop system. Used to identify an order to be shipped.
      *
      * @return self
      */

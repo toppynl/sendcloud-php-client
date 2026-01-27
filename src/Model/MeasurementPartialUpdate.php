@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ReturnCreatedWebhook
+ * MeasurementPartialUpdate
  *
  * PHP version 8.1
  *
@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\ObjectSerializer;
 
 /**
- * ReturnCreatedWebhook Class Doc Comment
+ * MeasurementPartialUpdate Class Doc Comment
  *
  * @category Class
- * @description The webhook payload when a return is created. This is emitted when a return is created either via the API or the Return Portal.  Creating a return manually via Return Form does NOT trigger the webhook.
+ * @description This object provides essential information for accurate packing, shipping, and inventory management
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ReturnCreatedWebhook';
+    protected static $openAPIModelName = 'measurement-partial-update';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'action' => 'string',
-        'timestamp' => 'float',
-        'data' => \Toppy\Sendcloud\Model\ReturnCreatedWebhookData::class
+        'dimension' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension::class,
+        'weight' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight::class,
+        'volume' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume::class
     ];
 
     /**
@@ -72,9 +72,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'action' => null,
-        'timestamp' => null,
-        'data' => null
+        'dimension' => null,
+        'weight' => null,
+        'volume' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'action' => false,
-        'timestamp' => false,
-        'data' => false
+        'dimension' => false,
+        'weight' => false,
+        'volume' => false
     ];
 
     /**
@@ -146,9 +146,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'action' => 'action',
-        'timestamp' => 'timestamp',
-        'data' => 'data'
+        'dimension' => 'dimension',
+        'weight' => 'weight',
+        'volume' => 'volume'
     ];
 
     /**
@@ -157,9 +157,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'action' => 'setAction',
-        'timestamp' => 'setTimestamp',
-        'data' => 'setData'
+        'dimension' => 'setDimension',
+        'weight' => 'setWeight',
+        'volume' => 'setVolume'
     ];
 
     /**
@@ -168,9 +168,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'action' => 'getAction',
-        'timestamp' => 'getTimestamp',
-        'data' => 'getData'
+        'dimension' => 'getDimension',
+        'weight' => 'getWeight',
+        'volume' => 'getVolume'
     ];
 
     /**
@@ -214,19 +214,6 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
-    public const ACTION_RETURN_CREATED = 'return_created';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_RETURN_CREATED,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -243,9 +230,9 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('action', $data ?? [], null);
-        $this->setIfExists('timestamp', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('dimension', $data ?? [], null);
+        $this->setIfExists('weight', $data ?? [], null);
+        $this->setIfExists('volume', $data ?? [], null);
     }
 
     /**
@@ -268,34 +255,11 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Show all the invalid properties with reasons.
      *
-     * @return array invalid properties with reasons
+     * @return array{} invalid properties with reasons
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
-
-        if ($this->container['action'] === null) {
-            $invalidProperties[] = "'action' can't be null";
-        }
-
-        $allowedValues = $this->getActionAllowableValues();
-        if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'action', must be one of '%s'",
-                $this->container['action'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['timestamp'] === null) {
-            $invalidProperties[] = "'timestamp' can't be null";
-        }
-
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-
-        return $invalidProperties;
+        return [];
     }
 
     /**
@@ -311,96 +275,85 @@ class ReturnCreatedWebhook implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets action
+     * Gets dimension
      *
-     * @return string
+     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension|null
      */
-    public function getAction()
+    public function getDimension()
     {
-        return $this->container['action'];
+        return $this->container['dimension'];
     }
 
     /**
-     * Sets action
+     * Sets dimension
      *
-     * @param string $action Describes webhook action
+     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension|null $dimension dimension
      *
      * @return self
      */
-    public function setAction($action)
+    public function setDimension($dimension)
     {
-        if (is_null($action)) {
-            throw new \InvalidArgumentException('non-nullable action cannot be null');
+        if (is_null($dimension)) {
+            throw new \InvalidArgumentException('non-nullable dimension cannot be null');
         }
 
-        $allowedValues = $this->getActionAllowableValues();
-        if (!in_array($action, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'action', must be one of '%s'",
-                    $action,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-
-        $this->container['action'] = $action;
+        $this->container['dimension'] = $dimension;
 
         return $this;
     }
 
     /**
-     * Gets timestamp
+     * Gets weight
      *
-     * @return float
+     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight|null
      */
-    public function getTimestamp()
+    public function getWeight()
     {
-        return $this->container['timestamp'];
+        return $this->container['weight'];
     }
 
     /**
-     * Sets timestamp
+     * Sets weight
      *
-     * @param float $timestamp Unix timestamp
+     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight|null $weight weight
      *
      * @return self
      */
-    public function setTimestamp($timestamp)
+    public function setWeight($weight)
     {
-        if (is_null($timestamp)) {
-            throw new \InvalidArgumentException('non-nullable timestamp cannot be null');
+        if (is_null($weight)) {
+            throw new \InvalidArgumentException('non-nullable weight cannot be null');
         }
 
-        $this->container['timestamp'] = $timestamp;
+        $this->container['weight'] = $weight;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets volume
      *
-     * @return \Toppy\Sendcloud\Model\ReturnCreatedWebhookData
+     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume|null
      */
-    public function getData()
+    public function getVolume()
     {
-        return $this->container['data'];
+        return $this->container['volume'];
     }
 
     /**
-     * Sets data
+     * Sets volume
      *
-     * @param \Toppy\Sendcloud\Model\ReturnCreatedWebhookData $data data
+     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume|null $volume volume
      *
      * @return self
      */
-    public function setData($data)
+    public function setVolume($volume)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($volume)) {
+            throw new \InvalidArgumentException('non-nullable volume cannot be null');
         }
 
-        $this->container['data'] = $data;
+        $this->container['volume'] = $volume;
 
         return $this;
     }

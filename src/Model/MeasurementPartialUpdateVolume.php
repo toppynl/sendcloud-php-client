@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ParcelStatusChangedWebhookParcelCountry
+ * MeasurementPartialUpdateVolume
  *
  * PHP version 8.1
  *
@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\ObjectSerializer;
 
 /**
- * ParcelStatusChangedWebhookParcelCountry Class Doc Comment
+ * MeasurementPartialUpdateVolume Class Doc Comment
  *
  * @category Class
- * @description Country of the recipient
+ * @description Volume in the specified unit
  * @package  Toppy\Sendcloud
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class MeasurementPartialUpdateVolume implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ParcelStatusChangedWebhook_parcel_country';
+    protected static $openAPIModelName = 'measurement_partial_update_volume';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'iso3' => 'string',
-        'iso2' => 'string',
-        'name' => 'string'
+        'value' => 'int',
+        'unit' => \Toppy\Sendcloud\Model\VolumeUnits::class
     ];
 
     /**
@@ -72,9 +71,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'iso3' => null,
-        'iso2' => null,
-        'name' => null
+        'value' => null,
+        'unit' => null
     ];
 
     /**
@@ -83,9 +81,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'iso3' => false,
-        'iso2' => false,
-        'name' => false
+        'value' => false,
+        'unit' => false
     ];
 
     /**
@@ -146,9 +143,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'iso3' => 'iso_3',
-        'iso2' => 'iso_2',
-        'name' => 'name'
+        'value' => 'value',
+        'unit' => 'unit'
     ];
 
     /**
@@ -157,9 +153,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'iso3' => 'setIso3',
-        'iso2' => 'setIso2',
-        'name' => 'setName'
+        'value' => 'setValue',
+        'unit' => 'setUnit'
     ];
 
     /**
@@ -168,9 +163,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'iso3' => 'getIso3',
-        'iso2' => 'getIso2',
-        'name' => 'getName'
+        'value' => 'getValue',
+        'unit' => 'getUnit'
     ];
 
     /**
@@ -230,9 +224,8 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('iso3', $data ?? [], null);
-        $this->setIfExists('iso2', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
+        $this->setIfExists('unit', $data ?? [], null);
     }
 
     /**
@@ -255,11 +248,17 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
     /**
      * Show all the invalid properties with reasons.
      *
-     * @return array{} invalid properties with reasons
+     * @return array invalid properties with reasons
      */
     public function listInvalidProperties()
     {
-        return [];
+        $invalidProperties = [];
+
+        if (!is_null($this->container['value']) && ($this->container['value'] < 0)) {
+            $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
+        }
+
+        return $invalidProperties;
     }
 
     /**
@@ -275,85 +274,61 @@ class ParcelStatusChangedWebhookParcelCountry implements ModelInterface, ArrayAc
 
 
     /**
-     * Gets iso3
+     * Gets value
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getIso3()
+    public function getValue()
     {
-        return $this->container['iso3'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets iso3
+     * Sets value
      *
-     * @param string|null $iso3 iso3
+     * @param int|null $value Volume value
      *
      * @return self
      */
-    public function setIso3($iso3)
+    public function setValue($value)
     {
-        if (is_null($iso3)) {
-            throw new \InvalidArgumentException('non-nullable iso3 cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
 
-        $this->container['iso3'] = $iso3;
+        if (($value < 0)) {
+            throw new \InvalidArgumentException('invalid value for $value when calling MeasurementPartialUpdateVolume., must be bigger than or equal to 0.');
+        }
+
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets iso2
+     * Gets unit
      *
-     * @return string|null
+     * @return \Toppy\Sendcloud\Model\VolumeUnits|null
      */
-    public function getIso2()
+    public function getUnit()
     {
-        return $this->container['iso2'];
+        return $this->container['unit'];
     }
 
     /**
-     * Sets iso2
+     * Sets unit
      *
-     * @param string|null $iso2 iso2
+     * @param \Toppy\Sendcloud\Model\VolumeUnits|null $unit unit
      *
      * @return self
      */
-    public function setIso2($iso2)
+    public function setUnit($unit)
     {
-        if (is_null($iso2)) {
-            throw new \InvalidArgumentException('non-nullable iso2 cannot be null');
+        if (is_null($unit)) {
+            throw new \InvalidArgumentException('non-nullable unit cannot be null');
         }
 
-        $this->container['iso2'] = $iso2;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-
-        $this->container['name'] = $name;
+        $this->container['unit'] = $unit;
 
         return $this;
     }

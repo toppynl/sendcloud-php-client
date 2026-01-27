@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -60,7 +60,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'isLocalPickup' => 'bool',
         'deliveryIndicator' => 'string',
-        'measurement' => 'object',
+        'measurement' => \Toppy\Sendcloud\Model\MeasurementPartialUpdate::class,
         'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class
     ];
 
@@ -321,7 +321,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     /**
      * Sets deliveryIndicator
      *
-     * @param string|null $deliveryIndicator A free text field to indicate how a specific order should be shipped. - The field is intended for applying the Checkout Delivery Method condition in shipping rules. - Learn more about the [Shipping rules](https://sendcloud.dev/docs/shipping/shipping-rules/).
+     * @param string|null $deliveryIndicator A free text field to indicate how a specific order should be shipped.  - The field is intended for applying the Checkout Delivery Method condition in shipping rules. - Learn more about [shipping rules](/docs/shipping/shipping-rules/).
      *
      * @return self
      */
@@ -339,7 +339,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     /**
      * Gets measurement
      *
-     * @return object|null
+     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdate|null
      */
     public function getMeasurement()
     {
@@ -349,7 +349,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     /**
      * Sets measurement
      *
-     * @param object|null $measurement measurement
+     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdate|null $measurement measurement
      *
      * @return self
      */

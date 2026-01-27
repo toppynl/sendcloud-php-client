@@ -14,7 +14,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -168,9 +168,9 @@ class OAuth2Api
     }
 
     /**
-     * Operation oauth2TokenExchange
+     * Operation oAuth2TokenExchange
      *
-     * The OAuth 2.0 Token Endpoint
+     * OAuth 2.0 token
      *
      * @param  string $grantType grantType (required)
      * @param  string $clientId clientId (optional)
@@ -182,16 +182,16 @@ class OAuth2Api
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\Model\OAuth2TokenExchange|\Toppy\Sendcloud\Model\ErrorOAuth2
      */
-    public function oauth2TokenExchange($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
+    public function oAuth2TokenExchange($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
     {
-        [$response] = $this->oauth2TokenExchangeWithHttpInfo($grantType, $clientId, $code, $redirectUri, $refreshToken);
+        [$response] = $this->oAuth2TokenExchangeWithHttpInfo($grantType, $clientId, $code, $redirectUri, $refreshToken);
         return $response;
     }
 
     /**
-     * Operation oauth2TokenExchangeWithHttpInfo
+     * Operation oAuth2TokenExchangeWithHttpInfo
      *
-     * The OAuth 2.0 Token Endpoint
+     * OAuth 2.0 token
      *
      * @param  string $grantType (required)
      * @param  string $clientId (optional)
@@ -203,9 +203,9 @@ class OAuth2Api
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\Model\OAuth2TokenExchange|\Toppy\Sendcloud\Model\ErrorOAuth2, HTTP status code, HTTP response headers (array of strings)
      */
-    public function oauth2TokenExchangeWithHttpInfo($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
+    public function oAuth2TokenExchangeWithHttpInfo($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
     {
-        $request = $this->oauth2TokenExchangeRequest($grantType, $clientId, $code, $redirectUri, $refreshToken);
+        $request = $this->oAuth2TokenExchangeRequest($grantType, $clientId, $code, $redirectUri, $refreshToken);
 
         try {
             try {
@@ -270,9 +270,9 @@ class OAuth2Api
     }
 
     /**
-     * Operation oauth2TokenExchangeAsync
+     * Operation oAuth2TokenExchangeAsync
      *
-     * The OAuth 2.0 Token Endpoint
+     * OAuth 2.0 token
      *
      * @param  string $grantType (required)
      * @param  string $clientId (optional)
@@ -283,9 +283,9 @@ class OAuth2Api
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function oauth2TokenExchangeAsync($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
+    public function oAuth2TokenExchangeAsync($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
     {
-        return $this->oauth2TokenExchangeAsyncWithHttpInfo($grantType, $clientId, $code, $redirectUri, $refreshToken)
+        return $this->oAuth2TokenExchangeAsyncWithHttpInfo($grantType, $clientId, $code, $redirectUri, $refreshToken)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -294,9 +294,9 @@ class OAuth2Api
     }
 
     /**
-     * Operation oauth2TokenExchangeAsyncWithHttpInfo
+     * Operation oAuth2TokenExchangeAsyncWithHttpInfo
      *
-     * The OAuth 2.0 Token Endpoint
+     * OAuth 2.0 token
      *
      * @param  string $grantType (required)
      * @param  string $clientId (optional)
@@ -307,10 +307,10 @@ class OAuth2Api
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function oauth2TokenExchangeAsyncWithHttpInfo($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
+    public function oAuth2TokenExchangeAsyncWithHttpInfo($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
     {
         $returnType = \Toppy\Sendcloud\Model\OAuth2TokenExchange::class;
-        $request = $this->oauth2TokenExchangeRequest($grantType, $clientId, $code, $redirectUri, $refreshToken);
+        $request = $this->oAuth2TokenExchangeRequest($grantType, $clientId, $code, $redirectUri, $refreshToken);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -345,7 +345,7 @@ class OAuth2Api
     }
 
     /**
-     * Create request for operation 'oauth2TokenExchange'
+     * Create request for operation 'oAuth2TokenExchange'
      *
      * @param  string $grantType (required)
      * @param  string $clientId (optional)
@@ -356,12 +356,12 @@ class OAuth2Api
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function oauth2TokenExchangeRequest($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
+    public function oAuth2TokenExchangeRequest($grantType, $clientId = null, $code = null, $redirectUri = null, $refreshToken = null)
     {
         // verify the required parameter 'grantType' is set
         if ($grantType === null || (is_array($grantType) && $grantType === [])) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $grantType when calling oauth2TokenExchange'
+                'Missing the required parameter $grantType when calling oAuth2TokenExchange'
             );
         }
 

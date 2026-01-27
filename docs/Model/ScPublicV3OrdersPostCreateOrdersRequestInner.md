@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Sendcloud&#39;s internal ID for the order. - In **responses**: Returned as an integer (e.g., &#x60;669&#x60;) - In **requests**: Optional field for explicitly updating a specific order. Must be provided as a string (e.g., &#x60;\&quot;669\&quot;&#x60;) - If omitted in requests, the upsert logic uses the combination of &#x60;order_id&#x60; + &#x60;integration.id&#x60; to match existing orders | [optional]
+**id** | **string** | Sendcloud&#39;s internal ID for the order.  - In **responses**: Returned as an integer (e.g., &#x60;669&#x60;) - In **requests**: Optional field for explicitly updating a specific order. Must be provided as a string (e.g., &#x60;\&quot;669\&quot;&#x60;) - If omitted in requests, the upsert logic uses the combination of &#x60;order_id&#x60; + &#x60;integration.id&#x60; to match existing orders | [optional]
 **orderId** | **string** | External order ID assigned by shop system |
 **orderNumber** | **string** | Unique order number generated manually or by shop system |
 **createdAt** | **\DateTime** | The date when an order was created at Sendcloud in ISO 8601 | [optional] [readonly]

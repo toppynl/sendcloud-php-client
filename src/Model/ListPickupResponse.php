@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -695,7 +695,7 @@ class ListPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets contractId
      *
-     * @param int|null $contractId Id of the contract that is used to create the pickup.
+     * @param int|null $contractId ID of the contract that is used to create the pickup.
      *
      * @return self
      */

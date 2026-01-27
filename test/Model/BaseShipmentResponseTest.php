@@ -13,7 +13,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -192,15 +192,6 @@ class BaseShipmentResponseTest extends TestCase
      * Test attribute "deliveryDates"
      */
     public function testPropertyDeliveryDates()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "carrier"
-     */
-    public function testPropertyCarrier()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -12,7 +12,7 @@
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -99,7 +99,7 @@ class ContractsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpGetAllContractsSchemas
      *
-     * Retrieve a list of contracts schemas.
+     * Retrieve a list of contract schemas.
      *
      */
     public function testScPublicV3ScpGetAllContractsSchemas()
@@ -135,7 +135,7 @@ class ContractsApiTest extends TestCase
     /**
      * Test case for scPublicV3ScpPostCreateContract
      *
-     * Create a contract for carrier.
+     * Create a contract for a carrier.
      *
      */
     public function testScPublicV3ScpPostCreateContract()

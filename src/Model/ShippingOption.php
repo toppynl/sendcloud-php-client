@@ -15,7 +15,7 @@ declare(strict_types=1);
 /**
  * Sendcloud Public REST API
  *
- * Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles
+ * Complete Sendcloud API v3 specification - merged from official sendcloud.dev documentation
  *
  * The version of the OpenAPI document: 3.0.0
  * Contact: contact@sendcloud.com
@@ -657,7 +657,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets chargingType
      *
-     * @param string|null $chargingType Specifies the timing of Sendcloud’s invoicing for the shipping label.  If set to `label_creation`, the label is invoiced at the moment it is created.  If set to `first_scan`, the label is only invoiced when the carrier first scans the parcel.  The `first_scan` value is only supported for return shipping options.
+     * @param string|null $chargingType Specifies the timing of Sendcloud's invoicing for the shipping label.  If set to `label_creation`, the label is invoiced at the moment it is created.  If set to `first_scan`, the label is only invoiced when the carrier first scans the parcel.  The `first_scan` value is only supported for return shipping options.
      *
      * @return self
      */
@@ -696,7 +696,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets quotes
      *
-     * @param \Toppy\Sendcloud\Model\ShippingQuote[]|null $quotes List of available quotes.  Quotes will only be calculated if: - `from_country_code` and `to_country_code` are to provided. - Direct contract prices are provided for the returned shipping options.
+     * @param \Toppy\Sendcloud\Model\ShippingQuote[]|null $quotes List of available quotes.  Quotes will only be calculated if:    - `from_country_code` and `to_country_code` are to provided. - Direct contract prices are provided for the returned shipping options.
      *
      * @return self
      */
