@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3",
-    "x-generated": "2026-01-28T13:49:00Z"
+    "x-generated": "2026-01-28T14:24:12Z"
   },
   "servers": [
     {
@@ -15169,22 +15169,7 @@
           "code": {
             "type": "string",
             "description": "A unique error code for the error, in snake case format.",
-            "minLength": 1,
-            "enum": [
-              "unknown_field",
-              "invalid",
-              "forbidden",
-              "invalid_choice",
-              "min_value",
-              "null",
-              "not_found",
-              "required",
-              "not_a_list",
-              "non_field_errors",
-              "authentication_failed",
-              "validation_error",
-              "parcel_announcement_error"
-            ]
+            "minLength": 1
           },
           "title": {
             "type": "string",

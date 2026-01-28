@@ -13,6 +13,7 @@
 # - Removes empty component sections
 # - Removes OpenAPI 3.1 specific schema attributes
 # - Simplifies allOf with single ErrorObject $ref to direct $ref
+# - Removes enum constraint from ErrorObject.code (API returns unlisted codes)
 #
 # Usage: ./scripts/fix-openapi-spec.sh
 #
@@ -51,6 +52,9 @@ jq '
 
   # Remove invalid schemas with numeric names (like "0", "1")
   .components.schemas |= with_entries(select(.key | test("^[0-9]+$") | not)) |
+
+  # Remove enum constraint from ErrorObject.code (API returns codes not in spec)
+  .components.schemas.ErrorObject.properties.code |= del(.enum) |
 
   # Fix schemas in components.schemas (recursively within each schema)
   .components.schemas |= (

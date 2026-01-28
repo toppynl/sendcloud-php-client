@@ -244,55 +244,6 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
         return self::$openAPIModelName;
     }
 
-    public const CODE_UNKNOWN_FIELD = 'unknown_field';
-
-    public const CODE_INVALID = 'invalid';
-
-    public const CODE_FORBIDDEN = 'forbidden';
-
-    public const CODE_INVALID_CHOICE = 'invalid_choice';
-
-    public const CODE_MIN_VALUE = 'min_value';
-
-    public const CODE_NULL = 'null';
-
-    public const CODE_NOT_FOUND = 'not_found';
-
-    public const CODE_REQUIRED = 'required';
-
-    public const CODE_NOT_A_LIST = 'not_a_list';
-
-    public const CODE_NON_FIELD_ERRORS = 'non_field_errors';
-
-    public const CODE_AUTHENTICATION_FAILED = 'authentication_failed';
-
-    public const CODE_VALIDATION_ERROR = 'validation_error';
-
-    public const CODE_PARCEL_ANNOUNCEMENT_ERROR = 'parcel_announcement_error';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCodeAllowableValues()
-    {
-        return [
-            self::CODE_UNKNOWN_FIELD,
-            self::CODE_INVALID,
-            self::CODE_FORBIDDEN,
-            self::CODE_INVALID_CHOICE,
-            self::CODE_MIN_VALUE,
-            self::CODE_NULL,
-            self::CODE_NOT_FOUND,
-            self::CODE_REQUIRED,
-            self::CODE_NOT_A_LIST,
-            self::CODE_NON_FIELD_ERRORS,
-            self::CODE_AUTHENTICATION_FAILED,
-            self::CODE_VALIDATION_ERROR,
-            self::CODE_PARCEL_ANNOUNCEMENT_ERROR,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -347,15 +298,6 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
 
         if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
             $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
-        }
-
-        $allowedValues = $this->getCodeAllowableValues();
-        if (!is_null($this->container['code']) && !in_array($this->container['code'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'code', must be one of '%s'",
-                $this->container['code'],
-                implode("', '", $allowedValues)
-            );
         }
 
         if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 1)) {
@@ -494,17 +436,6 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     {
         if (is_null($code)) {
             throw new \InvalidArgumentException('non-nullable code cannot be null');
-        }
-
-        $allowedValues = $this->getCodeAllowableValues();
-        if (!in_array($code, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'code', must be one of '%s'",
-                    $code,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
 
         if ((mb_strlen($code) < 1)) {
