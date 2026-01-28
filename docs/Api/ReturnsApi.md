@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetReturnsGetReturns()`
 
 ```php
-scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $parentParcelStatus, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response
+scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $cursor, $parentParcelStatus, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response
 ```
 
 Retrieve a list of returns
@@ -105,11 +105,12 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
 );
 $fromDate = 2022-04-06 00:00:00; // string | Excludes all returns before this datetime
 $toDate = 2022-04-07 00:00:00; // string | Excludes all returns after this datetime
+$cursor = cj0xJnA9MzAw; // string | The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - `o`: Offset - `r`: Reverse - `p`: Position    For example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.
 $parentParcelStatus = announced; // string | Search for returns with this parent status
 $pageSize = 10; // float | Refers to the number of items per page
 
 try {
-    $result = $apiInstance->scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $parentParcelStatus, $pageSize);
+    $result = $apiInstance->scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $cursor, $parentParcelStatus, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReturnsApi->scPublicV3ScpGetReturnsGetReturns: ', $e->getMessage(), PHP_EOL;
@@ -122,6 +123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fromDate** | **string**| Excludes all returns before this datetime |
  **toDate** | **string**| Excludes all returns after this datetime |
+ **cursor** | **string**| The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. | [optional]
  **parentParcelStatus** | **string**| Search for returns with this parent status | [optional]
  **pageSize** | **float**| Refers to the number of items per page | [optional]
 
@@ -207,7 +209,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostReturnsCreateNewReturn()`
 
 ```php
-scPublicV3ScpPostReturnsCreateNewReturn(): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
+scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
 ```
 
 Create a return
@@ -233,9 +235,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturn();
+    $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReturnsApi->scPublicV3ScpPostReturnsCreateNewReturn: ', $e->getMessage(), PHP_EOL;
@@ -244,7 +248,10 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
@@ -256,7 +263,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -266,7 +273,7 @@ This endpoint does not need any parameter.
 ## `scPublicV3ScpPostReturnsCreateNewReturnSynchronously()`
 
 ```php
-scPublicV3ScpPostReturnsCreateNewReturnSynchronously(): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
+scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
 ```
 
 Create a return synchronously
@@ -292,9 +299,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturnSynchronously();
+    $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReturnsApi->scPublicV3ScpPostReturnsCreateNewReturnSynchronously: ', $e->getMessage(), PHP_EOL;
@@ -303,7 +312,10 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
@@ -315,7 +327,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -325,7 +337,7 @@ This endpoint does not need any parameter.
 ## `scPublicV3ScpPostReturnsValidate()`
 
 ```php
-scPublicV3ScpPostReturnsValidate(): \Toppy\Sendcloud\V3\Model\ReturnValidation
+scPublicV3ScpPostReturnsValidate($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ReturnValidation
 ```
 
 Validate a return
@@ -351,9 +363,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostReturnsValidate();
+    $result = $apiInstance->scPublicV3ScpPostReturnsValidate($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ReturnsApi->scPublicV3ScpPostReturnsValidate: ', $e->getMessage(), PHP_EOL;
@@ -362,7 +376,10 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
@@ -374,7 +391,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

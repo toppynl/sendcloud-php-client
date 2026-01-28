@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObject1ErrorTest
+ * ScPublicV3OrdersPatchPartialUpdateOrder200ResponseDataTest
  *
  * PHP version 8.1
  *
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\V3\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObject1ErrorTest Class Doc Comment
+ * ScPublicV3OrdersPatchPartialUpdateOrder200ResponseDataTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject1Error
+ * @description Create/Update orders in batch response object
  * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InlineObject1ErrorTest extends TestCase
+class ScPublicV3OrdersPatchPartialUpdateOrder200ResponseDataTest extends TestCase
 {
 
     /**
@@ -72,36 +72,36 @@ class InlineObject1ErrorTest extends TestCase
     }
 
     /**
-     * Test "InlineObject1Error"
+     * Test "ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData"
      */
-    public function testInlineObject1Error()
+    public function testScPublicV3OrdersPatchPartialUpdateOrder200ResponseData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "id"
      */
-    public function testPropertyCode()
+    public function testPropertyId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "request"
+     * Test attribute "orderId"
      */
-    public function testPropertyRequest()
+    public function testPropertyOrderId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "orderNumber"
      */
-    public function testPropertyMessage()
+    public function testPropertyOrderNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

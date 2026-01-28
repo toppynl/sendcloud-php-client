@@ -1,4 +1,4 @@
-# # InlineObject1Error
+# # ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError
 
 ## Properties
 

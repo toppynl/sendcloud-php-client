@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3",
-    "x-generated": "2026-01-28T18:22:05Z"
+    "x-generated": "2026-01-28T19:03:15Z"
   },
   "servers": [
     {
@@ -848,13 +848,37 @@
         "description": "The options returned by this endpoint are based on the [delivery methods](https://support.sendcloud.com/hc/en-us/articles/360057944932-How-to-configure-Dynamic-Checkout#4) previously configured in addition to cart or order information, such as parcel weight, total order value, destination country, and more.",
         "parameters": [
           {
-            "name": "configuration_id",
-            "in": "path",
-            "required": true,
-            "description": "The checkout configuration ID",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/ConfigurationID"
+          },
+          {
+            "$ref": "#/components/parameters/WeightValue"
+          },
+          {
+            "$ref": "#/components/parameters/TotalOrderValue"
+          },
+          {
+            "$ref": "#/components/parameters/FromCountry"
+          },
+          {
+            "$ref": "#/components/parameters/ToCountry"
+          },
+          {
+            "$ref": "#/components/parameters/CheckoutIdentifierType"
+          },
+          {
+            "$ref": "#/components/parameters/ToPostalCode"
+          },
+          {
+            "$ref": "#/components/parameters/ParcelLength"
+          },
+          {
+            "$ref": "#/components/parameters/ParcelWidth"
+          },
+          {
+            "$ref": "#/components/parameters/ParcelHeight"
+          },
+          {
+            "$ref": "#/components/parameters/CheckoutMetadata"
           }
         ],
         "security": [
@@ -873,9 +897,28 @@
                 "schema": {
                   "$ref": "#/components/schemas/delivery-options-response"
                 },
-                "examples": {}
+                "examples": {
+                  "StandardDeliveryOption": {
+                    "$ref": "#/components/examples/StandardDeliveryOption"
+                  },
+                  "ServicePointDeliveryOptions": {
+                    "$ref": "#/components/examples/ServicePointDeliveryOptions"
+                  },
+                  "NominatedDayDeliveryOption": {
+                    "$ref": "#/components/examples/NominatedDayDeliveryOption"
+                  },
+                  "SameDayDeliveryOption": {
+                    "$ref": "#/components/examples/SameDayDeliveryOption"
+                  }
+                }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/Error400BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/Error404NotFound"
           }
         },
         "tags": [
@@ -1629,7 +1672,11 @@
           "href": "/api/v3/orders/create-update-orders-in-batch",
           "content": "Each order can have a different integration id, so you can create/update orders for multiple integrations in one request.\n\n## Upsert behavior\n\nThis is an **upsert** endpoint, which means:\n\n  - If an order with the same `order_id` and `integration.id` combination **already exists**, it will be **updated**\n  - If no matching order exists, a **new order will be created**\n  - **Optional**: You can include the Sendcloud `id` field to explicitly update a specific order\n    - **Important**: When returned in responses, `id` is an **integer**, but when sending it in requests, it must be a **string**\n    - Example: Response returns `\"id\": 669`, but request must send `\"id\": \"669\"`\n\n## Batch processing\n\n- Process multiple orders in a single request (up to **100 orders maximum**)\n- Orders from different integrations can be included in the same batch\n- **All-or-nothing transaction**: If any order in the batch fails validation, the entire batch is rejected and zero orders are created or updated\n\n## Limitations and constraints\n\n- **Maximum batch size**: 100 orders per request\n- **Upsert matching**: Orders are matched by the combination of `order_id` + `integration.id`\n- **Immutable fields**: When updating existing orders, certain fields like `order_id` cannot be changed\n- **Concurrent processing**: If the same `order_id` is being processed by another request, you'll receive a conflict error. Wait a moment and retry\n- **Integration access**: You can only create/update orders for integrations that belong to your account\n\n## Best practices\n\n- Ensure all required fields are present before sending the request\n- Handle errors gracefully and implement retry logic for transient failures"
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -2913,7 +2960,47 @@
             }
           }
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/integration"
+          },
+          {
+            "$ref": "#/components/parameters/order_number"
+          },
+          {
+            "$ref": "#/components/parameters/order_id"
+          },
+          {
+            "$ref": "#/components/parameters/order_status"
+          },
+          {
+            "$ref": "#/components/parameters/order_created_at"
+          },
+          {
+            "$ref": "#/components/parameters/order_created_at_min"
+          },
+          {
+            "$ref": "#/components/parameters/order_created_at_max"
+          },
+          {
+            "$ref": "#/components/parameters/order_updated_at"
+          },
+          {
+            "$ref": "#/components/parameters/order_updated_at_min"
+          },
+          {
+            "$ref": "#/components/parameters/order_updated_at_max"
+          },
+          {
+            "$ref": "#/components/parameters/sort"
+          },
+          {
+            "$ref": "#/components/parameters/page_size"
+          },
+          {
+            "$ref": "#/components/parameters/cursor"
+          }
+        ],
         "operationId": "sc-public-v3-orders-get-list_orders",
         "security": [
           {
@@ -3232,6 +3319,9 @@
           }
         },
         "responses": {
+          "200": {
+            "$ref": "#/components/responses/OrderUpdated"
+          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -6572,7 +6662,14 @@
             "OAuth2ClientCreds": []
           }
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/CreateReturn"
+        }
       },
       "get": {
         "tags": [
@@ -6585,6 +6682,9 @@
           "content": "The response includes return data for each parcel, plus up-to-date tracking history.\n\nThe returned data is paginated and has a default number of items per page of `40`, which can be controlled by the `page_size` query param.\n\nYou can filter the results to only include return parcels created within a specific time frame using the `from_date` and `to_date` parameters, or based on the `parent_parcel_status`."
         },
         "parameters": [
+          {
+            "$ref": "#/components/parameters/Cursor"
+          },
           {
             "name": "from_date",
             "in": "query",
@@ -6986,7 +7086,14 @@
           "href": "/api/v3/returns/validate-a-return",
           "content": "This endpoint allows you to validate whether a return can be announced **without** actually creating the return or announcing it with the carrier. You can structure the request body exactly as you would if you were making a request to the [Create a return](/api/v3/returns/create-a-return) endpoint.\n\nWhen you make the request, the response will indicate whether the parcel is valid and can be announced. Validation is based mainly on the `to` and `from` address, the parcel `weight` and the shipping product `id` provided.\n\n<Info>\n  The `parcel_items` field is **mandatory** if you're creating a return from outside the EU.\n</Info>"
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/CreateReturn"
+        },
         "responses": {
           "200": {
             "description": "Your return passed all validation",
@@ -7031,7 +7138,14 @@
           "href": "/api/v3/returns/create-a-return-synchronously",
           "content": "This endpoint will create a return, similarly to the [Create a return](/api/v3/returns/create-a-return) endpoint, but via a synchronous API request. This means that the API will wait for a response from the carrier before you can continue.\n\nThis endpoint is primarily used for **debugging purposes** in the event that a return parcel announcement fails, as it will retrieve the carrier announcement error. Creating a return synchronously can impact the performance of the endpoint, as the process will take longer than calls to the [Create a return](/api/v3/returns/create-a-return) endpoint.\n\n<Info>\n  **Note:** The `parcel_items` field is mandatory if you're creating a return from outside the EU.\n</Info>"
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
+        "requestBody": {
+          "$ref": "#/components/requestBodies/CreateReturn"
+        },
         "responses": {
           "201": {
             "description": "Created",
@@ -7076,6 +7190,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
           }
         },
         "operationId": "sc-public-v3-scp-post-returns_create_new_return_synchronously",
@@ -7108,6 +7225,9 @@
           "Sender Address"
         ],
         "parameters": [
+          {
+            "$ref": "#/components/parameters/Cursor"
+          },
           {
             "schema": {
               "type": "integer",
@@ -7398,7 +7518,11 @@
           "href": "/api/v3/ship-an-order/request-a-label-for-one-or-more-orders-asynchronously",
           "content": "To retrieve your documents or view announcement errors, use the `id` of the relevant shipment with the [Retrieve a shipment](/api/v3/shipments/retrieve-a-shipment) endpoint.\n\nTo apply shipping rules to the orders, make sure to set `apply_shipping_rules` to `true`.\n\nThis endpoint will attempt to generate labels for each order. If a request for one label errors, it will still attempt to generate the other labels. Because of this, the response might return a mix of labels and errors. Use the errors `source` `pointer` field to see which labels encountered a problem."
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7716,6 +7840,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
           }
         }
       }
@@ -7739,7 +7866,11 @@
         "x-mint": {
           "href": "/api/v3/ship-an-order/request-a-label-for-a-single-order-synchronously"
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7897,6 +8028,12 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
           }
         }
       }
@@ -7913,7 +8050,11 @@
           "Shipments"
         ],
         "operationId": "sc-public-v3-scp-post-announce_shipment",
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9143,6 +9284,9 @@
             "description": "Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs."
           },
           {
+            "$ref": "#/components/parameters/Cursor"
+          },
+          {
             "schema": {
               "type": "integer",
               "minimum": 1,
@@ -9742,7 +9886,11 @@
             }
           }
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -10749,7 +10897,11 @@
             }
           }
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11800,7 +11952,11 @@
             }
           }
         },
-        "parameters": [],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/SendcloudPartnerId"
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -24599,13 +24755,7 @@
         "description": "The maximum number of results to be returned per page"
       },
       "cursor": {
-        "in": "query",
-        "name": "cursor",
-        "description": "The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.\n\nThere are 3 possible parameters to encode:\n  - `o`: Offset\n  - `r`: Reverse\n  - `p`: Position\n  \nFor example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.",
-        "schema": {
-          "type": "string",
-          "example": "cj0xJnA9MzAw"
-        }
+        "$ref": "#/components/parameters/Cursor"
       },
       "SendcloudPartnerId": {
         "in": "header",

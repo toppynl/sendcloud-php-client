@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3AddressesGetAllSenderAddresses()`
 
 ```php
-scPublicV3AddressesGetAllSenderAddresses($pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
+scPublicV3AddressesGetAllSenderAddresses($cursor, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
 ```
 
 Retrieve a list of sender addresses
@@ -37,10 +37,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\SenderAddressApi(
     new GuzzleHttp\Client(),
     $config
 );
+$cursor = cj0xJnA9MzAw; // string | The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - `o`: Offset - `r`: Reverse - `p`: Position    For example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.
 $pageSize = 100; // int | The size of the page to fetch
 
 try {
-    $result = $apiInstance->scPublicV3AddressesGetAllSenderAddresses($pageSize);
+    $result = $apiInstance->scPublicV3AddressesGetAllSenderAddresses($cursor, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SenderAddressApi->scPublicV3AddressesGetAllSenderAddresses: ', $e->getMessage(), PHP_EOL;
@@ -51,6 +52,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cursor** | **string**| The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. | [optional]
  **pageSize** | **int**| The size of the page to fetch | [optional]
 
 ### Return type

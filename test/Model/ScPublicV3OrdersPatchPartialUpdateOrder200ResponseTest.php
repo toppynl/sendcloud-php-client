@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObject1Test
+ * ScPublicV3OrdersPatchPartialUpdateOrder200ResponseTest
  *
  * PHP version 8.1
  *
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\V3\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObject1Test Class Doc Comment
+ * ScPublicV3OrdersPatchPartialUpdateOrder200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject1
+ * @description ScPublicV3OrdersPatchPartialUpdateOrder200Response
  * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InlineObject1Test extends TestCase
+class ScPublicV3OrdersPatchPartialUpdateOrder200ResponseTest extends TestCase
 {
 
     /**
@@ -72,18 +72,18 @@ class InlineObject1Test extends TestCase
     }
 
     /**
-     * Test "InlineObject1"
+     * Test "ScPublicV3OrdersPatchPartialUpdateOrder200Response"
      */
-    public function testInlineObject1()
+    public function testScPublicV3OrdersPatchPartialUpdateOrder200Response()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "error"
+     * Test attribute "data"
      */
-    public function testPropertyError()
+    public function testPropertyData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -1,4 +1,4 @@
-# # InlineObjectData
+# # ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData
 
 ## Properties
 

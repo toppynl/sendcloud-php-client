@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObjectTest
+ * ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseErrorTest
  *
  * PHP version 8.1
  *
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\V3\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObjectTest Class Doc Comment
+ * ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseErrorTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject
+ * @description ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError
  * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InlineObjectTest extends TestCase
+class ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseErrorTest extends TestCase
 {
 
     /**
@@ -72,18 +72,36 @@ class InlineObjectTest extends TestCase
     }
 
     /**
-     * Test "InlineObject"
+     * Test "ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError"
      */
-    public function testInlineObject()
+    public function testScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "code"
      */
-    public function testPropertyData()
+    public function testPropertyCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "request"
+     */
+    public function testPropertyRequest()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "message"
+     */
+    public function testPropertyMessage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -172,15 +172,25 @@ class DeliveryOptionsApi
      *
      * Retrieve a list of delivery options
      *
-     * @param  string $configurationId The checkout configuration ID (required)
+     * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
+     * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
+     * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
+     * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3CheckoutApiGetDeliveryOptions($configurationId)
+    public function scPublicV3CheckoutApiGetDeliveryOptions($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
-        [$response] = $this->scPublicV3CheckoutApiGetDeliveryOptionsWithHttpInfo($configurationId);
+        [$response] = $this->scPublicV3CheckoutApiGetDeliveryOptionsWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata);
         return $response;
     }
 
@@ -189,15 +199,25 @@ class DeliveryOptionsApi
      *
      * Retrieve a list of delivery options
      *
-     * @param  string $configurationId The checkout configuration ID (required)
+     * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
+     * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
+     * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
+     * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3CheckoutApiGetDeliveryOptionsWithHttpInfo($configurationId)
+    public function scPublicV3CheckoutApiGetDeliveryOptionsWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
-        $request = $this->scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId);
+        $request = $this->scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata);
 
         try {
             try {
@@ -226,12 +246,20 @@ class DeliveryOptionsApi
             $statusCode = $response->getStatusCode();
 
 
-            if ($statusCode === 200) {
-                return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
-                    $request,
-                    $response,
-                );
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
+                        $request,
+                        $response,
+                    );
+                case 400:
+                case 404:
+                    return $this->handleResponseWithDataType(
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
+                        $request,
+                        $response,
+                    );
             }
 
             
@@ -254,14 +282,31 @@ class DeliveryOptionsApi
                 $response,
             );
         } catch (ApiException $apiException) {
-            if ($apiException->getCode() === 200) {
-                $data = ObjectSerializer::deserialize(
-                    $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
-                    $apiException->getResponseHeaders()
-                );
-                $apiException->setResponseObject($data);
-                throw $apiException;
+            switch ($apiException->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $apiException->getResponseBody(),
+                        \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
+                        $apiException->getResponseHeaders()
+                    );
+                    $apiException->setResponseObject($data);
+                    throw $apiException;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $apiException->getResponseBody(),
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
+                        $apiException->getResponseHeaders()
+                    );
+                    $apiException->setResponseObject($data);
+                    throw $apiException;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $apiException->getResponseBody(),
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
+                        $apiException->getResponseHeaders()
+                    );
+                    $apiException->setResponseObject($data);
+                    throw $apiException;
             }
         
 
@@ -274,14 +319,24 @@ class DeliveryOptionsApi
      *
      * Retrieve a list of delivery options
      *
-     * @param  string $configurationId The checkout configuration ID (required)
+     * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
+     * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
+     * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
+     * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3CheckoutApiGetDeliveryOptionsAsync($configurationId)
+    public function scPublicV3CheckoutApiGetDeliveryOptionsAsync($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
-        return $this->scPublicV3CheckoutApiGetDeliveryOptionsAsyncWithHttpInfo($configurationId)
+        return $this->scPublicV3CheckoutApiGetDeliveryOptionsAsyncWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -294,15 +349,25 @@ class DeliveryOptionsApi
      *
      * Retrieve a list of delivery options
      *
-     * @param  string $configurationId The checkout configuration ID (required)
+     * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
+     * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
+     * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
+     * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3CheckoutApiGetDeliveryOptionsAsyncWithHttpInfo($configurationId)
+    public function scPublicV3CheckoutApiGetDeliveryOptionsAsyncWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class;
-        $request = $this->scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId);
+        $request = $this->scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -339,12 +404,22 @@ class DeliveryOptionsApi
     /**
      * Create request for operation 'scPublicV3CheckoutApiGetDeliveryOptions'
      *
-     * @param  string $configurationId The checkout configuration ID (required)
+     * @param  string $configurationId The unique ID of the checkout configuration used to retrieve delivery options (required)
+     * @param  int $weightValue The total weight of the cart or order, specified in grams by default. This parameter is used to select the most suitable shipping option. (required)
+     * @param  string $totalOrderValue The total price of the cart or order, specified in the currency of the checkout configuration. This parameter is used to calculate the shipping rate if rates are configured for the delivery method. It can also be used to determine if free shipping is applicable based on the configured pricing rules. (required)
+     * @param  string $fromCountryCode The sender&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $toCountryCode The recipient&#39;s country code for the shipment, formatted as an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code (required)
+     * @param  string $checkoutIdentifierType Specifies how to retrieve the shipping label. Currently, only the &#x60;shipping_option_code&#x60; type is supported.  When this type is used, the &#x60;checkout_identifier&#x60; field in each delivery option contains the shipping option code, which is required to [create and announce a shipment asynchronously](/api/v3/shipments/create-and-announce-a-shipment-asynchronously). (optional, default to 'shipping_option_code')
+     * @param  string $toPostalCode The recipient&#39;s postal code. Use this in combination with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to show or hide delivery options for specific locations. (optional)
+     * @param  float $parcelLength The parcel&#39;s length in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelWidth The parcel&#39;s width in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
+     * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId)
+    public function scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
         // verify the required parameter 'configurationId' is set
         if ($configurationId === null || (is_array($configurationId) && $configurationId === [])) {
@@ -353,13 +428,168 @@ class DeliveryOptionsApi
             );
         }
 
+        // verify the required parameter 'weightValue' is set
+        if ($weightValue === null || (is_array($weightValue) && $weightValue === [])) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $weightValue when calling scPublicV3CheckoutApiGetDeliveryOptions'
+            );
+        }
+
+        if ($weightValue < 1) {
+            throw new \InvalidArgumentException('invalid value for "$weightValue" when calling DeliveryOptionsApi.scPublicV3CheckoutApiGetDeliveryOptions, must be bigger than or equal to 1.');
+        }
+
+        // verify the required parameter 'totalOrderValue' is set
+        if ($totalOrderValue === null || (is_array($totalOrderValue) && $totalOrderValue === [])) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $totalOrderValue when calling scPublicV3CheckoutApiGetDeliveryOptions'
+            );
+        }
+
+        if (strlen($totalOrderValue) < 1) {
+            throw new \InvalidArgumentException('invalid length for "$totalOrderValue" when calling DeliveryOptionsApi.scPublicV3CheckoutApiGetDeliveryOptions, must be bigger than or equal to 1.');
+        }
+
+        // verify the required parameter 'fromCountryCode' is set
+        if ($fromCountryCode === null || (is_array($fromCountryCode) && $fromCountryCode === [])) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fromCountryCode when calling scPublicV3CheckoutApiGetDeliveryOptions'
+            );
+        }
+
+        // verify the required parameter 'toCountryCode' is set
+        if ($toCountryCode === null || (is_array($toCountryCode) && $toCountryCode === [])) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $toCountryCode when calling scPublicV3CheckoutApiGetDeliveryOptions'
+            );
+        }
+
+        if ($toPostalCode !== null && strlen($toPostalCode) > 15) {
+            throw new \InvalidArgumentException('invalid length for "$toPostalCode" when calling DeliveryOptionsApi.scPublicV3CheckoutApiGetDeliveryOptions, must be smaller than or equal to 15.');
+        }
+
+        if ($checkoutMetadata !== null && strlen($checkoutMetadata) > 128) {
+            throw new \InvalidArgumentException('invalid length for "$checkoutMetadata" when calling DeliveryOptionsApi.scPublicV3CheckoutApiGetDeliveryOptions, must be smaller than or equal to 128.');
+        }
+
+
         $resourcePath = '/checkout/configurations/{configuration_id}/delivery-options';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = null;
         $multipart = false;
+        // query params
+        if(is_array($weightValue)) {
+            foreach($weightValue as $key => $value) {
+                $queryParams[$key] = $value;
+            }
+        }
+        else {
+            $queryParams['weight_value'] = $weightValue;
+        }
 
+        // query params
+        if(is_array($totalOrderValue)) {
+            foreach($totalOrderValue as $key => $value) {
+                $queryParams[$key] = $value;
+            }
+        }
+        else {
+            $queryParams['total_order_value'] = $totalOrderValue;
+        }
+
+        // query params
+        if(is_array($fromCountryCode)) {
+            foreach($fromCountryCode as $key => $value) {
+                $queryParams[$key] = $value;
+            }
+        }
+        else {
+            $queryParams['from_country_code'] = $fromCountryCode;
+        }
+
+        // query params
+        if(is_array($toCountryCode)) {
+            foreach($toCountryCode as $key => $value) {
+                $queryParams[$key] = $value;
+            }
+        }
+        else {
+            $queryParams['to_country_code'] = $toCountryCode;
+        }
+
+        // query params
+        if ($checkoutIdentifierType !== null) {
+            if(is_array($checkoutIdentifierType)) {
+                foreach($checkoutIdentifierType as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['checkout_identifier_type'] = $checkoutIdentifierType;
+            }
+        }
+
+        // query params
+        if ($toPostalCode !== null) {
+            if(is_array($toPostalCode)) {
+                foreach($toPostalCode as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['to_postal_code'] = $toPostalCode;
+            }
+        }
+
+        // query params
+        if ($parcelLength !== null) {
+            if(is_array($parcelLength)) {
+                foreach($parcelLength as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['parcel_length'] = $parcelLength;
+            }
+        }
+
+        // query params
+        if ($parcelWidth !== null) {
+            if(is_array($parcelWidth)) {
+                foreach($parcelWidth as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['parcel_width'] = $parcelWidth;
+            }
+        }
+
+        // query params
+        if ($parcelHeight !== null) {
+            if(is_array($parcelHeight)) {
+                foreach($parcelHeight as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['parcel_height'] = $parcelHeight;
+            }
+        }
+
+        // query params
+        if ($checkoutMetadata !== null) {
+            if(is_array($checkoutMetadata)) {
+                foreach($checkoutMetadata as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['checkout_metadata'] = $checkoutMetadata;
+            }
+        }
 
 
         // path params
@@ -462,6 +692,9 @@ class DeliveryOptionsApi
         return $request;
     }
 
+    /**
+     * @param array<string, string>|array<string, int>|array<string, float> $queryParams
+     */
     private function createUri(
         string $operationHost,
         string $resourcePath,

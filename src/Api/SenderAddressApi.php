@@ -172,15 +172,16 @@ class SenderAddressApi
      *
      * Retrieve a list of sender addresses
      *
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
      */
-    public function scPublicV3AddressesGetAllSenderAddresses($pageSize = null)
+    public function scPublicV3AddressesGetAllSenderAddresses($cursor = null, $pageSize = null)
     {
-        [$response] = $this->scPublicV3AddressesGetAllSenderAddressesWithHttpInfo($pageSize);
+        [$response] = $this->scPublicV3AddressesGetAllSenderAddressesWithHttpInfo($cursor, $pageSize);
         return $response;
     }
 
@@ -189,15 +190,16 @@ class SenderAddressApi
      *
      * Retrieve a list of sender addresses
      *
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3AddressesGetAllSenderAddressesWithHttpInfo($pageSize = null)
+    public function scPublicV3AddressesGetAllSenderAddressesWithHttpInfo($cursor = null, $pageSize = null)
     {
-        $request = $this->scPublicV3AddressesGetAllSenderAddressesRequest($pageSize);
+        $request = $this->scPublicV3AddressesGetAllSenderAddressesRequest($cursor, $pageSize);
 
         try {
             try {
@@ -274,14 +276,15 @@ class SenderAddressApi
      *
      * Retrieve a list of sender addresses
      *
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3AddressesGetAllSenderAddressesAsync($pageSize = null)
+    public function scPublicV3AddressesGetAllSenderAddressesAsync($cursor = null, $pageSize = null)
     {
-        return $this->scPublicV3AddressesGetAllSenderAddressesAsyncWithHttpInfo($pageSize)
+        return $this->scPublicV3AddressesGetAllSenderAddressesAsyncWithHttpInfo($cursor, $pageSize)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -294,15 +297,16 @@ class SenderAddressApi
      *
      * Retrieve a list of sender addresses
      *
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3AddressesGetAllSenderAddressesAsyncWithHttpInfo($pageSize = null)
+    public function scPublicV3AddressesGetAllSenderAddressesAsyncWithHttpInfo($cursor = null, $pageSize = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class;
-        $request = $this->scPublicV3AddressesGetAllSenderAddressesRequest($pageSize);
+        $request = $this->scPublicV3AddressesGetAllSenderAddressesRequest($cursor, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -339,12 +343,13 @@ class SenderAddressApi
     /**
      * Create request for operation 'scPublicV3AddressesGetAllSenderAddresses'
      *
+     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3AddressesGetAllSenderAddressesRequest($pageSize = null)
+    public function scPublicV3AddressesGetAllSenderAddressesRequest($cursor = null, $pageSize = null)
     {
         if ($pageSize !== null && $pageSize > 100) {
             throw new \InvalidArgumentException('invalid value for "$pageSize" when calling SenderAddressApi.scPublicV3AddressesGetAllSenderAddresses, must be smaller than or equal to 100.');
@@ -357,6 +362,18 @@ class SenderAddressApi
         $headerParams = [];
         $httpBody = null;
         $multipart = false;
+
+        // query params
+        if ($cursor !== null) {
+            if(is_array($cursor)) {
+                foreach($cursor as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['cursor'] = $cursor;
+            }
+        }
 
         // query params
         if ($pageSize !== null) {

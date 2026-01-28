@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `scPublicV3ScpGetAllShipments()`
 
 ```php
-scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response
+scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response
 ```
 
 Retrieve shipments
@@ -52,10 +52,11 @@ $updatedAfter = 2018-02-26T11:01:47.505309+00:00; // string | Returns all shipme
 $announcedBefore = 2018-02-26T11:01:47.505309+00:00; // string | Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format.
 $announcedAfter = 2018-02-26T11:01:47.505309+00:00; // string | Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format.
 $ids = 13579,24680,12345; // string | Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs.
+$cursor = cj0xJnA9MzAw; // string | The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - `o`: Offset - `r`: Reverse - `p`: Position    For example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.
 $pageSize = 10; // int | The maximum number of items to be returned in the response.
 
 try {
-    $result = $apiInstance->scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize);
+    $result = $apiInstance->scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->scPublicV3ScpGetAllShipments: ', $e->getMessage(), PHP_EOL;
@@ -76,6 +77,7 @@ Name | Type | Description  | Notes
  **announcedBefore** | **string**| Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. | [optional]
  **announcedAfter** | **string**| Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. | [optional]
  **ids** | **string**| Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. | [optional]
+ **cursor** | **string**| The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. | [optional]
  **pageSize** | **int**| The maximum number of items to be returned in the response. | [optional] [default to 40]
 
 ### Return type
@@ -160,7 +162,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostAnnounceShipment()`
 
 ```php
-scPublicV3ScpPostAnnounceShipment($shipmentRequestSyncAnnounce): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
+scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId, $shipmentRequestSyncAnnounce): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
 ```
 
 Create and announce a shipment synchronously
@@ -186,10 +188,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $shipmentRequestSyncAnnounce = {"label_details":{"mime_type":"application/pdf","dpi":72},"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"label_notes":["I live at the blue door","The doorbell isn't working"],"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce | 
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostAnnounceShipment($shipmentRequestSyncAnnounce);
+    $result = $apiInstance->scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->scPublicV3ScpPostAnnounceShipment: ', $e->getMessage(), PHP_EOL;
@@ -200,6 +203,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **shipmentRequestSyncAnnounce** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce**](../Model/ShipmentRequestSyncAnnounce.md)|  | [optional]
 
 ### Return type
@@ -222,7 +226,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostAnnounceShipmentWithRules()`
 
 ```php
-scPublicV3ScpPostAnnounceShipmentWithRules($shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
+scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
 ```
 
 Create a shipment with rules and/or defaults and announce it synchronously
@@ -248,10 +252,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules | 
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostAnnounceShipmentWithRules($shipmentRequestWithRules);
+    $result = $apiInstance->scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->scPublicV3ScpPostAnnounceShipmentWithRules: ', $e->getMessage(), PHP_EOL;
@@ -262,6 +267,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **shipmentRequestWithRules** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
 
 ### Return type
@@ -346,7 +352,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCreateShipment()`
 
 ```php
-scPublicV3ScpPostCreateShipment($shipmentRequestAsync): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
+scPublicV3ScpPostCreateShipment($sendcloudPartnerId, $shipmentRequestAsync): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
 ```
 
 Create and announce a shipment asynchronously
@@ -372,10 +378,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $shipmentRequestAsync = {"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync | 
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostCreateShipment($shipmentRequestAsync);
+    $result = $apiInstance->scPublicV3ScpPostCreateShipment($sendcloudPartnerId, $shipmentRequestAsync);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->scPublicV3ScpPostCreateShipment: ', $e->getMessage(), PHP_EOL;
@@ -386,6 +393,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **shipmentRequestAsync** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestAsync**](../Model/ShipmentRequestAsync.md)|  | [optional]
 
 ### Return type
@@ -408,7 +416,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCreateShipmentWithRules()`
 
 ```php
-scPublicV3ScpPostCreateShipmentWithRules($shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
+scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
 ```
 
 Create a shipment with rules and/or defaults and announce it asynchronously
@@ -434,10 +442,11 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules | 
 
 try {
-    $result = $apiInstance->scPublicV3ScpPostCreateShipmentWithRules($shipmentRequestWithRules);
+    $result = $apiInstance->scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentsApi->scPublicV3ScpPostCreateShipmentWithRules: ', $e->getMessage(), PHP_EOL;
@@ -448,6 +457,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **shipmentRequestWithRules** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
 
 ### Return type

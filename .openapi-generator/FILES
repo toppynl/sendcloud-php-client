@@ -144,10 +144,6 @@ docs/Model/HTTPValidationError.md
 docs/Model/HermesDePickupRequest.md
 docs/Model/HermesDePickupResponse.md
 docs/Model/IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordProvider.md
-docs/Model/InlineObject.md
-docs/Model/InlineObject1.md
-docs/Model/InlineObject1Error.md
-docs/Model/InlineObjectData.md
 docs/Model/Insurance.md
 docs/Model/IntegrationGetResponse.md
 docs/Model/IntegrationListResponse.md
@@ -271,6 +267,8 @@ docs/Model/ScPublicV3OrdersGetListOrders200Response.md
 docs/Model/ScPublicV3OrdersGetRetrieveOrder200Response.md
 docs/Model/ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response.md
 docs/Model/ScPublicV3OrdersLabelsPostCreateLabelsSync201Response.md
+docs/Model/ScPublicV3OrdersPatchPartialUpdateOrder200Response.md
+docs/Model/ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData.md
 docs/Model/ScPublicV3OrdersPostCreateOrders201Response.md
 docs/Model/ScPublicV3OrdersPostCreateOrders201ResponseDataInner.md
 docs/Model/ScPublicV3OrdersPostCreateOrdersRequestInner.md
@@ -293,6 +291,9 @@ docs/Model/ScPublicV3ScpPatchReturnsCancel409ResponseErrorsInner.md
 docs/Model/ScPublicV3ScpPostCompatShippingOptionsRequest.md
 docs/Model/ScPublicV3ScpPostPickupRequest.md
 docs/Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.md
+docs/Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md
+docs/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response.md
+docs/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError.md
 docs/Model/ScPublicV3ScpPostShippingOptions200Response.md
 docs/Model/ScPublicV3ScpPostShippingOptionsSimple200Response.md
 docs/Model/ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response.md
@@ -504,10 +505,6 @@ src/Model/HTTPValidationError.php
 src/Model/HermesDePickupRequest.php
 src/Model/HermesDePickupResponse.php
 src/Model/IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordProvider.php
-src/Model/InlineObject.php
-src/Model/InlineObject1.php
-src/Model/InlineObject1Error.php
-src/Model/InlineObjectData.php
 src/Model/Insurance.php
 src/Model/IntegrationGetResponse.php
 src/Model/IntegrationListResponse.php
@@ -632,6 +629,8 @@ src/Model/ScPublicV3OrdersGetListOrders200Response.php
 src/Model/ScPublicV3OrdersGetRetrieveOrder200Response.php
 src/Model/ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response.php
 src/Model/ScPublicV3OrdersLabelsPostCreateLabelsSync201Response.php
+src/Model/ScPublicV3OrdersPatchPartialUpdateOrder200Response.php
+src/Model/ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData.php
 src/Model/ScPublicV3OrdersPostCreateOrders201Response.php
 src/Model/ScPublicV3OrdersPostCreateOrders201ResponseDataInner.php
 src/Model/ScPublicV3OrdersPostCreateOrdersRequestInner.php
@@ -654,6 +653,9 @@ src/Model/ScPublicV3ScpPatchReturnsCancel409ResponseErrorsInner.php
 src/Model/ScPublicV3ScpPostCompatShippingOptionsRequest.php
 src/Model/ScPublicV3ScpPostPickupRequest.php
 src/Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.php
+src/Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.php
+src/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response.php
+src/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseError.php
 src/Model/ScPublicV3ScpPostShippingOptions200Response.php
 src/Model/ScPublicV3ScpPostShippingOptionsSimple200Response.php
 src/Model/ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response.php
@@ -859,10 +861,6 @@ test/Model/HTTPValidationErrorTest.php
 test/Model/HermesDePickupRequestTest.php
 test/Model/HermesDePickupResponseTest.php
 test/Model/IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordProviderTest.php
-test/Model/InlineObject1ErrorTest.php
-test/Model/InlineObject1Test.php
-test/Model/InlineObjectDataTest.php
-test/Model/InlineObjectTest.php
 test/Model/InsuranceTest.php
 test/Model/IntegrationGetResponseTest.php
 test/Model/IntegrationListResponseTest.php
@@ -986,6 +984,8 @@ test/Model/ScPublicV3OrdersGetListOrders200ResponseTest.php
 test/Model/ScPublicV3OrdersGetRetrieveOrder200ResponseTest.php
 test/Model/ScPublicV3OrdersLabelsPostCreateLabelsAsync202ResponseTest.php
 test/Model/ScPublicV3OrdersLabelsPostCreateLabelsSync201ResponseTest.php
+test/Model/ScPublicV3OrdersPatchPartialUpdateOrder200ResponseDataTest.php
+test/Model/ScPublicV3OrdersPatchPartialUpdateOrder200ResponseTest.php
 test/Model/ScPublicV3OrdersPostCreateOrders201ResponseDataInnerTest.php
 test/Model/ScPublicV3OrdersPostCreateOrders201ResponseTest.php
 test/Model/ScPublicV3OrdersPostCreateOrdersRequestInnerTest.php
@@ -1008,6 +1008,9 @@ test/Model/ScPublicV3ScpPatchReturnsCancel409ResponseTest.php
 test/Model/ScPublicV3ScpPostCompatShippingOptionsRequestTest.php
 test/Model/ScPublicV3ScpPostPickupRequestTest.php
 test/Model/ScPublicV3ScpPostReturnsCreateNewReturn201ResponseTest.php
+test/Model/ScPublicV3ScpPostReturnsCreateNewReturnRequestTest.php
+test/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseErrorTest.php
+test/Model/ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400ResponseTest.php
 test/Model/ScPublicV3ScpPostShippingOptions200ResponseTest.php
 test/Model/ScPublicV3ScpPostShippingOptionsSimple200ResponseTest.php
 test/Model/ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404ResponseTest.php
