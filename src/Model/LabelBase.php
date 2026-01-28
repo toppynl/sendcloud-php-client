@@ -61,7 +61,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
         'shipmentId' => 'string',
         'orderId' => 'string',
         'orderNumber' => 'string',
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith::class
     ];
 
     /**
@@ -367,7 +367,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null
      */
     public function getShipWith()
     {
@@ -377,7 +377,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null $shipWith shipWith
      *
      * @return self
      */

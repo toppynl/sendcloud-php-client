@@ -59,8 +59,8 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimension' => \Toppy\Sendcloud\V3\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'dimension' => \Toppy\Sendcloud\V3\Model\ParcelTrackingDimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ParcelTrackingWeight::class,
         'volume' => \Toppy\Sendcloud\V3\Model\Volume::class
     ];
 
@@ -277,7 +277,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets dimension
      *
-     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingDimension|null
      */
     public function getDimension()
     {
@@ -287,7 +287,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets dimension
      *
-     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimension dimension
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingDimension|null $dimension dimension
      *
      * @return self
      */
@@ -305,7 +305,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\V3\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingWeight|null
      */
     public function getWeight()
     {
@@ -315,7 +315,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingWeight|null $weight weight
      *
      * @return self
      */

@@ -60,7 +60,7 @@ class BaseShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipmentsShipWith::class,
         'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
         'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
         'toServicePoint' => \Toppy\Sendcloud\V3\Model\ServicePoint::class,
@@ -419,7 +419,7 @@ class BaseShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentsShipWith
      */
     public function getShipWith()
     {
@@ -429,7 +429,7 @@ class BaseShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipmentsShipWith $shipWith shipWith
      *
      * @return self
      */

@@ -61,7 +61,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
         'isLocalPickup' => 'bool',
         'deliveryIndicator' => 'string',
         'measurement' => \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdate::class,
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class
+        'shipWith' => \Toppy\Sendcloud\V3\Model\OrdersShipWith::class
     ];
 
     /**
@@ -367,7 +367,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersShipWith|null
      */
     public function getShipWith()
     {
@@ -377,7 +377,7 @@ class OrderPartialUpdateShippingDetails implements ModelInterface, ArrayAccess, 
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\OrdersShipWith|null $shipWith shipWith
      *
      * @return self
      */

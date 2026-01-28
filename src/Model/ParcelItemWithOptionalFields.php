@@ -62,7 +62,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ShipmentsWeight::class,
         'price' => \Toppy\Sendcloud\V3\Model\RequiredPrice::class,
         'hsCode' => 'string',
         'originCountry' => 'string',
@@ -494,7 +494,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\V3\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentsWeight|null
      */
     public function getWeight()
     {
@@ -504,7 +504,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ShipmentsWeight|null $weight weight
      *
      * @return self
      */

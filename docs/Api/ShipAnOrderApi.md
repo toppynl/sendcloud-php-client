@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3OrdersLabelsPostCreateLabelsAsync()`
 
 ```php
-scPublicV3OrdersLabelsPostCreateLabelsAsync($sendcloudPartnerId, $createLabelsAsync): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response
+scPublicV3OrdersLabelsPostCreateLabelsAsync($createLabelsAsync): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response
 ```
 
 Request a label for one or more orders asynchronously
@@ -37,11 +37,10 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipAnOrderApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $createLabelsAsync = {"integration_id":70,"orders":[{"order_number":"ORDER-25763","apply_shipping_rules":false}]}; // \Toppy\Sendcloud\V3\Model\CreateLabelsAsync
 
 try {
-    $result = $apiInstance->scPublicV3OrdersLabelsPostCreateLabelsAsync($sendcloudPartnerId, $createLabelsAsync);
+    $result = $apiInstance->scPublicV3OrdersLabelsPostCreateLabelsAsync($createLabelsAsync);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipAnOrderApi->scPublicV3OrdersLabelsPostCreateLabelsAsync: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +51,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **createLabelsAsync** | [**\Toppy\Sendcloud\V3\Model\CreateLabelsAsync**](../Model/CreateLabelsAsync.md)|  | [optional]
 
 ### Return type
@@ -75,7 +73,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3OrdersLabelsPostCreateLabelsSync()`
 
 ```php
-scPublicV3OrdersLabelsPostCreateLabelsSync($sendcloudPartnerId, $createLabelsSync): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersLabelsPostCreateLabelsSync201Response
+scPublicV3OrdersLabelsPostCreateLabelsSync($createLabelsSync): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersLabelsPostCreateLabelsSync201Response
 ```
 
 Request a label for a single order synchronously
@@ -101,11 +99,10 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ShipAnOrderApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $createLabelsSync = {"integration_id":70,"label_details":{"mime_type":"application/pdf","dpi":72},"order":{"order_number":"ORDER-25763","apply_shipping_rules":false}}; // \Toppy\Sendcloud\V3\Model\CreateLabelsSync
 
 try {
-    $result = $apiInstance->scPublicV3OrdersLabelsPostCreateLabelsSync($sendcloudPartnerId, $createLabelsSync);
+    $result = $apiInstance->scPublicV3OrdersLabelsPostCreateLabelsSync($createLabelsSync);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipAnOrderApi->scPublicV3OrdersLabelsPostCreateLabelsSync: ', $e->getMessage(), PHP_EOL;
@@ -116,7 +113,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **createLabelsSync** | [**\Toppy\Sendcloud\V3\Model\CreateLabelsSync**](../Model/CreateLabelsSync.md)|  | [optional]
 
 ### Return type

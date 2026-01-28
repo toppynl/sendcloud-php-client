@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **itemId** | **string** | Order Item external ID in shop system | [optional]
 **description** | **string** | Description of the item |
 **quantity** | **int** | Quantity of items shipped |
-**weight** | [**\Toppy\Sendcloud\V3\Model\Weight**](Weight.md) |  |
+**weight** | [**\Toppy\Sendcloud\V3\Model\ShipmentsWeight**](ShipmentsWeight.md) |  |
 **price** | [**\Toppy\Sendcloud\V3\Model\RequiredPrice**](RequiredPrice.md) |  |
 **hsCode** | **string** | Harmonized System Code. **This field is required if it&#39;s an international shipment** |
 **originCountry** | **string** | ISO-2 code of the country where the items were originally produced. **This field is required if it&#39;s an international shipment** | [optional]

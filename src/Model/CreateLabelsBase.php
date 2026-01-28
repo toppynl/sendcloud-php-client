@@ -61,7 +61,7 @@ class CreateLabelsBase implements ModelInterface, ArrayAccess, \JsonSerializable
         'integrationId' => 'int',
         'senderAddressId' => 'int',
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith::class
     ];
 
     /**
@@ -381,7 +381,7 @@ class CreateLabelsBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null
      */
     public function getShipWith()
     {
@@ -391,7 +391,7 @@ class CreateLabelsBase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null $shipWith shipWith
      *
      * @return self
      */

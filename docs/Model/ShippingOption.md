@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **carrier** | [**\Toppy\Sendcloud\V3\Model\Carrier**](Carrier.md) |  | [optional]
 **product** | [**\Toppy\Sendcloud\V3\Model\ShippingProduct**](ShippingProduct.md) |  | [optional]
 **functionalities** | [**\Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities**](CarrierShippingFunctionalities.md) |  | [optional]
-**maxDimensions** | [**\Toppy\Sendcloud\V3\Model\Dimension**](Dimension.md) |  | [optional]
+**maxDimensions** | [**\Toppy\Sendcloud\V3\Model\ShippingOptionsDimension**](ShippingOptionsDimension.md) |  | [optional]
 **weight** | [**\Toppy\Sendcloud\V3\Model\ShippingQuoteWeight**](ShippingQuoteWeight.md) |  | [optional]
 **parcelBilledWeights** | [**\Toppy\Sendcloud\V3\Model\ParcelBilledWeights[]**](ParcelBilledWeights.md) | If &#x60;dimensions&#x60; are provided, the volumetric weight will be calculated. The billed weight will indicate which is the highest of the regular weight and the volumetric weight. | [optional]
 **contract** | [**\Toppy\Sendcloud\V3\Model\Contract**](Contract.md) |  | [optional]

@@ -61,7 +61,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ShipmentsWeight::class,
         'price' => \Toppy\Sendcloud\V3\Model\RequiredPrice::class,
         'hsCode' => 'string',
         'originCountry' => 'string',
@@ -516,7 +516,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\V3\Model\Weight
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentsWeight
      */
     public function getWeight()
     {
@@ -526,7 +526,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\V3\Model\Weight $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ShipmentsWeight $weight weight
      *
      * @return self
      */

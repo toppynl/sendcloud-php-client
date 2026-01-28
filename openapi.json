@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3",
-    "x-generated": "2026-01-28T14:57:32Z"
+    "x-generated": "2026-01-28T18:22:05Z"
   },
   "servers": [
     {
@@ -848,37 +848,13 @@
         "description": "The options returned by this endpoint are based on the [delivery methods](https://support.sendcloud.com/hc/en-us/articles/360057944932-How-to-configure-Dynamic-Checkout#4) previously configured in addition to cart or order information, such as parcel weight, total order value, destination country, and more.",
         "parameters": [
           {
-            "$ref": "#/components/parameters/ConfigurationID"
-          },
-          {
-            "$ref": "#/components/parameters/WeightValue"
-          },
-          {
-            "$ref": "#/components/parameters/TotalOrderValue"
-          },
-          {
-            "$ref": "#/components/parameters/FromCountry"
-          },
-          {
-            "$ref": "#/components/parameters/ToCountry"
-          },
-          {
-            "$ref": "#/components/parameters/CheckoutIdentifierType"
-          },
-          {
-            "$ref": "#/components/parameters/ToPostalCode"
-          },
-          {
-            "$ref": "#/components/parameters/ParcelLength"
-          },
-          {
-            "$ref": "#/components/parameters/ParcelWidth"
-          },
-          {
-            "$ref": "#/components/parameters/ParcelHeight"
-          },
-          {
-            "$ref": "#/components/parameters/CheckoutMetadata"
+            "name": "configuration_id",
+            "in": "path",
+            "required": true,
+            "description": "The checkout configuration ID",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "security": [
@@ -897,28 +873,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/delivery-options-response"
                 },
-                "examples": {
-                  "StandardDeliveryOption": {
-                    "$ref": "#/components/examples/StandardDeliveryOption"
-                  },
-                  "ServicePointDeliveryOptions": {
-                    "$ref": "#/components/examples/ServicePointDeliveryOptions"
-                  },
-                  "NominatedDayDeliveryOption": {
-                    "$ref": "#/components/examples/NominatedDayDeliveryOption"
-                  },
-                  "SameDayDeliveryOption": {
-                    "$ref": "#/components/examples/SameDayDeliveryOption"
-                  }
-                }
+                "examples": {}
               }
             }
-          },
-          "400": {
-            "$ref": "#/components/responses/Error400BadRequest"
-          },
-          "404": {
-            "$ref": "#/components/responses/Error404NotFound"
           }
         },
         "tags": [
@@ -1672,11 +1629,7 @@
           "href": "/api/v3/orders/create-update-orders-in-batch",
           "content": "Each order can have a different integration id, so you can create/update orders for multiple integrations in one request.\n\n## Upsert behavior\n\nThis is an **upsert** endpoint, which means:\n\n  - If an order with the same `order_id` and `integration.id` combination **already exists**, it will be **updated**\n  - If no matching order exists, a **new order will be created**\n  - **Optional**: You can include the Sendcloud `id` field to explicitly update a specific order\n    - **Important**: When returned in responses, `id` is an **integer**, but when sending it in requests, it must be a **string**\n    - Example: Response returns `\"id\": 669`, but request must send `\"id\": \"669\"`\n\n## Batch processing\n\n- Process multiple orders in a single request (up to **100 orders maximum**)\n- Orders from different integrations can be included in the same batch\n- **All-or-nothing transaction**: If any order in the batch fails validation, the entire batch is rejected and zero orders are created or updated\n\n## Limitations and constraints\n\n- **Maximum batch size**: 100 orders per request\n- **Upsert matching**: Orders are matched by the combination of `order_id` + `integration.id`\n- **Immutable fields**: When updating existing orders, certain fields like `order_id` cannot be changed\n- **Concurrent processing**: If the same `order_id` is being processed by another request, you'll receive a conflict error. Wait a moment and retry\n- **Integration access**: You can only create/update orders for integrations that belong to your account\n\n## Best practices\n\n- Ensure all required fields are present before sending the request\n- Handle errors gracefully and implement retry logic for transient failures"
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1685,7 +1638,7 @@
                 "items": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/order"
+                      "$ref": "#/components/schemas/orders-order"
                     },
                     {
                       "type": "object",
@@ -2631,7 +2584,7 @@
                     "data": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/order"
+                        "$ref": "#/components/schemas/orders-order"
                       }
                     }
                   }
@@ -2960,47 +2913,7 @@
             }
           }
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/integration"
-          },
-          {
-            "$ref": "#/components/parameters/order_number"
-          },
-          {
-            "$ref": "#/components/parameters/order_id"
-          },
-          {
-            "$ref": "#/components/parameters/order_status"
-          },
-          {
-            "$ref": "#/components/parameters/order_created_at"
-          },
-          {
-            "$ref": "#/components/parameters/order_created_at_min"
-          },
-          {
-            "$ref": "#/components/parameters/order_created_at_max"
-          },
-          {
-            "$ref": "#/components/parameters/order_updated_at"
-          },
-          {
-            "$ref": "#/components/parameters/order_updated_at_min"
-          },
-          {
-            "$ref": "#/components/parameters/order_updated_at_max"
-          },
-          {
-            "$ref": "#/components/parameters/sort"
-          },
-          {
-            "$ref": "#/components/parameters/page_size"
-          },
-          {
-            "$ref": "#/components/parameters/cursor"
-          }
-        ],
+        "parameters": [],
         "operationId": "sc-public-v3-orders-get-list_orders",
         "security": [
           {
@@ -3039,7 +2952,7 @@
                   "type": "object",
                   "properties": {
                     "data": {
-                      "$ref": "#/components/schemas/order"
+                      "$ref": "#/components/schemas/orders-order"
                     }
                   }
                 },
@@ -3319,9 +3232,6 @@
           }
         },
         "responses": {
-          "200": {
-            "$ref": "#/components/responses/OrderUpdated"
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -3714,7 +3624,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/parcel-tracking-response"
+                  "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-response"
                 }
               }
             }
@@ -3766,7 +3676,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/parcel-tracking-create-request"
+                "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-create-request"
               }
             }
           },
@@ -3778,7 +3688,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/parcel-tracking-create-response"
+                  "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-create-response"
                 }
               }
             }
@@ -6662,14 +6572,7 @@
             "OAuth2ClientCreds": []
           }
         ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/CreateReturn"
-        }
+        "parameters": []
       },
       "get": {
         "tags": [
@@ -6682,9 +6585,6 @@
           "content": "The response includes return data for each parcel, plus up-to-date tracking history.\n\nThe returned data is paginated and has a default number of items per page of `40`, which can be controlled by the `page_size` query param.\n\nYou can filter the results to only include return parcels created within a specific time frame using the `from_date` and `to_date` parameters, or based on the `parent_parcel_status`."
         },
         "parameters": [
-          {
-            "$ref": "#/components/parameters/Cursor"
-          },
           {
             "name": "from_date",
             "in": "query",
@@ -7086,14 +6986,7 @@
           "href": "/api/v3/returns/validate-a-return",
           "content": "This endpoint allows you to validate whether a return can be announced **without** actually creating the return or announcing it with the carrier. You can structure the request body exactly as you would if you were making a request to the [Create a return](/api/v3/returns/create-a-return) endpoint.\n\nWhen you make the request, the response will indicate whether the parcel is valid and can be announced. Validation is based mainly on the `to` and `from` address, the parcel `weight` and the shipping product `id` provided.\n\n<Info>\n  The `parcel_items` field is **mandatory** if you're creating a return from outside the EU.\n</Info>"
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/CreateReturn"
-        },
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Your return passed all validation",
@@ -7138,14 +7031,7 @@
           "href": "/api/v3/returns/create-a-return-synchronously",
           "content": "This endpoint will create a return, similarly to the [Create a return](/api/v3/returns/create-a-return) endpoint, but via a synchronous API request. This means that the API will wait for a response from the carrier before you can continue.\n\nThis endpoint is primarily used for **debugging purposes** in the event that a return parcel announcement fails, as it will retrieve the carrier announcement error. Creating a return synchronously can impact the performance of the endpoint, as the process will take longer than calls to the [Create a return](/api/v3/returns/create-a-return) endpoint.\n\n<Info>\n  **Note:** The `parcel_items` field is mandatory if you're creating a return from outside the EU.\n</Info>"
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
-        "requestBody": {
-          "$ref": "#/components/requestBodies/CreateReturn"
-        },
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created",
@@ -7190,9 +7076,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "$ref": "#/components/responses/400"
           }
         },
         "operationId": "sc-public-v3-scp-post-returns_create_new_return_synchronously",
@@ -7225,9 +7108,6 @@
           "Sender Address"
         ],
         "parameters": [
-          {
-            "$ref": "#/components/parameters/Cursor"
-          },
           {
             "schema": {
               "type": "integer",
@@ -7518,11 +7398,7 @@
           "href": "/api/v3/ship-an-order/request-a-label-for-one-or-more-orders-asynchronously",
           "content": "To retrieve your documents or view announcement errors, use the `id` of the relevant shipment with the [Retrieve a shipment](/api/v3/shipments/retrieve-a-shipment) endpoint.\n\nTo apply shipping rules to the orders, make sure to set `apply_shipping_rules` to `true`.\n\nThis endpoint will attempt to generate labels for each order. If a request for one label errors, it will still attempt to generate the other labels. Because of this, the response might return a mix of labels and errors. Use the errors `source` `pointer` field to see which labels encountered a problem."
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -7840,9 +7716,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "$ref": "#/components/responses/NotFound"
           }
         }
       }
@@ -7866,11 +7739,7 @@
         "x-mint": {
           "href": "/api/v3/ship-an-order/request-a-label-for-a-single-order-synchronously"
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -8028,12 +7897,6 @@
                 }
               }
             }
-          },
-          "400": {
-            "$ref": "#/components/responses/BadRequest"
-          },
-          "404": {
-            "$ref": "#/components/responses/NotFound"
           }
         }
       }
@@ -8050,11 +7913,7 @@
           "Shipments"
         ],
         "operationId": "sc-public-v3-scp-post-announce_shipment",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -9284,9 +9143,6 @@
             "description": "Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs."
           },
           {
-            "$ref": "#/components/parameters/Cursor"
-          },
-          {
             "schema": {
               "type": "integer",
               "minimum": 1,
@@ -9886,11 +9742,7 @@
             }
           }
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -10897,11 +10749,7 @@
             }
           }
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -11952,11 +11800,7 @@
             }
           }
         },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/SendcloudPartnerId"
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/json": {
@@ -15412,7 +15256,7 @@
         "description": "A country represented by its ISO 3166-1 alpha-2 code",
         "example": "NL"
       },
-      "delivery-option": {
+      "dynamic-checkout-delivery-option": {
         "title": "Delivery Option Object",
         "type": "object",
         "description": "Delivery option that is available at the time of the request based on the passed cart/order details. Delivery option is computed from a [configured delivery method type](https://support.sendcloud.com/hc/en-us/articles/360057944932-How-to-configure-Dynamic-Checkout#h_01HQAJ4V59P9EX6STZ0321068J)'\n",
@@ -15669,7 +15513,7 @@
             "description": "A list of delivery options available for the given cart or order details. Each delivery option corresponds to a configured delivery method and includes detailed information, such as shipping rates, delivery dates, and carrier information.\n",
             "uniqueItems": true,
             "items": {
-              "$ref": "#/components/schemas/delivery-option"
+              "$ref": "#/components/schemas/dynamic-checkout-delivery-option"
             },
             "example": [
               {
@@ -16063,16 +15907,15 @@
           }
         }
       },
-      "Order": {
-        "$ref": "#/components/schemas/order"
+      "orders-Order": {
+        "$ref": "#/components/schemas/orders-order"
       },
-      "price": {
+      "orders-price": {
         "title": "Price Object",
         "type": "object",
-        "description": "Price in the specified currency",
         "properties": {
           "value": {
-            "type": "string"
+            "type": "number"
           },
           "currency": {
             "type": "string",
@@ -16083,7 +15926,8 @@
               "USD"
             ]
           }
-        }
+        },
+        "description": "Price in the specified currency"
       },
       "dimension-units": {
         "type": "string",
@@ -16098,7 +15942,7 @@
         ],
         "example": "mm"
       },
-      "dimension": {
+      "orders-dimension": {
         "title": "Dimension",
         "type": "object",
         "description": "Dimension in the specified unit",
@@ -16143,7 +15987,7 @@
         ],
         "example": "g"
       },
-      "weight": {
+      "orders-weight": {
         "title": "Weight",
         "type": "object",
         "description": "Weight in the specified unit",
@@ -16200,10 +16044,10 @@
         "type": "object",
         "properties": {
           "dimension": {
-            "$ref": "#/components/schemas/dimension"
+            "$ref": "#/components/schemas/parcel-tracking-dimension"
           },
           "weight": {
-            "$ref": "#/components/schemas/weight"
+            "$ref": "#/components/schemas/parcel-tracking-weight"
           },
           "volume": {
             "$ref": "#/components/schemas/volume"
@@ -16428,11 +16272,11 @@
               }
             },
             "unit_price": {
-              "$ref": "#/components/schemas/price",
+              "$ref": "#/components/schemas/orders-price",
               "description": "The price of a single item in the shop’s currency before discounts have been applied.\n- **[Sendcloud platform mapping]** This value is shown directly in the Unit value field in the Sendcloud platform.\n"
             },
             "total_price": {
-              "$ref": "#/components/schemas/price",
+              "$ref": "#/components/schemas/orders-price",
               "description": "The total price for this item line, after any item-level discounts, in the shop’s currency.\n- It should reflect `unit_price × quantity`, minus discounts (if applicable).\n- **[Sendcloud platform mapping]** Not displayed in the Sendcloud platform. Instead, the Sendcloud platform calculates its own total as `unit_price × quantity`.\n"
             },
             "measurement": {
@@ -16507,7 +16351,7 @@
           "total_price": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               }
             ],
             "description": "Total value in the shop currency",
@@ -16519,7 +16363,7 @@
           "subtotal_price": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               }
             ],
             "description": "Subtotal value in the shop currency",
@@ -16531,7 +16375,7 @@
           "estimated_shipping_price": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               }
             ],
             "description": "Sum of all shipping costs",
@@ -16543,7 +16387,7 @@
           "estimated_tax_price": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               }
             ],
             "description": "Sum of all estimated taxes for the order",
@@ -16604,7 +16448,7 @@
           }
         }
       },
-      "tax-number": {
+      "orders-tax-number": {
         "title": "Tax Number",
         "type": "object",
         "properties": {
@@ -16665,7 +16509,7 @@
                 "title": "Sender's Tax Information",
                 "minItems": 0,
                 "items": {
-                  "$ref": "#/components/schemas/tax-number"
+                  "$ref": "#/components/schemas/orders-tax-number"
                 }
               },
               "receiver": {
@@ -16673,7 +16517,7 @@
                 "title": "Receiver's Tax Information",
                 "minItems": 0,
                 "items": {
-                  "$ref": "#/components/schemas/tax-number"
+                  "$ref": "#/components/schemas/orders-tax-number"
                 }
               },
               "importer_of_record": {
@@ -16681,7 +16525,7 @@
                 "title": "Receiver's Tax Information",
                 "minItems": 0,
                 "items": {
-                  "$ref": "#/components/schemas/tax-number"
+                  "$ref": "#/components/schemas/orders-tax-number"
                 }
               }
             }
@@ -16833,14 +16677,14 @@
           }
         }
       },
-      "ship-with": {
+      "orders-ship-with": {
         "title": "Ship with object",
         "type": "object",
         "description": "The ship with object can be used to define how you would like to send your shipment.\n\nYou can use a `shipping_option_code`. This is a unique identifier that displays what carrier and what set of shipping functionalities you want to use.\n",
         "properties": {
           "type": {
             "type": "string",
-            "description": "The way the shipping method and carrier will be selected. Nowadays the only possible value is 'shipping_option_code', which requires client to also send the `shipping_option_code` inside properties.\n",
+            "description": "The way the shipping method and carrier will be selected.\n",
             "enum": [
               "shipping_option_code"
             ],
@@ -16875,7 +16719,7 @@
             "description": "Total order measurements"
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/orders-ship-with"
           }
         }
       },
@@ -16894,7 +16738,7 @@
           "id"
         ]
       },
-      "order": {
+      "orders-order": {
         "title": "Order Object",
         "type": "object",
         "description": "Sendcloud Order object",
@@ -17239,10 +17083,10 @@
                       }
                     },
                     "unit_price": {
-                      "$ref": "#/components/schemas/price"
+                      "$ref": "#/components/schemas/orders-price"
                     },
                     "total_price": {
-                      "$ref": "#/components/schemas/price"
+                      "$ref": "#/components/schemas/orders-price"
                     },
                     "measurement": {
                       "$ref": "#/components/schemas/measurement"
@@ -17309,16 +17153,16 @@
             "description": "Node for everything about payments and money",
             "properties": {
               "total_price": {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               },
               "subtotal_price": {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               },
               "estimated_shipping_price": {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               },
               "estimated_tax_price": {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/orders-price"
               },
               "status": {
                 "type": "object",
@@ -17477,14 +17321,14 @@
         },
         "title": "HTTPValidationError"
       },
-      "ParcelTrackingCreateRequest": {
-        "$ref": "#/components/schemas/parcel-tracking-create-request"
+      "parcel-tracking-ParcelTrackingCreateRequest": {
+        "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-create-request"
       },
-      "ParcelTrackingCreateResponse": {
-        "$ref": "#/components/schemas/parcel-tracking-create-response"
+      "parcel-tracking-ParcelTrackingCreateResponse": {
+        "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-create-response"
       },
-      "ParcelTrackingResponse": {
-        "$ref": "#/components/schemas/parcel-tracking-response"
+      "parcel-tracking-ParcelTrackingResponse": {
+        "$ref": "#/components/schemas/parcel-tracking-parcel-tracking-response"
       },
       "ValidationError": {
         "type": "object",
@@ -17702,7 +17546,27 @@
         ],
         "additionalProperties": false
       },
-      "Price": {
+      "parcel-tracking-weight": {
+        "title": "Weight",
+        "type": "object",
+        "description": "Weight in the specified unit",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "Weight value",
+            "exclusiveMinimum": 0,
+            "example": 14.5
+          },
+          "unit": {
+            "$ref": "#/components/schemas/weight-units"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ]
+      },
+      "parcel-tracking-Price": {
         "title": "Price Object",
         "type": "object",
         "properties": {
@@ -17725,7 +17589,7 @@
         "description": "Price, consisting of a value and currency.",
         "allOf": [
           {
-            "$ref": "#/components/schemas/Price"
+            "$ref": "#/components/schemas/shipments-Price"
           },
           {
             "type": "object",
@@ -17761,7 +17625,7 @@
             "example": 1
           },
           "weight": {
-            "$ref": "#/components/schemas/weight"
+            "$ref": "#/components/schemas/shipments-weight"
           },
           "price": {
             "$ref": "#/components/schemas/required-price"
@@ -17886,6 +17750,58 @@
         ],
         "additionalProperties": false
       },
+      "parcel-tracking-ship-with": {
+        "title": "Ship With Object",
+        "description": "The ship with object can be used to define how you would like to send your shipment.\n\nYou can use one of the following types:\n- `shipping_option_code`: Use a shipping option code to specify the carrier and shipping functionalities. The `shipping_option_code` property is required, and `contract_id` is optional.\n- `contract`: Use a contract to specify which carrier contract to use. The `contract_id` property is required.\n",
+        "type": "object",
+        "oneOf": [
+          {
+            "title": "Ship With Shipping Option Code Object",
+            "type": "object",
+            "description": "Ship using a shipping option code. The shipping option code is required.",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Type discriminator for shipping_option_code."
+              },
+              "properties": {
+                "$ref": "#/components/schemas/shipping-option-code-properties"
+              }
+            },
+            "required": [
+              "type",
+              "properties"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "title": "Ship With Contract Object",
+            "type": "object",
+            "description": "Ship using a contract. The contract_id is required.",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Type discriminator for contract."
+              },
+              "properties": {
+                "$ref": "#/components/schemas/contract-properties"
+              }
+            },
+            "required": [
+              "type",
+              "properties"
+            ],
+            "additionalProperties": false
+          }
+        ],
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "shipping_option_code": "#/components/schemas/0",
+            "contract": "#/components/schemas/1"
+          }
+        }
+      },
       "tracking-number-response": {
         "title": "Tracking Number Response",
         "type": "object",
@@ -17927,7 +17843,7 @@
           "tracking_url": "https://example.com"
         }
       },
-      "parcel-tracking-response": {
+      "parcel-tracking-parcel-tracking-response": {
         "title": "Parcel Tracking Response",
         "type": "object",
         "description": "This object contains the parcel and its associated tracking numbers",
@@ -17964,7 +17880,7 @@
             }
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/parcel-tracking-ship-with"
           },
           "source_id": {
             "type": "string",
@@ -18157,6 +18073,40 @@
           }
         ]
       },
+      "parcel-tracking-dimension": {
+        "title": "Dimension",
+        "type": "object",
+        "description": "Dimension in the specified unit",
+        "properties": {
+          "length": {
+            "type": "number",
+            "description": "length in specified unit",
+            "minimum": 0,
+            "example": 15
+          },
+          "width": {
+            "type": "number",
+            "description": "width in specified unit",
+            "minimum": 0,
+            "example": 20.5
+          },
+          "height": {
+            "type": "number",
+            "description": "height in specified unit",
+            "minimum": 0,
+            "example": 37
+          },
+          "unit": {
+            "$ref": "#/components/schemas/dimension-units"
+          }
+        },
+        "required": [
+          "length",
+          "width",
+          "height",
+          "unit"
+        ]
+      },
       "order-create-request": {
         "title": "Order Create Request",
         "type": "object",
@@ -18247,7 +18197,7 @@
           "tracking_number"
         ]
       },
-      "parcel-tracking-create-request": {
+      "parcel-tracking-parcel-tracking-create-request": {
         "title": "Parcel Tracking Create Request",
         "type": "object",
         "description": "The Parcel Tracking Create Request object",
@@ -18282,7 +18232,7 @@
             "description": "The return price"
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/parcel-tracking-ship-with"
           },
           "shipment": {
             "$ref": "#/components/schemas/shipment-create-request"
@@ -18426,7 +18376,7 @@
           }
         }
       },
-      "parcel-tracking-create-response": {
+      "parcel-tracking-parcel-tracking-create-response": {
         "title": "Parcel Tracking Create Response",
         "type": "object",
         "description": "The Parcel Tracking Create Response object",
@@ -18457,7 +18407,7 @@
             }
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/parcel-tracking-ship-with"
           },
           "source_id": {
             "type": "string",
@@ -20049,10 +19999,10 @@
             "$ref": "#/components/schemas/shipping-products-ref"
           },
           "dimensions": {
-            "$ref": "#/components/schemas/dimension"
+            "$ref": "#/components/schemas/returns-dimension"
           },
           "weight": {
-            "$ref": "#/components/schemas/weight"
+            "$ref": "#/components/schemas/returns-weight"
           },
           "collo_count": {
             "type": "integer",
@@ -20111,7 +20061,7 @@
             }
           },
           "label_cost": {
-            "$ref": "#/components/schemas/price"
+            "$ref": "#/components/schemas/returns-price"
           },
           "insurance": {
             "type": "boolean",
@@ -20194,7 +20144,7 @@
             "description": "Customs shipment type\n  * `0` - Gift\n  * `1` - Documents\n  * `2` - Commercial Goods\n  * `3` - Commercial Sample\n  * `4` - Returned Goods\n"
           },
           "delivery_option": {
-            "$ref": "#/components/schemas/DeliveryOption"
+            "$ref": "#/components/schemas/returns-DeliveryOption"
           },
           "images": {
             "type": "array",
@@ -20275,7 +20225,7 @@
             "$ref": "#/components/schemas/address-with-required-fields"
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ShipWith"
+            "$ref": "#/components/schemas/returns-ShipWith"
           },
           "dimensions": {
             "type": "object",
@@ -20337,7 +20287,7 @@
             "minimum": 1
           },
           "total_insured_value": {
-            "$ref": "#/components/schemas/price"
+            "$ref": "#/components/schemas/returns-price"
           },
           "order_number": {
             "type": "string",
@@ -20364,7 +20314,7 @@
             "description": "Customs shipment type\n  * `0` - Gift\n  * `1` - Documents\n  * `2` - Commercial Goods\n  * `3` - Commercial Sample\n  * `4` - Returned Goods\n"
           },
           "delivery_option": {
-            "$ref": "#/components/schemas/DeliveryOption"
+            "$ref": "#/components/schemas/returns-DeliveryOption"
           }
         },
         "required": [
@@ -20374,7 +20324,7 @@
           "weight"
         ]
       },
-      "DeliveryOption": {
+      "returns-DeliveryOption": {
         "title": "DeliveryOption",
         "x-stoplight": {
           "id": "1e5khic8yxpaw"
@@ -20391,7 +20341,7 @@
           null
         ]
       },
-      "ShipWith": {
+      "returns-ShipWith": {
         "title": "Ship With Object",
         "type": "object",
         "description": "Shipping specifications chosen for return",
@@ -20455,6 +20405,60 @@
         },
         "description": "Sendcloud shipping product code"
       },
+      "returns-dimension": {
+        "title": "Dimension",
+        "type": "object",
+        "description": "Dimension in the specified unit",
+        "properties": {
+          "length": {
+            "type": "number",
+            "description": "length in specified unit",
+            "minimum": 0,
+            "example": 15
+          },
+          "width": {
+            "type": "number",
+            "description": "width in specified unit",
+            "minimum": 0,
+            "example": 20.5
+          },
+          "height": {
+            "type": "number",
+            "description": "height in specified unit",
+            "minimum": 0,
+            "example": 37
+          },
+          "unit": {
+            "$ref": "#/components/schemas/dimension-units"
+          }
+        },
+        "required": [
+          "length",
+          "width",
+          "height",
+          "unit"
+        ]
+      },
+      "returns-weight": {
+        "title": "Weight",
+        "type": "object",
+        "description": "Weight in the specified unit",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "Weight value",
+            "exclusiveMinimum": 0,
+            "example": 14.5
+          },
+          "unit": {
+            "$ref": "#/components/schemas/weight-units"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ]
+      },
       "price-with-any-currency": {
         "title": "Price With Any Currency",
         "type": "object",
@@ -20497,7 +20501,7 @@
             "example": 1
           },
           "weight": {
-            "$ref": "#/components/schemas/weight"
+            "$ref": "#/components/schemas/returns-weight"
           },
           "price": {
             "$ref": "#/components/schemas/price-with-any-currency"
@@ -20615,6 +20619,25 @@
           }
         ]
       },
+      "returns-price": {
+        "title": "Price Object",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "enum": [
+              "EUR",
+              "GBP",
+              "USD"
+            ]
+          }
+        },
+        "description": "Price in the specified currency"
+      },
       "detailed-tracking-blob-status": {
         "title": "Detailed Tracking status",
         "type": "object",
@@ -20659,7 +20682,25 @@
           }
         }
       },
-      "TaxNumber": {
+      "returns-Price": {
+        "title": "Price Object",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "example": "12.65",
+            "pattern": "[\\d]+(\\.[\\d]+)?"
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "minLength": 3,
+            "maxLength": 3,
+            "example": "USD"
+          }
+        }
+      },
+      "returns-TaxNumber": {
         "title": "Tax Number Object",
         "description": "Identification numbers and codes used in different contexts. These identifiers are used for taxation, customs, business registration, and other purposes, depending on the country and the specific regulatory requirements. Depending on these requirements you may need to pass one or several numbers related to sender, receiver or importer of record provider. These numbers and codes will be included into final Customs documents.",
         "type": "object",
@@ -20942,7 +20983,7 @@
                 "description": "Sender's list of identification number objects",
                 "maxItems": 20,
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/returns-TaxNumber"
                 }
               },
               "receiver": {
@@ -20950,14 +20991,14 @@
                 "description": "Receiver's list of identification number objects",
                 "maxItems": 20,
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/returns-TaxNumber"
                 }
               },
               "importer_of_record": {
                 "type": "array",
                 "description": "Importer of record's list of identification number objects",
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/returns-TaxNumber"
                 },
                 "maxItems": 20
               }
@@ -21311,11 +21352,89 @@
               "tax_numbers": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/sender-addresses-TaxNumber"
                 }
               }
             }
           }
+        ]
+      },
+      "sender-addresses-TaxNumber": {
+        "title": "Tax Number Object",
+        "description": "Identification numbers and codes used in different contexts. These identifiers are used for taxation, customs, business registration, and other purposes, depending on the country and the specific regulatory requirements. Depending on these requirements you may need to pass one or several numbers related to sender, receiver or importer of record provider. These numbers and codes will be included into final Customs documents.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "EORI",
+            "description": "Tax number abbreviation\n  * VAT - Value-Added Tax → VOEC number for Norway should be shared here as advised by the [Norwegian Tax Authorities](https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/sending-and-marking-goods-through-postal-services-and-transporters.pdf)\n  * EIN - Employer Identification Number\n  * GST - Goods and Service Tax\n  * SSN - Social Security Number\n  * EORI - Economic Operators Registration and Identification for the European Union\n  * DUN - Data Universal Numbering System\n  * FED - Federal Tax ID\n  * STA - State Tax ID\n  * CNP - Brazil CNPJ/CPF Federal Tax\n  * IE - Brazil type IE/RG Federal Tax\n  * INN - Russia bank details section INN\n  * KPP - Russia bank details section KPP\n  * OGR - Russia bank details section OGRN\n  * OKP - Russia bank details section OKPO\n  * IOSS - SDT or Overseas Registered Supplier or Import One-Stop-Shop or GB VAT (foreign) registration or AUSid GST Registration or VAT on E-Commerce\n  * FTZ - Free Trade Zone ID\n  * DAN - Deferment Account Duties Only\n  * TAN - Deferment Account Tax Only\n  * DTF - Deferment Account Duties, Taxes and Fees Only\n  * RGP - EU Registered Exporters Registration ID\n  * DLI - Driver's License\n  * NID - National Identity Card - A PID (Personal Identification Number) should be provided as NID (National Identity Card).\n  * PAS - Passport\n  * MID - Manufacturer ID\n  * UKIMS - UK Internal Market Scheme -> customs clearance for shipping from Great Britain to Northern Ireland under the Windsor Framework, for more information see [Windsor Framework](https://www.gov.uk/government/publications/the-windsor-framework)\n",
+            "enum": [
+              "VAT",
+              "EIN",
+              "GST",
+              "SSN",
+              "EORI",
+              "DUN",
+              "FED",
+              "STA",
+              "CNP",
+              "IE",
+              "INN",
+              "KPP",
+              "OGR",
+              "OKP",
+              "IOSS",
+              "FTZ",
+              "DAN",
+              "TAN",
+              "DTF",
+              "RGP",
+              "DLI",
+              "NID",
+              "PAS",
+              "MID",
+              "UKIMS"
+            ]
+          },
+          "country_code": {
+            "type": "string",
+            "example": "NL",
+            "description": "Issuing country code (ISO 3166-1 alpha-2 code)",
+            "maxLength": 2
+          },
+          "value": {
+            "type": "string",
+            "example": "NL123456789B01",
+            "description": "Tax number itself",
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "name",
+          "country_code",
+          "value"
+        ]
+      },
+      "ship-an-order-ship-with": {
+        "title": "Ship with object",
+        "type": "object",
+        "description": "The ship with object can be used to define how you would like to send your shipment.\n\nYou can use a `shipping_option_code`. This is a unique identifier that displays what carrier and what set of shipping functionalities you want to use.\n",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The way the shipping method and carrier will be selected. Nowadays the only possible value is 'shipping_option_code', which requires client to also send the `shipping_option_code` inside properties.\n",
+            "enum": [
+              "shipping_option_code"
+            ],
+            "example": "shipping_option_code"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/shipping-option-code-properties"
+          }
+        },
+        "required": [
+          "type",
+          "properties"
         ]
       },
       "create-labels-base": {
@@ -21342,7 +21461,7 @@
           },
           "ship_with": {
             "type": "object",
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/ship-an-order-ship-with"
           }
         }
       },
@@ -21590,7 +21709,7 @@
           },
           "ship_with": {
             "type": "object",
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/ship-an-order-ship-with"
           }
         }
       },
@@ -21786,6 +21905,46 @@
           }
         ]
       },
+      "shipments-ship-with": {
+        "title": "Ship with object",
+        "type": "object",
+        "description": "The ship with object can be used to define how you would like to send your shipment.\n\nYou can use a `shipping_option_code`. This is a unique identifier that displays what carrier and what set of shipping functionalities you want to use.\n",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The way the shipping method and carrier will be selected. Nowadays the only possible value is 'shipping_option_code', which requires client to also send the `shipping_option_code` inside properties.\n",
+            "enum": [
+              "shipping_option_code"
+            ],
+            "example": "shipping_option_code"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/shipping-option-code-properties"
+          }
+        },
+        "required": [
+          "type",
+          "properties"
+        ]
+      },
+      "shipments-Price": {
+        "title": "Price Object",
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "example": "12.65",
+            "pattern": "[\\d]+(\\.[\\d]+)?"
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "minLength": 3,
+            "maxLength": 3,
+            "example": "USD"
+          }
+        }
+      },
       "shipment-common-with-optional-fields": {
         "title": "Shipment common with optional fields Object",
         "description": "Shipment common with optional fields object model",
@@ -21797,7 +21956,7 @@
             "type": "integer"
           },
           "ship_with": {
-            "$ref": "#/components/schemas/ship-with"
+            "$ref": "#/components/schemas/shipments-ship-with"
           },
           "from_address": {
             "$ref": "#/components/schemas/address-with-required-fields"
@@ -21839,6 +21998,62 @@
         },
         "required": [
           "to_address"
+        ]
+      },
+      "shipments-TaxNumber": {
+        "title": "Tax Number Object",
+        "description": "Identification numbers and codes used in different contexts. These identifiers are used for taxation, customs, business registration, and other purposes, depending on the country and the specific regulatory requirements. Depending on these requirements you may need to pass one or several numbers related to sender, receiver or importer of record provider. These numbers and codes will be included into final Customs documents.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "EORI",
+            "description": "Tax number abbreviation\n  * VAT - Value-Added Tax → VOEC number for Norway should be shared here as advised by the [Norwegian Tax Authorities](https://www.skatteetaten.no/globalassets/bedrift-og-organisasjon/voec/sending-and-marking-goods-through-postal-services-and-transporters.pdf)\n  * EIN - Employer Identification Number\n  * GST - Goods and Service Tax\n  * SSN - Social Security Number\n  * EORI - Economic Operators Registration and Identification for the European Union\n  * DUN - Data Universal Numbering System\n  * FED - Federal Tax ID\n  * STA - State Tax ID\n  * CNP - Brazil CNPJ/CPF Federal Tax\n  * IE - Brazil type IE/RG Federal Tax\n  * INN - Russia bank details section INN\n  * KPP - Russia bank details section KPP\n  * OGR - Russia bank details section OGRN\n  * OKP - Russia bank details section OKPO\n  * IOSS - SDT or Overseas Registered Supplier or Import One-Stop-Shop or GB VAT (foreign) registration or AUSid GST Registration or VAT on E-Commerce\n  * FTZ - Free Trade Zone ID\n  * DAN - Deferment Account Duties Only\n  * TAN - Deferment Account Tax Only\n  * DTF - Deferment Account Duties, Taxes and Fees Only\n  * RGP - EU Registered Exporters Registration ID\n  * DLI - Driver's License\n  * NID - National Identity Card - A PID (Personal Identification Number) should be provided as NID (National Identity Card).\n  * PAS - Passport\n  * MID - Manufacturer ID\n  * UKIMS - UK Internal Market Scheme -> customs clearance for shipping from Great Britain to Northern Ireland under the Windsor Framework, for more information see [Windsor Framework](https://www.gov.uk/government/publications/the-windsor-framework)\n",
+            "enum": [
+              "VAT",
+              "EIN",
+              "GST",
+              "SSN",
+              "EORI",
+              "DUN",
+              "FED",
+              "STA",
+              "CNP",
+              "IE",
+              "INN",
+              "KPP",
+              "OGR",
+              "OKP",
+              "IOSS",
+              "FTZ",
+              "DAN",
+              "TAN",
+              "DTF",
+              "RGP",
+              "DLI",
+              "NID",
+              "PAS",
+              "MID",
+              "UKIMS"
+            ]
+          },
+          "country_code": {
+            "type": "string",
+            "example": "NL",
+            "description": "Issuing country code (ISO 3166-1 alpha-2 code)",
+            "maxLength": 2
+          },
+          "value": {
+            "type": "string",
+            "example": "NL123456789B01",
+            "description": "Tax number itself",
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "name",
+          "country_code",
+          "value"
         ]
       },
       "customs-information-with-optional-fields": {
@@ -22061,7 +22276,7 @@
                 "description": "Sender's list of identification number objects",
                 "maxItems": 20,
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/shipments-TaxNumber"
                 }
               },
               "receiver": {
@@ -22069,14 +22284,14 @@
                 "description": "Receiver's list of identification number objects",
                 "maxItems": 20,
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/shipments-TaxNumber"
                 }
               },
               "importer_of_record": {
                 "type": "array",
                 "description": "Importer of record's list of identification number objects",
                 "items": {
-                  "$ref": "#/components/schemas/TaxNumber"
+                  "$ref": "#/components/schemas/shipments-TaxNumber"
                 },
                 "maxItems": 20
               }
@@ -22187,6 +22402,26 @@
           }
         ],
         "type": "object"
+      },
+      "shipments-weight": {
+        "title": "Weight",
+        "type": "object",
+        "description": "Weight in the specified unit",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "Weight value",
+            "exclusiveMinimum": 0,
+            "example": 14.5
+          },
+          "unit": {
+            "$ref": "#/components/schemas/weight-units"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ]
       },
       "parcel-common": {
         "title": "Parcel common Object",
@@ -22634,7 +22869,7 @@
         ],
         "example": "mm"
       },
-      "Dimension": {
+      "shipping-options-Dimension": {
         "title": "Dimension",
         "type": "object",
         "description": "Dimension in the specified unit",
@@ -22676,7 +22911,7 @@
         ],
         "example": "g"
       },
-      "Weight": {
+      "shipping-options-Weight": {
         "title": "Weight",
         "type": "object",
         "description": "Weight in the specified unit",
@@ -22758,7 +22993,7 @@
           "dimensions": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/Dimension"
+                "$ref": "#/components/schemas/shipping-options-Dimension"
               },
               {
                 "type": "null"
@@ -22768,7 +23003,7 @@
           "weight": {
             "oneOf": [
               {
-                "$ref": "#/components/schemas/Weight"
+                "$ref": "#/components/schemas/shipping-options-Weight"
               },
               {
                 "type": "null"
@@ -22837,7 +23072,7 @@
       "parcel-billed-weights": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Weight"
+            "$ref": "#/components/schemas/shipping-options-Weight"
           },
           {
             "$ref": "#/components/schemas/billed-weight-type"
@@ -22884,6 +23119,25 @@
           }
         }
       },
+      "shipping-options-price": {
+        "title": "Price Object",
+        "type": "object",
+        "description": "Price in the specified currency",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 currency code",
+            "enum": [
+              "EUR",
+              "GBP",
+              "USD"
+            ]
+          }
+        }
+      },
       "shipping-price-breakdown": {
         "title": "Array of Shipping Price Breakdown Objects",
         "description": "A Sendcloud shipping price breakdown.",
@@ -22925,7 +23179,7 @@
               "description": "Friendly name for the price type."
             },
             "price": {
-              "$ref": "#/components/schemas/price",
+              "$ref": "#/components/schemas/shipping-options-price",
               "description": "The price of the breakdown item."
             }
           }
@@ -22941,11 +23195,11 @@
             "description": "Weight range allowed for this qoute.",
             "properties": {
               "min": {
-                "$ref": "#/components/schemas/Weight",
+                "$ref": "#/components/schemas/shipping-options-Weight",
                 "description": "Minimum allowed parcel dimensions for this quote."
               },
               "max": {
-                "$ref": "#/components/schemas/Weight",
+                "$ref": "#/components/schemas/shipping-options-Weight",
                 "description": "Maximum allowed parcel weight for this quote."
               }
             }
@@ -22963,7 +23217,7 @@
                 "$ref": "#/components/schemas/shipping-price-breakdown"
               },
               "total": {
-                "$ref": "#/components/schemas/price"
+                "$ref": "#/components/schemas/shipping-options-price"
               }
             }
           }
@@ -22994,7 +23248,7 @@
             "$ref": "#/components/schemas/carrier-shipping-functionalities"
           },
           "max_dimensions": {
-            "$ref": "#/components/schemas/Dimension",
+            "$ref": "#/components/schemas/shipping-options-Dimension",
             "description": "Maximum allowed parcel dimensions for this option."
           },
           "weight": {
@@ -23002,11 +23256,11 @@
             "description": "Weight range allowed for this qoute.",
             "properties": {
               "min": {
-                "$ref": "#/components/schemas/Weight",
+                "$ref": "#/components/schemas/shipping-options-Weight",
                 "description": "Minimum allowed parcel dimensions for this option."
               },
               "max": {
-                "$ref": "#/components/schemas/Weight",
+                "$ref": "#/components/schemas/shipping-options-Weight",
                 "description": "Maximum allowed parcel dimensions for this option."
               }
             }
@@ -24345,7 +24599,13 @@
         "description": "The maximum number of results to be returned per page"
       },
       "cursor": {
-        "$ref": "#/components/parameters/Cursor"
+        "in": "query",
+        "name": "cursor",
+        "description": "The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.\n\nThere are 3 possible parameters to encode:\n  - `o`: Offset\n  - `r`: Reverse\n  - `p`: Position\n  \nFor example, `r=1&p=300` encoded as a base64 string would be `cj0xJnA9MzAw`. The query string would then be `cursor=cj0xJnA9MzAw`.",
+        "schema": {
+          "type": "string",
+          "example": "cj0xJnA9MzAw"
+        }
       },
       "SendcloudPartnerId": {
         "in": "header",
@@ -24464,13 +24724,13 @@
                   "$ref": "#/components/schemas/address-with-required-fields"
                 },
                 "ship_with": {
-                  "$ref": "#/components/schemas/ShipWith"
+                  "$ref": "#/components/schemas/returns-ShipWith"
                 },
                 "dimensions": {
-                  "$ref": "#/components/schemas/dimension"
+                  "$ref": "#/components/schemas/returns-dimension"
                 },
                 "weight": {
-                  "$ref": "#/components/schemas/weight"
+                  "$ref": "#/components/schemas/returns-weight"
                 },
                 "collo_count": {
                   "type": "integer",
@@ -24497,7 +24757,7 @@
                   "minimum": 1
                 },
                 "total_insured_value": {
-                  "$ref": "#/components/schemas/price"
+                  "$ref": "#/components/schemas/returns-price"
                 },
                 "order_number": {
                   "type": "string",
@@ -24517,7 +24777,7 @@
                   "description": "Customs invoice number. **This field is required if it's an international return**"
                 },
                 "delivery_option": {
-                  "$ref": "#/components/schemas/DeliveryOption"
+                  "$ref": "#/components/schemas/returns-DeliveryOption"
                 },
                 "customs_information": {
                   "$ref": "#/components/schemas/parcel-customs-information"

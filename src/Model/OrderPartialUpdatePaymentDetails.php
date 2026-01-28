@@ -59,10 +59,10 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
-        'subtotalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
-        'estimatedShippingPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
-        'estimatedTaxPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
+        'subtotalPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
+        'estimatedShippingPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
+        'estimatedTaxPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
         'status' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetailsStatus::class,
         'invoiceDate' => 'string',
         'discountGranted' => \Toppy\Sendcloud\V3\Model\CostsObject::class,
@@ -326,7 +326,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getTotalPrice()
     {
@@ -336,7 +336,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $totalPrice totalPrice
      *
      * @return self
      */
@@ -354,7 +354,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets subtotalPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getSubtotalPrice()
     {
@@ -364,7 +364,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets subtotalPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $subtotalPrice subtotalPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $subtotalPrice subtotalPrice
      *
      * @return self
      */
@@ -382,7 +382,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets estimatedShippingPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getEstimatedShippingPrice()
     {
@@ -392,7 +392,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets estimatedShippingPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $estimatedShippingPrice estimatedShippingPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $estimatedShippingPrice estimatedShippingPrice
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets estimatedTaxPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getEstimatedTaxPrice()
     {
@@ -420,7 +420,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets estimatedTaxPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $estimatedTaxPrice estimatedTaxPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $estimatedTaxPrice estimatedTaxPrice
      *
      * @return self
      */

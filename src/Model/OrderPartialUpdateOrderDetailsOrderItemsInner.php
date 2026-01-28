@@ -68,8 +68,8 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
         'hsCode' => 'string',
         'countryOfOrigin' => 'string',
         'properties' => 'array<string,mixed>',
-        'unitPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
-        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'unitPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
         'measurement' => \Toppy\Sendcloud\V3\Model\Measurement::class,
         'midCode' => 'string',
         'materialContent' => 'string',
@@ -646,7 +646,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets unitPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getUnitPrice()
     {
@@ -656,7 +656,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets unitPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $unitPrice unitPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $unitPrice unitPrice
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getTotalPrice()
     {
@@ -684,7 +684,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $totalPrice totalPrice
      *
      * @return self
      */

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **orderNumber** | **string** | Unique order number generated manually or by shop system |
 **createdAt** | **\DateTime** | The date when an order was created at Sendcloud in ISO 8601 | [optional] [readonly]
 **modifiedAt** | **\DateTime** | The date when an order was last modified at Sendcloud in ISO 8601 | [optional] [readonly]
-**orderDetails** | [**\Toppy\Sendcloud\V3\Model\OrderOrderDetails**](OrderOrderDetails.md) |  |
+**orderDetails** | [**\Toppy\Sendcloud\V3\Model\OrdersOrderOrderDetails**](OrdersOrderOrderDetails.md) |  |
 **paymentDetails** | [**\Toppy\Sendcloud\V3\Model\PaymentDetails**](PaymentDetails.md) |  |
 **customsDetails** | [**\Toppy\Sendcloud\V3\Model\CustomsDetails**](CustomsDetails.md) |  | [optional]
 **customerDetails** | [**\Toppy\Sendcloud\V3\Model\CustomerDetails**](CustomerDetails.md) |  | [optional]

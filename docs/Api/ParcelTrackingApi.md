@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber()`
 
 ```php
-scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber): \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse
+scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber): \Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingResponse
 ```
 
 Retrieve tracking information for a parcel
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\V3\Model\ParcelTrackingResponse**](../Model/ParcelTrackingResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingResponse**](../Model/ParcelTrackingParcelTrackingResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking()`
 
 ```php
-scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest): \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse
+scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingParcelTrackingCreateRequest): \Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingCreateResponse
 ```
 
 Create a tracking-only parcel
@@ -99,10 +99,10 @@ $apiInstance = new Toppy\Sendcloud\V3\Api\ParcelTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$parcelTrackingCreateRequest = new \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest(); // \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest
+$parcelTrackingParcelTrackingCreateRequest = new \Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingCreateRequest(); // \Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingCreateRequest
 
 try {
-    $result = $apiInstance->scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest);
+    $result = $apiInstance->scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingParcelTrackingCreateRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ParcelTrackingApi->scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking: ', $e->getMessage(), PHP_EOL;
@@ -113,11 +113,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parcelTrackingCreateRequest** | [**\Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest**](../Model/ParcelTrackingCreateRequest.md)|  |
+ **parcelTrackingParcelTrackingCreateRequest** | [**\Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingCreateRequest**](../Model/ParcelTrackingParcelTrackingCreateRequest.md)|  |
 
 ### Return type
 
-[**\Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse**](../Model/ParcelTrackingCreateResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ParcelTrackingParcelTrackingCreateResponse**](../Model/ParcelTrackingParcelTrackingCreateResponse.md)
 
 ### Authorization
 

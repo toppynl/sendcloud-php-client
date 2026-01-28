@@ -62,7 +62,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
         'integrationId' => 'int',
         'senderAddressId' => 'int',
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith::class,
         'orders' => '\Toppy\Sendcloud\V3\Model\CreateLabelsAsyncAllOfOrders[]'
     ];
 
@@ -401,7 +401,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null
      */
     public function getShipWith()
     {
@@ -411,7 +411,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null $shipWith shipWith
      *
      * @return self
      */

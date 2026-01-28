@@ -58,9 +58,9 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sender' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]',
-        'receiver' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]',
-        'importerOfRecord' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]'
+        'sender' => '\Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]',
+        'receiver' => '\Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]',
+        'importerOfRecord' => '\Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets sender
      *
-     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null
      */
     public function getSender()
     {
@@ -300,7 +300,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets sender
      *
-     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $sender sender
+     * @param \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null $sender sender
      *
      * @return self
      */
@@ -323,7 +323,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets receiver
      *
-     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null
      */
     public function getReceiver()
     {
@@ -333,7 +333,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets receiver
      *
-     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $receiver receiver
+     * @param \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null $receiver receiver
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets importerOfRecord
      *
-     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null
      */
     public function getImporterOfRecord()
     {
@@ -366,7 +366,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets importerOfRecord
      *
-     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $importerOfRecord importerOfRecord
+     * @param \Toppy\Sendcloud\V3\Model\OrdersTaxNumber[]|null $importerOfRecord importerOfRecord
      *
      * @return self
      */

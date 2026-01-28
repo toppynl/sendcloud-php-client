@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **hsCode** | **string** | The Harmonized System (HS) code is a standardized numerical system used to classify traded products in international commerce | [optional]
 **countryOfOrigin** | **string** | Country code of origin of the item in ISO 3166-1 alpha-2 | [optional]
 **properties** | **array<string,mixed>** | Any custom user-defined properties of order item or product | [optional]
-**unitPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
-**totalPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  |
+**unitPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  | [optional]
+**totalPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  |
 **measurement** | [**\Toppy\Sendcloud\V3\Model\Measurement**](Measurement.md) |  | [optional]
 **ean** | **string** | European standardised number for an article, EAN-13 | [optional]
 **deliveryDates** | [**\Toppy\Sendcloud\V3\Model\DeliveryDates**](DeliveryDates.md) |  | [optional]

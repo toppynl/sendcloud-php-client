@@ -70,8 +70,8 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
         'hsCode' => 'string',
         'countryOfOrigin' => 'string',
         'properties' => 'array<string,mixed>',
-        'unitPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
-        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'unitPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\OrdersPrice::class,
         'measurement' => \Toppy\Sendcloud\V3\Model\Measurement::class,
         'ean' => 'string',
         'deliveryDates' => \Toppy\Sendcloud\V3\Model\DeliveryDates::class,
@@ -743,7 +743,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets unitPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice|null
      */
     public function getUnitPrice()
     {
@@ -753,7 +753,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets unitPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $unitPrice unitPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice|null $unitPrice unitPrice
      *
      * @return self
      */
@@ -771,7 +771,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price
+     * @return \Toppy\Sendcloud\V3\Model\OrdersPrice
      */
     public function getTotalPrice()
     {
@@ -781,7 +781,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\OrdersPrice $totalPrice totalPrice
      *
      * @return self
      */

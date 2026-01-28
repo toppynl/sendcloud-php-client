@@ -7,15 +7,15 @@ Name | Type | Description | Notes
 **fromAddress** | [**\Toppy\Sendcloud\V3\Model\AddressWithRequiredFields**](AddressWithRequiredFields.md) |  |
 **toAddress** | [**\Toppy\Sendcloud\V3\Model\AddressWithRequiredFields**](AddressWithRequiredFields.md) |  |
 **shippingProduct** | [**\Toppy\Sendcloud\V3\Model\ShippingProductsRef**](ShippingProductsRef.md) |  |
-**dimensions** | [**\Toppy\Sendcloud\V3\Model\Dimension**](Dimension.md) |  | [optional]
-**weight** | [**\Toppy\Sendcloud\V3\Model\Weight**](Weight.md) |  |
+**dimensions** | [**\Toppy\Sendcloud\V3\Model\ReturnsDimension**](ReturnsDimension.md) |  | [optional]
+**weight** | [**\Toppy\Sendcloud\V3\Model\ReturnsWeight**](ReturnsWeight.md) |  |
 **colloCount** | **int** | The number of collos this return consists of | [optional] [default to 1]
 **parcelItems** | [**\Toppy\Sendcloud\V3\Model\ParcelItemReturnsDetails[]**](ParcelItemReturnsDetails.md) | List of items contained in this return. Required outside the EU. | [optional]
 **sendTrackingEmails** | **bool** | When &#x60;true&#x60;, Sendcloud will send out the default track and trace emails | [default to false]
 **brandId** | **int** | The ID of the brand this Return belongs to. | [optional]
 **labelUrl** | **string** | URL to download the label. This can be &#x60;null&#x60; because it might not be announced yet. **Deprecated** in favour of the &#x60;label&#x60; field. | [optional]
 **label** | [**\Toppy\Sendcloud\V3\Model\ReturnLabel**](ReturnLabel.md) |  | [optional]
-**labelCost** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
+**labelCost** | [**\Toppy\Sendcloud\V3\Model\ReturnsPrice**](ReturnsPrice.md) |  | [optional]
 **insurance** | **bool** | Whether the return parcel is insured | [optional]
 **trackingNumber** | **string** | This can be null because it might not be announced yet. | [optional]
 **trackingUrl** | **string** | URL to track your return. This can be null because it might not be announced yet. | [optional]
@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **contract** | **int** | ID of the contract used to ship this return | [optional]
 **customsInvoiceNr** | **string** | Customs invoice number | [optional]
 **customsShipmentType** | **int** | Customs shipment type   * &#x60;0&#x60; - Gift   * &#x60;1&#x60; - Documents   * &#x60;2&#x60; - Commercial Goods   * &#x60;3&#x60; - Commercial Sample   * &#x60;4&#x60; - Returned Goods | [optional]
-**deliveryOption** | [**\Toppy\Sendcloud\V3\Model\DeliveryOption**](DeliveryOption.md) |  | [optional]
+**deliveryOption** | [**\Toppy\Sendcloud\V3\Model\ReturnsDeliveryOption**](ReturnsDeliveryOption.md) |  | [optional]
 **images** | [**\Toppy\Sendcloud\V3\Model\ReturnImagesInner[]**](ReturnImagesInner.md) | Images uploaded when creating a return via the Return Portal | [optional]
 **status** | **string** | The current status of the return | [optional]
 **customsInformation** | [**\Toppy\Sendcloud\V3\Model\ParcelCustomsInformation**](ParcelCustomsInformation.md) |  | [optional]

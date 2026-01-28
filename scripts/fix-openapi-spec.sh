@@ -45,6 +45,19 @@ jq '
   # Fix server URL to use correct host
   .servers = [{ "url": "https://panel.sendcloud.sc/api/v3", "description": "Production" }] |
 
+  # Fix missing path parameter in dynamic-checkout endpoint
+  .paths["/checkout/configurations/{configuration_id}/delivery-options"].get.parameters |= (
+    if . == null or (map(select(.name == "configuration_id")) | length == 0) then
+      (. // []) + [{
+        "name": "configuration_id",
+        "in": "path",
+        "required": true,
+        "description": "The checkout configuration ID",
+        "schema": { "type": "string" }
+      }]
+    else . end
+  ) |
+
   # Remove empty component sections (but not the components object itself)
   (if (.components.parameters? // {} | keys | length) == 0 then del(.components.parameters) else . end) |
   (if (.components.requestBodies? // {} | keys | length) == 0 then del(.components.requestBodies) else . end) |

@@ -62,7 +62,7 @@ class ParcelItemReturnsCreate implements ModelInterface, ArrayAccess, \JsonSeria
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ReturnsWeight::class,
         'price' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'value' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'hsCode' => 'string',
@@ -473,7 +473,7 @@ class ParcelItemReturnsCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\V3\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnsWeight|null
      */
     public function getWeight()
     {
@@ -483,7 +483,7 @@ class ParcelItemReturnsCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ReturnsWeight|null $weight weight
      *
      * @return self
      */

@@ -62,15 +62,15 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
         'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
         'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
         'shippingProduct' => \Toppy\Sendcloud\V3\Model\ShippingProductsRef::class,
-        'dimensions' => \Toppy\Sendcloud\V3\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\ReturnsDimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ReturnsWeight::class,
         'colloCount' => 'int',
         'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemReturnsDetails[]',
         'sendTrackingEmails' => 'bool',
         'brandId' => 'int',
         'labelUrl' => 'string',
         'label' => \Toppy\Sendcloud\V3\Model\ReturnLabel::class,
-        'labelCost' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'labelCost' => \Toppy\Sendcloud\V3\Model\ReturnsPrice::class,
         'insurance' => 'bool',
         'trackingNumber' => 'string',
         'trackingUrl' => 'string',
@@ -86,7 +86,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
         'contract' => 'int',
         'customsInvoiceNr' => 'string',
         'customsShipmentType' => 'int',
-        'deliveryOption' => \Toppy\Sendcloud\V3\Model\DeliveryOption::class,
+        'deliveryOption' => \Toppy\Sendcloud\V3\Model\ReturnsDeliveryOption::class,
         'images' => '\Toppy\Sendcloud\V3\Model\ReturnImagesInner[]',
         'status' => 'string',
         'customsInformation' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation::class,
@@ -683,7 +683,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnsDimension|null
      */
     public function getDimensions()
     {
@@ -693,7 +693,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\ReturnsDimension|null $dimensions dimensions
      *
      * @return self
      */
@@ -711,7 +711,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\V3\Model\Weight
+     * @return \Toppy\Sendcloud\V3\Model\ReturnsWeight
      */
     public function getWeight()
     {
@@ -721,7 +721,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\V3\Model\Weight $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ReturnsWeight $weight weight
      *
      * @return self
      */
@@ -917,7 +917,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets labelCost
      *
-     * @return \Toppy\Sendcloud\V3\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnsPrice|null
      */
     public function getLabelCost()
     {
@@ -927,7 +927,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets labelCost
      *
-     * @param \Toppy\Sendcloud\V3\Model\Price|null $labelCost labelCost
+     * @param \Toppy\Sendcloud\V3\Model\ReturnsPrice|null $labelCost labelCost
      *
      * @return self
      */
@@ -1383,7 +1383,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets deliveryOption
      *
-     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnsDeliveryOption|null
      */
     public function getDeliveryOption()
     {
@@ -1393,7 +1393,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets deliveryOption
      *
-     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption|null $deliveryOption deliveryOption
+     * @param \Toppy\Sendcloud\V3\Model\ReturnsDeliveryOption|null $deliveryOption deliveryOption
      *
      * @return self
      */

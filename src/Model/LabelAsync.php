@@ -62,7 +62,7 @@ class LabelAsync implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
         'shipmentId' => 'string',
         'orderId' => 'string',
         'orderNumber' => 'string',
-        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith::class,
         'parcelId' => 'int',
         'parcelsIds' => 'int[]'
     ];
@@ -382,7 +382,7 @@ class LabelAsync implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null
      */
     public function getShipWith()
     {
@@ -392,7 +392,7 @@ class LabelAsync implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipAnOrderShipWith|null $shipWith shipWith
      *
      * @return self
      */

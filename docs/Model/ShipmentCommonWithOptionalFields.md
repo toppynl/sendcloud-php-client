@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **brandId** | **int** | The &#x60;id&#x60; of the brand. Brands can be added through the [Sendcloud platform](https://app.sendcloud.com/v2/settings/brands/list) and be retrieved (alongside their &#x60;id&#x60;) from the [Retrieve a list of brands](/api/v2/brands/retrieve-a-list-of-brands) endpoint. | [optional]
-**shipWith** | [**\Toppy\Sendcloud\V3\Model\ShipWith**](ShipWith.md) |  | [optional]
+**shipWith** | [**\Toppy\Sendcloud\V3\Model\ShipmentsShipWith**](ShipmentsShipWith.md) |  | [optional]
 **fromAddress** | [**\Toppy\Sendcloud\V3\Model\AddressWithRequiredFields**](AddressWithRequiredFields.md) |  | [optional]
 **toAddress** | [**\Toppy\Sendcloud\V3\Model\AddressWithRequiredFields**](AddressWithRequiredFields.md) |  |
 **toServicePoint** | [**\Toppy\Sendcloud\V3\Model\ServicePoint**](ServicePoint.md) |  | [optional]

@@ -60,7 +60,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'configurationId' => 'string',
-        'deliveryOptions' => '\Toppy\Sendcloud\V3\Model\DeliveryOption[]'
+        'deliveryOptions' => '\Toppy\Sendcloud\V3\Model\DynamicCheckoutDeliveryOption[]'
     ];
 
     /**
@@ -308,7 +308,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets deliveryOptions
      *
-     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption[]
+     * @return \Toppy\Sendcloud\V3\Model\DynamicCheckoutDeliveryOption[]
      */
     public function getDeliveryOptions()
     {
@@ -318,7 +318,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets deliveryOptions
      *
-     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption[] $deliveryOptions A list of delivery options available for the given cart or order details. Each delivery option corresponds to a configured delivery method and includes detailed information, such as shipping rates, delivery dates, and carrier information.
+     * @param \Toppy\Sendcloud\V3\Model\DynamicCheckoutDeliveryOption[] $deliveryOptions A list of delivery options available for the given cart or order details. Each delivery option corresponds to a configured delivery method and includes detailed information, such as shipping rates, delivery dates, and carrier information.
      *
      * @return self
      */

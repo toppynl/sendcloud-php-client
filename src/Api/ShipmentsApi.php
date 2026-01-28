@@ -182,16 +182,15 @@ class ShipmentsApi
      * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3ScpGetAllShipments($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
+    public function scPublicV3ScpGetAllShipments($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $pageSize = 40)
     {
-        [$response] = $this->scPublicV3ScpGetAllShipmentsWithHttpInfo($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize);
+        [$response] = $this->scPublicV3ScpGetAllShipmentsWithHttpInfo($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize);
         return $response;
     }
 
@@ -210,16 +209,15 @@ class ShipmentsApi
      * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3ScpGetAllShipmentsWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
+    public function scPublicV3ScpGetAllShipmentsWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $pageSize = 40)
     {
-        $request = $this->scPublicV3ScpGetAllShipmentsRequest($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize);
+        $request = $this->scPublicV3ScpGetAllShipmentsRequest($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize);
 
         try {
             try {
@@ -331,15 +329,14 @@ class ShipmentsApi
      * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpGetAllShipmentsAsync($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
+    public function scPublicV3ScpGetAllShipmentsAsync($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $pageSize = 40)
     {
-        return $this->scPublicV3ScpGetAllShipmentsAsyncWithHttpInfo($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize)
+        return $this->scPublicV3ScpGetAllShipmentsAsyncWithHttpInfo($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -362,16 +359,15 @@ class ShipmentsApi
      * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpGetAllShipmentsAsyncWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
+    public function scPublicV3ScpGetAllShipmentsAsyncWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $pageSize = 40)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response::class;
-        $request = $this->scPublicV3ScpGetAllShipmentsRequest($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize);
+        $request = $this->scPublicV3ScpGetAllShipmentsRequest($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -418,13 +414,12 @@ class ShipmentsApi
      * @param  string $announcedBefore Returns all shipments which have been announced to the carrier before the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $announcedAfter Returns all shipments which have been announced to the carrier after the given time. Use the ISO 8601 datetime format. (optional)
      * @param  string $ids Filter results using a comma-separated list of shipments IDs. The list may not contain more than 100 IDs. (optional)
-     * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3ScpGetAllShipmentsRequest($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
+    public function scPublicV3ScpGetAllShipmentsRequest($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $pageSize = 40)
     {
         if ($pageSize !== null && $pageSize > 100) {
             throw new \InvalidArgumentException('invalid value for "$pageSize" when calling ShipmentsApi.scPublicV3ScpGetAllShipments, must be smaller than or equal to 100.');
@@ -559,18 +554,6 @@ class ShipmentsApi
             }
             else {
                 $queryParams['ids'] = $ids;
-            }
-        }
-
-        // query params
-        if ($cursor !== null) {
-            if(is_array($cursor)) {
-                foreach($cursor as $key => $value) {
-                    $queryParams[$key] = $value;
-                }
-            }
-            else {
-                $queryParams['cursor'] = $cursor;
             }
         }
 
@@ -907,16 +890,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
+    public function scPublicV3ScpPostAnnounceShipment($shipmentRequestSyncAnnounce = null)
     {
-        [$response] = $this->scPublicV3ScpPostAnnounceShipmentWithHttpInfo($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
+        [$response] = $this->scPublicV3ScpPostAnnounceShipmentWithHttpInfo($shipmentRequestSyncAnnounce);
         return $response;
     }
 
@@ -925,16 +907,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithHttpInfo($shipmentRequestSyncAnnounce = null)
     {
-        $request = $this->scPublicV3ScpPostAnnounceShipmentRequest($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
+        $request = $this->scPublicV3ScpPostAnnounceShipmentRequest($shipmentRequestSyncAnnounce);
 
         try {
             try {
@@ -1036,15 +1017,14 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostAnnounceShipmentAsync($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
+    public function scPublicV3ScpPostAnnounceShipmentAsync($shipmentRequestSyncAnnounce = null)
     {
-        return $this->scPublicV3ScpPostAnnounceShipmentAsyncWithHttpInfo($sendcloudPartnerId, $shipmentRequestSyncAnnounce)
+        return $this->scPublicV3ScpPostAnnounceShipmentAsyncWithHttpInfo($shipmentRequestSyncAnnounce)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1057,16 +1037,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostAnnounceShipmentAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
+    public function scPublicV3ScpPostAnnounceShipmentAsyncWithHttpInfo($shipmentRequestSyncAnnounce = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class;
-        $request = $this->scPublicV3ScpPostAnnounceShipmentRequest($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
+        $request = $this->scPublicV3ScpPostAnnounceShipmentRequest($shipmentRequestSyncAnnounce);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -1103,13 +1082,12 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostAnnounceShipment'
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3ScpPostAnnounceShipmentRequest($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
+    public function scPublicV3ScpPostAnnounceShipmentRequest($shipmentRequestSyncAnnounce = null)
     {
 
         $resourcePath = '/shipments/announce';
@@ -1120,10 +1098,6 @@ class ShipmentsApi
         $multipart = false;
 
 
-        // header params
-        if ($sendcloudPartnerId !== null) {
-            $headerParams['Sendcloud-Partner-Id'] = ObjectSerializer::toHeaderValue($sendcloudPartnerId);
-        }
 
 
 
@@ -1193,16 +1167,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithRules($shipmentRequestWithRules = null)
     {
-        [$response] = $this->scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo($sendcloudPartnerId, $shipmentRequestWithRules);
+        [$response] = $this->scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo($shipmentRequestWithRules);
         return $response;
     }
 
@@ -1211,16 +1184,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo($shipmentRequestWithRules = null)
     {
-        $request = $this->scPublicV3ScpPostAnnounceShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
+        $request = $this->scPublicV3ScpPostAnnounceShipmentWithRulesRequest($shipmentRequestWithRules);
 
         try {
             try {
@@ -1322,15 +1294,14 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithRulesAsync($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithRulesAsync($shipmentRequestWithRules = null)
     {
-        return $this->scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId, $shipmentRequestWithRules)
+        return $this->scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo($shipmentRequestWithRules)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1343,16 +1314,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo($shipmentRequestWithRules = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class;
-        $request = $this->scPublicV3ScpPostAnnounceShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
+        $request = $this->scPublicV3ScpPostAnnounceShipmentWithRulesRequest($shipmentRequestWithRules);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -1389,13 +1359,12 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostAnnounceShipmentWithRules'
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3ScpPostAnnounceShipmentWithRulesRequest($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostAnnounceShipmentWithRulesRequest($shipmentRequestWithRules = null)
     {
 
         $resourcePath = '/shipments/announce-with-shipping-rules';
@@ -1406,10 +1375,6 @@ class ShipmentsApi
         $multipart = false;
 
 
-        // header params
-        if ($sendcloudPartnerId !== null) {
-            $headerParams['Sendcloud-Partner-Id'] = ObjectSerializer::toHeaderValue($sendcloudPartnerId);
-        }
 
 
 
@@ -1771,16 +1736,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3ScpPostCreateShipment($sendcloudPartnerId = null, $shipmentRequestAsync = null)
+    public function scPublicV3ScpPostCreateShipment($shipmentRequestAsync = null)
     {
-        [$response] = $this->scPublicV3ScpPostCreateShipmentWithHttpInfo($sendcloudPartnerId, $shipmentRequestAsync);
+        [$response] = $this->scPublicV3ScpPostCreateShipmentWithHttpInfo($shipmentRequestAsync);
         return $response;
     }
 
@@ -1789,16 +1753,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3ScpPostCreateShipmentWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestAsync = null)
+    public function scPublicV3ScpPostCreateShipmentWithHttpInfo($shipmentRequestAsync = null)
     {
-        $request = $this->scPublicV3ScpPostCreateShipmentRequest($sendcloudPartnerId, $shipmentRequestAsync);
+        $request = $this->scPublicV3ScpPostCreateShipmentRequest($shipmentRequestAsync);
 
         try {
             try {
@@ -1900,15 +1863,14 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostCreateShipmentAsync($sendcloudPartnerId = null, $shipmentRequestAsync = null)
+    public function scPublicV3ScpPostCreateShipmentAsync($shipmentRequestAsync = null)
     {
-        return $this->scPublicV3ScpPostCreateShipmentAsyncWithHttpInfo($sendcloudPartnerId, $shipmentRequestAsync)
+        return $this->scPublicV3ScpPostCreateShipmentAsyncWithHttpInfo($shipmentRequestAsync)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1921,16 +1883,15 @@ class ShipmentsApi
      *
      * Create and announce a shipment asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostCreateShipmentAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestAsync = null)
+    public function scPublicV3ScpPostCreateShipmentAsyncWithHttpInfo($shipmentRequestAsync = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class;
-        $request = $this->scPublicV3ScpPostCreateShipmentRequest($sendcloudPartnerId, $shipmentRequestAsync);
+        $request = $this->scPublicV3ScpPostCreateShipmentRequest($shipmentRequestAsync);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -1967,13 +1928,12 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCreateShipment'
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3ScpPostCreateShipmentRequest($sendcloudPartnerId = null, $shipmentRequestAsync = null)
+    public function scPublicV3ScpPostCreateShipmentRequest($shipmentRequestAsync = null)
     {
 
         $resourcePath = '/shipments';
@@ -1984,10 +1944,6 @@ class ShipmentsApi
         $multipart = false;
 
 
-        // header params
-        if ($sendcloudPartnerId !== null) {
-            $headerParams['Sendcloud-Partner-Id'] = ObjectSerializer::toHeaderValue($sendcloudPartnerId);
-        }
 
 
 
@@ -2057,16 +2013,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
-    public function scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostCreateShipmentWithRules($shipmentRequestWithRules = null)
     {
-        [$response] = $this->scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo($sendcloudPartnerId, $shipmentRequestWithRules);
+        [$response] = $this->scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo($shipmentRequestWithRules);
         return $response;
     }
 
@@ -2075,16 +2030,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
-    public function scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo($shipmentRequestWithRules = null)
     {
-        $request = $this->scPublicV3ScpPostCreateShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
+        $request = $this->scPublicV3ScpPostCreateShipmentWithRulesRequest($shipmentRequestWithRules);
 
         try {
             try {
@@ -2186,15 +2140,14 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostCreateShipmentWithRulesAsync($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostCreateShipmentWithRulesAsync($shipmentRequestWithRules = null)
     {
-        return $this->scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId, $shipmentRequestWithRules)
+        return $this->scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo($shipmentRequestWithRules)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2207,16 +2160,15 @@ class ShipmentsApi
      *
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo($shipmentRequestWithRules = null)
     {
         $returnType = \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class;
-        $request = $this->scPublicV3ScpPostCreateShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
+        $request = $this->scPublicV3ScpPostCreateShipmentWithRulesRequest($shipmentRequestWithRules);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -2253,13 +2205,12 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCreateShipmentWithRules'
      *
-     * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function scPublicV3ScpPostCreateShipmentWithRulesRequest($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
+    public function scPublicV3ScpPostCreateShipmentWithRulesRequest($shipmentRequestWithRules = null)
     {
 
         $resourcePath = '/shipments/create-with-shipping-rules';
@@ -2270,10 +2221,6 @@ class ShipmentsApi
         $multipart = false;
 
 
-        // header params
-        if ($sendcloudPartnerId !== null) {
-            $headerParams['Sendcloud-Partner-Id'] = ObjectSerializer::toHeaderValue($sendcloudPartnerId);
-        }
 
 
 

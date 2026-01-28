@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **phoneNumber** | **string** | Phone number of the person associated with the address | [optional]
 **id** | **int** | The identifier for this Sender Address | [optional] [readonly]
 **signature** | [**\Toppy\Sendcloud\V3\Model\SenderAddressResponseAllOfSignature**](SenderAddressResponseAllOfSignature.md) |  | [optional]
-**taxNumbers** | [**\Toppy\Sendcloud\V3\Model\TaxNumber[]**](TaxNumber.md) |  | [optional]
+**taxNumbers** | [**\Toppy\Sendcloud\V3\Model\SenderAddressesTaxNumber[]**](SenderAddressesTaxNumber.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

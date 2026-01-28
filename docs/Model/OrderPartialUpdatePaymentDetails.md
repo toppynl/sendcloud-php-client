@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
-**subtotalPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
-**estimatedShippingPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
-**estimatedTaxPrice** | [**\Toppy\Sendcloud\V3\Model\Price**](Price.md) |  | [optional]
+**totalPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  | [optional]
+**subtotalPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  | [optional]
+**estimatedShippingPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  | [optional]
+**estimatedTaxPrice** | [**\Toppy\Sendcloud\V3\Model\OrdersPrice**](OrdersPrice.md) |  | [optional]
 **status** | [**\Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetailsStatus**](OrderPartialUpdatePaymentDetailsStatus.md) |  | [optional]
 **invoiceDate** | **string** | The date when invoice was issued. | [optional]
 **discountGranted** | [**\Toppy\Sendcloud\V3\Model\CostsObject**](.md) |  | [optional]

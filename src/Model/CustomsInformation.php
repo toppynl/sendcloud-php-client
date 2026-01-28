@@ -69,7 +69,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
         'generalNotes' => 'string',
         'additionalDeclarationStatements' => 'string[]',
         'importerOfRecord' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationImporterOfRecord::class,
-        'taxNumbers' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers::class
+        'taxNumbers' => \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFieldsTaxNumbers::class
     ];
 
     /**
@@ -813,7 +813,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets taxNumbers
      *
-     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFieldsTaxNumbers|null
      */
     public function getTaxNumbers()
     {
@@ -823,7 +823,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets taxNumbers
      *
-     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers|null $taxNumbers taxNumbers
+     * @param \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFieldsTaxNumbers|null $taxNumbers taxNumbers
      *
      * @return self
      */
