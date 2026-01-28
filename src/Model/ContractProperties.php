@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ContractProperties Class Doc Comment
  *
  * @category Class
  * @description Properties for contract type ship_with. This type only requires a contract_id, without needing a shipping_option_code. User can provide custom shipping method name and ID for display purposes.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

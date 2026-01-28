@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * MulticolloParcelsArrayRequestWithOptionalFields Class Doc Comment
  *
  * @category Class
  * @description Parcels array request with optional fields object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MulticolloParcelsArrayRequestWithOptionalFields implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'parcels' => '\Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]'
+        'parcels' => '\Toppy\Sendcloud\V3\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]'
     ];
 
     /**
@@ -273,7 +273,7 @@ class MulticolloParcelsArrayRequestWithOptionalFields implements ModelInterface,
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null
      */
     public function getParcels()
     {
@@ -283,7 +283,7 @@ class MulticolloParcelsArrayRequestWithOptionalFields implements ModelInterface,
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represents each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
+     * @param \Toppy\Sendcloud\V3\Model\MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner[]|null $parcels Represents each package of the shipment. Each carrier can have its own number of parcels limit per shipment, otherwise there is a restriction to a maximum of 50 parcels (default).
      *
      * @return self
      */

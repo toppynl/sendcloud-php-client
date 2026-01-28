@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\CreateTicketApi
+# Toppy\Sendcloud\V3\CreateTicketApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `scPublicV3DsfPostTicketsAddressChange()`
 
 ```php
-scPublicV3DsfPostTicketsAddressChange($scPublicV3DsfPostTicketsAddressChangeRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsAddressChange($scPublicV3DsfPostTicketsAddressChangeRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for an address change
@@ -30,18 +30,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsAddressChangeRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsAddressChangeRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsAddressChange($scPublicV3DsfPostTicketsAddressChangeRequest);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsAddressChangeRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest**](../Model/ScPublicV3DsfPostTicketsAddressChangeRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsAddressChangeRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest**](../Model/ScPublicV3DsfPostTicketsAddressChangeRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostTicketsDamage()`
 
 ```php
-scPublicV3DsfPostTicketsDamage($scPublicV3DsfPostTicketsDamageRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsDamage($scPublicV3DsfPostTicketsDamageRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for a damaged parcel
@@ -92,18 +92,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsDamageRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsDamageRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsDamage($scPublicV3DsfPostTicketsDamageRequest);
@@ -117,11 +117,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsDamageRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest**](../Model/ScPublicV3DsfPostTicketsDamageRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsDamageRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest**](../Model/ScPublicV3DsfPostTicketsDamageRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostTicketsDelay()`
 
 ```php
-scPublicV3DsfPostTicketsDelay($scPublicV3DsfPostTicketsDelayRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsDelay($scPublicV3DsfPostTicketsDelayRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for a delayed parcel
@@ -154,18 +154,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsDelayRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsDelayRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsDelay($scPublicV3DsfPostTicketsDelayRequest);
@@ -179,11 +179,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsDelayRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest**](../Model/ScPublicV3DsfPostTicketsDelayRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsDelayRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest**](../Model/ScPublicV3DsfPostTicketsDelayRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostTicketsDeliveredButNotReceived()`
 
 ```php
-scPublicV3DsfPostTicketsDeliveredButNotReceived($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsDeliveredButNotReceived($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for a delivered but not received parcel
@@ -216,18 +216,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsDeliveredButNotReceived($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest);
@@ -241,11 +241,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest**](../Model/ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest**](../Model/ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostTicketsLost()`
 
 ```php
-scPublicV3DsfPostTicketsLost($scPublicV3DsfPostTicketsLostRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsLost($scPublicV3DsfPostTicketsLostRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for a lost parcel
@@ -278,18 +278,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsLostRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsLostRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsLost($scPublicV3DsfPostTicketsLostRequest);
@@ -303,11 +303,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsLostRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest**](../Model/ScPublicV3DsfPostTicketsLostRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsLostRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest**](../Model/ScPublicV3DsfPostTicketsLostRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostTicketsUnjustReturn()`
 
 ```php
-scPublicV3DsfPostTicketsUnjustReturn($scPublicV3DsfPostTicketsUnjustReturnRequest): \Toppy\Sendcloud\Model\CreateTicketResponseSchema
+scPublicV3DsfPostTicketsUnjustReturn($scPublicV3DsfPostTicketsUnjustReturnRequest): \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema
 ```
 
 Create a ticket for an unjustly returned parcel
@@ -340,18 +340,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CreateTicketApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CreateTicketApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostTicketsUnjustReturnRequest = new \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest(); // \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
+$scPublicV3DsfPostTicketsUnjustReturnRequest = new \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest(); // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest | Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below.
 
 try {
     $result = $apiInstance->scPublicV3DsfPostTicketsUnjustReturn($scPublicV3DsfPostTicketsUnjustReturnRequest);
@@ -365,11 +365,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostTicketsUnjustReturnRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest**](../Model/ScPublicV3DsfPostTicketsUnjustReturnRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
+ **scPublicV3DsfPostTicketsUnjustReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest**](../Model/ScPublicV3DsfPostTicketsUnjustReturnRequest.md)| Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
+[**\Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema**](../Model/CreateTicketResponseSchema.md)
 
 ### Authorization
 

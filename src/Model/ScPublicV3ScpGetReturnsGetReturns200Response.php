@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpGetReturnsGetReturns200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ScPublicV3ScpGetReturnsGetReturns200Response implements ModelInterface, Ar
     protected static $openAPITypes = [
         'next' => 'string',
         'previous' => 'string',
-        'data' => '\Toppy\Sendcloud\Model\ModelReturn[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\ModelReturn[]'
     ];
 
     /**
@@ -332,7 +332,7 @@ class ScPublicV3ScpGetReturnsGetReturns200Response implements ModelInterface, Ar
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ModelReturn[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ModelReturn[]|null
      */
     public function getData()
     {
@@ -342,7 +342,7 @@ class ScPublicV3ScpGetReturnsGetReturns200Response implements ModelInterface, Ar
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ModelReturn[]|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\ModelReturn[]|null $data data
      *
      * @return self
      */

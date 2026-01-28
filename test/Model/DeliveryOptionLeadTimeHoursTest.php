@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Toppy\Sendcloud\Test\Model;
+namespace Toppy\Sendcloud\V3\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Estimated shipping lead times, in hours,  representing how long it typically takes from when the parcel is shipped to when the first delivery attempt is made.  This data is useful for tracking and optimizing delivery times. These figures are based on historical data and are not specific to any individual parcel.  The estimates are broken down by percentiles (&#x60;p10&#x60; to &#x60;p95&#x60;),  which indicate how many hours it takes for different percentages of parcels to be delivered.  For example:   - If &#x60;p50&#x60; is **72**, it means that **50%** of parcels are delivered within **72 hours** or less.   - If &#x60;p90&#x60; is **120**, it means that **90%** of parcels are delivered within **120 hours** or less.
- * @package     Toppy\Sendcloud
+ * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

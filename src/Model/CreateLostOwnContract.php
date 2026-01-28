@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateLostOwnContract Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,16 +59,16 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'trackingNumber' => 'string',
-        'contentsSalesPrice' => \Toppy\Sendcloud\Model\ContentsSalesValueField::class,
-        'contentsPurchasePrice' => \Toppy\Sendcloud\Model\ContentsPurchaseValueField::class,
+        'contentsSalesPrice' => \Toppy\Sendcloud\V3\Model\ContentsSalesValueField::class,
+        'contentsPurchasePrice' => \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField::class,
         'contentsDescription' => 'string',
         'parcelExteriorDescription' => 'string',
-        'parcelDimensions' => \Toppy\Sendcloud\Model\ParcelDimensionsField::class,
+        'parcelDimensions' => \Toppy\Sendcloud\V3\Model\ParcelDimensionsField::class,
         'additionalRemarks' => 'string',
-        'salesInvoice' => \Toppy\Sendcloud\Model\SalesInvoiceField::class,
-        'purchaseInvoice' => \Toppy\Sendcloud\Model\PurchaseInvoiceField::class,
-        'customerConfirmation' => \Toppy\Sendcloud\Model\CustomerConfirmationField::class,
-        'carrierClaimForm' => \Toppy\Sendcloud\Model\CarrierClaimForm::class
+        'salesInvoice' => \Toppy\Sendcloud\V3\Model\SalesInvoiceField::class,
+        'purchaseInvoice' => \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField::class,
+        'customerConfirmation' => \Toppy\Sendcloud\V3\Model\CustomerConfirmationField::class,
+        'carrierClaimForm' => \Toppy\Sendcloud\V3\Model\CarrierClaimForm::class
     ];
 
     /**
@@ -366,7 +366,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets contentsSalesPrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsSalesValueField|null
+     * @return \Toppy\Sendcloud\V3\Model\ContentsSalesValueField|null
      */
     public function getContentsSalesPrice()
     {
@@ -376,7 +376,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets contentsSalesPrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsSalesValueField|null $contentsSalesPrice contentsSalesPrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsSalesValueField|null $contentsSalesPrice contentsSalesPrice
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets contentsPurchasePrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null
+     * @return \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null
      */
     public function getContentsPurchasePrice()
     {
@@ -404,7 +404,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets contentsPurchasePrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets parcelDimensions
      *
-     * @return \Toppy\Sendcloud\Model\ParcelDimensionsField|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelDimensionsField|null
      */
     public function getParcelDimensions()
     {
@@ -488,7 +488,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets parcelDimensions
      *
-     * @param \Toppy\Sendcloud\Model\ParcelDimensionsField|null $parcelDimensions parcelDimensions
+     * @param \Toppy\Sendcloud\V3\Model\ParcelDimensionsField|null $parcelDimensions parcelDimensions
      *
      * @return self
      */
@@ -534,7 +534,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets salesInvoice
      *
-     * @return \Toppy\Sendcloud\Model\SalesInvoiceField|null
+     * @return \Toppy\Sendcloud\V3\Model\SalesInvoiceField|null
      */
     public function getSalesInvoice()
     {
@@ -544,7 +544,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets salesInvoice
      *
-     * @param \Toppy\Sendcloud\Model\SalesInvoiceField|null $salesInvoice salesInvoice
+     * @param \Toppy\Sendcloud\V3\Model\SalesInvoiceField|null $salesInvoice salesInvoice
      *
      * @return self
      */
@@ -562,7 +562,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets purchaseInvoice
      *
-     * @return \Toppy\Sendcloud\Model\PurchaseInvoiceField|null
+     * @return \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField|null
      */
     public function getPurchaseInvoice()
     {
@@ -572,7 +572,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets purchaseInvoice
      *
-     * @param \Toppy\Sendcloud\Model\PurchaseInvoiceField|null $purchaseInvoice purchaseInvoice
+     * @param \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField|null $purchaseInvoice purchaseInvoice
      *
      * @return self
      */
@@ -590,7 +590,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets customerConfirmation
      *
-     * @return \Toppy\Sendcloud\Model\CustomerConfirmationField|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomerConfirmationField|null
      */
     public function getCustomerConfirmation()
     {
@@ -600,7 +600,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets customerConfirmation
      *
-     * @param \Toppy\Sendcloud\Model\CustomerConfirmationField|null $customerConfirmation customerConfirmation
+     * @param \Toppy\Sendcloud\V3\Model\CustomerConfirmationField|null $customerConfirmation customerConfirmation
      *
      * @return self
      */
@@ -618,7 +618,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets carrierClaimForm
      *
-     * @return \Toppy\Sendcloud\Model\CarrierClaimForm|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierClaimForm|null
      */
     public function getCarrierClaimForm()
     {
@@ -628,7 +628,7 @@ class CreateLostOwnContract implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets carrierClaimForm
      *
-     * @param \Toppy\Sendcloud\Model\CarrierClaimForm|null $carrierClaimForm carrierClaimForm
+     * @param \Toppy\Sendcloud\V3\Model\CarrierClaimForm|null $carrierClaimForm carrierClaimForm
      *
      * @return self
      */

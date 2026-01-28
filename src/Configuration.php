@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,14 +26,14 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud;
+namespace Toppy\Sendcloud\V3;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -95,14 +95,14 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://account.sendcloud.com';
+    protected $host = 'https://panel.sendcloud.sc/api/v3';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/0.2.1/PHP';
+    protected $userAgent = 'OpenAPI-Generator/0.3.0/PHP';
 
     /**
      * Debug switch (default set to false)
@@ -488,11 +488,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Toppy\Sendcloud) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Toppy\Sendcloud\V3) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 3.0.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.2.1' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.3.0' . PHP_EOL;
 
         return $report . ('    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL);
     }
@@ -529,12 +529,8 @@ class Configuration
     {
         return [
             [
-                "url" => "https://account.sendcloud.com",
-                "description" => "Production",
-            ],
-            [
                 "url" => "https://panel.sendcloud.sc/api/v3",
-                "description" => "Sendcloud Production",
+                "description" => "Production",
             ]
         ];
     }

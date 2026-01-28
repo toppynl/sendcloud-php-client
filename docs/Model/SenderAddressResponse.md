@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **email** | **string** | Email address of the person associated with the address | [optional]
 **phoneNumber** | **string** | Phone number of the person associated with the address | [optional]
 **id** | **int** | The identifier for this Sender Address | [optional] [readonly]
-**signature** | [**\Toppy\Sendcloud\Model\SenderAddressResponseAllOfSignature**](SenderAddressResponseAllOfSignature.md) |  | [optional]
-**taxNumbers** | [**\Toppy\Sendcloud\Model\TaxNumber[]**](TaxNumber.md) |  | [optional]
+**signature** | [**\Toppy\Sendcloud\V3\Model\SenderAddressResponseAllOfSignature**](SenderAddressResponseAllOfSignature.md) |  | [optional]
+**taxNumbers** | [**\Toppy\Sendcloud\V3\Model\TaxNumber[]**](TaxNumber.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

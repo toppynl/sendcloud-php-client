@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingDetails Class Doc Comment
  *
  * @category Class
  * @description Shipping information
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,8 +61,8 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     protected static $openAPITypes = [
         'isLocalPickup' => 'bool',
         'deliveryIndicator' => 'string',
-        'measurement' => \Toppy\Sendcloud\Model\Measurement::class,
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class
+        'measurement' => \Toppy\Sendcloud\V3\Model\Measurement::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class
     ];
 
     /**
@@ -340,7 +340,7 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets measurement
      *
-     * @return \Toppy\Sendcloud\Model\Measurement|null
+     * @return \Toppy\Sendcloud\V3\Model\Measurement|null
      */
     public function getMeasurement()
     {
@@ -350,7 +350,7 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets measurement
      *
-     * @param \Toppy\Sendcloud\Model\Measurement|null $measurement measurement
+     * @param \Toppy\Sendcloud\V3\Model\Measurement|null $measurement measurement
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -378,7 +378,7 @@ class ShippingDetails implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ValidationError Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'loc' => '\Toppy\Sendcloud\Model\LocationInner[]',
+        'loc' => '\Toppy\Sendcloud\V3\Model\LocationInner[]',
         'msg' => 'string',
         'type' => 'string'
     ];
@@ -290,7 +290,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets loc
      *
-     * @return \Toppy\Sendcloud\Model\LocationInner[]
+     * @return \Toppy\Sendcloud\V3\Model\LocationInner[]
      */
     public function getLoc()
     {
@@ -300,7 +300,7 @@ class ValidationError implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets loc
      *
-     * @param \Toppy\Sendcloud\Model\LocationInner[] $loc loc
+     * @param \Toppy\Sendcloud\V3\Model\LocationInner[] $loc loc
      *
      * @return self
      */

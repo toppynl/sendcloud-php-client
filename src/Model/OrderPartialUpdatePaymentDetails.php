@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderPartialUpdatePaymentDetails Class Doc Comment
  *
  * @category Class
  * @description Node for everything about payments and money
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,16 +59,16 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'totalPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'subtotalPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'estimatedShippingPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'estimatedTaxPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'status' => \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetailsStatus::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'subtotalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'estimatedShippingPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'estimatedTaxPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'status' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetailsStatus::class,
         'invoiceDate' => 'string',
-        'discountGranted' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'insuranceCosts' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'freightCosts' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'otherCosts' => \Toppy\Sendcloud\Model\CostsObject::class
+        'discountGranted' => \Toppy\Sendcloud\V3\Model\CostsObject::class,
+        'insuranceCosts' => \Toppy\Sendcloud\V3\Model\CostsObject::class,
+        'freightCosts' => \Toppy\Sendcloud\V3\Model\CostsObject::class,
+        'otherCosts' => \Toppy\Sendcloud\V3\Model\CostsObject::class
     ];
 
     /**
@@ -326,7 +326,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getTotalPrice()
     {
@@ -336,7 +336,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalPrice totalPrice
      *
      * @return self
      */
@@ -354,7 +354,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets subtotalPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getSubtotalPrice()
     {
@@ -364,7 +364,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets subtotalPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $subtotalPrice subtotalPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $subtotalPrice subtotalPrice
      *
      * @return self
      */
@@ -382,7 +382,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets estimatedShippingPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getEstimatedShippingPrice()
     {
@@ -392,7 +392,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets estimatedShippingPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $estimatedShippingPrice estimatedShippingPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $estimatedShippingPrice estimatedShippingPrice
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets estimatedTaxPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getEstimatedTaxPrice()
     {
@@ -420,7 +420,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets estimatedTaxPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $estimatedTaxPrice estimatedTaxPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $estimatedTaxPrice estimatedTaxPrice
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetailsStatus|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetailsStatus|null
      */
     public function getStatus()
     {
@@ -448,7 +448,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetailsStatus|null $status status
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetailsStatus|null $status status
      *
      * @return self
      */
@@ -494,7 +494,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets discountGranted
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V3\Model\CostsObject|null
      */
     public function getDiscountGranted()
     {
@@ -504,7 +504,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets discountGranted
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $discountGranted discountGranted
+     * @param \Toppy\Sendcloud\V3\Model\CostsObject|null $discountGranted discountGranted
      *
      * @return self
      */
@@ -522,7 +522,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets insuranceCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V3\Model\CostsObject|null
      */
     public function getInsuranceCosts()
     {
@@ -532,7 +532,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets insuranceCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $insuranceCosts insuranceCosts
+     * @param \Toppy\Sendcloud\V3\Model\CostsObject|null $insuranceCosts insuranceCosts
      *
      * @return self
      */
@@ -550,7 +550,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets freightCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V3\Model\CostsObject|null
      */
     public function getFreightCosts()
     {
@@ -560,7 +560,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets freightCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $freightCosts freightCosts
+     * @param \Toppy\Sendcloud\V3\Model\CostsObject|null $freightCosts freightCosts
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Gets otherCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V3\Model\CostsObject|null
      */
     public function getOtherCosts()
     {
@@ -588,7 +588,7 @@ class OrderPartialUpdatePaymentDetails implements ModelInterface, ArrayAccess, \
     /**
      * Sets otherCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $otherCosts otherCosts
+     * @param \Toppy\Sendcloud\V3\Model\CostsObject|null $otherCosts otherCosts
      *
      * @return self
      */

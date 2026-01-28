@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ListPickupResponse Class Doc Comment
  *
  * @category Class
  * @description Sendcloud pickup object, returned through a list.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class ListPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'carrierCode' => 'string',
         'country' => 'string',
         'trackingNumber' => 'string',
-        'timeSlots' => '\ToppySendcloudModelTimeSlot[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlot[]',
         'status' => 'string',
         'createdAt' => '\DateTime',
         'cancelledAt' => '\DateTime',
@@ -562,7 +562,7 @@ class ListPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlot[]|null
+     * @return \ToppySendcloudV3ModelTimeSlot[]|null
      */
     public function getTimeSlots()
     {
@@ -572,7 +572,7 @@ class ListPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */

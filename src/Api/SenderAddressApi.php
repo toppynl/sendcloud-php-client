@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * SenderAddressApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class SenderAddressApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -175,9 +175,9 @@ class SenderAddressApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
      */
     public function scPublicV3AddressesGetAllSenderAddresses($cursor = null, $pageSize = null)
     {
@@ -193,9 +193,9 @@ class SenderAddressApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3AddressesGetAllSenderAddressesWithHttpInfo($cursor = null, $pageSize = null)
     {
@@ -230,7 +230,7 @@ class SenderAddressApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
                     $request,
                     $response,
                 );
@@ -251,7 +251,7 @@ class SenderAddressApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
                 $request,
                 $response,
             );
@@ -259,7 +259,7 @@ class SenderAddressApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -305,7 +305,7 @@ class SenderAddressApi
      */
     public function scPublicV3AddressesGetAllSenderAddressesAsyncWithHttpInfo($cursor = null, $pageSize = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response::class;
         $request = $this->scPublicV3AddressesGetAllSenderAddressesRequest($cursor, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -452,9 +452,9 @@ class SenderAddressApi
      *
      * @param  int $id The sender address unique identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3AddressesGetSenderAddressById($id)
     {
@@ -469,9 +469,9 @@ class SenderAddressApi
      *
      * @param  int $id The sender address unique identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3AddressesGetSenderAddressByIdWithHttpInfo($id)
     {
@@ -507,13 +507,13 @@ class SenderAddressApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -534,7 +534,7 @@ class SenderAddressApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
                 $request,
                 $response,
             );
@@ -543,7 +543,7 @@ class SenderAddressApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -551,7 +551,7 @@ class SenderAddressApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -595,7 +595,7 @@ class SenderAddressApi
      */
     public function scPublicV3AddressesGetSenderAddressByIdAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response::class;
         $request = $this->scPublicV3AddressesGetSenderAddressByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

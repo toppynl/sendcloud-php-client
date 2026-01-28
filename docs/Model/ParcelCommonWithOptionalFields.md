@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dimensions** | [**\Toppy\Sendcloud\Model\StrDimensions**](StrDimensions.md) |  | [optional]
-**weight** | [**\Toppy\Sendcloud\Model\StrWeight**](StrWeight.md) |  | [optional]
-**additionalInsuredPrice** | [**\Toppy\Sendcloud\Model\OptionalPrice**](OptionalPrice.md) |  | [optional]
+**dimensions** | [**\Toppy\Sendcloud\V3\Model\StrDimensions**](StrDimensions.md) |  | [optional]
+**weight** | [**\Toppy\Sendcloud\V3\Model\StrWeight**](StrWeight.md) |  | [optional]
+**additionalInsuredPrice** | [**\Toppy\Sendcloud\V3\Model\OptionalPrice**](OptionalPrice.md) |  | [optional]
 **labelNotes** | **string[]** | Custom messages printed on the shipping label. Use this field to include custom text - such as invoice numbers, product IDs, or internal reference codes - on the package&#39;s shipping label.   **Note that support for label messages varies by carrier; some carriers may ignore this field or offer alternatives, such as delivery instructions, which are communicated to the carrier but not printed on the label. Some carriers may apply label notes at the shipment level rather than per individual parcel.** | [optional]
 **sscc** | **string** | The Serial Shipping Container Code (SSCC) serves as a globally unique identifier for a logistic unit, functioning as a digital \&quot;license plate\&quot; for tracking and managing goods throughout the supply chain. | [optional]
 

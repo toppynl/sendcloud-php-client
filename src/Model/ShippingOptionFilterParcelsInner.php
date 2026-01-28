@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingOptionFilterParcelsInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ShippingOptionFilterParcelsInner implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimensions' => \Toppy\Sendcloud\Model\StrDimensions::class,
-        'weight' => \Toppy\Sendcloud\Model\StrWeight::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\StrDimensions::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\StrWeight::class,
         'additionalInsuredPrice' => 'float',
         'totalInsuredPrice' => 'float'
     ];
@@ -283,7 +283,7 @@ class ShippingOptionFilterParcelsInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\StrDimensions|null
+     * @return \Toppy\Sendcloud\V3\Model\StrDimensions|null
      */
     public function getDimensions()
     {
@@ -293,7 +293,7 @@ class ShippingOptionFilterParcelsInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\StrDimensions|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\StrDimensions|null $dimensions dimensions
      *
      * @return self
      */
@@ -311,7 +311,7 @@ class ShippingOptionFilterParcelsInner implements ModelInterface, ArrayAccess, \
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\StrWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\StrWeight|null
      */
     public function getWeight()
     {
@@ -321,7 +321,7 @@ class ShippingOptionFilterParcelsInner implements ModelInterface, ArrayAccess, \
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\StrWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\StrWeight|null $weight weight
      *
      * @return self
      */

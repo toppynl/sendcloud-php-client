@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * GetCustomStatusMapping Class Doc Comment
  *
  * @category Class
  * @description Retrieve available shop order statuses mapped onto Sendcloud&#39;s internal status category for the given integration.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class GetCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\GetCustomStatusMappingData::class
+        'data' => \Toppy\Sendcloud\V3\Model\GetCustomStatusMappingData::class
     ];
 
     /**
@@ -263,7 +263,7 @@ class GetCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\GetCustomStatusMappingData|null
+     * @return \Toppy\Sendcloud\V3\Model\GetCustomStatusMappingData|null
      */
     public function getData()
     {
@@ -273,7 +273,7 @@ class GetCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\GetCustomStatusMappingData|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\GetCustomStatusMappingData|null $data data
      *
      * @return self
      */

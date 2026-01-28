@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * DeliveryOptionsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class DeliveryOptionsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -184,9 +184,9 @@ class DeliveryOptionsApi
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3CheckoutApiGetDeliveryOptions($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
@@ -211,9 +211,9 @@ class DeliveryOptionsApi
      * @param  float $parcelHeight The parcel&#39;s height in centimeters (e.g., \&quot;48\&quot; or \&quot;52.3\&quot;) (optional)
      * @param  string $checkoutMetadata An arbitrary text field that can be used with [Checkout Rules](https://support.sendcloud.com/hc/en-us/articles/18580048370705-Checkout-rules) to control which delivery options are displayed during checkout. For example, you might use it to pass a product SKU, goods category, or any other custom property to show or hide specific delivery options during checkout (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3CheckoutApiGetDeliveryOptionsWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
@@ -249,14 +249,14 @@ class DeliveryOptionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\DeliveryOptionsResponse::class,
+                        \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -277,7 +277,7 @@ class DeliveryOptionsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\DeliveryOptionsResponse::class,
+                \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
                 $request,
                 $response,
             );
@@ -286,7 +286,7 @@ class DeliveryOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\DeliveryOptionsResponse::class,
+                        \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -294,7 +294,7 @@ class DeliveryOptionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -302,7 +302,7 @@ class DeliveryOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -366,7 +366,7 @@ class DeliveryOptionsApi
      */
     public function scPublicV3CheckoutApiGetDeliveryOptionsAsyncWithHttpInfo($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType = 'shipping_option_code', $toPostalCode = null, $parcelLength = null, $parcelWidth = null, $parcelHeight = null, $checkoutMetadata = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\DeliveryOptionsResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse::class;
         $request = $this->scPublicV3CheckoutApiGetDeliveryOptionsRequest($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelCustomsInformation Class Doc Comment
  *
  * @category Class
  * @description Optional customs information that should be provided for international parcels. This information is used for generating customs documents.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,15 +63,15 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
         'exportReason' => 'string',
         'exportType' => 'string',
         'invoiceDate' => '\DateTime',
-        'discountGranted' => \Toppy\Sendcloud\Model\OptionalPrice::class,
-        'freightCosts' => \Toppy\Sendcloud\Model\OptionalPrice::class,
-        'insuranceCosts' => \Toppy\Sendcloud\Model\OptionalPrice::class,
-        'otherCosts' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'discountGranted' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
+        'freightCosts' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
+        'insuranceCosts' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
+        'otherCosts' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'generalNotes' => 'string',
         'additionalDeclarationStatements' => 'string[]',
-        'importerOfRecord' => \Toppy\Sendcloud\Model\ParcelCustomsInformationImporterOfRecord::class,
-        'taxNumbers' => \Toppy\Sendcloud\Model\ParcelCustomsInformationTaxNumbers::class,
-        'returnData' => \Toppy\Sendcloud\Model\ParcelCustomsInformationReturnData::class
+        'importerOfRecord' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationImporterOfRecord::class,
+        'taxNumbers' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers::class,
+        'returnData' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationReturnData::class
     ];
 
     /**
@@ -592,7 +592,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets discountGranted
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getDiscountGranted()
     {
@@ -602,7 +602,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets discountGranted
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $discountGranted discountGranted
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $discountGranted discountGranted
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets freightCosts
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getFreightCosts()
     {
@@ -637,7 +637,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets freightCosts
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $freightCosts freightCosts
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $freightCosts freightCosts
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets insuranceCosts
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getInsuranceCosts()
     {
@@ -672,7 +672,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets insuranceCosts
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $insuranceCosts insuranceCosts
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $insuranceCosts insuranceCosts
      *
      * @return self
      */
@@ -697,7 +697,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets otherCosts
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getOtherCosts()
     {
@@ -707,7 +707,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets otherCosts
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $otherCosts otherCosts
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $otherCosts otherCosts
      *
      * @return self
      */
@@ -800,7 +800,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets importerOfRecord
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformationImporterOfRecord|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationImporterOfRecord|null
      */
     public function getImporterOfRecord()
     {
@@ -810,7 +810,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets importerOfRecord
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformationImporterOfRecord|null $importerOfRecord importerOfRecord
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationImporterOfRecord|null $importerOfRecord importerOfRecord
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets taxNumbers
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformationTaxNumbers|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers|null
      */
     public function getTaxNumbers()
     {
@@ -838,7 +838,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets taxNumbers
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformationTaxNumbers|null $taxNumbers taxNumbers
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationTaxNumbers|null $taxNumbers taxNumbers
      *
      * @return self
      */
@@ -856,7 +856,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets returnData
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformationReturnData|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationReturnData|null
      */
     public function getReturnData()
     {
@@ -866,7 +866,7 @@ class ParcelCustomsInformation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets returnData
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformationReturnData|null $returnData returnData
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformationReturnData|null $returnData returnData
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ReturnValidation Class Doc Comment
  *
  * @category Class
  * @description A Sendcloud return validation object
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,21 +59,21 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'dimensions' => \Toppy\Sendcloud\Model\ReturnValidationDimensions::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\ReturnValidationDimensions::class,
         'weight' => 'float',
         'colloCount' => 'int',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]',
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]',
         'sendTrackingEmails' => 'bool',
         'brandId' => 'int',
-        'totalInsuredValue' => \Toppy\Sendcloud\Model\Price::class,
+        'totalInsuredValue' => \Toppy\Sendcloud\V3\Model\Price::class,
         'orderNumber' => 'string',
-        'totalOrderValue' => \Toppy\Sendcloud\Model\PriceWithAnyCurrency::class,
+        'totalOrderValue' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'externalReference' => 'string',
         'customsShipmentType' => 'int',
-        'deliveryOption' => \Toppy\Sendcloud\Model\DeliveryOption::class
+        'deliveryOption' => \Toppy\Sendcloud\V3\Model\DeliveryOption::class
     ];
 
     /**
@@ -425,7 +425,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getFromAddress()
     {
@@ -435,7 +435,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $fromAddress fromAddress
      *
      * @return self
      */
@@ -453,7 +453,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -463,7 +463,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -481,7 +481,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith
      */
     public function getShipWith()
     {
@@ -491,7 +491,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
      *
      * @return self
      */
@@ -509,7 +509,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\ReturnValidationDimensions|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnValidationDimensions|null
      */
     public function getDimensions()
     {
@@ -519,7 +519,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\ReturnValidationDimensions|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\ReturnValidationDimensions|null $dimensions dimensions
      *
      * @return self
      */
@@ -601,7 +601,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]|null
      */
     public function getParcelItems()
     {
@@ -611,7 +611,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]|null $parcelItems List of items contained in this return. Required outside EU.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]|null $parcelItems List of items contained in this return. Required outside EU.
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets totalInsuredValue
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getTotalInsuredValue()
     {
@@ -699,7 +699,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets totalInsuredValue
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $totalInsuredValue totalInsuredValue
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalInsuredValue totalInsuredValue
      *
      * @return self
      */
@@ -745,7 +745,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets totalOrderValue
      *
-     * @return \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null
+     * @return \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null
      */
     public function getTotalOrderValue()
     {
@@ -755,7 +755,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets totalOrderValue
      *
-     * @param \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null $totalOrderValue totalOrderValue
+     * @param \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null $totalOrderValue totalOrderValue
      *
      * @return self
      */
@@ -840,7 +840,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets deliveryOption
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryOption|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption|null
      */
     public function getDeliveryOption()
     {
@@ -850,7 +850,7 @@ class ReturnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deliveryOption
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryOption|null $deliveryOption deliveryOption
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption|null $deliveryOption deliveryOption
      *
      * @return self
      */

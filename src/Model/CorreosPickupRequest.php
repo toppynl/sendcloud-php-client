@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CorreosPickupRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,13 +58,13 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlot[]',
-        'items' => '\Toppy\Sendcloud\Model\CorreosPickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlot[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\CorreosPickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddress::class
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddress::class
     ];
 
     /**
@@ -340,7 +340,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlot[]|null
+     * @return \ToppySendcloudV3ModelTimeSlot[]|null
      */
     public function getTimeSlots()
     {
@@ -350,7 +350,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\CorreosPickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\CorreosPickupItem[]|null
      */
     public function getItems()
     {
@@ -378,7 +378,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\CorreosPickupItem[]|null $items items
+     * @param \Toppy\Sendcloud\V3\Model\CorreosPickupItem[]|null $items items
      *
      * @return self
      */
@@ -523,7 +523,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddress
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddress
      */
     public function getAddress()
     {
@@ -533,7 +533,7 @@ class CorreosPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddress $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddress $address address
      *
      * @return self
      */

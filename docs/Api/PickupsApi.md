@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\PickupsApi
+# Toppy\Sendcloud\V3\PickupsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ## `scPublicV3ScpGetAllPickups()`
 
 ```php
-scPublicV3ScpGetAllPickups($pageSize): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllPickups200Response
+scPublicV3ScpGetAllPickups($pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllPickups200Response
 ```
 
 Retrieve a list of pickups
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\PickupsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\PickupsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllPickups200Response**](../Model/ScPublicV3ScpGetAllPickups200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllPickups200Response**](../Model/ScPublicV3ScpGetAllPickups200Response.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetPickup()`
 
 ```php
-scPublicV3ScpGetPickup($id): \Toppy\Sendcloud\Model\ScPublicV3ScpGetPickup200Response
+scPublicV3ScpGetPickup($id): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetPickup200Response
 ```
 
 Retrieve a pickup
@@ -89,12 +89,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\PickupsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\PickupsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetPickup200Response**](../Model/ScPublicV3ScpGetPickup200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetPickup200Response**](../Model/ScPublicV3ScpGetPickup200Response.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostPickup()`
 
 ```php
-scPublicV3ScpPostPickup($scPublicV3ScpPostPickupRequest): \Toppy\Sendcloud\Model\ScPublicV3ScpGetPickup200Response
+scPublicV3ScpPostPickup($scPublicV3ScpPostPickupRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetPickup200Response
 ```
 
 Create a pickup
@@ -151,18 +151,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\PickupsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\PickupsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3ScpPostPickupRequest = {"address":{"name":"John Doe","company_name":"Sendcloud","country_code":"NL","city":"Eindhoven","email":"example@sendcloud.com","address_line_1":"Stadhuisplein","house_number":"10","address_line_2":"","postal_code":"5611 EM","phone_number":"+310612345678"},"time_slots":[{"start_at":"2022-04-06T12:00:00Z","end_at":"2022-04-06T17:00:00Z"}],"items":[{"quantity":20,"container_type":"parcel","total_weight":{"value":"1.00","unit":"kg"}}],"carrier_code":"dhl_express"}; // \Toppy\Sendcloud\Model\ScPublicV3ScpPostPickupRequest | 
+$scPublicV3ScpPostPickupRequest = {"address":{"name":"John Doe","company_name":"Sendcloud","country_code":"NL","city":"Eindhoven","email":"example@sendcloud.com","address_line_1":"Stadhuisplein","house_number":"10","address_line_2":"","postal_code":"5611 EM","phone_number":"+310612345678"},"time_slots":[{"start_at":"2022-04-06T12:00:00Z","end_at":"2022-04-06T17:00:00Z"}],"items":[{"quantity":20,"container_type":"parcel","total_weight":{"value":"1.00","unit":"kg"}}],"carrier_code":"dhl_express"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostPickupRequest | 
 
 try {
     $result = $apiInstance->scPublicV3ScpPostPickup($scPublicV3ScpPostPickupRequest);
@@ -176,11 +176,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3ScpPostPickupRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3ScpPostPickupRequest**](../Model/ScPublicV3ScpPostPickupRequest.md)|  | [optional]
+ **scPublicV3ScpPostPickupRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostPickupRequest**](../Model/ScPublicV3ScpPostPickupRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetPickup200Response**](../Model/ScPublicV3ScpGetPickup200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetPickup200Response**](../Model/ScPublicV3ScpGetPickup200Response.md)
 
 ### Authorization
 

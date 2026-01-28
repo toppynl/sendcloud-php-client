@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CorreosPickupItem Class Doc Comment
  *
  * @category Class
  * @description Information about the items to be picked up.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class CorreosPickupItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'quantity' => 'int',
         'containerType' => 'string',
-        'totalWeight' => \Toppy\Sendcloud\Model\StrWeight::class,
+        'totalWeight' => \Toppy\Sendcloud\V3\Model\StrWeight::class,
         'volumetricWeightKind' => 'string'
     ];
 
@@ -437,7 +437,7 @@ class CorreosPickupItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets totalWeight
      *
-     * @return \Toppy\Sendcloud\Model\StrWeight
+     * @return \Toppy\Sendcloud\V3\Model\StrWeight
      */
     public function getTotalWeight()
     {
@@ -447,7 +447,7 @@ class CorreosPickupItem implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets totalWeight
      *
-     * @param \Toppy\Sendcloud\Model\StrWeight $totalWeight totalWeight
+     * @param \Toppy\Sendcloud\V3\Model\StrWeight $totalWeight totalWeight
      *
      * @return self
      */

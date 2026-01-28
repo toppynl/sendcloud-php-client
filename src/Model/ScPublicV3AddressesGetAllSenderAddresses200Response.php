@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3AddressesGetAllSenderAddresses200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV3AddressesGetAllSenderAddresses200Response implements ModelInterf
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\SenderAddressResponse[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\SenderAddressResponse[]'
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV3AddressesGetAllSenderAddresses200Response implements ModelInterf
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\SenderAddressResponse[]|null
+     * @return \Toppy\Sendcloud\V3\Model\SenderAddressResponse[]|null
      */
     public function getData()
     {
@@ -272,7 +272,7 @@ class ScPublicV3AddressesGetAllSenderAddresses200Response implements ModelInterf
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\SenderAddressResponse[]|null $data A list of the users configured sender addresses.
+     * @param \Toppy\Sendcloud\V3\Model\SenderAddressResponse[]|null $data A list of the users configured sender addresses.
      *
      * @return self
      */

@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\ShipmentsApi
+# Toppy\Sendcloud\V3\ShipmentsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `scPublicV3ScpGetAllShipments()`
 
 ```php
-scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response
+scPublicV3ScpGetAllShipments($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response
 ```
 
 Retrieve shipments
@@ -31,18 +31,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$parcelStatus = new \Toppy\Sendcloud\Model\\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter(); // \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter | Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint.
+$parcelStatus = new \Toppy\Sendcloud\V3\Model\\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter(); // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter | Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint.
 $trackingNumber = 'trackingNumber_example'; // string | Returns shipments that match a specified tracking number
 $externalReferenceId = 'externalReferenceId_example'; // string | Returns shipments that match a specified external reference
 $orderNumber = 'orderNumber_example'; // string | Returns a shipment that matches a specific `order_number` property from your shipments
@@ -67,7 +67,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parcelStatus** | [**\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter**](../Model/.md)| Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. | [optional]
+ **parcelStatus** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter**](../Model/.md)| Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. | [optional]
  **trackingNumber** | **string**| Returns shipments that match a specified tracking number | [optional]
  **externalReferenceId** | **string**| Returns shipments that match a specified external reference | [optional]
  **orderNumber** | **string**| Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments | [optional]
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response**](../Model/ScPublicV3ScpGetAllShipments200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response**](../Model/ScPublicV3ScpGetAllShipments200Response.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetShipmentById()`
 
 ```php
-scPublicV3ScpGetShipmentById($id): \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response
+scPublicV3ScpGetShipmentById($id): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response
 ```
 
 Retrieve a shipment
@@ -115,12 +115,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response**](../Model/ScPublicV3ScpGetShipmentById200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response**](../Model/ScPublicV3ScpGetShipmentById200Response.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostAnnounceShipment()`
 
 ```php
-scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId, $shipmentRequestSyncAnnounce): \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel
+scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId, $shipmentRequestSyncAnnounce): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
 ```
 
 Create and announce a shipment synchronously
@@ -177,19 +177,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$shipmentRequestSyncAnnounce = {"label_details":{"mime_type":"application/pdf","dpi":72},"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"label_notes":["I live at the blue door","The doorbell isn't working"],"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce | 
+$shipmentRequestSyncAnnounce = {"label_details":{"mime_type":"application/pdf","dpi":72},"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"label_notes":["I live at the blue door","The doorbell isn't working"],"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce | 
 
 try {
     $result = $apiInstance->scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
@@ -204,11 +204,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **shipmentRequestSyncAnnounce** | [**\Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce**](../Model/ShipmentRequestSyncAnnounce.md)|  | [optional]
+ **shipmentRequestSyncAnnounce** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce**](../Model/ShipmentRequestSyncAnnounce.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel**](../Model/AnnouncedShipmentIncludingLabel.md)
+[**\Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel**](../Model/AnnouncedShipmentIncludingLabel.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostAnnounceShipmentWithRules()`
 
 ```php
-scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel
+scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel
 ```
 
 Create a shipment with rules and/or defaults and announce it synchronously
@@ -241,19 +241,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\Model\ShipmentRequestWithRules | 
+$shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules | 
 
 try {
     $result = $apiInstance->scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules);
@@ -268,11 +268,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **shipmentRequestWithRules** | [**\Toppy\Sendcloud\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
+ **shipmentRequestWithRules** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel**](../Model/AnnouncedShipmentIncludingLabel.md)
+[**\Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel**](../Model/AnnouncedShipmentIncludingLabel.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCancelShipment()`
 
 ```php
-scPublicV3ScpPostCancelShipment($id): \Toppy\Sendcloud\Model\CancelShipmentStatus
+scPublicV3ScpPostCancelShipment($id): \Toppy\Sendcloud\V3\Model\CancelShipmentStatus
 ```
 
 Cancel a shipment
@@ -305,12 +305,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CancelShipmentStatus**](../Model/CancelShipmentStatus.md)
+[**\Toppy\Sendcloud\V3\Model\CancelShipmentStatus**](../Model/CancelShipmentStatus.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCreateShipment()`
 
 ```php
-scPublicV3ScpPostCreateShipment($sendcloudPartnerId, $shipmentRequestAsync): \Toppy\Sendcloud\Model\ShipmentCreatedResponse
+scPublicV3ScpPostCreateShipment($sendcloudPartnerId, $shipmentRequestAsync): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
 ```
 
 Create and announce a shipment asynchronously
@@ -367,19 +367,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$shipmentRequestAsync = {"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\Model\ShipmentRequestAsync | 
+$shipmentRequestAsync = {"to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync | 
 
 try {
     $result = $apiInstance->scPublicV3ScpPostCreateShipment($sendcloudPartnerId, $shipmentRequestAsync);
@@ -394,11 +394,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **shipmentRequestAsync** | [**\Toppy\Sendcloud\Model\ShipmentRequestAsync**](../Model/ShipmentRequestAsync.md)|  | [optional]
+ **shipmentRequestAsync** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestAsync**](../Model/ShipmentRequestAsync.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ShipmentCreatedResponse**](../Model/ShipmentCreatedResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse**](../Model/ShipmentCreatedResponse.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCreateShipmentWithRules()`
 
 ```php
-scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\Model\ShipmentCreatedResponse
+scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules): \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse
 ```
 
 Create a shipment with rules and/or defaults and announce it asynchronously
@@ -431,19 +431,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShipmentsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\Model\ShipmentRequestWithRules | 
+$shipmentRequestWithRules = {"apply_shipping_defaults":true,"apply_shipping_rules":true,"delivery_indicator":"DHL home delivery","to_address":{"name":"John Doe","company_name":"Sendcloud","address_line_1":"Insulindelaan 115","house_number":"115","postal_code":"5642CV","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"john.doe@sendcloud.com","po_box":"PO Box 678"},"from_address":{"name":"Marie Doe","company_name":"Sendcloud","address_line_1":"Stadhuisplein 10","address_line_2":"2e verdieping","house_number":"10","postal_code":"5611 EM","city":"Eindhoven","country_code":"NL","phone_number":"+31612345678","email":"marie.doe@sendcloud.com","po_box":"PO Box 478"},"ship_with":{"type":"shipping_option_code","properties":{"shipping_option_code":"postnl:standard","contract_id":517}},"order_number":"1234567890","total_order_price":{"currency":"EUR","value":"11.11"},"parcels":[{"dimensions":{"length":"5.00","width":"15.00","height":"20.00","unit":"cm"},"weight":{"value":"1.320","unit":"kg"},"parcel_items":[{"item_id":"5552","description":"T-Shirt XL","quantity":1,"weight":{"value":0.3,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"NL","sku":"TS1234","product_id":"19284","mid_code":"NLOZR92MEL","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":"XL","color":"green"}},{"item_id":"98712","description":"Sneakers 42","quantity":1,"weight":{"value":1.02,"unit":"kg"},"price":{"value":"12.65","currency":"EUR"},"hs_code":"620520","origin_country":"US","sku":"TS1234","product_id":"19284","mid_code":"US1234567","material_content":"100% Cotton","intended_use":"Personal use","dds_reference":"25FIYPEK0A7573","taric_doc_code":"Y142","properties":{"size":42,"color":"black"}}]}]}; // \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules | 
 
 try {
     $result = $apiInstance->scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId, $shipmentRequestWithRules);
@@ -458,11 +458,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **shipmentRequestWithRules** | [**\Toppy\Sendcloud\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
+ **shipmentRequestWithRules** | [**\Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules**](../Model/ShipmentRequestWithRules.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ShipmentCreatedResponse**](../Model/ShipmentCreatedResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse**](../Model/ShipmentCreatedResponse.md)
 
 ### Authorization
 

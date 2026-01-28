@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpPostReturnsCreateNewReturnRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,22 +58,22 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'dimensions' => \Toppy\Sendcloud\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\Dimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
         'colloCount' => 'int',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]',
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]',
         'sendTrackingEmails' => 'bool',
         'brandId' => 'int',
-        'totalInsuredValue' => \Toppy\Sendcloud\Model\Price::class,
+        'totalInsuredValue' => \Toppy\Sendcloud\V3\Model\Price::class,
         'orderNumber' => 'string',
-        'totalOrderValue' => \Toppy\Sendcloud\Model\PriceWithAnyCurrency::class,
+        'totalOrderValue' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'externalReference' => 'string',
         'customsInvoiceNr' => 'string',
-        'deliveryOption' => \Toppy\Sendcloud\Model\DeliveryOption::class,
-        'customsInformation' => \Toppy\Sendcloud\Model\ParcelCustomsInformation::class,
+        'deliveryOption' => \Toppy\Sendcloud\V3\Model\DeliveryOption::class,
+        'customsInformation' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation::class,
         'applyRules' => 'bool'
     ];
 
@@ -400,7 +400,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getFromAddress()
     {
@@ -410,7 +410,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $fromAddress fromAddress
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -438,7 +438,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -456,7 +456,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith
      */
     public function getShipWith()
     {
@@ -466,7 +466,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
      *
      * @return self
      */
@@ -484,7 +484,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
      */
     public function getDimensions()
     {
@@ -494,7 +494,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\Dimension|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimensions dimensions
      *
      * @return self
      */
@@ -512,7 +512,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight
+     * @return \Toppy\Sendcloud\V3\Model\Weight
      */
     public function getWeight()
     {
@@ -522,7 +522,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight $weight weight
      *
      * @return self
      */
@@ -572,7 +572,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]|null
      */
     public function getParcelItems()
     {
@@ -582,7 +582,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemReturnsCreate[]|null $parcelItems List of items contained in this return. Required outside EU.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItemReturnsCreate[]|null $parcelItems List of items contained in this return. Required outside EU.
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets totalInsuredValue
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getTotalInsuredValue()
     {
@@ -670,7 +670,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets totalInsuredValue
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $totalInsuredValue totalInsuredValue
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalInsuredValue totalInsuredValue
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets totalOrderValue
      *
-     * @return \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null
+     * @return \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null
      */
     public function getTotalOrderValue()
     {
@@ -726,7 +726,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets totalOrderValue
      *
-     * @param \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null $totalOrderValue totalOrderValue
+     * @param \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null $totalOrderValue totalOrderValue
      *
      * @return self
      */
@@ -800,7 +800,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets deliveryOption
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryOption|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption|null
      */
     public function getDeliveryOption()
     {
@@ -810,7 +810,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets deliveryOption
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryOption|null $deliveryOption deliveryOption
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption|null $deliveryOption deliveryOption
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformation|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -838,7 +838,7 @@ class ScPublicV3ScpPostReturnsCreateNewReturnRequest implements ModelInterface, 
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */

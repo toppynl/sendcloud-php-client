@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\IntegrationsApi
+# Toppy\Sendcloud\V3\IntegrationsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -78,7 +78,7 @@ void (empty response body)
 ## `scPublicV3IntegrationsGetListIntegrations()`
 
 ```php
-scPublicV3IntegrationsGetListIntegrations($sort): \Toppy\Sendcloud\Model\IntegrationListResponse
+scPublicV3IntegrationsGetListIntegrations($sort): \Toppy\Sendcloud\V3\Model\IntegrationListResponse
 ```
 
 Retrieve a list of integrations
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\IntegrationListResponse**](../Model/IntegrationListResponse.md)
+[**\Toppy\Sendcloud\V3\Model\IntegrationListResponse**](../Model/IntegrationListResponse.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3IntegrationsGetRetrieveIntegration()`
 
 ```php
-scPublicV3IntegrationsGetRetrieveIntegration($id): \Toppy\Sendcloud\Model\IntegrationGetResponse
+scPublicV3IntegrationsGetRetrieveIntegration($id): \Toppy\Sendcloud\V3\Model\IntegrationGetResponse
 ```
 
 Retrieve an integration
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\IntegrationGetResponse**](../Model/IntegrationGetResponse.md)
+[**\Toppy\Sendcloud\V3\Model\IntegrationGetResponse**](../Model/IntegrationGetResponse.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3IntegrationsGetShopOrderStatuses()`
 
 ```php
-scPublicV3IntegrationsGetShopOrderStatuses($integrationId, $language, $showDeleted): \Toppy\Sendcloud\Model\GetShopOrderStatuses
+scPublicV3IntegrationsGetShopOrderStatuses($integrationId, $language, $showDeleted): \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses
 ```
 
 Retrieve shop order statuses for an integration
@@ -217,12 +217,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\GetShopOrderStatuses**](../Model/GetShopOrderStatuses.md)
+[**\Toppy\Sendcloud\V3\Model\GetShopOrderStatuses**](../Model/GetShopOrderStatuses.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3IntegrationsGetShopOrderStatusesMapping()`
 
 ```php
-scPublicV3IntegrationsGetShopOrderStatusesMapping($integrationId): \Toppy\Sendcloud\Model\GetCustomStatusMapping
+scPublicV3IntegrationsGetShopOrderStatusesMapping($integrationId): \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping
 ```
 
 Retrieve custom status mapping for an integration
@@ -283,12 +283,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\GetCustomStatusMapping**](../Model/GetCustomStatusMapping.md)
+[**\Toppy\Sendcloud\V3\Model\GetCustomStatusMapping**](../Model/GetCustomStatusMapping.md)
 
 ### Authorization
 
@@ -345,19 +345,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Filtering on the Sendcloud integration ID
-$integrationModel = {"shop_name":"My Webshop"}; // \Toppy\Sendcloud\Model\IntegrationModel
+$integrationModel = {"shop_name":"My Webshop"}; // \Toppy\Sendcloud\V3\Model\IntegrationModel
 
 try {
     $apiInstance->scPublicV3IntegrationsPatchUpdateIntegration($id, $integrationModel);
@@ -371,7 +371,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Filtering on the Sendcloud integration ID |
- **integrationModel** | [**\Toppy\Sendcloud\Model\IntegrationModel**](../Model/IntegrationModel.md)|  | [optional]
+ **integrationModel** | [**\Toppy\Sendcloud\V3\Model\IntegrationModel**](../Model/IntegrationModel.md)|  | [optional]
 
 ### Return type
 
@@ -408,18 +408,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$postShopOrderStatuses = {"integration_id":23452345,"statuses":[{"external_id":"Send-4","translations":[{"status":"Sent","language":"en-gb"},{"status":"Verzonden","language":"nl-nl"}]},{"external_id":"15","translations":[{"status":"Delivered","language":"en-gb"},{"status":"Bezorgt","language":"nl-nl"}]}]}; // \Toppy\Sendcloud\Model\PostShopOrderStatuses
+$postShopOrderStatuses = {"integration_id":23452345,"statuses":[{"external_id":"Send-4","translations":[{"status":"Sent","language":"en-gb"},{"status":"Verzonden","language":"nl-nl"}]},{"external_id":"15","translations":[{"status":"Delivered","language":"en-gb"},{"status":"Bezorgt","language":"nl-nl"}]}]}; // \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses
 
 try {
     $result = $apiInstance->scPublicV3IntegrationsPostShopOrderStatuses($postShopOrderStatuses);
@@ -433,7 +433,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **postShopOrderStatuses** | [**\Toppy\Sendcloud\Model\PostShopOrderStatuses**](../Model/PostShopOrderStatuses.md)|  | [optional]
+ **postShopOrderStatuses** | [**\Toppy\Sendcloud\V3\Model\PostShopOrderStatuses**](../Model/PostShopOrderStatuses.md)|  | [optional]
 
 ### Return type
 
@@ -470,18 +470,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$createCustomStatusMapping = {"integration_id":23452345,"mapping":[{"status_category":"READY_TO_SEND","external_id":"11"},{"status_category":"IN_TRANSIT","external_id":"11"},{"status_category":"DELIVERED","external_id":"12"},{"status_category":"CANCEL","external_id":null}]}; // \Toppy\Sendcloud\Model\CreateCustomStatusMapping
+$createCustomStatusMapping = {"integration_id":23452345,"mapping":[{"status_category":"READY_TO_SEND","external_id":"11"},{"status_category":"IN_TRANSIT","external_id":"11"},{"status_category":"DELIVERED","external_id":"12"},{"status_category":"CANCEL","external_id":null}]}; // \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping
 
 try {
     $result = $apiInstance->scPublicV3IntegrationsPostShopOrderStatusesMapping($createCustomStatusMapping);
@@ -495,7 +495,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCustomStatusMapping** | [**\Toppy\Sendcloud\Model\CreateCustomStatusMapping**](../Model/CreateCustomStatusMapping.md)|  | [optional]
+ **createCustomStatusMapping** | [**\Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping**](../Model/CreateCustomStatusMapping.md)|  | [optional]
 
 ### Return type
 

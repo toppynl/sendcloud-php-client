@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpPostShippingOptions200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV3ScpPostShippingOptions200Response implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\ShippingOption[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\ShippingOption[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class ScPublicV3ScpPostShippingOptions200Response implements ModelInterface, Arr
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ShippingOption[]
+     * @return \Toppy\Sendcloud\V3\Model\ShippingOption[]
      */
     public function getData()
     {
@@ -278,7 +278,7 @@ class ScPublicV3ScpPostShippingOptions200Response implements ModelInterface, Arr
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ShippingOption[] $data A list of shipping options suitable for entire shipments. Each option includes total pricing for the entire shipment and breakdown per parcel. If the request doesn't pass basic details about the parcels (e.g. from_country, to_country), it's possible that the data will be null.
+     * @param \Toppy\Sendcloud\V3\Model\ShippingOption[] $data A list of shipping options suitable for entire shipments. Each option includes total pricing for the entire shipment and breakdown per parcel. If the request doesn't pass basic details about the parcels (e.g. from_country, to_country), it's possible that the data will be null.
      *
      * @return self
      */

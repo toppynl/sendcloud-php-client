@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderPartialUpdateOrderDetails Class Doc Comment
  *
  * @category Class
  * @description Node for general order information
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'integration' => \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsIntegration::class,
-        'status' => \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsStatus::class,
+        'integration' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsIntegration::class,
+        'status' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsStatus::class,
         'orderCreatedAt' => '\DateTime',
         'orderUpdatedAt' => '\DateTime',
-        'orderItems' => '\Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]',
+        'orderItems' => '\Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]',
         'notes' => 'string',
         'tags' => 'string[]'
     ];
@@ -305,7 +305,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets integration
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsIntegration|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsIntegration|null
      */
     public function getIntegration()
     {
@@ -315,7 +315,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets integration
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsIntegration|null $integration integration
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsIntegration|null $integration integration
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsStatus|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsStatus|null
      */
     public function getStatus()
     {
@@ -343,7 +343,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsStatus|null $status status
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsStatus|null $status status
      *
      * @return self
      */
@@ -417,7 +417,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets orderItems
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]|null
      */
     public function getOrderItems()
     {
@@ -427,7 +427,7 @@ class OrderPartialUpdateOrderDetails implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets orderItems
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]|null $orderItems List of items the order contains
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInner[]|null $orderItems List of items the order contains
      *
      * @return self
      */

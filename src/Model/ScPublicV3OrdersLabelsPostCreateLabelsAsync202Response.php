@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\LabelAsync[]',
-        'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\LabelAsync[]',
+        'errors' => '\Toppy\Sendcloud\V3\Model\ErrorObject[]'
     ];
 
     /**
@@ -275,7 +275,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\LabelAsync[]|null
+     * @return \Toppy\Sendcloud\V3\Model\LabelAsync[]|null
      */
     public function getData()
     {
@@ -285,7 +285,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\LabelAsync[]|null $data An array containing the created parcel IDs and other order information.
+     * @param \Toppy\Sendcloud\V3\Model\LabelAsync[]|null $data An array containing the created parcel IDs and other order information.
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Gets errors
      *
-     * @return \Toppy\Sendcloud\Model\ErrorObject[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ErrorObject[]|null
      */
     public function getErrors()
     {
@@ -318,7 +318,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Sets errors
      *
-     * @param \Toppy\Sendcloud\Model\ErrorObject[]|null $errors errors
+     * @param \Toppy\Sendcloud\V3\Model\ErrorObject[]|null $errors errors
      *
      * @return self
      */

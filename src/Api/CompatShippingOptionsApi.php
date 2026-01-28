@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * CompatShippingOptionsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class CompatShippingOptionsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -172,11 +172,11 @@ class CompatShippingOptionsApi
      *
      * Retrieve a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest scPublicV3ScpPostCompatShippingOptionsRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest scPublicV3ScpPostCompatShippingOptionsRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CompatShippingOptionsResponse
+     * @return \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse
      */
     public function scPublicV3ScpPostCompatShippingOptions($scPublicV3ScpPostCompatShippingOptionsRequest = null)
     {
@@ -189,11 +189,11 @@ class CompatShippingOptionsApi
      *
      * Retrieve a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CompatShippingOptionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostCompatShippingOptionsWithHttpInfo($scPublicV3ScpPostCompatShippingOptionsRequest = null)
     {
@@ -228,7 +228,7 @@ class CompatShippingOptionsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\CompatShippingOptionsResponse::class,
+                    \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse::class,
                     $request,
                     $response,
                 );
@@ -249,7 +249,7 @@ class CompatShippingOptionsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CompatShippingOptionsResponse::class,
+                \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse::class,
                 $request,
                 $response,
             );
@@ -257,7 +257,7 @@ class CompatShippingOptionsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\CompatShippingOptionsResponse::class,
+                    \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -274,7 +274,7 @@ class CompatShippingOptionsApi
      *
      * Retrieve a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -294,14 +294,14 @@ class CompatShippingOptionsApi
      *
      * Retrieve a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostCompatShippingOptionsAsyncWithHttpInfo($scPublicV3ScpPostCompatShippingOptionsRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\CompatShippingOptionsResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CompatShippingOptionsResponse::class;
         $request = $this->scPublicV3ScpPostCompatShippingOptionsRequest($scPublicV3ScpPostCompatShippingOptionsRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -339,7 +339,7 @@ class CompatShippingOptionsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCompatShippingOptions'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostCompatShippingOptionsRequest $scPublicV3ScpPostCompatShippingOptionsRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

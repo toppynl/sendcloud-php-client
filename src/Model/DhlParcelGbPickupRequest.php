@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * DhlParcelGbPickupRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,13 +58,13 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlot[]',
-        'items' => '\Toppy\Sendcloud\Model\BasePickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlot[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\BasePickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddress::class,
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddress::class,
         'customerAccountNumber' => 'string',
         'tradingLocationId' => 'string'
     ];
@@ -370,7 +370,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlot[]
+     * @return \ToppySendcloudV3ModelTimeSlot[]
      */
     public function getTimeSlots()
     {
@@ -380,7 +380,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlot[] $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlot[] $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -398,7 +398,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\BasePickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null
      */
     public function getItems()
     {
@@ -408,7 +408,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
+     * @param \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
      *
      * @return self
      */
@@ -558,7 +558,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddress
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddress
      */
     public function getAddress()
     {
@@ -568,7 +568,7 @@ class DhlParcelGbPickupRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddress $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddress $address address
      *
      * @return self
      */

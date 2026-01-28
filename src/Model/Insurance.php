@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * Insurance Class Doc Comment
  *
  * @category Class
  * @description Sendcloud Insurance object with insurance policy ID
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class Insurance implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'insuredValue' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'insuredValue' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'policyId' => 'string'
     ];
 
@@ -280,7 +280,7 @@ class Insurance implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets insuredValue
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getInsuredValue()
     {
@@ -290,7 +290,7 @@ class Insurance implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets insuredValue
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $insuredValue insuredValue
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $insuredValue insuredValue
      *
      * @return self
      */

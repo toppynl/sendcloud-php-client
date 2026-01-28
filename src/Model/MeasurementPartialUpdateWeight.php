@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * MeasurementPartialUpdateWeight Class Doc Comment
  *
  * @category Class
  * @description Weight in the specified unit
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class MeasurementPartialUpdateWeight implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'value' => 'float',
-        'unit' => \Toppy\Sendcloud\Model\WeightUnits::class
+        'unit' => \Toppy\Sendcloud\V3\Model\WeightUnits::class
     ];
 
     /**
@@ -298,7 +298,7 @@ class MeasurementPartialUpdateWeight implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets unit
      *
-     * @return \Toppy\Sendcloud\Model\WeightUnits|null
+     * @return \Toppy\Sendcloud\V3\Model\WeightUnits|null
      */
     public function getUnit()
     {
@@ -308,7 +308,7 @@ class MeasurementPartialUpdateWeight implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets unit
      *
-     * @param \Toppy\Sendcloud\Model\WeightUnits|null $unit unit
+     * @param \Toppy\Sendcloud\V3\Model\WeightUnits|null $unit unit
      *
      * @return self
      */

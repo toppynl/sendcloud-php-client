@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderPartialUpdate Class Doc Comment
  *
  * @category Class
  * @description API v3 Order model without any required fields to be used in partial update.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,14 +64,14 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
         'orderNumber' => 'string',
         'createdAt' => '\DateTime',
         'modifiedAt' => '\DateTime',
-        'orderDetails' => \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetails::class,
-        'paymentDetails' => \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetails::class,
-        'customsDetails' => \Toppy\Sendcloud\Model\CustomsDetails::class,
-        'customerDetails' => \Toppy\Sendcloud\Model\OrderPartialUpdateCustomerDetails::class,
-        'billingAddress' => \Toppy\Sendcloud\Model\Address::class,
-        'shippingAddress' => \Toppy\Sendcloud\Model\Address::class,
-        'shippingDetails' => \Toppy\Sendcloud\Model\OrderPartialUpdateShippingDetails::class,
-        'servicePointDetails' => \Toppy\Sendcloud\Model\OrderPartialUpdateServicePointDetails::class
+        'orderDetails' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetails::class,
+        'paymentDetails' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetails::class,
+        'customsDetails' => \Toppy\Sendcloud\V3\Model\CustomsDetails::class,
+        'customerDetails' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateCustomerDetails::class,
+        'billingAddress' => \Toppy\Sendcloud\V3\Model\Address::class,
+        'shippingAddress' => \Toppy\Sendcloud\V3\Model\Address::class,
+        'shippingDetails' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateShippingDetails::class,
+        'servicePointDetails' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateServicePointDetails::class
     ];
 
     /**
@@ -487,7 +487,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets orderDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetails|null
      */
     public function getOrderDetails()
     {
@@ -497,7 +497,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets orderDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetails|null $orderDetails orderDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetails|null $orderDetails orderDetails
      *
      * @return self
      */
@@ -515,7 +515,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets paymentDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetails|null
      */
     public function getPaymentDetails()
     {
@@ -525,7 +525,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets paymentDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdatePaymentDetails|null $paymentDetails paymentDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdatePaymentDetails|null $paymentDetails paymentDetails
      *
      * @return self
      */
@@ -543,7 +543,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets customsDetails
      *
-     * @return \Toppy\Sendcloud\Model\CustomsDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsDetails|null
      */
     public function getCustomsDetails()
     {
@@ -553,7 +553,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customsDetails
      *
-     * @param \Toppy\Sendcloud\Model\CustomsDetails|null $customsDetails customsDetails
+     * @param \Toppy\Sendcloud\V3\Model\CustomsDetails|null $customsDetails customsDetails
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets customerDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateCustomerDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateCustomerDetails|null
      */
     public function getCustomerDetails()
     {
@@ -581,7 +581,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customerDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateCustomerDetails|null $customerDetails customerDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateCustomerDetails|null $customerDetails customerDetails
      *
      * @return self
      */
@@ -599,7 +599,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets billingAddress
      *
-     * @return \Toppy\Sendcloud\Model\Address|null
+     * @return \Toppy\Sendcloud\V3\Model\Address|null
      */
     public function getBillingAddress()
     {
@@ -609,7 +609,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets billingAddress
      *
-     * @param \Toppy\Sendcloud\Model\Address|null $billingAddress billingAddress
+     * @param \Toppy\Sendcloud\V3\Model\Address|null $billingAddress billingAddress
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets shippingAddress
      *
-     * @return \Toppy\Sendcloud\Model\Address|null
+     * @return \Toppy\Sendcloud\V3\Model\Address|null
      */
     public function getShippingAddress()
     {
@@ -637,7 +637,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shippingAddress
      *
-     * @param \Toppy\Sendcloud\Model\Address|null $shippingAddress shippingAddress
+     * @param \Toppy\Sendcloud\V3\Model\Address|null $shippingAddress shippingAddress
      *
      * @return self
      */
@@ -655,7 +655,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets shippingDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateShippingDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateShippingDetails|null
      */
     public function getShippingDetails()
     {
@@ -665,7 +665,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shippingDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateShippingDetails|null $shippingDetails shippingDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateShippingDetails|null $shippingDetails shippingDetails
      *
      * @return self
      */
@@ -683,7 +683,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets servicePointDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateServicePointDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateServicePointDetails|null
      */
     public function getServicePointDetails()
     {
@@ -693,7 +693,7 @@ class OrderPartialUpdate implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets servicePointDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateServicePointDetails|null $servicePointDetails servicePointDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateServicePointDetails|null $servicePointDetails servicePointDetails
      *
      * @return self
      */

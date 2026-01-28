@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * DhlDeReturnsObject Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class DhlDeReturnsObject implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'key' => \Toppy\Sendcloud\Model\BaseContractFieldSchema::class,
-        'value' => \Toppy\Sendcloud\Model\BaseContractFieldSchema::class
+        'key' => \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema::class,
+        'value' => \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema::class
     ];
 
     /**
@@ -269,7 +269,7 @@ class DhlDeReturnsObject implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets key
      *
-     * @return \Toppy\Sendcloud\Model\BaseContractFieldSchema|null
+     * @return \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema|null
      */
     public function getKey()
     {
@@ -279,7 +279,7 @@ class DhlDeReturnsObject implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets key
      *
-     * @param \Toppy\Sendcloud\Model\BaseContractFieldSchema|null $key key
+     * @param \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema|null $key key
      *
      * @return self
      */
@@ -297,7 +297,7 @@ class DhlDeReturnsObject implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets value
      *
-     * @return \Toppy\Sendcloud\Model\BaseContractFieldSchema|null
+     * @return \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema|null
      */
     public function getValue()
     {
@@ -307,7 +307,7 @@ class DhlDeReturnsObject implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets value
      *
-     * @param \Toppy\Sendcloud\Model\BaseContractFieldSchema|null $value value
+     * @param \Toppy\Sendcloud\V3\Model\BaseContractFieldSchema|null $value value
      *
      * @return self
      */

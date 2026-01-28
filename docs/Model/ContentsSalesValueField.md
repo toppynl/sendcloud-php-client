@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **float** |  | [optional]
-**currency** | [**\Toppy\Sendcloud\Model\CurrencyType**](CurrencyType.md) |  | [optional]
+**currency** | [**\Toppy\Sendcloud\V3\Model\CurrencyType**](CurrencyType.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

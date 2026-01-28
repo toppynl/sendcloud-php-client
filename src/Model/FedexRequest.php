@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * FedexRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,14 +58,14 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlot[]',
-        'items' => '\Toppy\Sendcloud\Model\BasePickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlot[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\BasePickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddressPhoneNumberRequired::class,
-        'originDetail' => \Toppy\Sendcloud\Model\FedexOriginDetail::class
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddressPhoneNumberRequired::class,
+        'originDetail' => \Toppy\Sendcloud\V3\Model\FedexOriginDetail::class
     ];
 
     /**
@@ -355,7 +355,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlot[]|null
+     * @return \ToppySendcloudV3ModelTimeSlot[]|null
      */
     public function getTimeSlots()
     {
@@ -365,7 +365,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlot[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -383,7 +383,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\BasePickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null
      */
     public function getItems()
     {
@@ -393,7 +393,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
+     * @param \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
      *
      * @return self
      */
@@ -543,7 +543,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddressPhoneNumberRequired
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddressPhoneNumberRequired
      */
     public function getAddress()
     {
@@ -553,7 +553,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddressPhoneNumberRequired $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddressPhoneNumberRequired $address address
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets originDetail
      *
-     * @return \Toppy\Sendcloud\Model\FedexOriginDetail
+     * @return \Toppy\Sendcloud\V3\Model\FedexOriginDetail
      */
     public function getOriginDetail()
     {
@@ -581,7 +581,7 @@ class FedexRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets originDetail
      *
-     * @param \Toppy\Sendcloud\Model\FedexOriginDetail $originDetail originDetail
+     * @param \Toppy\Sendcloud\V3\Model\FedexOriginDetail $originDetail originDetail
      *
      * @return self
      */

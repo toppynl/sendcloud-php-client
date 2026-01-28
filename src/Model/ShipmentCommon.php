@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShipmentCommon Class Doc Comment
  *
  * @category Class
  * @description Shipment common object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,16 +60,16 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
       */
     protected static $openAPITypes = [
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toServicePoint' => \Toppy\Sendcloud\Model\ServicePoint::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toServicePoint' => \Toppy\Sendcloud\V3\Model\ServicePoint::class,
         'orderNumber' => 'string',
-        'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'totalOrderPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'reference' => 'string',
         'externalReferenceId' => 'string',
         'validationMethods' => 'string[]',
-        'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformation::class
+        'customsInformation' => \Toppy\Sendcloud\V3\Model\CustomsInformation::class
     ];
 
     /**
@@ -398,7 +398,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith
      */
     public function getShipWith()
     {
@@ -408,7 +408,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
      *
      * @return self
      */
@@ -426,7 +426,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getFromAddress()
     {
@@ -436,7 +436,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $fromAddress fromAddress
      *
      * @return self
      */
@@ -454,7 +454,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -464,7 +464,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -482,7 +482,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets toServicePoint
      *
-     * @return \Toppy\Sendcloud\Model\ServicePoint|null
+     * @return \Toppy\Sendcloud\V3\Model\ServicePoint|null
      */
     public function getToServicePoint()
     {
@@ -492,7 +492,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets toServicePoint
      *
-     * @param \Toppy\Sendcloud\Model\ServicePoint|null $toServicePoint toServicePoint
+     * @param \Toppy\Sendcloud\V3\Model\ServicePoint|null $toServicePoint toServicePoint
      *
      * @return self
      */
@@ -538,7 +538,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets totalOrderPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getTotalOrderPrice()
     {
@@ -548,7 +548,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets totalOrderPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
      *
      * @return self
      */
@@ -667,7 +667,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\CustomsInformation|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -677,7 +677,7 @@ class ShipmentCommon implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\CustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V3\Model\CustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * UpsPickupRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,13 +58,13 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlotEndAtRequired[]',
-        'items' => '\Toppy\Sendcloud\Model\UpsPickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlotEndAtRequired[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\UpsPickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\UpsPickupAddress::class,
+        'address' => \Toppy\Sendcloud\V3\Model\UpsPickupAddress::class,
         'isOverweight' => 'bool'
     ];
 
@@ -347,7 +347,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlotEndAtRequired[]|null
+     * @return \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null
      */
     public function getTimeSlots()
     {
@@ -357,7 +357,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -375,7 +375,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\UpsPickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\UpsPickupItem[]|null
      */
     public function getItems()
     {
@@ -385,7 +385,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\UpsPickupItem[]|null $items items
+     * @param \Toppy\Sendcloud\V3\Model\UpsPickupItem[]|null $items items
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\UpsPickupAddress
+     * @return \Toppy\Sendcloud\V3\Model\UpsPickupAddress
      */
     public function getAddress()
     {
@@ -540,7 +540,7 @@ class UpsPickupRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\UpsPickupAddress $address address
+     * @param \Toppy\Sendcloud\V3\Model\UpsPickupAddress $address address
      *
      * @return self
      */

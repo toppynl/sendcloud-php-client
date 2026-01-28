@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\ParcelTrackingApi
+# Toppy\Sendcloud\V3\ParcelTrackingApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber()`
 
 ```php
-scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber): \Toppy\Sendcloud\Model\ParcelTrackingResponse
+scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber): \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse
 ```
 
 Retrieve tracking information for a parcel
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelTrackingApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ParcelTrackingApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ParcelTrackingResponse**](../Model/ParcelTrackingResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ParcelTrackingResponse**](../Model/ParcelTrackingResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking()`
 
 ```php
-scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest): \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse
+scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest): \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse
 ```
 
 Create a tracking-only parcel
@@ -88,18 +88,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelTrackingApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ParcelTrackingApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$parcelTrackingCreateRequest = new \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest(); // \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest
+$parcelTrackingCreateRequest = new \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest(); // \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest
 
 try {
     $result = $apiInstance->scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest);
@@ -113,11 +113,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parcelTrackingCreateRequest** | [**\Toppy\Sendcloud\Model\ParcelTrackingCreateRequest**](../Model/ParcelTrackingCreateRequest.md)|  |
+ **parcelTrackingCreateRequest** | [**\Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest**](../Model/ParcelTrackingCreateRequest.md)|  |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ParcelTrackingCreateResponse**](../Model/ParcelTrackingCreateResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse**](../Model/ParcelTrackingCreateResponse.md)
 
 ### Authorization
 

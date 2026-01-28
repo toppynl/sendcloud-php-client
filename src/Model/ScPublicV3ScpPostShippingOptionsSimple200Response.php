@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpPostShippingOptionsSimple200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV3ScpPostShippingOptionsSimple200Response implements ModelInterfac
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\ShippingOption[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\ShippingOption[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class ScPublicV3ScpPostShippingOptionsSimple200Response implements ModelInterfac
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ShippingOption[]
+     * @return \Toppy\Sendcloud\V3\Model\ShippingOption[]
      */
     public function getData()
     {
@@ -278,7 +278,7 @@ class ScPublicV3ScpPostShippingOptionsSimple200Response implements ModelInterfac
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ShippingOption[] $data A list of options to ship a parcel. A shipping option is a shipping product that the carrier offers in combination with a unique set of shipping functionalities. Each shipping option will indicate the fully allowed weight range, the requirements, the contract and the billed weight (in case weight and dimensions are passed in the request) for this option. If the request doesn't pass basic details about the parcel (e.g. from_country, to_country, and weight), it's possible that the data will be null. This is to prevent sending too many results in the response.
+     * @param \Toppy\Sendcloud\V3\Model\ShippingOption[] $data A list of options to ship a parcel. A shipping option is a shipping product that the carrier offers in combination with a unique set of shipping functionalities. Each shipping option will indicate the fully allowed weight range, the requirements, the contract and the billed weight (in case weight and dimensions are passed in the request) for this option. If the request doesn't pass basic details about the parcel (e.g. from_country, to_country, and weight), it's possible that the data will be null. This is to prevent sending too many results in the response.
      *
      * @return self
      */

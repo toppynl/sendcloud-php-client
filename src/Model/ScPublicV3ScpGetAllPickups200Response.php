@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpGetAllPickups200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV3ScpGetAllPickups200Response implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\ListPickupResponse[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\ListPickupResponse[]'
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV3ScpGetAllPickups200Response implements ModelInterface, ArrayAcce
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ListPickupResponse[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ListPickupResponse[]|null
      */
     public function getData()
     {
@@ -272,7 +272,7 @@ class ScPublicV3ScpGetAllPickups200Response implements ModelInterface, ArrayAcce
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ListPickupResponse[]|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\ListPickupResponse[]|null $data data
      *
      * @return self
      */

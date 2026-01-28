@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\ContractsApi
+# Toppy\Sendcloud\V3\ContractsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -76,7 +76,7 @@ void (empty response body)
 ## `scPublicV3ScpGetAllContracts()`
 
 ```php
-scPublicV3ScpGetAllContracts($carrierCode, $isActive, $clientId, $name, $countryCode, $cursor, $pageSize): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response
+scPublicV3ScpGetAllContracts($carrierCode, $isActive, $clientId, $name, $countryCode, $cursor, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response
 ```
 
 Retrieve a list of contracts
@@ -91,12 +91,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response**](../Model/ScPublicV3ScpGetAllContracts200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response**](../Model/ScPublicV3ScpGetAllContracts200Response.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetAllContractsSchemas()`
 
 ```php
-scPublicV3ScpGetAllContractsSchemas($carrierCode): \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response
+scPublicV3ScpGetAllContractsSchemas($carrierCode): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response
 ```
 
 Retrieve a list of contract schemas
@@ -165,12 +165,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response**](../Model/ScPublicV3ScpGetAllContractsSchemas200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response**](../Model/ScPublicV3ScpGetAllContractsSchemas200Response.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetSpecificContract()`
 
 ```php
-scPublicV3ScpGetSpecificContract($id): \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response
+scPublicV3ScpGetSpecificContract($id): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response
 ```
 
 Retrieve a contract
@@ -227,12 +227,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response**](../Model/ScPublicV3ScpGetSpecificContract200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response**](../Model/ScPublicV3ScpGetSpecificContract200Response.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPatchContract()`
 
 ```php
-scPublicV3ScpPatchContract($id, $updateContractRequest): \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response
+scPublicV3ScpPatchContract($id, $updateContractRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response
 ```
 
 Update a contract
@@ -289,19 +289,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The id of the contract.
-$updateContractRequest = new \Toppy\Sendcloud\Model\UpdateContractRequest(); // \Toppy\Sendcloud\Model\UpdateContractRequest
+$updateContractRequest = new \Toppy\Sendcloud\V3\Model\UpdateContractRequest(); // \Toppy\Sendcloud\V3\Model\UpdateContractRequest
 
 try {
     $result = $apiInstance->scPublicV3ScpPatchContract($id, $updateContractRequest);
@@ -316,11 +316,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the contract. |
- **updateContractRequest** | [**\Toppy\Sendcloud\Model\UpdateContractRequest**](../Model/UpdateContractRequest.md)|  | [optional]
+ **updateContractRequest** | [**\Toppy\Sendcloud\V3\Model\UpdateContractRequest**](../Model/UpdateContractRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response**](../Model/ScPublicV3ScpPatchContract200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response**](../Model/ScPublicV3ScpPatchContract200Response.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostCreateContract()`
 
 ```php
-scPublicV3ScpPostCreateContract($createContractRequest): \Toppy\Sendcloud\Model\ContractCreatedResponse
+scPublicV3ScpPostCreateContract($createContractRequest): \Toppy\Sendcloud\V3\Model\ContractCreatedResponse
 ```
 
 Create a contract for a carrier
@@ -353,18 +353,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ContractsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ContractsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$createContractRequest = new \Toppy\Sendcloud\Model\CreateContractRequest(); // \Toppy\Sendcloud\Model\CreateContractRequest
+$createContractRequest = new \Toppy\Sendcloud\V3\Model\CreateContractRequest(); // \Toppy\Sendcloud\V3\Model\CreateContractRequest
 
 try {
     $result = $apiInstance->scPublicV3ScpPostCreateContract($createContractRequest);
@@ -378,11 +378,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createContractRequest** | [**\Toppy\Sendcloud\Model\CreateContractRequest**](../Model/CreateContractRequest.md)|  | [optional]
+ **createContractRequest** | [**\Toppy\Sendcloud\V3\Model\CreateContractRequest**](../Model/CreateContractRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ContractCreatedResponse**](../Model/ContractCreatedResponse.md)
+[**\Toppy\Sendcloud\V3\Model\ContractCreatedResponse**](../Model/ContractCreatedResponse.md)
 
 ### Authorization
 

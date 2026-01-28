@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateLabelsParcels Class Doc Comment
  *
  * @category Class
  * @description Multicollo parcels array model used for splitting shipped object into multiple parcels
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class CreateLabelsParcels implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'parcels' => '\Toppy\Sendcloud\Model\CreateLabelParcel[]'
+        'parcels' => '\Toppy\Sendcloud\V3\Model\CreateLabelParcel[]'
     ];
 
     /**
@@ -273,7 +273,7 @@ class CreateLabelsParcels implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\CreateLabelParcel[]|null
+     * @return \Toppy\Sendcloud\V3\Model\CreateLabelParcel[]|null
      */
     public function getParcels()
     {
@@ -283,7 +283,7 @@ class CreateLabelsParcels implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\CreateLabelParcel[]|null $parcels Represents each package in the shipment. Each carrier can have its own limit for the number of parcels per shipment, otherwise there is a default maximum of 50 parcels. If left empty, one parcel will be created from an entire order.
+     * @param \Toppy\Sendcloud\V3\Model\CreateLabelParcel[]|null $parcels Represents each package in the shipment. Each carrier can have its own limit for the number of parcels per shipment, otherwise there is a default maximum of 50 parcels. If left empty, one parcel will be created from an entire order.
      *
      * @return self
      */

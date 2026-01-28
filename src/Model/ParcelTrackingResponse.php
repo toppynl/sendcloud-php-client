@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelTrackingResponse Class Doc Comment
  *
  * @category Class
  * @description This object contains the parcel and its associated tracking numbers
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,14 +61,14 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'announcedAt' => '\DateTime',
         'createdAt' => '\DateTime',
-        'details' => \Toppy\Sendcloud\Model\ParcelDetailResponse::class,
-        'events' => '\Toppy\Sendcloud\Model\ParcelEventResponse[]',
-        'fromAddress' => \Toppy\Sendcloud\Model\ParcelTrackingAddress::class,
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItemWithSourceId[]',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
+        'details' => \Toppy\Sendcloud\V3\Model\ParcelDetailResponse::class,
+        'events' => '\Toppy\Sendcloud\V3\Model\ParcelEventResponse[]',
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress::class,
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemWithSourceId[]',
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
         'sourceId' => 'string',
-        'toAddress' => \Toppy\Sendcloud\Model\ParcelTrackingAddress::class,
-        'trackingNumbers' => '\Toppy\Sendcloud\Model\TrackingNumberResponse[]',
+        'toAddress' => \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress::class,
+        'trackingNumbers' => '\Toppy\Sendcloud\V3\Model\TrackingNumberResponse[]',
         'updatedAt' => '\DateTime'
     ];
 
@@ -427,7 +427,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets details
      *
-     * @return \Toppy\Sendcloud\Model\ParcelDetailResponse
+     * @return \Toppy\Sendcloud\V3\Model\ParcelDetailResponse
      */
     public function getDetails()
     {
@@ -437,7 +437,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets details
      *
-     * @param \Toppy\Sendcloud\Model\ParcelDetailResponse $details details
+     * @param \Toppy\Sendcloud\V3\Model\ParcelDetailResponse $details details
      *
      * @return self
      */
@@ -455,7 +455,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets events
      *
-     * @return \Toppy\Sendcloud\Model\ParcelEventResponse[]
+     * @return \Toppy\Sendcloud\V3\Model\ParcelEventResponse[]
      */
     public function getEvents()
     {
@@ -465,7 +465,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets events
      *
-     * @param \Toppy\Sendcloud\Model\ParcelEventResponse[] $events events
+     * @param \Toppy\Sendcloud\V3\Model\ParcelEventResponse[] $events events
      *
      * @return self
      */
@@ -483,7 +483,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingAddress
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress
      */
     public function getFromAddress()
     {
@@ -493,7 +493,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\ParcelTrackingAddress $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress $fromAddress fromAddress
      *
      * @return self
      */
@@ -511,7 +511,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItemWithSourceId[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItemWithSourceId[]|null
      */
     public function getParcelItems()
     {
@@ -521,7 +521,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemWithSourceId[]|null $parcelItems List of items / products that the parcel contains
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItemWithSourceId[]|null $parcelItems List of items / products that the parcel contains
      *
      * @return self
      */
@@ -539,7 +539,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -549,7 +549,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */
@@ -595,7 +595,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingAddress
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress
      */
     public function getToAddress()
     {
@@ -605,7 +605,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\ParcelTrackingAddress $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress $toAddress toAddress
      *
      * @return self
      */
@@ -623,7 +623,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets trackingNumbers
      *
-     * @return \Toppy\Sendcloud\Model\TrackingNumberResponse[]
+     * @return \Toppy\Sendcloud\V3\Model\TrackingNumberResponse[]
      */
     public function getTrackingNumbers()
     {
@@ -633,7 +633,7 @@ class ParcelTrackingResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets trackingNumbers
      *
-     * @param \Toppy\Sendcloud\Model\TrackingNumberResponse[] $trackingNumbers trackingNumbers
+     * @param \Toppy\Sendcloud\V3\Model\TrackingNumberResponse[] $trackingNumbers trackingNumbers
      *
      * @return self
      */

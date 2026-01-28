@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\RequestedDataApi
+# Toppy\Sendcloud\V3\RequestedDataApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3DsfGetRequestedData()`
 
 ```php
-scPublicV3DsfGetRequestedData(): \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response
+scPublicV3DsfGetRequestedData(): \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response
 ```
 
 Retrieve requested data for open tickets
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\RequestedDataApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\RequestedDataApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response**](../Model/ScPublicV3DsfGetRequestedData200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response**](../Model/ScPublicV3DsfGetRequestedData200Response.md)
 
 ### Authorization
 
@@ -85,18 +85,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\RequestedDataApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\RequestedDataApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV3DsfPostRequestedDataRequest = {"request_id":144,"comment":"Sales invoice","attachments":[{"file_token":"4b08344f-8325-40df-8273-c0c31c412bb0"}]}; // \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest
+$scPublicV3DsfPostRequestedDataRequest = {"request_id":144,"comment":"Sales invoice","attachments":[{"file_token":"4b08344f-8325-40df-8273-c0c31c412bb0"}]}; // \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest
 
 try {
     $apiInstance->scPublicV3DsfPostRequestedData($scPublicV3DsfPostRequestedDataRequest);
@@ -109,7 +109,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV3DsfPostRequestedDataRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest**](../Model/ScPublicV3DsfPostRequestedDataRequest.md)|  |
+ **scPublicV3DsfPostRequestedDataRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest**](../Model/ScPublicV3DsfPostRequestedDataRequest.md)|  |
 
 ### Return type
 

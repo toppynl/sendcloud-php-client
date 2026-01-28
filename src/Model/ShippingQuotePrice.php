@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingQuotePrice Class Doc Comment
  *
  * @category Class
  * @description Quote price.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class ShippingQuotePrice implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'breakdown' => '\Toppy\Sendcloud\Model\ShippingPriceBreakdownInner[]',
-        'total' => \Toppy\Sendcloud\Model\Price::class
+        'breakdown' => '\Toppy\Sendcloud\V3\Model\ShippingPriceBreakdownInner[]',
+        'total' => \Toppy\Sendcloud\V3\Model\Price::class
     ];
 
     /**
@@ -270,7 +270,7 @@ class ShippingQuotePrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets breakdown
      *
-     * @return \Toppy\Sendcloud\Model\ShippingPriceBreakdownInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingPriceBreakdownInner[]|null
      */
     public function getBreakdown()
     {
@@ -280,7 +280,7 @@ class ShippingQuotePrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets breakdown
      *
-     * @param \Toppy\Sendcloud\Model\ShippingPriceBreakdownInner[]|null $breakdown A Sendcloud shipping price breakdown.
+     * @param \Toppy\Sendcloud\V3\Model\ShippingPriceBreakdownInner[]|null $breakdown A Sendcloud shipping price breakdown.
      *
      * @return self
      */
@@ -298,7 +298,7 @@ class ShippingQuotePrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets total
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getTotal()
     {
@@ -308,7 +308,7 @@ class ShippingQuotePrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets total
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $total total
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $total total
      *
      * @return self
      */

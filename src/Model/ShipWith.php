@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShipWith Class Doc Comment
  *
  * @category Class
  * @description Shipping specifications chosen for return
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
         'type' => 'string',
         'shippingOptionCode' => 'string',
         'shippingProductCode' => 'string',
-        'functionalities' => \Toppy\Sendcloud\Model\CarrierShippingFunctionalities::class,
+        'functionalities' => \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities::class,
         'contract' => 'int'
     ];
 
@@ -413,7 +413,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
     /**
      * Gets functionalities
      *
-     * @return \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null
      */
     public function getFunctionalities()
     {
@@ -423,7 +423,7 @@ class ShipWith implements ModelInterface, ArrayAccess, \JsonSerializable, \Strin
     /**
      * Sets functionalities
      *
-     * @param \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null $functionalities functionalities
+     * @param \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null $functionalities functionalities
      *
      * @return self
      */

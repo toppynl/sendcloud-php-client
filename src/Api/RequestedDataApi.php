@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * RequestedDataApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class RequestedDataApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -173,9 +173,9 @@ class RequestedDataApi
      * Retrieve requested data for open tickets
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response
      */
     public function scPublicV3DsfGetRequestedData()
     {
@@ -189,9 +189,9 @@ class RequestedDataApi
      * Retrieve requested data for open tickets
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfGetRequestedDataWithHttpInfo()
     {
@@ -226,7 +226,7 @@ class RequestedDataApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response::class,
                     $request,
                     $response,
                 );
@@ -247,7 +247,7 @@ class RequestedDataApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response::class,
                 $request,
                 $response,
             );
@@ -255,7 +255,7 @@ class RequestedDataApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -297,7 +297,7 @@ class RequestedDataApi
      */
     public function scPublicV3DsfGetRequestedDataAsyncWithHttpInfo()
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3DsfGetRequestedData200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3DsfGetRequestedData200Response::class;
         $request = $this->scPublicV3DsfGetRequestedDataRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -413,9 +413,9 @@ class RequestedDataApi
      *
      * Provide requested data
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest scPublicV3DsfPostRequestedDataRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest scPublicV3DsfPostRequestedDataRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -429,9 +429,9 @@ class RequestedDataApi
      *
      * Provide requested data
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -472,7 +472,7 @@ class RequestedDataApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -480,7 +480,7 @@ class RequestedDataApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -497,7 +497,7 @@ class RequestedDataApi
      *
      * Provide requested data
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -517,7 +517,7 @@ class RequestedDataApi
      *
      * Provide requested data
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -551,7 +551,7 @@ class RequestedDataApi
     /**
      * Create request for operation 'scPublicV3DsfPostRequestedData'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequest $scPublicV3DsfPostRequestedDataRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

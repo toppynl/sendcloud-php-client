@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ModelReturn Class Doc Comment
  *
  * @category Class
  * @description A Sendcloud return object
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,38 +59,38 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'shippingProduct' => \Toppy\Sendcloud\Model\ShippingProductsRef::class,
-        'dimensions' => \Toppy\Sendcloud\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'shippingProduct' => \Toppy\Sendcloud\V3\Model\ShippingProductsRef::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\Dimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
         'colloCount' => 'int',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]',
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemReturnsDetails[]',
         'sendTrackingEmails' => 'bool',
         'brandId' => 'int',
         'labelUrl' => 'string',
-        'label' => \Toppy\Sendcloud\Model\ReturnLabel::class,
-        'labelCost' => \Toppy\Sendcloud\Model\Price::class,
+        'label' => \Toppy\Sendcloud\V3\Model\ReturnLabel::class,
+        'labelCost' => \Toppy\Sendcloud\V3\Model\Price::class,
         'insurance' => 'bool',
         'trackingNumber' => 'string',
         'trackingUrl' => 'string',
         'isCancellable' => 'bool',
-        'statusHistory' => '\Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]',
+        'statusHistory' => '\Toppy\Sendcloud\V3\Model\DetailedTrackingBlobStatus[]',
         'createdAt' => '\DateTime',
         'deliveredAt' => 'float',
         'deliveredAtIso' => '\DateTime',
-        'reason' => \Toppy\Sendcloud\Model\ReturnReason::class,
-        'refund' => \Toppy\Sendcloud\Model\ReturnRefund::class,
-        'returnFee' => \Toppy\Sendcloud\Model\PriceWithAnyCurrency::class,
+        'reason' => \Toppy\Sendcloud\V3\Model\ReturnReason::class,
+        'refund' => \Toppy\Sendcloud\V3\Model\ReturnRefund::class,
+        'returnFee' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'orderNumber' => 'string',
         'contract' => 'int',
         'customsInvoiceNr' => 'string',
         'customsShipmentType' => 'int',
-        'deliveryOption' => \Toppy\Sendcloud\Model\DeliveryOption::class,
-        'images' => '\Toppy\Sendcloud\Model\ReturnImagesInner[]',
+        'deliveryOption' => \Toppy\Sendcloud\V3\Model\DeliveryOption::class,
+        'images' => '\Toppy\Sendcloud\V3\Model\ReturnImagesInner[]',
         'status' => 'string',
-        'customsInformation' => \Toppy\Sendcloud\Model\ParcelCustomsInformation::class,
-        'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]'
+        'customsInformation' => \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation::class,
+        'errors' => '\Toppy\Sendcloud\V3\Model\ErrorObject[]'
     ];
 
     /**
@@ -599,7 +599,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getFromAddress()
     {
@@ -609,7 +609,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $fromAddress fromAddress
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -637,7 +637,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -655,7 +655,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets shippingProduct
      *
-     * @return \Toppy\Sendcloud\Model\ShippingProductsRef
+     * @return \Toppy\Sendcloud\V3\Model\ShippingProductsRef
      */
     public function getShippingProduct()
     {
@@ -665,7 +665,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets shippingProduct
      *
-     * @param \Toppy\Sendcloud\Model\ShippingProductsRef $shippingProduct shippingProduct
+     * @param \Toppy\Sendcloud\V3\Model\ShippingProductsRef $shippingProduct shippingProduct
      *
      * @return self
      */
@@ -683,7 +683,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
      */
     public function getDimensions()
     {
@@ -693,7 +693,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\Dimension|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimensions dimensions
      *
      * @return self
      */
@@ -711,7 +711,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight
+     * @return \Toppy\Sendcloud\V3\Model\Weight
      */
     public function getWeight()
     {
@@ -721,7 +721,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight $weight weight
      *
      * @return self
      */
@@ -771,7 +771,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItemReturnsDetails[]|null
      */
     public function getParcelItems()
     {
@@ -781,7 +781,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemReturnsDetails[]|null $parcelItems List of items contained in this return. Required outside the EU.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItemReturnsDetails[]|null $parcelItems List of items contained in this return. Required outside the EU.
      *
      * @return self
      */
@@ -889,7 +889,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets label
      *
-     * @return \Toppy\Sendcloud\Model\ReturnLabel|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnLabel|null
      */
     public function getLabel()
     {
@@ -899,7 +899,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets label
      *
-     * @param \Toppy\Sendcloud\Model\ReturnLabel|null $label label
+     * @param \Toppy\Sendcloud\V3\Model\ReturnLabel|null $label label
      *
      * @return self
      */
@@ -917,7 +917,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets labelCost
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getLabelCost()
     {
@@ -927,7 +927,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets labelCost
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $labelCost labelCost
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $labelCost labelCost
      *
      * @return self
      */
@@ -1057,7 +1057,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets statusHistory
      *
-     * @return \Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]
+     * @return \Toppy\Sendcloud\V3\Model\DetailedTrackingBlobStatus[]
      */
     public function getStatusHistory()
     {
@@ -1067,7 +1067,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets statusHistory
      *
-     * @param \Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[] $statusHistory List with the timeline of your return status
+     * @param \Toppy\Sendcloud\V3\Model\DetailedTrackingBlobStatus[] $statusHistory List with the timeline of your return status
      *
      * @return self
      */
@@ -1176,7 +1176,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets reason
      *
-     * @return \Toppy\Sendcloud\Model\ReturnReason|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnReason|null
      */
     public function getReason()
     {
@@ -1186,7 +1186,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets reason
      *
-     * @param \Toppy\Sendcloud\Model\ReturnReason|null $reason reason
+     * @param \Toppy\Sendcloud\V3\Model\ReturnReason|null $reason reason
      *
      * @return self
      */
@@ -1204,7 +1204,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets refund
      *
-     * @return \Toppy\Sendcloud\Model\ReturnRefund|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnRefund|null
      */
     public function getRefund()
     {
@@ -1214,7 +1214,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets refund
      *
-     * @param \Toppy\Sendcloud\Model\ReturnRefund|null $refund refund
+     * @param \Toppy\Sendcloud\V3\Model\ReturnRefund|null $refund refund
      *
      * @return self
      */
@@ -1232,7 +1232,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets returnFee
      *
-     * @return \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null
+     * @return \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null
      */
     public function getReturnFee()
     {
@@ -1242,7 +1242,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets returnFee
      *
-     * @param \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null $returnFee returnFee
+     * @param \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null $returnFee returnFee
      *
      * @return self
      */
@@ -1383,7 +1383,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets deliveryOption
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryOption|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption|null
      */
     public function getDeliveryOption()
     {
@@ -1393,7 +1393,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets deliveryOption
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryOption|null $deliveryOption deliveryOption
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption|null $deliveryOption deliveryOption
      *
      * @return self
      */
@@ -1411,7 +1411,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets images
      *
-     * @return \Toppy\Sendcloud\Model\ReturnImagesInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnImagesInner[]|null
      */
     public function getImages()
     {
@@ -1421,7 +1421,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets images
      *
-     * @param \Toppy\Sendcloud\Model\ReturnImagesInner[]|null $images Images uploaded when creating a return via the Return Portal
+     * @param \Toppy\Sendcloud\V3\Model\ReturnImagesInner[]|null $images Images uploaded when creating a return via the Return Portal
      *
      * @return self
      */
@@ -1482,7 +1482,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformation|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -1492,7 +1492,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */
@@ -1510,7 +1510,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets errors
      *
-     * @return \Toppy\Sendcloud\Model\ErrorObject[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ErrorObject[]|null
      */
     public function getErrors()
     {
@@ -1520,7 +1520,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets errors
      *
-     * @param \Toppy\Sendcloud\Model\ErrorObject[]|null $errors This array will contain errors such as carrier announcement errors.
+     * @param \Toppy\Sendcloud\V3\Model\ErrorObject[]|null $errors This array will contain errors such as carrier announcement errors.
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * HTTPValidationError Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'detail' => '\Toppy\Sendcloud\Model\ValidationError[]'
+        'detail' => '\Toppy\Sendcloud\V3\Model\ValidationError[]'
     ];
 
     /**
@@ -262,7 +262,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets detail
      *
-     * @return \Toppy\Sendcloud\Model\ValidationError[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ValidationError[]|null
      */
     public function getDetail()
     {
@@ -272,7 +272,7 @@ class HTTPValidationError implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets detail
      *
-     * @param \Toppy\Sendcloud\Model\ValidationError[]|null $detail detail
+     * @param \Toppy\Sendcloud\V3\Model\ValidationError[]|null $detail detail
      *
      * @return self
      */

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ShipmentsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ShipmentsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -172,7 +172,7 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
@@ -185,9 +185,9 @@ class ShipmentsApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpGetAllShipments($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
     {
@@ -200,7 +200,7 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
@@ -213,9 +213,9 @@ class ShipmentsApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The maximum number of items to be returned in the response. (optional, default to 40)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetAllShipmentsWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
     {
@@ -251,14 +251,14 @@ class ShipmentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -279,7 +279,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response::class,
                 $request,
                 $response,
             );
@@ -288,7 +288,7 @@ class ShipmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -296,7 +296,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -304,7 +304,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -321,7 +321,7 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
@@ -352,7 +352,7 @@ class ShipmentsApi
      *
      * Retrieve shipments
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
@@ -370,7 +370,7 @@ class ShipmentsApi
      */
     public function scPublicV3ScpGetAllShipmentsAsyncWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReferenceId = null, $orderNumber = null, $integrationId = null, $updatedBefore = null, $updatedAfter = null, $announcedBefore = null, $announcedAfter = null, $ids = null, $cursor = null, $pageSize = 40)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipments200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipments200Response::class;
         $request = $this->scPublicV3ScpGetAllShipmentsRequest($parcelStatus, $trackingNumber, $externalReferenceId, $orderNumber, $integrationId, $updatedBefore, $updatedAfter, $announcedBefore, $announcedAfter, $ids, $cursor, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -408,7 +408,7 @@ class ShipmentsApi
     /**
      * Create request for operation 'scPublicV3ScpGetAllShipments'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllShipmentsParcelStatusParameter $parcelStatus Returns shipments that have the requested status. For a list of possible statuses, see the [Retrieve a list of parcel statuses](/api/v3/parcel-statuses/retrieve-a-list-of-parcel-statuses) endpoint. (optional)
      * @param  string $trackingNumber Returns shipments that match a specified tracking number (optional)
      * @param  string $externalReferenceId Returns shipments that match a specified external reference (optional)
      * @param  string $orderNumber Returns a shipment that matches a specific &#x60;order_number&#x60; property from your shipments (optional)
@@ -651,9 +651,9 @@ class ShipmentsApi
      *
      * @param  string $id The id of the shipment you want to retrieve (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response
      */
     public function scPublicV3ScpGetShipmentById($id)
     {
@@ -668,9 +668,9 @@ class ShipmentsApi
      *
      * @param  string $id The id of the shipment you want to retrieve (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetShipmentByIdWithHttpInfo($id)
     {
@@ -705,7 +705,7 @@ class ShipmentsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response::class,
                     $request,
                     $response,
                 );
@@ -726,7 +726,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response::class,
                 $request,
                 $response,
             );
@@ -734,7 +734,7 @@ class ShipmentsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -778,7 +778,7 @@ class ShipmentsApi
      */
     public function scPublicV3ScpGetShipmentByIdAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetShipmentById200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetShipmentById200Response::class;
         $request = $this->scPublicV3ScpGetShipmentByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -908,11 +908,11 @@ class ShipmentsApi
      * Create and announce a shipment synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostAnnounceShipment($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
     {
@@ -926,11 +926,11 @@ class ShipmentsApi
      * Create and announce a shipment synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostAnnounceShipmentWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
     {
@@ -966,14 +966,14 @@ class ShipmentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                        \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -994,7 +994,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                 $request,
                 $response,
             );
@@ -1003,7 +1003,7 @@ class ShipmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                        \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1011,7 +1011,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1019,7 +1019,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1037,7 +1037,7 @@ class ShipmentsApi
      * Create and announce a shipment synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1058,14 +1058,14 @@ class ShipmentsApi
      * Create and announce a shipment synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostAnnounceShipmentAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestSyncAnnounce = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class;
         $request = $this->scPublicV3ScpPostAnnounceShipmentRequest($sendcloudPartnerId, $shipmentRequestSyncAnnounce);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1104,7 +1104,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV3ScpPostAnnounceShipment'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestSyncAnnounce $shipmentRequestSyncAnnounce  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1194,11 +1194,11 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostAnnounceShipmentWithRules($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
@@ -1212,11 +1212,11 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostAnnounceShipmentWithRulesWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
@@ -1252,14 +1252,14 @@ class ShipmentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                        \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1280,7 +1280,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                 $request,
                 $response,
             );
@@ -1289,7 +1289,7 @@ class ShipmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class,
+                        \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1297,7 +1297,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1305,7 +1305,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1323,7 +1323,7 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1344,14 +1344,14 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostAnnounceShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\AnnouncedShipmentIncludingLabel::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\AnnouncedShipmentIncludingLabel::class;
         $request = $this->scPublicV3ScpPostAnnounceShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1390,7 +1390,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV3ScpPostAnnounceShipmentWithRules'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1481,9 +1481,9 @@ class ShipmentsApi
      *
      * @param  string $id ID of the shipment (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CancelShipmentStatus|\Toppy\Sendcloud\Model\CancelShipmentStatus|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\CancelShipmentStatus|\Toppy\Sendcloud\V3\Model\CancelShipmentStatus|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostCancelShipment($id)
     {
@@ -1498,9 +1498,9 @@ class ShipmentsApi
      *
      * @param  string $id ID of the shipment (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CancelShipmentStatus|\Toppy\Sendcloud\Model\CancelShipmentStatus|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CancelShipmentStatus|\Toppy\Sendcloud\V3\Model\CancelShipmentStatus|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostCancelShipmentWithHttpInfo($id)
     {
@@ -1537,14 +1537,14 @@ class ShipmentsApi
                 case 200:
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CancelShipmentStatus::class,
+                        \Toppy\Sendcloud\V3\Model\CancelShipmentStatus::class,
                         $request,
                         $response,
                     );
                 case 404:
                 case 409:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1565,7 +1565,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CancelShipmentStatus::class,
+                \Toppy\Sendcloud\V3\Model\CancelShipmentStatus::class,
                 $request,
                 $response,
             );
@@ -1574,7 +1574,7 @@ class ShipmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CancelShipmentStatus::class,
+                        \Toppy\Sendcloud\V3\Model\CancelShipmentStatus::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1582,7 +1582,7 @@ class ShipmentsApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CancelShipmentStatus::class,
+                        \Toppy\Sendcloud\V3\Model\CancelShipmentStatus::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1590,7 +1590,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1598,7 +1598,7 @@ class ShipmentsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1642,7 +1642,7 @@ class ShipmentsApi
      */
     public function scPublicV3ScpPostCancelShipmentAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\CancelShipmentStatus::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CancelShipmentStatus::class;
         $request = $this->scPublicV3ScpPostCancelShipmentRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1772,11 +1772,11 @@ class ShipmentsApi
      * Create and announce a shipment asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostCreateShipment($sendcloudPartnerId = null, $shipmentRequestAsync = null)
     {
@@ -1790,11 +1790,11 @@ class ShipmentsApi
      * Create and announce a shipment asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostCreateShipmentWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestAsync = null)
     {
@@ -1830,14 +1830,14 @@ class ShipmentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1858,7 +1858,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                 $request,
                 $response,
             );
@@ -1867,7 +1867,7 @@ class ShipmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1875,7 +1875,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1883,7 +1883,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1901,7 +1901,7 @@ class ShipmentsApi
      * Create and announce a shipment asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1922,14 +1922,14 @@ class ShipmentsApi
      * Create and announce a shipment asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostCreateShipmentAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestAsync = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class;
         $request = $this->scPublicV3ScpPostCreateShipmentRequest($sendcloudPartnerId, $shipmentRequestAsync);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1968,7 +1968,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV3ScpPostCreateShipment'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestAsync $shipmentRequestAsync  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -2058,11 +2058,11 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostCreateShipmentWithRules($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
@@ -2076,11 +2076,11 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostCreateShipmentWithRulesWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
@@ -2116,14 +2116,14 @@ class ShipmentsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -2144,7 +2144,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                 $request,
                 $response,
             );
@@ -2153,7 +2153,7 @@ class ShipmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2169,7 +2169,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2187,7 +2187,7 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -2208,14 +2208,14 @@ class ShipmentsApi
      * Create a shipment with rules and/or defaults and announce it asynchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostCreateShipmentWithRulesAsyncWithHttpInfo($sendcloudPartnerId = null, $shipmentRequestWithRules = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ShipmentCreatedResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ShipmentCreatedResponse::class;
         $request = $this->scPublicV3ScpPostCreateShipmentWithRulesRequest($sendcloudPartnerId, $shipmentRequestWithRules);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -2254,7 +2254,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV3ScpPostCreateShipmentWithRules'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShipmentRequestWithRules $shipmentRequestWithRules  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

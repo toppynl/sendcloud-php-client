@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpGetUserAuthMetadata200Response Class Doc Comment
  *
  * @category Class
  * @description Retrieve User Authentication/Authorization
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ScPublicV3ScpGetUserAuthMetadata200Response implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\UserAuthMetadata::class
+        'data' => \Toppy\Sendcloud\V3\Model\UserAuthMetadata::class
     ];
 
     /**
@@ -269,7 +269,7 @@ class ScPublicV3ScpGetUserAuthMetadata200Response implements ModelInterface, Arr
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\UserAuthMetadata
+     * @return \Toppy\Sendcloud\V3\Model\UserAuthMetadata
      */
     public function getData()
     {
@@ -279,7 +279,7 @@ class ScPublicV3ScpGetUserAuthMetadata200Response implements ModelInterface, Arr
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\UserAuthMetadata $data data
+     * @param \Toppy\Sendcloud\V3\Model\UserAuthMetadata $data data
      *
      * @return self
      */

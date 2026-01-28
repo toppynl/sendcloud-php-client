@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Toppy\Sendcloud\Test\Model;
+namespace Toppy\Sendcloud\V3\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Node for service point information. Use the [Retrieve a list of service points](/api/v2/service-points/retrieve-a-list-of-service-points) endpoint to find service points.
- * @package     Toppy\Sendcloud
+ * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

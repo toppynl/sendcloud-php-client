@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpGetShipmentById200Response Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ScPublicV3ScpGetShipmentById200Response implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\ShipmentResponse::class
+        'data' => \Toppy\Sendcloud\V3\Model\ShipmentResponse::class
     ];
 
     /**
@@ -263,7 +263,7 @@ class ScPublicV3ScpGetShipmentById200Response implements ModelInterface, ArrayAc
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ShipmentResponse|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentResponse|null
      */
     public function getData()
     {
@@ -273,7 +273,7 @@ class ScPublicV3ScpGetShipmentById200Response implements ModelInterface, ArrayAc
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ShipmentResponse|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\ShipmentResponse|null $data data
      *
      * @return self
      */

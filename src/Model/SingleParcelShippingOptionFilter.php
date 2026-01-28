@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * SingleParcelShippingOptionFilter Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,16 +60,16 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     protected static $openAPITypes = [
         'fromCountryCode' => 'string',
         'toCountryCode' => 'string',
-        'functionalities' => \Toppy\Sendcloud\Model\CarrierShippingFunctionalities::class,
+        'functionalities' => \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities::class,
         'carrierCode' => 'string',
         'contractId' => 'int',
         'shippingProductCode' => 'string',
-        'dimensions' => \Toppy\Sendcloud\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\Dimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
         'fromPostalCode' => 'string',
         'toPostalCode' => 'string',
         'totalInsurance' => 'float',
-        'leadTime' => \Toppy\Sendcloud\Model\LeadTimeFilter::class
+        'leadTime' => \Toppy\Sendcloud\V3\Model\LeadTimeFilter::class
     ];
 
     /**
@@ -415,7 +415,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Gets functionalities
      *
-     * @return \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null
      */
     public function getFunctionalities()
     {
@@ -425,7 +425,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Sets functionalities
      *
-     * @param \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null $functionalities functionalities
+     * @param \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null $functionalities functionalities
      *
      * @return self
      */
@@ -534,7 +534,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
      */
     public function getDimensions()
     {
@@ -544,7 +544,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\Dimension|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimensions dimensions
      *
      * @return self
      */
@@ -569,7 +569,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getWeight()
     {
@@ -579,7 +579,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
      *
      * @return self
      */
@@ -696,7 +696,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Gets leadTime
      *
-     * @return \Toppy\Sendcloud\Model\LeadTimeFilter|null
+     * @return \Toppy\Sendcloud\V3\Model\LeadTimeFilter|null
      */
     public function getLeadTime()
     {
@@ -706,7 +706,7 @@ class SingleParcelShippingOptionFilter implements ModelInterface, ArrayAccess, \
     /**
      * Sets leadTime
      *
-     * @param \Toppy\Sendcloud\Model\LeadTimeFilter|null $leadTime leadTime
+     * @param \Toppy\Sendcloud\V3\Model\LeadTimeFilter|null $leadTime leadTime
      *
      * @return self
      */

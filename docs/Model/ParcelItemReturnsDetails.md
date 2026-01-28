@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **itemId** | **string** | Order Item external ID in shop system | [optional]
 **description** | **string** | Description of the item | [optional]
 **quantity** | **int** | Quantity of items shipped | [optional]
-**weight** | [**\Toppy\Sendcloud\Model\Weight**](Weight.md) |  | [optional]
-**price** | [**\Toppy\Sendcloud\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]
-**value** | [**\Toppy\Sendcloud\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]
+**weight** | [**\Toppy\Sendcloud\V3\Model\Weight**](Weight.md) |  | [optional]
+**price** | [**\Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]
+**value** | [**\Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency**](PriceWithAnyCurrency.md) |  | [optional]
 **hsCode** | **string** | Harmonized System Code. **This field is required if it&#39;s an international return** | [optional]
 **originCountry** | **string** | ISO-2 code of the country where the items were originally produced. **This field is required if it&#39;s an international return** | [optional]
 **sku** | **string** | The SKU of the product | [optional]
@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **intendedUse** | **string** | Intended use of the order contents. The intended use may be personal or commercial. | [optional]
 **properties** | **array<string,mixed>** | Any custom user-defined properties of order item or product | [optional]
 **variantId** | **string** | Variant ID of the product. Imported from a shop system | [optional] [readonly]
-**returnReason** | [**\Toppy\Sendcloud\Model\ReturnReason**](ReturnReason.md) |  | [optional]
+**returnReason** | [**\Toppy\Sendcloud\V3\Model\ReturnReason**](ReturnReason.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

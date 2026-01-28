@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**loc** | [**\Toppy\Sendcloud\Model\LocationInner[]**](LocationInner.md) |  |
+**loc** | [**\Toppy\Sendcloud\V3\Model\LocationInner[]**](LocationInner.md) |  |
 **msg** | **string** |  |
 **type** | **string** |  |
 

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ContentsSalesValueField Class Doc Comment
  *
  * @category Class
  * @description Sales value of the contents of the parcel
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ContentsSalesValueField implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'price' => 'float',
-        'currency' => \Toppy\Sendcloud\Model\CurrencyType::class
+        'currency' => \Toppy\Sendcloud\V3\Model\CurrencyType::class
     ];
 
     /**
@@ -298,7 +298,7 @@ class ContentsSalesValueField implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets currency
      *
-     * @return \Toppy\Sendcloud\Model\CurrencyType|null
+     * @return \Toppy\Sendcloud\V3\Model\CurrencyType|null
      */
     public function getCurrency()
     {
@@ -308,7 +308,7 @@ class ContentsSalesValueField implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets currency
      *
-     * @param \Toppy\Sendcloud\Model\CurrencyType|null $currency currency
+     * @param \Toppy\Sendcloud\V3\Model\CurrencyType|null $currency currency
      *
      * @return self
      */

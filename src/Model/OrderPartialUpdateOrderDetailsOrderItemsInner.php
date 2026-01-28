@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderPartialUpdateOrderDetailsOrderItemsInner Class Doc Comment
  *
  * @category Class
  * @description Order item
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,13 +68,13 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
         'hsCode' => 'string',
         'countryOfOrigin' => 'string',
         'properties' => 'array<string,mixed>',
-        'unitPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'totalPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'measurement' => \Toppy\Sendcloud\Model\Measurement::class,
+        'unitPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'measurement' => \Toppy\Sendcloud\V3\Model\Measurement::class,
         'midCode' => 'string',
         'materialContent' => 'string',
         'intendedUse' => 'string',
-        'deliveryDates' => \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates::class
+        'deliveryDates' => \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates::class
     ];
 
     /**
@@ -646,7 +646,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets unitPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getUnitPrice()
     {
@@ -656,7 +656,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets unitPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $unitPrice unitPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $unitPrice unitPrice
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getTotalPrice()
     {
@@ -684,7 +684,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $totalPrice totalPrice
      *
      * @return self
      */
@@ -702,7 +702,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets measurement
      *
-     * @return \Toppy\Sendcloud\Model\Measurement|null
+     * @return \Toppy\Sendcloud\V3\Model\Measurement|null
      */
     public function getMeasurement()
     {
@@ -712,7 +712,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets measurement
      *
-     * @param \Toppy\Sendcloud\Model\Measurement|null $measurement measurement
+     * @param \Toppy\Sendcloud\V3\Model\Measurement|null $measurement measurement
      *
      * @return self
      */
@@ -814,7 +814,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Gets deliveryDates
      *
-     * @return \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates|null
      */
     public function getDeliveryDates()
     {
@@ -824,7 +824,7 @@ class OrderPartialUpdateOrderDetailsOrderItemsInner implements ModelInterface, A
     /**
      * Sets deliveryDates
      *
-     * @param \Toppy\Sendcloud\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates|null $deliveryDates deliveryDates
+     * @param \Toppy\Sendcloud\V3\Model\OrderPartialUpdateOrderDetailsOrderItemsInnerDeliveryDates|null $deliveryDates deliveryDates
      *
      * @return self
      */

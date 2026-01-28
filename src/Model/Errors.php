@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * Errors Class Doc Comment
  *
  * @category Class
  * @description A standardized format for errors in JSON:API responses.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]'
+        'errors' => '\Toppy\Sendcloud\V3\Model\ErrorObject[]'
     ];
 
     /**
@@ -263,7 +263,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets errors
      *
-     * @return \Toppy\Sendcloud\Model\ErrorObject[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ErrorObject[]|null
      */
     public function getErrors()
     {
@@ -273,7 +273,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets errors
      *
-     * @param \Toppy\Sendcloud\Model\ErrorObject[]|null $errors errors
+     * @param \Toppy\Sendcloud\V3\Model\ErrorObject[]|null $errors errors
      *
      * @return self
      */

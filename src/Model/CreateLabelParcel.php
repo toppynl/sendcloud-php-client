@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateLabelParcel Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,12 +58,12 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimensions' => \Toppy\Sendcloud\Model\StrDimensions::class,
-        'weight' => \Toppy\Sendcloud\Model\StrWeight::class,
-        'additionalInsuredPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\StrDimensions::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\StrWeight::class,
+        'additionalInsuredPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'labelNotes' => 'string[]',
         'sscc' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\OrderItem[]'
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\OrderItem[]'
     ];
 
     /**
@@ -333,7 +333,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\StrDimensions|null
+     * @return \Toppy\Sendcloud\V3\Model\StrDimensions|null
      */
     public function getDimensions()
     {
@@ -343,7 +343,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\StrDimensions|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\StrDimensions|null $dimensions dimensions
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\StrWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\StrWeight|null
      */
     public function getWeight()
     {
@@ -371,7 +371,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\StrWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\StrWeight|null $weight weight
      *
      * @return self
      */
@@ -389,7 +389,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets additionalInsuredPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getAdditionalInsuredPrice()
     {
@@ -399,7 +399,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets additionalInsuredPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
      *
      * @return self
      */
@@ -496,7 +496,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\OrderItem[]
+     * @return \Toppy\Sendcloud\V3\Model\OrderItem[]
      */
     public function getParcelItems()
     {
@@ -506,7 +506,7 @@ class CreateLabelParcel implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\OrderItem[] $parcelItems List of items/products from the order that the parcel contains.
+     * @param \Toppy\Sendcloud\V3\Model\OrderItem[] $parcelItems List of items/products from the order that the parcel contains.
      *
      * @return self
      */

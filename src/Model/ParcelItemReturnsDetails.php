@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelItemReturnsDetails Class Doc Comment
  *
  * @category Class
  * @description A single item in a shipment
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,9 +62,9 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
-        'price' => \Toppy\Sendcloud\Model\PriceWithAnyCurrency::class,
-        'value' => \Toppy\Sendcloud\Model\PriceWithAnyCurrency::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'price' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
+        'value' => \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency::class,
         'hsCode' => 'string',
         'originCountry' => 'string',
         'sku' => 'string',
@@ -76,7 +76,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
         'intendedUse' => 'string',
         'properties' => 'array<string,mixed>',
         'variantId' => 'string',
-        'returnReason' => \Toppy\Sendcloud\Model\ReturnReason::class
+        'returnReason' => \Toppy\Sendcloud\V3\Model\ReturnReason::class
     ];
 
     /**
@@ -480,7 +480,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getWeight()
     {
@@ -490,7 +490,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
      *
      * @return self
      */
@@ -508,7 +508,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null
+     * @return \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null
      */
     public function getPrice()
     {
@@ -518,7 +518,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null $price price
+     * @param \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null $price price
      *
      * @return self
      */
@@ -536,7 +536,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets value
      *
-     * @return \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null
+     * @return \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null
      */
     public function getValue()
     {
@@ -546,7 +546,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets value
      *
-     * @param \Toppy\Sendcloud\Model\PriceWithAnyCurrency|null $value value
+     * @param \Toppy\Sendcloud\V3\Model\PriceWithAnyCurrency|null $value value
      *
      * @return self
      */
@@ -878,7 +878,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets returnReason
      *
-     * @return \Toppy\Sendcloud\Model\ReturnReason|null
+     * @return \Toppy\Sendcloud\V3\Model\ReturnReason|null
      */
     public function getReturnReason()
     {
@@ -888,7 +888,7 @@ class ParcelItemReturnsDetails implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets returnReason
      *
-     * @param \Toppy\Sendcloud\Model\ReturnReason|null $returnReason returnReason
+     * @param \Toppy\Sendcloud\V3\Model\ReturnReason|null $returnReason returnReason
      *
      * @return self
      */

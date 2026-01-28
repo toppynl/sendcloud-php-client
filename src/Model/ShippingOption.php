@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingOption Class Doc Comment
  *
  * @category Class
  * @description A shipping option is a shipping product that the carrier offers in combination with a unique set of shipping functionalities.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,16 +61,16 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     protected static $openAPITypes = [
         'code' => 'string',
         'name' => 'string',
-        'carrier' => \Toppy\Sendcloud\Model\Carrier::class,
-        'product' => \Toppy\Sendcloud\Model\ShippingProduct::class,
-        'functionalities' => \Toppy\Sendcloud\Model\CarrierShippingFunctionalities::class,
-        'maxDimensions' => \Toppy\Sendcloud\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\Model\ShippingQuoteWeight::class,
-        'parcelBilledWeights' => '\Toppy\Sendcloud\Model\ParcelBilledWeights[]',
-        'contract' => \Toppy\Sendcloud\Model\Contract::class,
-        'requirements' => \Toppy\Sendcloud\Model\Requirements::class,
+        'carrier' => \Toppy\Sendcloud\V3\Model\Carrier::class,
+        'product' => \Toppy\Sendcloud\V3\Model\ShippingProduct::class,
+        'functionalities' => \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities::class,
+        'maxDimensions' => \Toppy\Sendcloud\V3\Model\Dimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight::class,
+        'parcelBilledWeights' => '\Toppy\Sendcloud\V3\Model\ParcelBilledWeights[]',
+        'contract' => \Toppy\Sendcloud\V3\Model\Contract::class,
+        'requirements' => \Toppy\Sendcloud\V3\Model\Requirements::class,
         'chargingType' => 'string',
-        'quotes' => '\Toppy\Sendcloud\Model\ShippingQuote[]'
+        'quotes' => '\Toppy\Sendcloud\V3\Model\ShippingQuote[]'
     ];
 
     /**
@@ -423,7 +423,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets carrier
      *
-     * @return \Toppy\Sendcloud\Model\Carrier|null
+     * @return \Toppy\Sendcloud\V3\Model\Carrier|null
      */
     public function getCarrier()
     {
@@ -433,7 +433,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets carrier
      *
-     * @param \Toppy\Sendcloud\Model\Carrier|null $carrier carrier
+     * @param \Toppy\Sendcloud\V3\Model\Carrier|null $carrier carrier
      *
      * @return self
      */
@@ -451,7 +451,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets product
      *
-     * @return \Toppy\Sendcloud\Model\ShippingProduct|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingProduct|null
      */
     public function getProduct()
     {
@@ -461,7 +461,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets product
      *
-     * @param \Toppy\Sendcloud\Model\ShippingProduct|null $product product
+     * @param \Toppy\Sendcloud\V3\Model\ShippingProduct|null $product product
      *
      * @return self
      */
@@ -479,7 +479,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets functionalities
      *
-     * @return \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null
      */
     public function getFunctionalities()
     {
@@ -489,7 +489,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets functionalities
      *
-     * @param \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null $functionalities functionalities
+     * @param \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null $functionalities functionalities
      *
      * @return self
      */
@@ -507,7 +507,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets maxDimensions
      *
-     * @return \Toppy\Sendcloud\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
      */
     public function getMaxDimensions()
     {
@@ -517,7 +517,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets maxDimensions
      *
-     * @param \Toppy\Sendcloud\Model\Dimension|null $maxDimensions maxDimensions
+     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $maxDimensions maxDimensions
      *
      * @return self
      */
@@ -535,7 +535,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\ShippingQuoteWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight|null
      */
     public function getWeight()
     {
@@ -545,7 +545,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\ShippingQuoteWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight|null $weight weight
      *
      * @return self
      */
@@ -563,7 +563,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets parcelBilledWeights
      *
-     * @return \Toppy\Sendcloud\Model\ParcelBilledWeights[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelBilledWeights[]|null
      */
     public function getParcelBilledWeights()
     {
@@ -573,7 +573,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets parcelBilledWeights
      *
-     * @param \Toppy\Sendcloud\Model\ParcelBilledWeights[]|null $parcelBilledWeights If `dimensions` are provided, the volumetric weight will be calculated. The billed weight will indicate which is the highest of the regular weight and the volumetric weight.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelBilledWeights[]|null $parcelBilledWeights If `dimensions` are provided, the volumetric weight will be calculated. The billed weight will indicate which is the highest of the regular weight and the volumetric weight.
      *
      * @return self
      */
@@ -591,7 +591,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets contract
      *
-     * @return \Toppy\Sendcloud\Model\Contract|null
+     * @return \Toppy\Sendcloud\V3\Model\Contract|null
      */
     public function getContract()
     {
@@ -601,7 +601,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets contract
      *
-     * @param \Toppy\Sendcloud\Model\Contract|null $contract contract
+     * @param \Toppy\Sendcloud\V3\Model\Contract|null $contract contract
      *
      * @return self
      */
@@ -619,7 +619,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets requirements
      *
-     * @return \Toppy\Sendcloud\Model\Requirements|null
+     * @return \Toppy\Sendcloud\V3\Model\Requirements|null
      */
     public function getRequirements()
     {
@@ -629,7 +629,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets requirements
      *
-     * @param \Toppy\Sendcloud\Model\Requirements|null $requirements requirements
+     * @param \Toppy\Sendcloud\V3\Model\Requirements|null $requirements requirements
      *
      * @return self
      */
@@ -686,7 +686,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets quotes
      *
-     * @return \Toppy\Sendcloud\Model\ShippingQuote[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingQuote[]|null
      */
     public function getQuotes()
     {
@@ -696,7 +696,7 @@ class ShippingOption implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets quotes
      *
-     * @param \Toppy\Sendcloud\Model\ShippingQuote[]|null $quotes List of available quotes.  Quotes will only be calculated if:    - `from_country_code` and `to_country_code` are to provided. - Direct contract prices are provided for the returned shipping options.
+     * @param \Toppy\Sendcloud\V3\Model\ShippingQuote[]|null $quotes List of available quotes.  Quotes will only be calculated if:    - `from_country_code` and `to_country_code` are to provided. - Direct contract prices are provided for the returned shipping options.
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShipmentCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'externalReferenceId' => 'string',
-        'order' => \Toppy\Sendcloud\Model\OrderCreateRequest::class,
-        'price' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'order' => \Toppy\Sendcloud\V3\Model\OrderCreateRequest::class,
+        'price' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'sourceId' => 'string'
     ];
 
@@ -327,7 +327,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets order
      *
-     * @return \Toppy\Sendcloud\Model\OrderCreateRequest|null
+     * @return \Toppy\Sendcloud\V3\Model\OrderCreateRequest|null
      */
     public function getOrder()
     {
@@ -337,7 +337,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets order
      *
-     * @param \Toppy\Sendcloud\Model\OrderCreateRequest|null $order order
+     * @param \Toppy\Sendcloud\V3\Model\OrderCreateRequest|null $order order
      *
      * @return self
      */
@@ -355,7 +355,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getPrice()
     {
@@ -365,7 +365,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $price price
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $price price
      *
      * @return self
      */

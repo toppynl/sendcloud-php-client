@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * CreateTicketApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class CreateTicketApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -172,11 +172,11 @@ class CreateTicketApi
      *
      * Create a ticket for an address change
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsAddressChange($scPublicV3DsfPostTicketsAddressChangeRequest)
     {
@@ -189,11 +189,11 @@ class CreateTicketApi
      *
      * Create a ticket for an address change
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsAddressChangeWithHttpInfo($scPublicV3DsfPostTicketsAddressChangeRequest)
     {
@@ -229,7 +229,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -259,7 +259,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -268,7 +268,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -276,7 +276,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -284,7 +284,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -292,7 +292,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -300,7 +300,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -317,7 +317,7 @@ class CreateTicketApi
      *
      * Create a ticket for an address change
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -337,14 +337,14 @@ class CreateTicketApi
      *
      * Create a ticket for an address change
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsAddressChangeAsyncWithHttpInfo($scPublicV3DsfPostTicketsAddressChangeRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsAddressChangeRequest($scPublicV3DsfPostTicketsAddressChangeRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -382,7 +382,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsAddressChange'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsAddressChangeRequest $scPublicV3DsfPostTicketsAddressChangeRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -473,11 +473,11 @@ class CreateTicketApi
      *
      * Create a ticket for a damaged parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsDamage($scPublicV3DsfPostTicketsDamageRequest)
     {
@@ -490,11 +490,11 @@ class CreateTicketApi
      *
      * Create a ticket for a damaged parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsDamageWithHttpInfo($scPublicV3DsfPostTicketsDamageRequest)
     {
@@ -530,7 +530,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -539,7 +539,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -560,7 +560,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -569,7 +569,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -577,7 +577,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -585,7 +585,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -593,7 +593,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -601,7 +601,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -618,7 +618,7 @@ class CreateTicketApi
      *
      * Create a ticket for a damaged parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -638,14 +638,14 @@ class CreateTicketApi
      *
      * Create a ticket for a damaged parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsDamageAsyncWithHttpInfo($scPublicV3DsfPostTicketsDamageRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsDamageRequest($scPublicV3DsfPostTicketsDamageRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -683,7 +683,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsDamage'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDamageRequest $scPublicV3DsfPostTicketsDamageRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -774,11 +774,11 @@ class CreateTicketApi
      *
      * Create a ticket for a delayed parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsDelay($scPublicV3DsfPostTicketsDelayRequest)
     {
@@ -791,11 +791,11 @@ class CreateTicketApi
      *
      * Create a ticket for a delayed parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsDelayWithHttpInfo($scPublicV3DsfPostTicketsDelayRequest)
     {
@@ -831,7 +831,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -840,7 +840,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -861,7 +861,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -870,7 +870,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -878,7 +878,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -886,7 +886,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -894,7 +894,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -902,7 +902,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -919,7 +919,7 @@ class CreateTicketApi
      *
      * Create a ticket for a delayed parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -939,14 +939,14 @@ class CreateTicketApi
      *
      * Create a ticket for a delayed parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsDelayAsyncWithHttpInfo($scPublicV3DsfPostTicketsDelayRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsDelayRequest($scPublicV3DsfPostTicketsDelayRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -984,7 +984,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsDelay'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDelayRequest $scPublicV3DsfPostTicketsDelayRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1075,11 +1075,11 @@ class CreateTicketApi
      *
      * Create a ticket for a delivered but not received parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsDeliveredButNotReceived($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest)
     {
@@ -1092,11 +1092,11 @@ class CreateTicketApi
      *
      * Create a ticket for a delivered but not received parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsDeliveredButNotReceivedWithHttpInfo($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest)
     {
@@ -1132,7 +1132,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1141,7 +1141,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1162,7 +1162,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -1171,7 +1171,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1179,7 +1179,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1187,7 +1187,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1203,7 +1203,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1220,7 +1220,7 @@ class CreateTicketApi
      *
      * Create a ticket for a delivered but not received parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1240,14 +1240,14 @@ class CreateTicketApi
      *
      * Create a ticket for a delivered but not received parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsDeliveredButNotReceivedAsyncWithHttpInfo($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest($scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1285,7 +1285,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsDeliveredButNotReceived'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsDeliveredButNotReceivedRequest $scPublicV3DsfPostTicketsDeliveredButNotReceivedRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1376,11 +1376,11 @@ class CreateTicketApi
      *
      * Create a ticket for a lost parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsLost($scPublicV3DsfPostTicketsLostRequest)
     {
@@ -1393,11 +1393,11 @@ class CreateTicketApi
      *
      * Create a ticket for a lost parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsLostWithHttpInfo($scPublicV3DsfPostTicketsLostRequest)
     {
@@ -1433,7 +1433,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1442,7 +1442,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1463,7 +1463,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -1472,7 +1472,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1480,7 +1480,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1488,7 +1488,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1496,7 +1496,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1504,7 +1504,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1521,7 +1521,7 @@ class CreateTicketApi
      *
      * Create a ticket for a lost parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1541,14 +1541,14 @@ class CreateTicketApi
      *
      * Create a ticket for a lost parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsLostAsyncWithHttpInfo($scPublicV3DsfPostTicketsLostRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsLostRequest($scPublicV3DsfPostTicketsLostRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1586,7 +1586,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsLost'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsLostRequest $scPublicV3DsfPostTicketsLostRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1677,11 +1677,11 @@ class CreateTicketApi
      *
      * Create a ticket for an unjustly returned parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostTicketsUnjustReturn($scPublicV3DsfPostTicketsUnjustReturnRequest)
     {
@@ -1694,11 +1694,11 @@ class CreateTicketApi
      *
      * Create a ticket for an unjustly returned parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostTicketsUnjustReturnWithHttpInfo($scPublicV3DsfPostTicketsUnjustReturnRequest)
     {
@@ -1734,7 +1734,7 @@ class CreateTicketApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1743,7 +1743,7 @@ class CreateTicketApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1764,7 +1764,7 @@ class CreateTicketApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                 $request,
                 $response,
             );
@@ -1773,7 +1773,7 @@ class CreateTicketApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1781,7 +1781,7 @@ class CreateTicketApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1789,7 +1789,7 @@ class CreateTicketApi
                 case 406:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1797,7 +1797,7 @@ class CreateTicketApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1805,7 +1805,7 @@ class CreateTicketApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1822,7 +1822,7 @@ class CreateTicketApi
      *
      * Create a ticket for an unjustly returned parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1842,14 +1842,14 @@ class CreateTicketApi
      *
      * Create a ticket for an unjustly returned parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostTicketsUnjustReturnAsyncWithHttpInfo($scPublicV3DsfPostTicketsUnjustReturnRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CreateTicketResponseSchema::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CreateTicketResponseSchema::class;
         $request = $this->scPublicV3DsfPostTicketsUnjustReturnRequest($scPublicV3DsfPostTicketsUnjustReturnRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1887,7 +1887,7 @@ class CreateTicketApi
     /**
      * Create request for operation 'scPublicV3DsfPostTicketsUnjustReturn'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostTicketsUnjustReturnRequest $scPublicV3DsfPostTicketsUnjustReturnRequest Data that is needed for creation of a ticket for own contract parcel and parcels created using Sendcloud rates is different. Please refer to relevant examples below. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

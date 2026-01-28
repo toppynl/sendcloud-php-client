@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelItemWithOptionalFields Class Doc Comment
  *
  * @category Class
  * @description A single item (with optional fields) in a shipment. **Note that parcel item object is required for shipments that require customs documents.**
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,8 +62,8 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
-        'price' => \Toppy\Sendcloud\Model\RequiredPrice::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'price' => \Toppy\Sendcloud\V3\Model\RequiredPrice::class,
         'hsCode' => 'string',
         'originCountry' => 'string',
         'sku' => 'string',
@@ -71,7 +71,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
         'midCode' => 'string',
         'materialContent' => 'string',
         'intendedUse' => 'string',
-        'dangerousGoods' => \Toppy\Sendcloud\Model\DangerousGoods::class,
+        'dangerousGoods' => \Toppy\Sendcloud\V3\Model\DangerousGoods::class,
         'ddsReference' => 'string',
         'taricDocCode' => 'string',
         'properties' => 'array<string,mixed>'
@@ -494,7 +494,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getWeight()
     {
@@ -504,7 +504,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
      *
      * @return self
      */
@@ -522,7 +522,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\RequiredPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\RequiredPrice|null
      */
     public function getPrice()
     {
@@ -532,7 +532,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\RequiredPrice|null $price price
+     * @param \Toppy\Sendcloud\V3\Model\RequiredPrice|null $price price
      *
      * @return self
      */
@@ -750,7 +750,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets dangerousGoods
      *
-     * @return \Toppy\Sendcloud\Model\DangerousGoods|null
+     * @return \Toppy\Sendcloud\V3\Model\DangerousGoods|null
      */
     public function getDangerousGoods()
     {
@@ -760,7 +760,7 @@ class ParcelItemWithOptionalFields implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets dangerousGoods
      *
-     * @param \Toppy\Sendcloud\Model\DangerousGoods|null $dangerousGoods dangerousGoods
+     * @param \Toppy\Sendcloud\V3\Model\DangerousGoods|null $dangerousGoods dangerousGoods
      *
      * @return self
      */

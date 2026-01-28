@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Toppy\Sendcloud\Test\Model;
+namespace Toppy\Sendcloud\V3\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description A price object containing the shipping rate shown to the customer at checkout. This rate is calculated based on the cart&#39;s weight, value, and the [configured shipping rates](https://support.sendcloud.com/hc/en-us/articles/4414673031700-How-to-add-Dynamic-Checkout-rates) for the matched delivery method.
- * @package     Toppy\Sendcloud
+ * @package     Toppy\Sendcloud\V3
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * Volume Class Doc Comment
  *
  * @category Class
  * @description Volume in the specified unit
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class Volume implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
       */
     protected static $openAPITypes = [
         'value' => 'int',
-        'unit' => \Toppy\Sendcloud\Model\VolumeUnits::class
+        'unit' => \Toppy\Sendcloud\V3\Model\VolumeUnits::class
     ];
 
     /**
@@ -316,7 +316,7 @@ class Volume implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets unit
      *
-     * @return \Toppy\Sendcloud\Model\VolumeUnits
+     * @return \Toppy\Sendcloud\V3\Model\VolumeUnits
      */
     public function getUnit()
     {
@@ -326,7 +326,7 @@ class Volume implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets unit
      *
-     * @param \Toppy\Sendcloud\Model\VolumeUnits $unit unit
+     * @param \Toppy\Sendcloud\V3\Model\VolumeUnits $unit unit
      *
      * @return self
      */

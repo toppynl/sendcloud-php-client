@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderOrderDetails Class Doc Comment
  *
  * @category Class
  * @description Node for general order information
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'integration' => \Toppy\Sendcloud\Model\OrderOrderDetailsIntegration::class,
-        'status' => \Toppy\Sendcloud\Model\OrderOrderDetailsStatus::class,
+        'integration' => \Toppy\Sendcloud\V3\Model\OrderOrderDetailsIntegration::class,
+        'status' => \Toppy\Sendcloud\V3\Model\OrderOrderDetailsStatus::class,
         'orderCreatedAt' => '\DateTime',
         'orderUpdatedAt' => '\DateTime',
-        'orderItems' => '\Toppy\Sendcloud\Model\OrderItemsInner[]',
+        'orderItems' => '\Toppy\Sendcloud\V3\Model\OrderItemsInner[]',
         'notes' => 'string',
         'tags' => 'string[]'
     ];
@@ -323,7 +323,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets integration
      *
-     * @return \Toppy\Sendcloud\Model\OrderOrderDetailsIntegration
+     * @return \Toppy\Sendcloud\V3\Model\OrderOrderDetailsIntegration
      */
     public function getIntegration()
     {
@@ -333,7 +333,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets integration
      *
-     * @param \Toppy\Sendcloud\Model\OrderOrderDetailsIntegration $integration integration
+     * @param \Toppy\Sendcloud\V3\Model\OrderOrderDetailsIntegration $integration integration
      *
      * @return self
      */
@@ -351,7 +351,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\OrderOrderDetailsStatus
+     * @return \Toppy\Sendcloud\V3\Model\OrderOrderDetailsStatus
      */
     public function getStatus()
     {
@@ -361,7 +361,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\OrderOrderDetailsStatus $status status
+     * @param \Toppy\Sendcloud\V3\Model\OrderOrderDetailsStatus $status status
      *
      * @return self
      */
@@ -435,7 +435,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets orderItems
      *
-     * @return \Toppy\Sendcloud\Model\OrderItemsInner[]
+     * @return \Toppy\Sendcloud\V3\Model\OrderItemsInner[]
      */
     public function getOrderItems()
     {
@@ -445,7 +445,7 @@ class OrderOrderDetails implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets orderItems
      *
-     * @param \Toppy\Sendcloud\Model\OrderItemsInner[] $orderItems The list of items that an order contains
+     * @param \Toppy\Sendcloud\V3\Model\OrderItemsInner[] $orderItems The list of items that an order contains
      *
      * @return self
      */

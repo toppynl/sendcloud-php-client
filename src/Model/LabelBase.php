@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * LabelBase Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
         'shipmentId' => 'string',
         'orderId' => 'string',
         'orderNumber' => 'string',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class
     ];
 
     /**
@@ -367,7 +367,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -377,7 +377,7 @@ class LabelBase implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */

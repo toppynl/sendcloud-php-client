@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpGetAllParcelStatuses200Response Class Doc Comment
  *
  * @category Class
  * @description Retrieve Parcel Statuses
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ScPublicV3ScpGetAllParcelStatuses200Response implements ModelInterface, Ar
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\ParcelStatus[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\ParcelStatus[]'
     ];
 
     /**
@@ -277,7 +277,7 @@ class ScPublicV3ScpGetAllParcelStatuses200Response implements ModelInterface, Ar
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ParcelStatus[]
+     * @return \Toppy\Sendcloud\V3\Model\ParcelStatus[]
      */
     public function getData()
     {
@@ -287,7 +287,7 @@ class ScPublicV3ScpGetAllParcelStatuses200Response implements ModelInterface, Ar
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ParcelStatus[] $data data
+     * @param \Toppy\Sendcloud\V3\Model\ParcelStatus[] $data data
      *
      * @return self
      */

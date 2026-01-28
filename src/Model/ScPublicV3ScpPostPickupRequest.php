@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3ScpPostPickupRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,16 +58,16 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlotEndAtRequired[]',
-        'items' => '\Toppy\Sendcloud\Model\UpsPickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlotEndAtRequired[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\UpsPickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\UpsPickupAddress::class,
+        'address' => \Toppy\Sendcloud\V3\Model\UpsPickupAddress::class,
         'customerAccountNumber' => 'string',
         'tradingLocationId' => 'string',
-        'originDetail' => \Toppy\Sendcloud\Model\FedexOriginDetail::class,
+        'originDetail' => \Toppy\Sendcloud\V3\Model\FedexOriginDetail::class,
         'isOverweight' => 'bool'
     ];
 
@@ -387,7 +387,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlotEndAtRequired[]
+     * @return \ToppySendcloudV3ModelTimeSlotEndAtRequired[]
      */
     public function getTimeSlots()
     {
@@ -397,7 +397,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlotEndAtRequired[] $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlotEndAtRequired[] $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -415,7 +415,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\UpsPickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\UpsPickupItem[]|null
      */
     public function getItems()
     {
@@ -425,7 +425,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\UpsPickupItem[]|null $items items
+     * @param \Toppy\Sendcloud\V3\Model\UpsPickupItem[]|null $items items
      *
      * @return self
      */
@@ -570,7 +570,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\UpsPickupAddress
+     * @return \Toppy\Sendcloud\V3\Model\UpsPickupAddress
      */
     public function getAddress()
     {
@@ -580,7 +580,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\UpsPickupAddress $address address
+     * @param \Toppy\Sendcloud\V3\Model\UpsPickupAddress $address address
      *
      * @return self
      */
@@ -654,7 +654,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets originDetail
      *
-     * @return \Toppy\Sendcloud\Model\FedexOriginDetail
+     * @return \Toppy\Sendcloud\V3\Model\FedexOriginDetail
      */
     public function getOriginDetail()
     {
@@ -664,7 +664,7 @@ class ScPublicV3ScpPostPickupRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets originDetail
      *
-     * @param \Toppy\Sendcloud\Model\FedexOriginDetail $originDetail originDetail
+     * @param \Toppy\Sendcloud\V3\Model\FedexOriginDetail $originDetail originDetail
      *
      * @return self
      */

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ParcelDocumentsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ParcelDocumentsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -178,9 +178,9 @@ class ParcelDocumentsApi
      * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
      * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \SplFileObject|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpGetRetrieveParcelDocuments($id, $type, $dpi = 72, $accept = 'application/pdf', $paperSize = null)
     {
@@ -199,9 +199,9 @@ class ParcelDocumentsApi
      * @param  string $accept The returned format of the document.  **Note:** If a label is requested as native ZPL from the carrier it can&#39;t be converted to another format and will always be returned in ZPL. (optional, default to 'application/pdf')
      * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetRetrieveParcelDocumentsWithHttpInfo($id, $type, $dpi = 72, $accept = 'application/pdf', $paperSize = null)
     {
@@ -244,7 +244,7 @@ class ParcelDocumentsApi
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -282,7 +282,7 @@ class ParcelDocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -290,7 +290,7 @@ class ParcelDocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -528,9 +528,9 @@ class ParcelDocumentsApi
      * @param  string $type Document type you want to retrieve. (required)
      * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \SplFileObject|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpGetRetrieveParcelDocumentsBulk($parcels, $type, $paperSize = null)
     {
@@ -547,9 +547,9 @@ class ParcelDocumentsApi
      * @param  string $type Document type you want to retrieve. (required)
      * @param  string $paperSize The paper size of the document you would like to retrieve. Paper size can be one of:  - A4 - A5 - A6  Omitting this query parameter leads to the internal paper size of the document being used. Generally this is A6 for labels and A4 for larger documents, like customs documents. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetRetrieveParcelDocumentsBulkWithHttpInfo($parcels, $type, $paperSize = null)
     {
@@ -592,7 +592,7 @@ class ParcelDocumentsApi
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -630,7 +630,7 @@ class ParcelDocumentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -638,7 +638,7 @@ class ParcelDocumentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);

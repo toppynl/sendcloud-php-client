@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\SenderAddressApi
+# Toppy\Sendcloud\V3\SenderAddressApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV3AddressesGetAllSenderAddresses()`
 
 ```php
-scPublicV3AddressesGetAllSenderAddresses($cursor, $pageSize): \Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
+scPublicV3AddressesGetAllSenderAddresses($cursor, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response
 ```
 
 Retrieve a list of sender addresses
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\SenderAddressApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\SenderAddressApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3AddressesGetAllSenderAddresses200Response**](../Model/ScPublicV3AddressesGetAllSenderAddresses200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetAllSenderAddresses200Response**](../Model/ScPublicV3AddressesGetAllSenderAddresses200Response.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3AddressesGetSenderAddressById()`
 
 ```php
-scPublicV3AddressesGetSenderAddressById($id): \Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response
+scPublicV3AddressesGetSenderAddressById($id): \Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response
 ```
 
 Retrieve a sender address
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\SenderAddressApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\SenderAddressApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3AddressesGetSenderAddressById200Response**](../Model/ScPublicV3AddressesGetSenderAddressById200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3AddressesGetSenderAddressById200Response**](../Model/ScPublicV3AddressesGetSenderAddressById200Response.md)
 
 ### Authorization
 

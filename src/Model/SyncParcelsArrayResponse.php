@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * SyncParcelsArrayResponse Class Doc Comment
  *
  * @category Class
  * @description Sync parcel common object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,21 +59,21 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimensions' => \Toppy\Sendcloud\Model\StrDimensions::class,
-        'weight' => \Toppy\Sendcloud\Model\StrWeight::class,
-        'additionalInsuredPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\StrDimensions::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\StrWeight::class,
+        'additionalInsuredPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'labelNotes' => 'string[]',
         'sscc' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItem[]',
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItem[]',
         'createdAt' => '\DateTime',
         'updatedAt' => '\DateTime',
         'announcedAt' => '\DateTime',
         'id' => 'int',
-        'status' => \Toppy\Sendcloud\Model\Status::class,
-        'documents' => '\Toppy\Sendcloud\Model\Documents[]',
+        'status' => \Toppy\Sendcloud\V3\Model\Status::class,
+        'documents' => '\Toppy\Sendcloud\V3\Model\Documents[]',
         'trackingNumber' => 'string',
         'trackingUrl' => 'string',
-        'additionalCarrierData' => \Toppy\Sendcloud\Model\CarrierSpecificData::class,
+        'additionalCarrierData' => \Toppy\Sendcloud\V3\Model\CarrierSpecificData::class,
         'labelFile' => 'string'
     ];
 
@@ -400,7 +400,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\StrDimensions|null
+     * @return \Toppy\Sendcloud\V3\Model\StrDimensions|null
      */
     public function getDimensions()
     {
@@ -410,7 +410,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\StrDimensions|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\StrDimensions|null $dimensions dimensions
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\StrWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\StrWeight|null
      */
     public function getWeight()
     {
@@ -438,7 +438,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\StrWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\StrWeight|null $weight weight
      *
      * @return self
      */
@@ -456,7 +456,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets additionalInsuredPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getAdditionalInsuredPrice()
     {
@@ -466,7 +466,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets additionalInsuredPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
      *
      * @return self
      */
@@ -563,7 +563,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItem[]|null
      */
     public function getParcelItems()
     {
@@ -573,7 +573,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems List of items/products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItem[]|null $parcelItems List of items/products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
      *
      * @return self
      */
@@ -707,7 +707,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\Status|null
+     * @return \Toppy\Sendcloud\V3\Model\Status|null
      */
     public function getStatus()
     {
@@ -717,7 +717,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\Status|null $status status
+     * @param \Toppy\Sendcloud\V3\Model\Status|null $status status
      *
      * @return self
      */
@@ -735,7 +735,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets documents
      *
-     * @return \Toppy\Sendcloud\Model\Documents[]|null
+     * @return \Toppy\Sendcloud\V3\Model\Documents[]|null
      */
     public function getDocuments()
     {
@@ -745,7 +745,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets documents
      *
-     * @param \Toppy\Sendcloud\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
+     * @param \Toppy\Sendcloud\V3\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
      *
      * @return self
      */
@@ -820,7 +820,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets additionalCarrierData
      *
-     * @return \Toppy\Sendcloud\Model\CarrierSpecificData|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierSpecificData|null
      */
     public function getAdditionalCarrierData()
     {
@@ -830,7 +830,7 @@ class SyncParcelsArrayResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets additionalCarrierData
      *
-     * @param \Toppy\Sendcloud\Model\CarrierSpecificData|null $additionalCarrierData additionalCarrierData
+     * @param \Toppy\Sendcloud\V3\Model\CarrierSpecificData|null $additionalCarrierData additionalCarrierData
      *
      * @return self
      */

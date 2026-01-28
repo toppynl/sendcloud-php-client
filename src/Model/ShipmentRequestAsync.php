@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShipmentRequestAsync Class Doc Comment
  *
  * @category Class
  * @description Asynchronous Shipment request object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,19 +60,19 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toServicePoint' => \Toppy\Sendcloud\Model\ServicePoint::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toServicePoint' => \Toppy\Sendcloud\V3\Model\ServicePoint::class,
         'orderNumber' => 'string',
-        'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'totalOrderPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'reference' => 'string',
         'externalReferenceId' => 'string',
         'validationMethods' => 'string[]',
-        'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformation::class,
-        'labelDetails' => \Toppy\Sendcloud\Model\LabelDetails::class,
-        'deliveryDates' => \Toppy\Sendcloud\Model\DeliveryDates::class,
-        'parcels' => '\Toppy\Sendcloud\Model\ParcelCommon[]'
+        'customsInformation' => \Toppy\Sendcloud\V3\Model\CustomsInformation::class,
+        'labelDetails' => \Toppy\Sendcloud\V3\Model\LabelDetails::class,
+        'deliveryDates' => \Toppy\Sendcloud\V3\Model\DeliveryDates::class,
+        'parcels' => '\Toppy\Sendcloud\V3\Model\ParcelCommon[]'
     ];
 
     /**
@@ -427,7 +427,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith
      */
     public function getShipWith()
     {
@@ -437,7 +437,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
      *
      * @return self
      */
@@ -455,7 +455,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getFromAddress()
     {
@@ -465,7 +465,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $fromAddress fromAddress
      *
      * @return self
      */
@@ -483,7 +483,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -493,7 +493,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -511,7 +511,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets toServicePoint
      *
-     * @return \Toppy\Sendcloud\Model\ServicePoint|null
+     * @return \Toppy\Sendcloud\V3\Model\ServicePoint|null
      */
     public function getToServicePoint()
     {
@@ -521,7 +521,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets toServicePoint
      *
-     * @param \Toppy\Sendcloud\Model\ServicePoint|null $toServicePoint toServicePoint
+     * @param \Toppy\Sendcloud\V3\Model\ServicePoint|null $toServicePoint toServicePoint
      *
      * @return self
      */
@@ -567,7 +567,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets totalOrderPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getTotalOrderPrice()
     {
@@ -577,7 +577,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets totalOrderPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
      *
      * @return self
      */
@@ -696,7 +696,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\CustomsInformation|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -706,7 +706,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\CustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V3\Model\CustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */
@@ -724,7 +724,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets labelDetails
      *
-     * @return \Toppy\Sendcloud\Model\LabelDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\LabelDetails|null
      */
     public function getLabelDetails()
     {
@@ -734,7 +734,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets labelDetails
      *
-     * @param \Toppy\Sendcloud\Model\LabelDetails|null $labelDetails labelDetails
+     * @param \Toppy\Sendcloud\V3\Model\LabelDetails|null $labelDetails labelDetails
      *
      * @return self
      */
@@ -752,7 +752,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets deliveryDates
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryDates|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryDates|null
      */
     public function getDeliveryDates()
     {
@@ -762,7 +762,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets deliveryDates
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryDates|null $deliveryDates deliveryDates
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryDates|null $deliveryDates deliveryDates
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCommon[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCommon[]|null
      */
     public function getParcels()
     {
@@ -797,7 +797,7 @@ class ShipmentRequestAsync implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCommon[]|null $parcels Represent each package of the shipment.  There is a restriction to a maximum number of percels per shipment.   * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment  Note: each carrier can have a lower than the max number of parcels limit per shipment.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCommon[]|null $parcels Represent each package of the shipment.  There is a restriction to a maximum number of percels per shipment.   * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment  Note: each carrier can have a lower than the max number of parcels limit per shipment.
      *
      * @return self
      */

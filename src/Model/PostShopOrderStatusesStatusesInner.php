@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * PostShopOrderStatusesStatusesInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PostShopOrderStatusesStatusesInner implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'externalId' => 'string',
-        'translations' => '\Toppy\Sendcloud\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[]'
+        'translations' => '\Toppy\Sendcloud\V3\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[]'
     ];
 
     /**
@@ -315,7 +315,7 @@ class PostShopOrderStatusesStatusesInner implements ModelInterface, ArrayAccess,
     /**
      * Gets translations
      *
-     * @return \Toppy\Sendcloud\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[]
+     * @return \Toppy\Sendcloud\V3\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[]
      */
     public function getTranslations()
     {
@@ -325,7 +325,7 @@ class PostShopOrderStatusesStatusesInner implements ModelInterface, ArrayAccess,
     /**
      * Sets translations
      *
-     * @param \Toppy\Sendcloud\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[] $translations translations
+     * @param \Toppy\Sendcloud\V3\Model\PostShopOrderStatusesStatusesInnerTranslationsInner[] $translations translations
      *
      * @return self
      */

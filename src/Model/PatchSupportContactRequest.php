@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * PatchSupportContactRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PatchSupportContactRequest implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'email' => 'string',
-        'language' => \Toppy\Sendcloud\Model\CarrierLanguageField::class
+        'language' => \Toppy\Sendcloud\V3\Model\CarrierLanguageField::class
     ];
 
     /**
@@ -297,7 +297,7 @@ class PatchSupportContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets language
      *
-     * @return \Toppy\Sendcloud\Model\CarrierLanguageField|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierLanguageField|null
      */
     public function getLanguage()
     {
@@ -307,7 +307,7 @@ class PatchSupportContactRequest implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets language
      *
-     * @param \Toppy\Sendcloud\Model\CarrierLanguageField|null $language language
+     * @param \Toppy\Sendcloud\V3\Model\CarrierLanguageField|null $language language
      *
      * @return self
      */

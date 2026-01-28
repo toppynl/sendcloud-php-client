@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateDelayedTransactional Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,12 +59,12 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'trackingNumber' => 'string',
-        'contentsSalesPrice' => \Toppy\Sendcloud\Model\ContentsSalesValueField::class,
-        'contentsPurchasePrice' => \Toppy\Sendcloud\Model\ContentsPurchaseValueField::class,
+        'contentsSalesPrice' => \Toppy\Sendcloud\V3\Model\ContentsSalesValueField::class,
+        'contentsPurchasePrice' => \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField::class,
         'contentsDescription' => 'string',
         'parcelExteriorDescription' => 'string',
-        'salesInvoice' => \Toppy\Sendcloud\Model\SalesInvoiceField::class,
-        'purchaseInvoice' => \Toppy\Sendcloud\Model\PurchaseInvoiceField::class
+        'salesInvoice' => \Toppy\Sendcloud\V3\Model\SalesInvoiceField::class,
+        'purchaseInvoice' => \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField::class
     ];
 
     /**
@@ -358,7 +358,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets contentsSalesPrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsSalesValueField
+     * @return \Toppy\Sendcloud\V3\Model\ContentsSalesValueField
      */
     public function getContentsSalesPrice()
     {
@@ -368,7 +368,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets contentsSalesPrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsSalesValueField $contentsSalesPrice contentsSalesPrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsSalesValueField $contentsSalesPrice contentsSalesPrice
      *
      * @return self
      */
@@ -386,7 +386,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets contentsPurchasePrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null
+     * @return \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null
      */
     public function getContentsPurchasePrice()
     {
@@ -396,7 +396,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets contentsPurchasePrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
      *
      * @return self
      */
@@ -470,7 +470,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets salesInvoice
      *
-     * @return \Toppy\Sendcloud\Model\SalesInvoiceField
+     * @return \Toppy\Sendcloud\V3\Model\SalesInvoiceField
      */
     public function getSalesInvoice()
     {
@@ -480,7 +480,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets salesInvoice
      *
-     * @param \Toppy\Sendcloud\Model\SalesInvoiceField $salesInvoice salesInvoice
+     * @param \Toppy\Sendcloud\V3\Model\SalesInvoiceField $salesInvoice salesInvoice
      *
      * @return self
      */
@@ -498,7 +498,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets purchaseInvoice
      *
-     * @return \Toppy\Sendcloud\Model\PurchaseInvoiceField
+     * @return \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField
      */
     public function getPurchaseInvoice()
     {
@@ -508,7 +508,7 @@ class CreateDelayedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets purchaseInvoice
      *
-     * @param \Toppy\Sendcloud\Model\PurchaseInvoiceField $purchaseInvoice purchaseInvoice
+     * @param \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField $purchaseInvoice purchaseInvoice
      *
      * @return self
      */

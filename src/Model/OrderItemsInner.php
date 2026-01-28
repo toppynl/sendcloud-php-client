@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * OrderItemsInner Class Doc Comment
  *
  * @category Class
  * @description Order item
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -70,15 +70,15 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
         'hsCode' => 'string',
         'countryOfOrigin' => 'string',
         'properties' => 'array<string,mixed>',
-        'unitPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'totalPrice' => \Toppy\Sendcloud\Model\Price::class,
-        'measurement' => \Toppy\Sendcloud\Model\Measurement::class,
+        'unitPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'totalPrice' => \Toppy\Sendcloud\V3\Model\Price::class,
+        'measurement' => \Toppy\Sendcloud\V3\Model\Measurement::class,
         'ean' => 'string',
-        'deliveryDates' => \Toppy\Sendcloud\Model\DeliveryDates::class,
+        'deliveryDates' => \Toppy\Sendcloud\V3\Model\DeliveryDates::class,
         'midCode' => 'string',
         'materialContent' => 'string',
         'intendedUse' => 'string',
-        'dangerousGoods' => \Toppy\Sendcloud\Model\DangerousGoods::class
+        'dangerousGoods' => \Toppy\Sendcloud\V3\Model\DangerousGoods::class
     ];
 
     /**
@@ -743,7 +743,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets unitPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getUnitPrice()
     {
@@ -753,7 +753,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets unitPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $unitPrice unitPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $unitPrice unitPrice
      *
      * @return self
      */
@@ -771,7 +771,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets totalPrice
      *
-     * @return \Toppy\Sendcloud\Model\Price
+     * @return \Toppy\Sendcloud\V3\Model\Price
      */
     public function getTotalPrice()
     {
@@ -781,7 +781,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets totalPrice
      *
-     * @param \Toppy\Sendcloud\Model\Price $totalPrice totalPrice
+     * @param \Toppy\Sendcloud\V3\Model\Price $totalPrice totalPrice
      *
      * @return self
      */
@@ -799,7 +799,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets measurement
      *
-     * @return \Toppy\Sendcloud\Model\Measurement|null
+     * @return \Toppy\Sendcloud\V3\Model\Measurement|null
      */
     public function getMeasurement()
     {
@@ -809,7 +809,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets measurement
      *
-     * @param \Toppy\Sendcloud\Model\Measurement|null $measurement measurement
+     * @param \Toppy\Sendcloud\V3\Model\Measurement|null $measurement measurement
      *
      * @return self
      */
@@ -855,7 +855,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets deliveryDates
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryDates|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryDates|null
      */
     public function getDeliveryDates()
     {
@@ -865,7 +865,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets deliveryDates
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryDates|null $deliveryDates deliveryDates
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryDates|null $deliveryDates deliveryDates
      *
      * @return self
      */
@@ -967,7 +967,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets dangerousGoods
      *
-     * @return \Toppy\Sendcloud\Model\DangerousGoods|null
+     * @return \Toppy\Sendcloud\V3\Model\DangerousGoods|null
      */
     public function getDangerousGoods()
     {
@@ -977,7 +977,7 @@ class OrderItemsInner implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets dangerousGoods
      *
-     * @param \Toppy\Sendcloud\Model\DangerousGoods|null $dangerousGoods dangerousGoods
+     * @param \Toppy\Sendcloud\V3\Model\DangerousGoods|null $dangerousGoods dangerousGoods
      *
      * @return self
      */

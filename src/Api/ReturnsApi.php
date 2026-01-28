@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ReturnsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ReturnsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,9 +174,9 @@ class ReturnsApi
      *
      * @param  int $id The internal Sendcloud id of this return (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ModelReturn
+     * @return \Toppy\Sendcloud\V3\Model\ModelReturn
      */
     public function scPublicV3ScpGetReturnsGetDetails($id)
     {
@@ -191,9 +191,9 @@ class ReturnsApi
      *
      * @param  int $id The internal Sendcloud id of this return (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ModelReturn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ModelReturn, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetReturnsGetDetailsWithHttpInfo($id)
     {
@@ -228,7 +228,7 @@ class ReturnsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ModelReturn::class,
+                    \Toppy\Sendcloud\V3\Model\ModelReturn::class,
                     $request,
                     $response,
                 );
@@ -249,7 +249,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ModelReturn::class,
+                \Toppy\Sendcloud\V3\Model\ModelReturn::class,
                 $request,
                 $response,
             );
@@ -257,7 +257,7 @@ class ReturnsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ModelReturn::class,
+                    \Toppy\Sendcloud\V3\Model\ModelReturn::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -301,7 +301,7 @@ class ReturnsApi
      */
     public function scPublicV3ScpGetReturnsGetDetailsAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ModelReturn::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ModelReturn::class;
         $request = $this->scPublicV3ScpGetReturnsGetDetailsRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -436,9 +436,9 @@ class ReturnsApi
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response
      */
     public function scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $cursor = null, $parentParcelStatus = null, $pageSize = null)
     {
@@ -457,9 +457,9 @@ class ReturnsApi
      * @param  string $parentParcelStatus Search for returns with this parent status (optional)
      * @param  float $pageSize Refers to the number of items per page (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetReturnsGetReturnsWithHttpInfo($fromDate, $toDate, $cursor = null, $parentParcelStatus = null, $pageSize = null)
     {
@@ -494,7 +494,7 @@ class ReturnsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
                     $request,
                     $response,
                 );
@@ -515,7 +515,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
                 $request,
                 $response,
             );
@@ -523,7 +523,7 @@ class ReturnsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -575,7 +575,7 @@ class ReturnsApi
      */
     public function scPublicV3ScpGetReturnsGetReturnsAsyncWithHttpInfo($fromDate, $toDate, $cursor = null, $parentParcelStatus = null, $pageSize = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response::class;
         $request = $this->scPublicV3ScpGetReturnsGetReturnsRequest($fromDate, $toDate, $cursor, $parentParcelStatus, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -775,9 +775,9 @@ class ReturnsApi
      *
      * @param  int $id The internal Sendcloud id of this return (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response|\Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel409Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response|\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel409Response
      */
     public function scPublicV3ScpPatchReturnsCancel($id)
     {
@@ -792,9 +792,9 @@ class ReturnsApi
      *
      * @param  int $id The internal Sendcloud id of this return (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response|\Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel409Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response|\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel409Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPatchReturnsCancelWithHttpInfo($id)
     {
@@ -830,13 +830,13 @@ class ReturnsApi
             switch($statusCode) {
                 case 202:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel409Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel409Response::class,
                         $request,
                         $response,
                     );
@@ -857,7 +857,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
                 $request,
                 $response,
             );
@@ -866,7 +866,7 @@ class ReturnsApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -874,7 +874,7 @@ class ReturnsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel409Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel409Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -918,7 +918,7 @@ class ReturnsApi
      */
     public function scPublicV3ScpPatchReturnsCancelAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response::class;
         $request = $this->scPublicV3ScpPatchReturnsCancelRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1048,11 +1048,11 @@ class ReturnsApi
      * Create a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1066,11 +1066,11 @@ class ReturnsApi
      * Create a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostReturnsCreateNewReturnWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1106,13 +1106,13 @@ class ReturnsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1133,7 +1133,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                 $request,
                 $response,
             );
@@ -1142,7 +1142,7 @@ class ReturnsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1150,7 +1150,7 @@ class ReturnsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1168,7 +1168,7 @@ class ReturnsApi
      * Create a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1189,14 +1189,14 @@ class ReturnsApi
      * Create a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostReturnsCreateNewReturnAsyncWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class;
         $request = $this->scPublicV3ScpPostReturnsCreateNewReturnRequest($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1235,7 +1235,7 @@ class ReturnsApi
      * Create request for operation 'scPublicV3ScpPostReturnsCreateNewReturn'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1325,11 +1325,11 @@ class ReturnsApi
      * Create a return synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response
      */
     public function scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1343,11 +1343,11 @@ class ReturnsApi
      * Create a return synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response|\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostReturnsCreateNewReturnSynchronouslyWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1383,13 +1383,13 @@ class ReturnsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response::class,
                         $request,
                         $response,
                     );
@@ -1410,7 +1410,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                 $request,
                 $response,
             );
@@ -1419,7 +1419,7 @@ class ReturnsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1427,7 +1427,7 @@ class ReturnsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnSynchronously400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1445,7 +1445,7 @@ class ReturnsApi
      * Create a return synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1466,14 +1466,14 @@ class ReturnsApi
      * Create a return synchronously
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostReturnsCreateNewReturnSynchronouslyAsyncWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response::class;
         $request = $this->scPublicV3ScpPostReturnsCreateNewReturnSynchronouslyRequest($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1512,7 +1512,7 @@ class ReturnsApi
      * Create request for operation 'scPublicV3ScpPostReturnsCreateNewReturnSynchronously'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1602,11 +1602,11 @@ class ReturnsApi
      * Validate a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ReturnValidation|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ReturnValidation|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostReturnsValidate($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1620,11 +1620,11 @@ class ReturnsApi
      * Validate a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ReturnValidation|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ReturnValidation|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostReturnsValidateWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
@@ -1660,13 +1660,13 @@ class ReturnsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ReturnValidation::class,
+                        \Toppy\Sendcloud\V3\Model\ReturnValidation::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1687,7 +1687,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ReturnValidation::class,
+                \Toppy\Sendcloud\V3\Model\ReturnValidation::class,
                 $request,
                 $response,
             );
@@ -1696,7 +1696,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ReturnValidation::class,
+                        \Toppy\Sendcloud\V3\Model\ReturnValidation::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1704,7 +1704,7 @@ class ReturnsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1722,7 +1722,7 @@ class ReturnsApi
      * Validate a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1743,14 +1743,14 @@ class ReturnsApi
      * Validate a return
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostReturnsValidateAsyncWithHttpInfo($sendcloudPartnerId = null, $scPublicV3ScpPostReturnsCreateNewReturnRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ReturnValidation::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ReturnValidation::class;
         $request = $this->scPublicV3ScpPostReturnsValidateRequest($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1789,7 +1789,7 @@ class ReturnsApi
      * Create request for operation 'scPublicV3ScpPostReturnsValidate'
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest $scPublicV3ScpPostReturnsCreateNewReturnRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

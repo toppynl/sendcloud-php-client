@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * MeasurementPartialUpdate Class Doc Comment
  *
  * @category Class
  * @description This object provides essential information for accurate packing, shipping, and inventory management
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimension' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension::class,
-        'weight' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight::class,
-        'volume' => \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume::class
+        'dimension' => \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateDimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateWeight::class,
+        'volume' => \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateVolume::class
     ];
 
     /**
@@ -277,7 +277,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets dimension
      *
-     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension|null
+     * @return \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateDimension|null
      */
     public function getDimension()
     {
@@ -287,7 +287,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets dimension
      *
-     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateDimension|null $dimension dimension
+     * @param \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateDimension|null $dimension dimension
      *
      * @return self
      */
@@ -305,7 +305,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateWeight|null
      */
     public function getWeight()
     {
@@ -315,7 +315,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateWeight|null $weight weight
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets volume
      *
-     * @return \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume|null
+     * @return \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateVolume|null
      */
     public function getVolume()
     {
@@ -343,7 +343,7 @@ class MeasurementPartialUpdate implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets volume
      *
-     * @param \Toppy\Sendcloud\Model\MeasurementPartialUpdateVolume|null $volume volume
+     * @param \Toppy\Sendcloud\V3\Model\MeasurementPartialUpdateVolume|null $volume volume
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3OrdersPostCreateOrdersRequestInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,14 +63,14 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
         'orderNumber' => 'string',
         'createdAt' => '\DateTime',
         'modifiedAt' => '\DateTime',
-        'orderDetails' => \Toppy\Sendcloud\Model\OrderOrderDetails::class,
-        'paymentDetails' => \Toppy\Sendcloud\Model\PaymentDetails::class,
-        'customsDetails' => \Toppy\Sendcloud\Model\CustomsDetails::class,
-        'customerDetails' => \Toppy\Sendcloud\Model\CustomerDetails::class,
-        'billingAddress' => \Toppy\Sendcloud\Model\Address::class,
-        'shippingAddress' => \Toppy\Sendcloud\Model\Address::class,
-        'shippingDetails' => \Toppy\Sendcloud\Model\ShippingDetails::class,
-        'servicePointDetails' => \Toppy\Sendcloud\Model\ServicePoint::class
+        'orderDetails' => \Toppy\Sendcloud\V3\Model\OrderOrderDetails::class,
+        'paymentDetails' => \Toppy\Sendcloud\V3\Model\PaymentDetails::class,
+        'customsDetails' => \Toppy\Sendcloud\V3\Model\CustomsDetails::class,
+        'customerDetails' => \Toppy\Sendcloud\V3\Model\CustomerDetails::class,
+        'billingAddress' => \Toppy\Sendcloud\V3\Model\Address::class,
+        'shippingAddress' => \Toppy\Sendcloud\V3\Model\Address::class,
+        'shippingDetails' => \Toppy\Sendcloud\V3\Model\ShippingDetails::class,
+        'servicePointDetails' => \Toppy\Sendcloud\V3\Model\ServicePoint::class
     ];
 
     /**
@@ -520,7 +520,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets orderDetails
      *
-     * @return \Toppy\Sendcloud\Model\OrderOrderDetails
+     * @return \Toppy\Sendcloud\V3\Model\OrderOrderDetails
      */
     public function getOrderDetails()
     {
@@ -530,7 +530,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets orderDetails
      *
-     * @param \Toppy\Sendcloud\Model\OrderOrderDetails $orderDetails orderDetails
+     * @param \Toppy\Sendcloud\V3\Model\OrderOrderDetails $orderDetails orderDetails
      *
      * @return self
      */
@@ -548,7 +548,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets paymentDetails
      *
-     * @return \Toppy\Sendcloud\Model\PaymentDetails
+     * @return \Toppy\Sendcloud\V3\Model\PaymentDetails
      */
     public function getPaymentDetails()
     {
@@ -558,7 +558,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets paymentDetails
      *
-     * @param \Toppy\Sendcloud\Model\PaymentDetails $paymentDetails paymentDetails
+     * @param \Toppy\Sendcloud\V3\Model\PaymentDetails $paymentDetails paymentDetails
      *
      * @return self
      */
@@ -576,7 +576,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets customsDetails
      *
-     * @return \Toppy\Sendcloud\Model\CustomsDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsDetails|null
      */
     public function getCustomsDetails()
     {
@@ -586,7 +586,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets customsDetails
      *
-     * @param \Toppy\Sendcloud\Model\CustomsDetails|null $customsDetails customsDetails
+     * @param \Toppy\Sendcloud\V3\Model\CustomsDetails|null $customsDetails customsDetails
      *
      * @return self
      */
@@ -604,7 +604,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets customerDetails
      *
-     * @return \Toppy\Sendcloud\Model\CustomerDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomerDetails|null
      */
     public function getCustomerDetails()
     {
@@ -614,7 +614,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets customerDetails
      *
-     * @param \Toppy\Sendcloud\Model\CustomerDetails|null $customerDetails customerDetails
+     * @param \Toppy\Sendcloud\V3\Model\CustomerDetails|null $customerDetails customerDetails
      *
      * @return self
      */
@@ -632,7 +632,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets billingAddress
      *
-     * @return \Toppy\Sendcloud\Model\Address|null
+     * @return \Toppy\Sendcloud\V3\Model\Address|null
      */
     public function getBillingAddress()
     {
@@ -642,7 +642,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets billingAddress
      *
-     * @param \Toppy\Sendcloud\Model\Address|null $billingAddress billingAddress
+     * @param \Toppy\Sendcloud\V3\Model\Address|null $billingAddress billingAddress
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets shippingAddress
      *
-     * @return \Toppy\Sendcloud\Model\Address|null
+     * @return \Toppy\Sendcloud\V3\Model\Address|null
      */
     public function getShippingAddress()
     {
@@ -670,7 +670,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets shippingAddress
      *
-     * @param \Toppy\Sendcloud\Model\Address|null $shippingAddress shippingAddress
+     * @param \Toppy\Sendcloud\V3\Model\Address|null $shippingAddress shippingAddress
      *
      * @return self
      */
@@ -688,7 +688,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets shippingDetails
      *
-     * @return \Toppy\Sendcloud\Model\ShippingDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingDetails|null
      */
     public function getShippingDetails()
     {
@@ -698,7 +698,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets shippingDetails
      *
-     * @param \Toppy\Sendcloud\Model\ShippingDetails|null $shippingDetails shippingDetails
+     * @param \Toppy\Sendcloud\V3\Model\ShippingDetails|null $shippingDetails shippingDetails
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Gets servicePointDetails
      *
-     * @return \Toppy\Sendcloud\Model\ServicePoint|null
+     * @return \Toppy\Sendcloud\V3\Model\ServicePoint|null
      */
     public function getServicePointDetails()
     {
@@ -726,7 +726,7 @@ class ScPublicV3OrdersPostCreateOrdersRequestInner implements ModelInterface, Ar
     /**
      * Sets servicePointDetails
      *
-     * @param \Toppy\Sendcloud\Model\ServicePoint|null $servicePointDetails servicePointDetails
+     * @param \Toppy\Sendcloud\V3\Model\ServicePoint|null $servicePointDetails servicePointDetails
      *
      * @return self
      */

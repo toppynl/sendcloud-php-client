@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateCustomStatusMapping Class Doc Comment
  *
  * @category Class
  * @description Create or update the mapping of available shop order statuses onto Sendcloud&#39;s internal status category.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CreateCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'integrationId' => 'int',
-        'mapping' => '\Toppy\Sendcloud\Model\CreateCustomStatusMappingMappingInner[]'
+        'mapping' => '\Toppy\Sendcloud\V3\Model\CreateCustomStatusMappingMappingInner[]'
     ];
 
     /**
@@ -316,7 +316,7 @@ class CreateCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets mapping
      *
-     * @return \Toppy\Sendcloud\Model\CreateCustomStatusMappingMappingInner[]
+     * @return \Toppy\Sendcloud\V3\Model\CreateCustomStatusMappingMappingInner[]
      */
     public function getMapping()
     {
@@ -326,7 +326,7 @@ class CreateCustomStatusMapping implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets mapping
      *
-     * @param \Toppy\Sendcloud\Model\CreateCustomStatusMappingMappingInner[] $mapping Array containing available shop order statuses mapped onto Sendcloud's internal status category.   - Create or update an existing map of available shop order statuses onto Sendcloud's internal status category for the given integration.   - Make sure the mapping array contains objects of each Sendcloud's internal status categories.   - Map each of Sendcloud's internal status categories onto either `AvailableStatus.external_id` or `None`.   - Note that two `external_ids` may map to the same internal status category.
+     * @param \Toppy\Sendcloud\V3\Model\CreateCustomStatusMappingMappingInner[] $mapping Array containing available shop order statuses mapped onto Sendcloud's internal status category.   - Create or update an existing map of available shop order statuses onto Sendcloud's internal status category for the given integration.   - Make sure the mapping array contains objects of each Sendcloud's internal status categories.   - Map each of Sendcloud's internal status categories onto either `AvailableStatus.external_id` or `None`.   - Note that two `external_ids` may map to the same internal status category.
      *
      * @return self
      */

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ContractsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ContractsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,7 +174,7 @@ class ContractsApi
      *
      * @param  int $id The id of the contract. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -190,7 +190,7 @@ class ContractsApi
      *
      * @param  int $id The id of the contract. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -230,7 +230,7 @@ class ContractsApi
             if ($apiException->getCode() === 404) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\Errors::class,
+                    \Toppy\Sendcloud\V3\Model\Errors::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -400,9 +400,9 @@ class ContractsApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpGetAllContracts($carrierCode = null, $isActive = null, $clientId = null, $name = null, $countryCode = null, $cursor = null, $pageSize = null)
     {
@@ -423,9 +423,9 @@ class ContractsApi
      * @param  string $cursor The cursor query string is used as the pivot value to filter results. If no value is provided, the first page of results will be returned. To get this value, you must encode the offset, reverse and position into a base64 string.  There are 3 possible parameters to encode: - &#x60;o&#x60;: Offset - &#x60;r&#x60;: Reverse - &#x60;p&#x60;: Position    For example, &#x60;r&#x3D;1&amp;p&#x3D;300&#x60; encoded as a base64 string would be &#x60;cj0xJnA9MzAw&#x60;. The query string would then be &#x60;cursor&#x3D;cj0xJnA9MzAw&#x60;. (optional)
      * @param  int $pageSize The size of the page to fetch (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetAllContractsWithHttpInfo($carrierCode = null, $isActive = null, $clientId = null, $name = null, $countryCode = null, $cursor = null, $pageSize = null)
     {
@@ -461,13 +461,13 @@ class ContractsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -488,7 +488,7 @@ class ContractsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response::class,
                 $request,
                 $response,
             );
@@ -497,7 +497,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -505,7 +505,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -561,7 +561,7 @@ class ContractsApi
      */
     public function scPublicV3ScpGetAllContractsAsyncWithHttpInfo($carrierCode = null, $isActive = null, $clientId = null, $name = null, $countryCode = null, $cursor = null, $pageSize = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContracts200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContracts200Response::class;
         $request = $this->scPublicV3ScpGetAllContractsRequest($carrierCode, $isActive, $clientId, $name, $countryCode, $cursor, $pageSize);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -769,9 +769,9 @@ class ContractsApi
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpGetAllContractsSchemas($carrierCode = null)
     {
@@ -786,9 +786,9 @@ class ContractsApi
      *
      * @param  string $carrierCode The carrier you want to filter for, for instance: postnl. You can find available carriers in your Sendcloud account settings. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetAllContractsSchemasWithHttpInfo($carrierCode = null)
     {
@@ -824,13 +824,13 @@ class ContractsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -851,7 +851,7 @@ class ContractsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
                 $request,
                 $response,
             );
@@ -860,7 +860,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -868,7 +868,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -912,7 +912,7 @@ class ContractsApi
      */
     public function scPublicV3ScpGetAllContractsSchemasAsyncWithHttpInfo($carrierCode = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetAllContractsSchemas200Response::class;
         $request = $this->scPublicV3ScpGetAllContractsSchemasRequest($carrierCode);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1042,9 +1042,9 @@ class ContractsApi
      *
      * @param  int $id The id of the contract. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response
      */
     public function scPublicV3ScpGetSpecificContract($id)
     {
@@ -1059,9 +1059,9 @@ class ContractsApi
      *
      * @param  int $id The id of the contract. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetSpecificContractWithHttpInfo($id)
     {
@@ -1096,7 +1096,7 @@ class ContractsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response::class,
                     $request,
                     $response,
                 );
@@ -1117,7 +1117,7 @@ class ContractsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response::class,
                 $request,
                 $response,
             );
@@ -1125,7 +1125,7 @@ class ContractsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -1169,7 +1169,7 @@ class ContractsApi
      */
     public function scPublicV3ScpGetSpecificContractAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetSpecificContract200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetSpecificContract200Response::class;
         $request = $this->scPublicV3ScpGetSpecificContractRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1299,11 +1299,11 @@ class ContractsApi
      * Update a contract
      *
      * @param  int $id The id of the contract. (required)
-     * @param  \Toppy\Sendcloud\Model\UpdateContractRequest $updateContractRequest updateContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\UpdateContractRequest $updateContractRequest updateContractRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPatchContract($id, $updateContractRequest = null)
     {
@@ -1317,11 +1317,11 @@ class ContractsApi
      * Update a contract
      *
      * @param  int $id The id of the contract. (required)
-     * @param  \Toppy\Sendcloud\Model\UpdateContractRequest $updateContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\UpdateContractRequest $updateContractRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response|\Toppy\Sendcloud\Model\Errors|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response|\Toppy\Sendcloud\V3\Model\Errors|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPatchContractWithHttpInfo($id, $updateContractRequest = null)
     {
@@ -1357,14 +1357,14 @@ class ContractsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1385,7 +1385,7 @@ class ContractsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response::class,
                 $request,
                 $response,
             );
@@ -1394,7 +1394,7 @@ class ContractsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1402,7 +1402,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1410,7 +1410,7 @@ class ContractsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1428,7 +1428,7 @@ class ContractsApi
      * Update a contract
      *
      * @param  int $id The id of the contract. (required)
-     * @param  \Toppy\Sendcloud\Model\UpdateContractRequest $updateContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\UpdateContractRequest $updateContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1449,14 +1449,14 @@ class ContractsApi
      * Update a contract
      *
      * @param  int $id The id of the contract. (required)
-     * @param  \Toppy\Sendcloud\Model\UpdateContractRequest $updateContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\UpdateContractRequest $updateContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPatchContractAsyncWithHttpInfo($id, $updateContractRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPatchContract200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchContract200Response::class;
         $request = $this->scPublicV3ScpPatchContractRequest($id, $updateContractRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1495,7 +1495,7 @@ class ContractsApi
      * Create request for operation 'scPublicV3ScpPatchContract'
      *
      * @param  int $id The id of the contract. (required)
-     * @param  \Toppy\Sendcloud\Model\UpdateContractRequest $updateContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\UpdateContractRequest $updateContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1592,11 +1592,11 @@ class ContractsApi
      *
      * Create a contract for a carrier
      *
-     * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest createContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateContractRequest $createContractRequest createContractRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ContractCreatedResponse|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ContractCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostCreateContract($createContractRequest = null)
     {
@@ -1609,11 +1609,11 @@ class ContractsApi
      *
      * Create a contract for a carrier
      *
-     * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateContractRequest $createContractRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ContractCreatedResponse|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ContractCreatedResponse|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostCreateContractWithHttpInfo($createContractRequest = null)
     {
@@ -1649,13 +1649,13 @@ class ContractsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ContractCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ContractCreatedResponse::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1676,7 +1676,7 @@ class ContractsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ContractCreatedResponse::class,
+                \Toppy\Sendcloud\V3\Model\ContractCreatedResponse::class,
                 $request,
                 $response,
             );
@@ -1685,7 +1685,7 @@ class ContractsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ContractCreatedResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ContractCreatedResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1693,7 +1693,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1710,7 +1710,7 @@ class ContractsApi
      *
      * Create a contract for a carrier
      *
-     * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateContractRequest $createContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1730,14 +1730,14 @@ class ContractsApi
      *
      * Create a contract for a carrier
      *
-     * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateContractRequest $createContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostCreateContractAsyncWithHttpInfo($createContractRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ContractCreatedResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ContractCreatedResponse::class;
         $request = $this->scPublicV3ScpPostCreateContractRequest($createContractRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1775,7 +1775,7 @@ class ContractsApi
     /**
      * Create request for operation 'scPublicV3ScpPostCreateContract'
      *
-     * @param  \Toppy\Sendcloud\Model\CreateContractRequest $createContractRequest (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateContractRequest $createContractRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

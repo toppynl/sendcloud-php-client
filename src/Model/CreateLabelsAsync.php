@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateLabelsAsync Class Doc Comment
  *
  * @category Class
  * @description Payload for creating labels for orders.  Note that if the &#x60;sender_address_id&#x60; is not specified, the API will use the default [sender address](/docs/getting-started/sender-addresses) associated with your account.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,8 +62,8 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
         'integrationId' => 'int',
         'senderAddressId' => 'int',
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'orders' => '\Toppy\Sendcloud\Model\CreateLabelsAsyncAllOfOrders[]'
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'orders' => '\Toppy\Sendcloud\V3\Model\CreateLabelsAsyncAllOfOrders[]'
     ];
 
     /**
@@ -401,7 +401,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -411,7 +411,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets orders
      *
-     * @return \Toppy\Sendcloud\Model\CreateLabelsAsyncAllOfOrders[]
+     * @return \Toppy\Sendcloud\V3\Model\CreateLabelsAsyncAllOfOrders[]
      */
     public function getOrders()
     {
@@ -439,7 +439,7 @@ class CreateLabelsAsync implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets orders
      *
-     * @param \Toppy\Sendcloud\Model\CreateLabelsAsyncAllOfOrders[] $orders Array of order objects you want to create labels for
+     * @param \Toppy\Sendcloud\V3\Model\CreateLabelsAsyncAllOfOrders[] $orders Array of order objects you want to create labels for
      *
      * @return self
      */

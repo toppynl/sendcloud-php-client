@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingPriceBreakdownInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ShippingPriceBreakdownInner implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'type' => 'string',
         'label' => 'string',
-        'price' => \Toppy\Sendcloud\Model\Price::class
+        'price' => \Toppy\Sendcloud\V3\Model\Price::class
     ];
 
     /**
@@ -427,7 +427,7 @@ class ShippingPriceBreakdownInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\Price|null
+     * @return \Toppy\Sendcloud\V3\Model\Price|null
      */
     public function getPrice()
     {
@@ -437,7 +437,7 @@ class ShippingPriceBreakdownInner implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\Price|null $price price
+     * @param \Toppy\Sendcloud\V3\Model\Price|null $price price
      *
      * @return self
      */

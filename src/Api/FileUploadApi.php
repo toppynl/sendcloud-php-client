@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * FileUploadApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class FileUploadApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,9 +174,9 @@ class FileUploadApi
      *
      * @param  \SplFileObject $file file (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostFiles($file)
     {
@@ -191,9 +191,9 @@ class FileUploadApi
      *
      * @param  \SplFileObject $file (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostFilesWithHttpInfo($file)
     {
@@ -229,7 +229,7 @@ class FileUploadApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response::class,
                         $request,
                         $response,
                     );
@@ -238,7 +238,7 @@ class FileUploadApi
                 case 422:
                 case 429:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -259,7 +259,7 @@ class FileUploadApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response::class,
                 $request,
                 $response,
             );
@@ -268,7 +268,7 @@ class FileUploadApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -276,7 +276,7 @@ class FileUploadApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -284,7 +284,7 @@ class FileUploadApi
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -292,7 +292,7 @@ class FileUploadApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -300,7 +300,7 @@ class FileUploadApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -344,7 +344,7 @@ class FileUploadApi
      */
     public function scPublicV3DsfPostFilesAsyncWithHttpInfo($file)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3DsfPostFiles201Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostFiles201Response::class;
         $request = $this->scPublicV3DsfPostFilesRequest($file);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

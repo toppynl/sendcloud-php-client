@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **carrierCode** | **string** |  | [optional]
 **country** | **string** | ISO 3166-1 alpha-2 country code. | [optional]
 **trackingNumber** | **string** |  | [optional]
-**timeSlots** | [**\ToppySendcloudModelTimeSlot[]**](TimeSlot.md) | Scheduled time slots for the pickup. Note that most carriers only support a single time slot. | [optional]
+**timeSlots** | [**\ToppySendcloudV3ModelTimeSlot[]**](TimeSlot.md) | Scheduled time slots for the pickup. Note that most carriers only support a single time slot. | [optional]
 **status** | **string** |  | [optional]
 **createdAt** | **\DateTime** | ISO 8601 DateTime at which the pickup is created. | [optional]
 **cancelledAt** | **\DateTime** | ISO 8601 DateTime at which the pickup is cancelled. | [optional]

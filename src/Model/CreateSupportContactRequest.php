@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateSupportContactRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class CreateSupportContactRequest implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrierCode' => \Toppy\Sendcloud\Model\CarrierCodeField::class,
+        'carrierCode' => \Toppy\Sendcloud\V3\Model\CarrierCodeField::class,
         'email' => 'string',
-        'language' => \Toppy\Sendcloud\Model\CarrierLanguageField::class
+        'language' => \Toppy\Sendcloud\V3\Model\CarrierLanguageField::class
     ];
 
     /**
@@ -290,7 +290,7 @@ class CreateSupportContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets carrierCode
      *
-     * @return \Toppy\Sendcloud\Model\CarrierCodeField
+     * @return \Toppy\Sendcloud\V3\Model\CarrierCodeField
      */
     public function getCarrierCode()
     {
@@ -300,7 +300,7 @@ class CreateSupportContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets carrierCode
      *
-     * @param \Toppy\Sendcloud\Model\CarrierCodeField $carrierCode carrierCode
+     * @param \Toppy\Sendcloud\V3\Model\CarrierCodeField $carrierCode carrierCode
      *
      * @return self
      */
@@ -346,7 +346,7 @@ class CreateSupportContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets language
      *
-     * @return \Toppy\Sendcloud\Model\CarrierLanguageField
+     * @return \Toppy\Sendcloud\V3\Model\CarrierLanguageField
      */
     public function getLanguage()
     {
@@ -356,7 +356,7 @@ class CreateSupportContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets language
      *
-     * @param \Toppy\Sendcloud\Model\CarrierLanguageField $language language
+     * @param \Toppy\Sendcloud\V3\Model\CarrierLanguageField $language language
      *
      * @return self
      */

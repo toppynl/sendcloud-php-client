@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3DsfPostRequestedDataRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class ScPublicV3DsfPostRequestedDataRequest implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'requestId' => 'int',
         'comment' => 'string',
-        'attachments' => '\Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]',
-        'salesData' => '\Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]'
+        'attachments' => '\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]',
+        'salesData' => '\Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]'
     ];
 
     /**
@@ -345,7 +345,7 @@ class ScPublicV3DsfPostRequestedDataRequest implements ModelInterface, ArrayAcce
     /**
      * Gets attachments
      *
-     * @return \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]|null
      */
     public function getAttachments()
     {
@@ -355,7 +355,7 @@ class ScPublicV3DsfPostRequestedDataRequest implements ModelInterface, ArrayAcce
     /**
      * Sets attachments
      *
-     * @param \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]|null $attachments attachments
+     * @param \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestAttachmentsInner[]|null $attachments attachments
      *
      * @return self
      */
@@ -373,7 +373,7 @@ class ScPublicV3DsfPostRequestedDataRequest implements ModelInterface, ArrayAcce
     /**
      * Gets salesData
      *
-     * @return \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]|null
      */
     public function getSalesData()
     {
@@ -383,7 +383,7 @@ class ScPublicV3DsfPostRequestedDataRequest implements ModelInterface, ArrayAcce
     /**
      * Sets salesData
      *
-     * @param \Toppy\Sendcloud\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]|null $salesData salesData
+     * @param \Toppy\Sendcloud\V3\Model\ScPublicV3DsfPostRequestedDataRequestSalesDataInner[]|null $salesData salesData
      *
      * @return self
      */

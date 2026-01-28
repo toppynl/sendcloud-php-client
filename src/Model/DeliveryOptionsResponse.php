@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * DeliveryOptionsResponse Class Doc Comment
  *
  * @category Class
  * @description Delivery options response
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'configurationId' => 'string',
-        'deliveryOptions' => '\Toppy\Sendcloud\Model\DeliveryOption[]'
+        'deliveryOptions' => '\Toppy\Sendcloud\V3\Model\DeliveryOption[]'
     ];
 
     /**
@@ -308,7 +308,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets deliveryOptions
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryOption[]
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryOption[]
      */
     public function getDeliveryOptions()
     {
@@ -318,7 +318,7 @@ class DeliveryOptionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets deliveryOptions
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryOption[] $deliveryOptions A list of delivery options available for the given cart or order details. Each delivery option corresponds to a configured delivery method and includes detailed information, such as shipping rates, delivery dates, and carrier information.
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryOption[] $deliveryOptions A list of delivery options available for the given cart or order details. Each delivery option corresponds to a configured delivery method and includes detailed information, such as shipping rates, delivery dates, and carrier information.
      *
      * @return self
      */

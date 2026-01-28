@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ParcelTrackingApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ParcelTrackingApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,9 +174,9 @@ class ParcelTrackingApi
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingResponse|\Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response|\Toppy\Sendcloud\Model\HTTPValidationError
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse|\Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response|\Toppy\Sendcloud\V3\Model\HTTPValidationError
      */
     public function scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber($trackingNumber)
     {
@@ -191,9 +191,9 @@ class ParcelTrackingApi
      *
      * @param  string $trackingNumber Parcel tracking number (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ParcelTrackingResponse|\Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response|\Toppy\Sendcloud\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse|\Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response|\Toppy\Sendcloud\V3\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberWithHttpInfo($trackingNumber)
     {
@@ -229,19 +229,19 @@ class ParcelTrackingApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ParcelTrackingResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response::class,
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\HTTPValidationError::class,
+                        \Toppy\Sendcloud\V3\Model\HTTPValidationError::class,
                         $request,
                         $response,
                     );
@@ -262,7 +262,7 @@ class ParcelTrackingApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ParcelTrackingResponse::class,
+                \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse::class,
                 $request,
                 $response,
             );
@@ -271,7 +271,7 @@ class ParcelTrackingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ParcelTrackingResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -279,7 +279,7 @@ class ParcelTrackingApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumber404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -287,7 +287,7 @@ class ParcelTrackingApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\HTTPValidationError::class,
+                        \Toppy\Sendcloud\V3\Model\HTTPValidationError::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -331,7 +331,7 @@ class ParcelTrackingApi
      */
     public function scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberAsyncWithHttpInfo($trackingNumber)
     {
-        $returnType = \Toppy\Sendcloud\Model\ParcelTrackingResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ParcelTrackingResponse::class;
         $request = $this->scPublicV3ShippingIntelligenceEngineGetGetParcelByTrackingNumberRequest($trackingNumber);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -469,11 +469,11 @@ class ParcelTrackingApi
      *
      * Create a tracking-only parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest parcelTrackingCreateRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest parcelTrackingCreateRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse|\Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response|\Toppy\Sendcloud\Model\HTTPValidationError
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse|\Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response|\Toppy\Sendcloud\V3\Model\HTTPValidationError
      */
     public function scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking($parcelTrackingCreateRequest)
     {
@@ -486,11 +486,11 @@ class ParcelTrackingApi
      *
      * Create a tracking-only parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse|\Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response|\Toppy\Sendcloud\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse|\Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response|\Toppy\Sendcloud\V3\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTrackingWithHttpInfo($parcelTrackingCreateRequest)
     {
@@ -526,19 +526,19 @@ class ParcelTrackingApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse::class,
                         $request,
                         $response,
                     );
                 case 409:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response::class,
                         $request,
                         $response,
                     );
                 case 422:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\HTTPValidationError::class,
+                        \Toppy\Sendcloud\V3\Model\HTTPValidationError::class,
                         $request,
                         $response,
                     );
@@ -559,7 +559,7 @@ class ParcelTrackingApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse::class,
+                \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse::class,
                 $request,
                 $response,
             );
@@ -568,7 +568,7 @@ class ParcelTrackingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse::class,
+                        \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -576,7 +576,7 @@ class ParcelTrackingApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking409Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -584,7 +584,7 @@ class ParcelTrackingApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\HTTPValidationError::class,
+                        \Toppy\Sendcloud\V3\Model\HTTPValidationError::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -601,7 +601,7 @@ class ParcelTrackingApi
      *
      * Create a tracking-only parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -621,14 +621,14 @@ class ParcelTrackingApi
      *
      * Create a tracking-only parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTrackingAsyncWithHttpInfo($parcelTrackingCreateRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\ParcelTrackingCreateResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateResponse::class;
         $request = $this->scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTrackingRequest($parcelTrackingCreateRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -666,7 +666,7 @@ class ParcelTrackingApi
     /**
      * Create request for operation 'scPublicV3ShippingIntelligenceEnginePostRegisterParcelForTracking'
      *
-     * @param  \Toppy\Sendcloud\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\ParcelTrackingCreateRequest $parcelTrackingCreateRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

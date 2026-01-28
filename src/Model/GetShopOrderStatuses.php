@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * GetShopOrderStatuses Class Doc Comment
  *
  * @category Class
  * @description Available shop order statuses with translations.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class GetShopOrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Toppy\Sendcloud\Model\GetShopOrderStatusesDataInner[]'
+        'data' => '\Toppy\Sendcloud\V3\Model\GetShopOrderStatusesDataInner[]'
     ];
 
     /**
@@ -263,7 +263,7 @@ class GetShopOrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\GetShopOrderStatusesDataInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\GetShopOrderStatusesDataInner[]|null
      */
     public function getData()
     {
@@ -273,7 +273,7 @@ class GetShopOrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\GetShopOrderStatusesDataInner[]|null $data Array holding all available shop order statuses for an integration
+     * @param \Toppy\Sendcloud\V3\Model\GetShopOrderStatusesDataInner[]|null $data Array holding all available shop order statuses for an integration
      *
      * @return self
      */

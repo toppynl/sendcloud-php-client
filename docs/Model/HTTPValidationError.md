@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**detail** | [**\Toppy\Sendcloud\Model\ValidationError[]**](ValidationError.md) |  | [optional]
+**detail** | [**\Toppy\Sendcloud\V3\Model\ValidationError[]**](ValidationError.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

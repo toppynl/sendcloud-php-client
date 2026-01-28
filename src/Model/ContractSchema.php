@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ContractSchema Class Doc Comment
  *
  * @category Class
  * @description Schema for creating/updating contract
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ContractSchema implements ModelInterface, ArrayAccess, \JsonSerializable, 
       */
     protected static $openAPITypes = [
         'carrierCode' => 'string',
-        'fields' => '\Toppy\Sendcloud\Model\ContractSchemaFieldsInner[]'
+        'fields' => '\Toppy\Sendcloud\V3\Model\ContractSchemaFieldsInner[]'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ContractSchema implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets fields
      *
-     * @return \Toppy\Sendcloud\Model\ContractSchemaFieldsInner[]
+     * @return \Toppy\Sendcloud\V3\Model\ContractSchemaFieldsInner[]
      */
     public function getFields()
     {
@@ -318,7 +318,7 @@ class ContractSchema implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets fields
      *
-     * @param \Toppy\Sendcloud\Model\ContractSchemaFieldsInner[] $fields List of fields for creating/updating contract
+     * @param \Toppy\Sendcloud\V3\Model\ContractSchemaFieldsInner[] $fields List of fields for creating/updating contract
      *
      * @return self
      */

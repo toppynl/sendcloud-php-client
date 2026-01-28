@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * HermesDePickupResponse Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPITypes = [
         'id' => 'int',
         'carrierCode' => 'string',
-        'timeSlots' => '\ToppySendcloudModelTimeSlotEndAtRequired[]',
-        'items' => '\Toppy\Sendcloud\Model\BasePickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlotEndAtRequired[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\BasePickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'trackingNumber' => 'string',
@@ -69,7 +69,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
         'createdAt' => '\DateTime',
         'cancelledAt' => '\DateTime',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddress::class
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddress::class
     ];
 
     /**
@@ -486,7 +486,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlotEndAtRequired[]|null
+     * @return \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null
      */
     public function getTimeSlots()
     {
@@ -496,7 +496,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -514,7 +514,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\BasePickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null
      */
     public function getItems()
     {
@@ -524,7 +524,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
+     * @param \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
      *
      * @return self
      */
@@ -766,7 +766,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddress|null
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddress|null
      */
     public function getAddress()
     {
@@ -776,7 +776,7 @@ class HermesDePickupResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddress|null $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddress|null $address address
      *
      * @return self
      */

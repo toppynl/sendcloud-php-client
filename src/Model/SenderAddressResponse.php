@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * SenderAddressResponse Class Doc Comment
  *
  * @category Class
  * @description The SenderAddress response schema
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -72,8 +72,8 @@ class SenderAddressResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'email' => 'string',
         'phoneNumber' => 'string',
         'id' => 'int',
-        'signature' => \Toppy\Sendcloud\Model\SenderAddressResponseAllOfSignature::class,
-        'taxNumbers' => '\Toppy\Sendcloud\Model\TaxNumber[]'
+        'signature' => \Toppy\Sendcloud\V3\Model\SenderAddressResponseAllOfSignature::class,
+        'taxNumbers' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]'
     ];
 
     /**
@@ -759,7 +759,7 @@ class SenderAddressResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets signature
      *
-     * @return \Toppy\Sendcloud\Model\SenderAddressResponseAllOfSignature|null
+     * @return \Toppy\Sendcloud\V3\Model\SenderAddressResponseAllOfSignature|null
      */
     public function getSignature()
     {
@@ -769,7 +769,7 @@ class SenderAddressResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets signature
      *
-     * @param \Toppy\Sendcloud\Model\SenderAddressResponseAllOfSignature|null $signature signature
+     * @param \Toppy\Sendcloud\V3\Model\SenderAddressResponseAllOfSignature|null $signature signature
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class SenderAddressResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets taxNumbers
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
      */
     public function getTaxNumbers()
     {
@@ -797,7 +797,7 @@ class SenderAddressResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets taxNumbers
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $taxNumbers taxNumbers
+     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $taxNumbers taxNumbers
      *
      * @return self
      */

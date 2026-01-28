@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,12 +58,12 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimensions' => \Toppy\Sendcloud\Model\StrDimensions::class,
-        'weight' => \Toppy\Sendcloud\Model\StrWeight::class,
-        'additionalInsuredPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'dimensions' => \Toppy\Sendcloud\V3\Model\StrDimensions::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\StrWeight::class,
+        'additionalInsuredPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'labelNotes' => 'string[]',
         'sscc' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItemWithOptionalFields[]'
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItemWithOptionalFields[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Gets dimensions
      *
-     * @return \Toppy\Sendcloud\Model\StrDimensions|null
+     * @return \Toppy\Sendcloud\V3\Model\StrDimensions|null
      */
     public function getDimensions()
     {
@@ -339,7 +339,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Sets dimensions
      *
-     * @param \Toppy\Sendcloud\Model\StrDimensions|null $dimensions dimensions
+     * @param \Toppy\Sendcloud\V3\Model\StrDimensions|null $dimensions dimensions
      *
      * @return self
      */
@@ -357,7 +357,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\StrWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\StrWeight|null
      */
     public function getWeight()
     {
@@ -367,7 +367,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\StrWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\StrWeight|null $weight weight
      *
      * @return self
      */
@@ -385,7 +385,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Gets additionalInsuredPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getAdditionalInsuredPrice()
     {
@@ -395,7 +395,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Sets additionalInsuredPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $additionalInsuredPrice additionalInsuredPrice
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItemWithOptionalFields[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItemWithOptionalFields[]|null
      */
     public function getParcelItems()
     {
@@ -502,7 +502,7 @@ class MulticolloParcelsArrayRequestWithOptionalFieldsParcelsInner implements Mod
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItemWithOptionalFields[]|null $parcelItems List of items/products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItemWithOptionalFields[]|null $parcelItems List of items/products that the parcel contains. **Note that parcel items array is required for shipments that require customs documents.**
      *
      * @return self
      */

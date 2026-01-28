@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ShippingOptionsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class ShippingOptionsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -172,11 +172,11 @@ class ShippingOptionsApi
      *
      * Return a list of available shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostShippingOptions($shippingOptionFilter = null)
     {
@@ -189,11 +189,11 @@ class ShippingOptionsApi
      *
      * Return a list of available shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostShippingOptionsWithHttpInfo($shippingOptionFilter = null)
     {
@@ -229,13 +229,13 @@ class ShippingOptionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -256,7 +256,7 @@ class ShippingOptionsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response::class,
                 $request,
                 $response,
             );
@@ -265,7 +265,7 @@ class ShippingOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -273,7 +273,7 @@ class ShippingOptionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -290,7 +290,7 @@ class ShippingOptionsApi
      *
      * Return a list of available shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -310,14 +310,14 @@ class ShippingOptionsApi
      *
      * Return a list of available shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostShippingOptionsAsyncWithHttpInfo($shippingOptionFilter = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptions200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptions200Response::class;
         $request = $this->scPublicV3ScpPostShippingOptionsRequest($shippingOptionFilter);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -355,7 +355,7 @@ class ShippingOptionsApi
     /**
      * Create request for operation 'scPublicV3ScpPostShippingOptions'
      *
-     * @param  \Toppy\Sendcloud\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\ShippingOptionFilter $shippingOptionFilter Shipment details for quote calculation (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -440,11 +440,11 @@ class ShippingOptionsApi
      *
      * Create a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3ScpPostShippingOptionsSimple($singleParcelShippingOptionFilter = null)
     {
@@ -457,11 +457,11 @@ class ShippingOptionsApi
      *
      * Create a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpPostShippingOptionsSimpleWithHttpInfo($singleParcelShippingOptionFilter = null)
     {
@@ -497,13 +497,13 @@ class ShippingOptionsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -524,7 +524,7 @@ class ShippingOptionsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
                 $request,
                 $response,
             );
@@ -533,7 +533,7 @@ class ShippingOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
+                        \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -541,7 +541,7 @@ class ShippingOptionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -558,7 +558,7 @@ class ShippingOptionsApi
      *
      * Create a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -578,14 +578,14 @@ class ShippingOptionsApi
      *
      * Create a list of shipping options
      *
-     * @param  \Toppy\Sendcloud\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3ScpPostShippingOptionsSimpleAsyncWithHttpInfo($singleParcelShippingOptionFilter = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostShippingOptionsSimple200Response::class;
         $request = $this->scPublicV3ScpPostShippingOptionsSimpleRequest($singleParcelShippingOptionFilter);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -623,7 +623,7 @@ class ShippingOptionsApi
     /**
      * Create request for operation 'scPublicV3ScpPostShippingOptionsSimple'
      *
-     * @param  \Toppy\Sendcloud\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\SingleParcelShippingOptionFilter $singleParcelShippingOptionFilter  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

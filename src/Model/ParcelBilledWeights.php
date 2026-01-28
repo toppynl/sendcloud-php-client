@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelBilledWeights Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ParcelBilledWeights implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'value' => 'string',
-        'unit' => \Toppy\Sendcloud\Model\WeightUnit::class,
+        'unit' => \Toppy\Sendcloud\V3\Model\WeightUnit::class,
         'volumetric' => 'bool',
         'parcelNumber' => 'float',
         'calculation' => 'string'
@@ -328,7 +328,7 @@ class ParcelBilledWeights implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets unit
      *
-     * @return \Toppy\Sendcloud\Model\WeightUnit
+     * @return \Toppy\Sendcloud\V3\Model\WeightUnit
      */
     public function getUnit()
     {
@@ -338,7 +338,7 @@ class ParcelBilledWeights implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets unit
      *
-     * @param \Toppy\Sendcloud\Model\WeightUnit $unit unit
+     * @param \Toppy\Sendcloud\V3\Model\WeightUnit $unit unit
      *
      * @return self
      */

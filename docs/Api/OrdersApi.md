@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\OrdersApi
+# Toppy\Sendcloud\V3\OrdersApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\OrdersApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -75,7 +75,7 @@ void (empty response body)
 ## `scPublicV3OrdersGetListOrders()`
 
 ```php
-scPublicV3OrdersGetListOrders($integration, $orderNumber, $orderId, $status, $orderCreatedAt, $orderCreatedAtMin, $orderCreatedAtMax, $orderUpdatedAt, $orderUpdatedAtMin, $orderUpdatedAtMax, $sort, $pageSize, $cursor): \Toppy\Sendcloud\Model\ScPublicV3OrdersGetListOrders200Response
+scPublicV3OrdersGetListOrders($integration, $orderNumber, $orderId, $status, $orderCreatedAt, $orderCreatedAtMin, $orderCreatedAtMax, $orderUpdatedAt, $orderUpdatedAtMin, $orderUpdatedAtMax, $sort, $pageSize, $cursor): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersGetListOrders200Response
 ```
 
 Retrieve a list of orders
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\OrdersApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3OrdersGetListOrders200Response**](../Model/ScPublicV3OrdersGetListOrders200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3OrdersGetListOrders200Response**](../Model/ScPublicV3OrdersGetListOrders200Response.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3OrdersGetRetrieveOrder()`
 
 ```php
-scPublicV3OrdersGetRetrieveOrder($id): \Toppy\Sendcloud\Model\ScPublicV3OrdersGetRetrieveOrder200Response
+scPublicV3OrdersGetRetrieveOrder($id): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersGetRetrieveOrder200Response
 ```
 
 Retrieve an order
@@ -176,12 +176,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\OrdersApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3OrdersGetRetrieveOrder200Response**](../Model/ScPublicV3OrdersGetRetrieveOrder200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3OrdersGetRetrieveOrder200Response**](../Model/ScPublicV3OrdersGetRetrieveOrder200Response.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3OrdersPatchPartialUpdateOrder()`
 
 ```php
-scPublicV3OrdersPatchPartialUpdateOrder($id, $orderPartialUpdate): \Toppy\Sendcloud\Model\ScPublicV3OrdersPatchPartialUpdateOrder200Response
+scPublicV3OrdersPatchPartialUpdateOrder($id, $orderPartialUpdate): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPatchPartialUpdateOrder200Response
 ```
 
 Update an order
@@ -238,19 +238,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\OrdersApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Filtering on the Sendcloud order ID
-$orderPartialUpdate = {"id":"669","order_id":"555413","order_details":{"status":{"code":"fulfilled","message":"Fulfilled"},"tags":["october_campaign"]}}; // \Toppy\Sendcloud\Model\OrderPartialUpdate | Only include the fields you would like to update. If you need to update any of the `order_items`, the `name` field is required so that the correct `order_item` is updated. If you need to add items to or remove items from an order, you should use the [Create/Update orders in batch](/api/v3/orders/create-update-orders-in-batch) endpoint instead.
+$orderPartialUpdate = {"id":"669","order_id":"555413","order_details":{"status":{"code":"fulfilled","message":"Fulfilled"},"tags":["october_campaign"]}}; // \Toppy\Sendcloud\V3\Model\OrderPartialUpdate | Only include the fields you would like to update. If you need to update any of the `order_items`, the `name` field is required so that the correct `order_item` is updated. If you need to add items to or remove items from an order, you should use the [Create/Update orders in batch](/api/v3/orders/create-update-orders-in-batch) endpoint instead.
 
 try {
     $result = $apiInstance->scPublicV3OrdersPatchPartialUpdateOrder($id, $orderPartialUpdate);
@@ -265,11 +265,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Filtering on the Sendcloud order ID |
- **orderPartialUpdate** | [**\Toppy\Sendcloud\Model\OrderPartialUpdate**](../Model/OrderPartialUpdate.md)| Only include the fields you would like to update. If you need to update any of the &#x60;order_items&#x60;, the &#x60;name&#x60; field is required so that the correct &#x60;order_item&#x60; is updated. If you need to add items to or remove items from an order, you should use the [Create/Update orders in batch](/api/v3/orders/create-update-orders-in-batch) endpoint instead. | [optional]
+ **orderPartialUpdate** | [**\Toppy\Sendcloud\V3\Model\OrderPartialUpdate**](../Model/OrderPartialUpdate.md)| Only include the fields you would like to update. If you need to update any of the &#x60;order_items&#x60;, the &#x60;name&#x60; field is required so that the correct &#x60;order_item&#x60; is updated. If you need to add items to or remove items from an order, you should use the [Create/Update orders in batch](/api/v3/orders/create-update-orders-in-batch) endpoint instead. | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3OrdersPatchPartialUpdateOrder200Response**](../Model/ScPublicV3OrdersPatchPartialUpdateOrder200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPatchPartialUpdateOrder200Response**](../Model/ScPublicV3OrdersPatchPartialUpdateOrder200Response.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3OrdersPostCreateOrders()`
 
 ```php
-scPublicV3OrdersPostCreateOrders($sendcloudPartnerId, $scPublicV3OrdersPostCreateOrdersRequestInner): \Toppy\Sendcloud\Model\ScPublicV3OrdersPostCreateOrders201Response
+scPublicV3OrdersPostCreateOrders($sendcloudPartnerId, $scPublicV3OrdersPostCreateOrdersRequestInner): \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPostCreateOrders201Response
 ```
 
 Create/Update orders in batch
@@ -302,19 +302,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\OrdersApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$scPublicV3OrdersPostCreateOrdersRequestInner = [{"order_id":"555413","order_number":"OXSDFGHTD-12","order_details":{"integration":{"id":7},"status":{"code":"fulfilled","message":"Fulfilled"},"order_created_at":"2018-02-27T10:00:00.556Z","order_items":[{"name":"Cylinder candle","quantity":1,"total_price":{"value":3.5,"currency":"EUR"}}]},"payment_details":{"total_price":{"value":3.5,"currency":"EUR"},"status":{"code":"paid","message":"Paid"}},"shipping_address":{"name":"John Doe","address_line_1":"Lansdown Glade","house_number":"15","postal_code":"5341XT","city":"Oss","country_code":"NL"},"shipping_details":{"is_local_pickup":false,"delivery_indicator":"DHL home delivery","measurement":{"weight":{"value":3,"unit":"kg"}}}}]; // \Toppy\Sendcloud\Model\ScPublicV3OrdersPostCreateOrdersRequestInner[]
+$scPublicV3OrdersPostCreateOrdersRequestInner = [{"order_id":"555413","order_number":"OXSDFGHTD-12","order_details":{"integration":{"id":7},"status":{"code":"fulfilled","message":"Fulfilled"},"order_created_at":"2018-02-27T10:00:00.556Z","order_items":[{"name":"Cylinder candle","quantity":1,"total_price":{"value":3.5,"currency":"EUR"}}]},"payment_details":{"total_price":{"value":3.5,"currency":"EUR"},"status":{"code":"paid","message":"Paid"}},"shipping_address":{"name":"John Doe","address_line_1":"Lansdown Glade","house_number":"15","postal_code":"5341XT","city":"Oss","country_code":"NL"},"shipping_details":{"is_local_pickup":false,"delivery_indicator":"DHL home delivery","measurement":{"weight":{"value":3,"unit":"kg"}}}}]; // \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPostCreateOrdersRequestInner[]
 
 try {
     $result = $apiInstance->scPublicV3OrdersPostCreateOrders($sendcloudPartnerId, $scPublicV3OrdersPostCreateOrdersRequestInner);
@@ -329,11 +329,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **scPublicV3OrdersPostCreateOrdersRequestInner** | [**\Toppy\Sendcloud\Model\ScPublicV3OrdersPostCreateOrdersRequestInner[]**](../Model/ScPublicV3OrdersPostCreateOrdersRequestInner.md)|  | [optional]
+ **scPublicV3OrdersPostCreateOrdersRequestInner** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPostCreateOrdersRequestInner[]**](../Model/ScPublicV3OrdersPostCreateOrdersRequestInner.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3OrdersPostCreateOrders201Response**](../Model/ScPublicV3OrdersPostCreateOrders201Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPostCreateOrders201Response**](../Model/ScPublicV3OrdersPostCreateOrders201Response.md)
 
 ### Authorization
 

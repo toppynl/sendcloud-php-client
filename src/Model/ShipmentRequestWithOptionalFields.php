@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShipmentRequestWithOptionalFields Class Doc Comment
  *
  * @category Class
  * @description Shipment request with optional fields object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,18 +60,18 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'fromAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toAddress' => \Toppy\Sendcloud\Model\AddressWithRequiredFields::class,
-        'toServicePoint' => \Toppy\Sendcloud\Model\ServicePoint::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toAddress' => \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields::class,
+        'toServicePoint' => \Toppy\Sendcloud\V3\Model\ServicePoint::class,
         'orderNumber' => 'string',
-        'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
+        'totalOrderPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
         'reference' => 'string',
         'externalReferenceId' => 'string',
         'validationMethods' => 'string[]',
-        'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformationWithOptionalFields::class,
-        'labelDetails' => \Toppy\Sendcloud\Model\LabelDetails::class,
-        'deliveryDates' => \Toppy\Sendcloud\Model\DeliveryDates::class
+        'customsInformation' => \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFields::class,
+        'labelDetails' => \Toppy\Sendcloud\V3\Model\LabelDetails::class,
+        'deliveryDates' => \Toppy\Sendcloud\V3\Model\DeliveryDates::class
     ];
 
     /**
@@ -404,7 +404,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -414,7 +414,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */
@@ -432,7 +432,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields|null
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields|null
      */
     public function getFromAddress()
     {
@@ -442,7 +442,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields|null $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields|null $fromAddress fromAddress
      *
      * @return self
      */
@@ -460,7 +460,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\AddressWithRequiredFields
+     * @return \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields
      */
     public function getToAddress()
     {
@@ -470,7 +470,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\AddressWithRequiredFields $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\AddressWithRequiredFields $toAddress toAddress
      *
      * @return self
      */
@@ -488,7 +488,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets toServicePoint
      *
-     * @return \Toppy\Sendcloud\Model\ServicePoint|null
+     * @return \Toppy\Sendcloud\V3\Model\ServicePoint|null
      */
     public function getToServicePoint()
     {
@@ -498,7 +498,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets toServicePoint
      *
-     * @param \Toppy\Sendcloud\Model\ServicePoint|null $toServicePoint toServicePoint
+     * @param \Toppy\Sendcloud\V3\Model\ServicePoint|null $toServicePoint toServicePoint
      *
      * @return self
      */
@@ -544,7 +544,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets totalOrderPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getTotalOrderPrice()
     {
@@ -554,7 +554,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets totalOrderPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $totalOrderPrice totalOrderPrice
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\CustomsInformationWithOptionalFields|null
+     * @return \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFields|null
      */
     public function getCustomsInformation()
     {
@@ -683,7 +683,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\CustomsInformationWithOptionalFields|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V3\Model\CustomsInformationWithOptionalFields|null $customsInformation customsInformation
      *
      * @return self
      */
@@ -701,7 +701,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets labelDetails
      *
-     * @return \Toppy\Sendcloud\Model\LabelDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\LabelDetails|null
      */
     public function getLabelDetails()
     {
@@ -711,7 +711,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets labelDetails
      *
-     * @param \Toppy\Sendcloud\Model\LabelDetails|null $labelDetails labelDetails
+     * @param \Toppy\Sendcloud\V3\Model\LabelDetails|null $labelDetails labelDetails
      *
      * @return self
      */
@@ -729,7 +729,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Gets deliveryDates
      *
-     * @return \Toppy\Sendcloud\Model\DeliveryDates|null
+     * @return \Toppy\Sendcloud\V3\Model\DeliveryDates|null
      */
     public function getDeliveryDates()
     {
@@ -739,7 +739,7 @@ class ShipmentRequestWithOptionalFields implements ModelInterface, ArrayAccess, 
     /**
      * Sets deliveryDates
      *
-     * @param \Toppy\Sendcloud\Model\DeliveryDates|null $deliveryDates deliveryDates
+     * @param \Toppy\Sendcloud\V3\Model\DeliveryDates|null $deliveryDates deliveryDates
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3OrdersPatchPartialUpdateOrder200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV3OrdersPatchPartialUpdateOrder200Response implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData::class
+        'data' => \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV3OrdersPatchPartialUpdateOrder200Response implements ModelInterfa
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData|null
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData|null
      */
     public function getData()
     {
@@ -272,7 +272,7 @@ class ScPublicV3OrdersPatchPartialUpdateOrder200Response implements ModelInterfa
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\ScPublicV3OrdersPatchPartialUpdateOrder200ResponseData|null $data data
      *
      * @return self
      */

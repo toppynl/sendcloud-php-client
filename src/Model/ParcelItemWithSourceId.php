@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelItemWithSourceId Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,8 +61,8 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
         'itemId' => 'string',
         'description' => 'string',
         'quantity' => 'int',
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
-        'price' => \Toppy\Sendcloud\Model\RequiredPrice::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'price' => \Toppy\Sendcloud\V3\Model\RequiredPrice::class,
         'hsCode' => 'string',
         'originCountry' => 'string',
         'sku' => 'string',
@@ -70,7 +70,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
         'midCode' => 'string',
         'materialContent' => 'string',
         'intendedUse' => 'string',
-        'dangerousGoods' => \Toppy\Sendcloud\Model\DangerousGoods::class,
+        'dangerousGoods' => \Toppy\Sendcloud\V3\Model\DangerousGoods::class,
         'ddsReference' => 'string',
         'taricDocCode' => 'string',
         'properties' => 'array<string,mixed>',
@@ -516,7 +516,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight
+     * @return \Toppy\Sendcloud\V3\Model\Weight
      */
     public function getWeight()
     {
@@ -526,7 +526,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight $weight weight
      *
      * @return self
      */
@@ -544,7 +544,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\RequiredPrice
+     * @return \Toppy\Sendcloud\V3\Model\RequiredPrice
      */
     public function getPrice()
     {
@@ -554,7 +554,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\RequiredPrice $price price
+     * @param \Toppy\Sendcloud\V3\Model\RequiredPrice $price price
      *
      * @return self
      */
@@ -772,7 +772,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets dangerousGoods
      *
-     * @return \Toppy\Sendcloud\Model\DangerousGoods|null
+     * @return \Toppy\Sendcloud\V3\Model\DangerousGoods|null
      */
     public function getDangerousGoods()
     {
@@ -782,7 +782,7 @@ class ParcelItemWithSourceId implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dangerousGoods
      *
-     * @param \Toppy\Sendcloud\Model\DangerousGoods|null $dangerousGoods dangerousGoods
+     * @param \Toppy\Sendcloud\V3\Model\DangerousGoods|null $dangerousGoods dangerousGoods
      *
      * @return self
      */

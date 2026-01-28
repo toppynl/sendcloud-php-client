@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * DhlPickupResponse Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'id' => 'int',
         'carrierCode' => 'string',
-        'timeSlots' => '\ToppySendcloudModelTimeSlotEndAtRequired[]',
-        'items' => '\Toppy\Sendcloud\Model\DhlPickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlotEndAtRequired[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\DhlPickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'trackingNumber' => 'string',
@@ -69,7 +69,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
         'createdAt' => '\DateTime',
         'cancelledAt' => '\DateTime',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddress::class
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddress::class
     ];
 
     /**
@@ -482,7 +482,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlotEndAtRequired[]|null
+     * @return \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null
      */
     public function getTimeSlots()
     {
@@ -492,7 +492,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\DhlPickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\DhlPickupItem[]|null
      */
     public function getItems()
     {
@@ -520,7 +520,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\DhlPickupItem[]|null $items items
+     * @param \Toppy\Sendcloud\V3\Model\DhlPickupItem[]|null $items items
      *
      * @return self
      */
@@ -757,7 +757,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddress|null
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddress|null
      */
     public function getAddress()
     {
@@ -767,7 +767,7 @@ class DhlPickupResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddress|null $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddress|null $address address
      *
      * @return self
      */

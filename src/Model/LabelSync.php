@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * LabelSync Class Doc Comment
  *
  * @category Class
  * @description Holds the reference to created label.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,10 +62,10 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
         'shipmentId' => 'string',
         'orderId' => 'string',
         'orderNumber' => 'string',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
         'parcelId' => 'int',
-        'labelDetails' => \Toppy\Sendcloud\Model\LabelSyncAllOfLabelDetails::class,
-        'documents' => '\Toppy\Sendcloud\Model\Documents[]',
+        'labelDetails' => \Toppy\Sendcloud\V3\Model\LabelSyncAllOfLabelDetails::class,
+        'documents' => '\Toppy\Sendcloud\V3\Model\Documents[]',
         'trackingNumber' => 'string',
         'trackingUrl' => 'string'
     ];
@@ -403,7 +403,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -413,7 +413,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */
@@ -459,7 +459,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets labelDetails
      *
-     * @return \Toppy\Sendcloud\Model\LabelSyncAllOfLabelDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\LabelSyncAllOfLabelDetails|null
      */
     public function getLabelDetails()
     {
@@ -469,7 +469,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets labelDetails
      *
-     * @param \Toppy\Sendcloud\Model\LabelSyncAllOfLabelDetails|null $labelDetails labelDetails
+     * @param \Toppy\Sendcloud\V3\Model\LabelSyncAllOfLabelDetails|null $labelDetails labelDetails
      *
      * @return self
      */
@@ -487,7 +487,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Gets documents
      *
-     * @return \Toppy\Sendcloud\Model\Documents[]|null
+     * @return \Toppy\Sendcloud\V3\Model\Documents[]|null
      */
     public function getDocuments()
     {
@@ -497,7 +497,7 @@ class LabelSync implements ModelInterface, ArrayAccess, \JsonSerializable, \Stri
     /**
      * Sets documents
      *
-     * @param \Toppy\Sendcloud\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
+     * @param \Toppy\Sendcloud\V3\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
      *
      * @return self
      */

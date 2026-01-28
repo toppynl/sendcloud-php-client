@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * IntegrationsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class IntegrationsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,7 +174,7 @@ class IntegrationsApi
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -190,7 +190,7 @@ class IntegrationsApi
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -230,7 +230,7 @@ class IntegrationsApi
             if ($apiException->getCode() === 404) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\Errors::class,
+                    \Toppy\Sendcloud\V3\Model\Errors::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -399,9 +399,9 @@ class IntegrationsApi
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\IntegrationListResponse
+     * @return \Toppy\Sendcloud\V3\Model\IntegrationListResponse
      */
     public function scPublicV3IntegrationsGetListIntegrations($sort = null)
     {
@@ -416,9 +416,9 @@ class IntegrationsApi
      *
      * @param  string $sort Set the order for the response items: - Sorting is supported by the &#x60;integration_type&#x60;, &#x60;created_at&#x60;, &#x60;updated_at&#x60;, &#x60;last_fetch&#x60;, and &#x60;failing_since&#x60; attributes in the response object. - To sort the response in descending order, add the prefix &#x60;-&#x60; to the query param value. - By default, the items will be ordered by &#x60;last_fetch&#x60; and then &#x60;created_at&#x60;. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\IntegrationListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\IntegrationListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsGetListIntegrationsWithHttpInfo($sort = null)
     {
@@ -453,7 +453,7 @@ class IntegrationsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\IntegrationListResponse::class,
+                    \Toppy\Sendcloud\V3\Model\IntegrationListResponse::class,
                     $request,
                     $response,
                 );
@@ -474,7 +474,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\IntegrationListResponse::class,
+                \Toppy\Sendcloud\V3\Model\IntegrationListResponse::class,
                 $request,
                 $response,
             );
@@ -482,7 +482,7 @@ class IntegrationsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\IntegrationListResponse::class,
+                    \Toppy\Sendcloud\V3\Model\IntegrationListResponse::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -526,7 +526,7 @@ class IntegrationsApi
      */
     public function scPublicV3IntegrationsGetListIntegrationsAsyncWithHttpInfo($sort = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\IntegrationListResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\IntegrationListResponse::class;
         $request = $this->scPublicV3IntegrationsGetListIntegrationsRequest($sort);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -656,9 +656,9 @@ class IntegrationsApi
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\IntegrationGetResponse|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\IntegrationGetResponse|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3IntegrationsGetRetrieveIntegration($id)
     {
@@ -673,9 +673,9 @@ class IntegrationsApi
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\IntegrationGetResponse|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\IntegrationGetResponse|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsGetRetrieveIntegrationWithHttpInfo($id)
     {
@@ -711,13 +711,13 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\IntegrationGetResponse::class,
+                        \Toppy\Sendcloud\V3\Model\IntegrationGetResponse::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -738,7 +738,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\IntegrationGetResponse::class,
+                \Toppy\Sendcloud\V3\Model\IntegrationGetResponse::class,
                 $request,
                 $response,
             );
@@ -747,7 +747,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\IntegrationGetResponse::class,
+                        \Toppy\Sendcloud\V3\Model\IntegrationGetResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -755,7 +755,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -799,7 +799,7 @@ class IntegrationsApi
      */
     public function scPublicV3IntegrationsGetRetrieveIntegrationAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\IntegrationGetResponse::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\IntegrationGetResponse::class;
         $request = $this->scPublicV3IntegrationsGetRetrieveIntegrationRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -937,9 +937,9 @@ class IntegrationsApi
      * @param  string $language Get a response for the specified language. (optional)
      * @param  bool $showDeleted Get all currently available and historical statuses. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\GetShopOrderStatuses|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3IntegrationsGetShopOrderStatuses($integrationId, $language = null, $showDeleted = null)
     {
@@ -956,9 +956,9 @@ class IntegrationsApi
      * @param  string $language Get a response for the specified language. (optional)
      * @param  bool $showDeleted Get all currently available and historical statuses. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\GetShopOrderStatuses|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsGetShopOrderStatusesWithHttpInfo($integrationId, $language = null, $showDeleted = null)
     {
@@ -994,13 +994,13 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\GetShopOrderStatuses::class,
+                        \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1021,7 +1021,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\GetShopOrderStatuses::class,
+                \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses::class,
                 $request,
                 $response,
             );
@@ -1030,7 +1030,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\GetShopOrderStatuses::class,
+                        \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1086,7 +1086,7 @@ class IntegrationsApi
      */
     public function scPublicV3IntegrationsGetShopOrderStatusesAsyncWithHttpInfo($integrationId, $language = null, $showDeleted = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\GetShopOrderStatuses::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\GetShopOrderStatuses::class;
         $request = $this->scPublicV3IntegrationsGetShopOrderStatusesRequest($integrationId, $language, $showDeleted);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1245,9 +1245,9 @@ class IntegrationsApi
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\GetCustomStatusMapping|\Toppy\Sendcloud\Model\Errors
+     * @return \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3IntegrationsGetShopOrderStatusesMapping($integrationId)
     {
@@ -1262,9 +1262,9 @@ class IntegrationsApi
      *
      * @param  int $integrationId Filter response on &#x60;integration_id&#x60;. (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\GetCustomStatusMapping|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsGetShopOrderStatusesMappingWithHttpInfo($integrationId)
     {
@@ -1300,13 +1300,13 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\GetCustomStatusMapping::class,
+                        \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1327,7 +1327,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\GetCustomStatusMapping::class,
+                \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping::class,
                 $request,
                 $response,
             );
@@ -1336,7 +1336,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\GetCustomStatusMapping::class,
+                        \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1344,7 +1344,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1388,7 +1388,7 @@ class IntegrationsApi
      */
     public function scPublicV3IntegrationsGetShopOrderStatusesMappingAsyncWithHttpInfo($integrationId)
     {
-        $returnType = \Toppy\Sendcloud\Model\GetCustomStatusMapping::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\GetCustomStatusMapping::class;
         $request = $this->scPublicV3IntegrationsGetShopOrderStatusesMappingRequest($integrationId);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1521,9 +1521,9 @@ class IntegrationsApi
      * Update certain parts of an integration
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationModel $integrationModel integrationModel (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\IntegrationModel $integrationModel integrationModel (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1538,9 +1538,9 @@ class IntegrationsApi
      * Update certain parts of an integration
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationModel $integrationModel (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\IntegrationModel $integrationModel (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1581,7 +1581,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1589,7 +1589,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1607,7 +1607,7 @@ class IntegrationsApi
      * Update certain parts of an integration
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationModel $integrationModel (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\IntegrationModel $integrationModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1628,7 +1628,7 @@ class IntegrationsApi
      * Update certain parts of an integration
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationModel $integrationModel (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\IntegrationModel $integrationModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1663,7 +1663,7 @@ class IntegrationsApi
      * Create request for operation 'scPublicV3IntegrationsPatchUpdateIntegration'
      *
      * @param  int $id Filtering on the Sendcloud integration ID (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationModel $integrationModel (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\IntegrationModel $integrationModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1765,11 +1765,11 @@ class IntegrationsApi
      *
      * Create or overwrite shop order statuses
      *
-     * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses postShopOrderStatuses (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses $postShopOrderStatuses postShopOrderStatuses (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return Null|\Toppy\Sendcloud\Model\Errors
+     * @return Null|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3IntegrationsPostShopOrderStatuses($postShopOrderStatuses = null)
     {
@@ -1782,11 +1782,11 @@ class IntegrationsApi
      *
      * Create or overwrite shop order statuses
      *
-     * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of Null|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of Null|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsPostShopOrderStatusesWithHttpInfo($postShopOrderStatuses = null)
     {
@@ -1828,7 +1828,7 @@ class IntegrationsApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -1866,7 +1866,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1883,7 +1883,7 @@ class IntegrationsApi
      *
      * Create or overwrite shop order statuses
      *
-     * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1903,7 +1903,7 @@ class IntegrationsApi
      *
      * Create or overwrite shop order statuses
      *
-     * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1948,7 +1948,7 @@ class IntegrationsApi
     /**
      * Create request for operation 'scPublicV3IntegrationsPostShopOrderStatuses'
      *
-     * @param  \Toppy\Sendcloud\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\PostShopOrderStatuses $postShopOrderStatuses (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -2033,11 +2033,11 @@ class IntegrationsApi
      *
      * Create or update custom status mapping for an integration
      *
-     * @param  \Toppy\Sendcloud\Model\CreateCustomStatusMapping $createCustomStatusMapping createCustomStatusMapping (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping $createCustomStatusMapping createCustomStatusMapping (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return Null|\Toppy\Sendcloud\Model\Errors
+     * @return Null|\Toppy\Sendcloud\V3\Model\Errors
      */
     public function scPublicV3IntegrationsPostShopOrderStatusesMapping($createCustomStatusMapping = null)
     {
@@ -2050,11 +2050,11 @@ class IntegrationsApi
      *
      * Create or update custom status mapping for an integration
      *
-     * @param  \Toppy\Sendcloud\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of Null|\Toppy\Sendcloud\Model\Errors, HTTP status code, HTTP response headers (array of strings)
+     * @return array of Null|\Toppy\Sendcloud\V3\Model\Errors, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3IntegrationsPostShopOrderStatusesMappingWithHttpInfo($createCustomStatusMapping = null)
     {
@@ -2096,7 +2096,7 @@ class IntegrationsApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $request,
                         $response,
                     );
@@ -2134,7 +2134,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Errors::class,
+                        \Toppy\Sendcloud\V3\Model\Errors::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2151,7 +2151,7 @@ class IntegrationsApi
      *
      * Create or update custom status mapping for an integration
      *
-     * @param  \Toppy\Sendcloud\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -2171,7 +2171,7 @@ class IntegrationsApi
      *
      * Create or update custom status mapping for an integration
      *
-     * @param  \Toppy\Sendcloud\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -2216,7 +2216,7 @@ class IntegrationsApi
     /**
      * Create request for operation 'scPublicV3IntegrationsPostShopOrderStatusesMapping'
      *
-     * @param  \Toppy\Sendcloud\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateCustomStatusMapping $createCustomStatusMapping (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

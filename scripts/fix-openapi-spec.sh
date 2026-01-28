@@ -14,6 +14,7 @@
 # - Removes OpenAPI 3.1 specific schema attributes
 # - Simplifies allOf with single ErrorObject $ref to direct $ref
 # - Removes enum constraint from ErrorObject.code (API returns unlisted codes)
+# - Fixes server URL to panel.sendcloud.sc/api/v3
 #
 # Usage: ./scripts/fix-openapi-spec.sh
 #
@@ -40,6 +41,9 @@ trap "rm -f $TEMP_FILE" EXIT
 jq '
   # Downgrade to 3.0.3 for better generator compatibility
   .openapi = "3.0.3" |
+
+  # Fix server URL to use correct host
+  .servers = [{ "url": "https://panel.sendcloud.sc/api/v3", "description": "Production" }] |
 
   # Remove empty component sections (but not the components object itself)
   (if (.components.parameters? // {} | keys | length) == 0 then del(.components.parameters) else . end) |

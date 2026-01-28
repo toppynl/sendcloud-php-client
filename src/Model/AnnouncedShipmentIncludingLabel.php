@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * AnnouncedShipmentIncludingLabel Class Doc Comment
  *
  * @category Class
  * @description Create a shipment
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class AnnouncedShipmentIncludingLabel implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\SyncShipmentResponse::class
+        'data' => \Toppy\Sendcloud\V3\Model\SyncShipmentResponse::class
     ];
 
     /**
@@ -263,7 +263,7 @@ class AnnouncedShipmentIncludingLabel implements ModelInterface, ArrayAccess, \J
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\SyncShipmentResponse|null
+     * @return \Toppy\Sendcloud\V3\Model\SyncShipmentResponse|null
      */
     public function getData()
     {
@@ -273,7 +273,7 @@ class AnnouncedShipmentIncludingLabel implements ModelInterface, ArrayAccess, \J
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\SyncShipmentResponse|null $data data
+     * @param \Toppy\Sendcloud\V3\Model\SyncShipmentResponse|null $data data
      *
      * @return self
      */

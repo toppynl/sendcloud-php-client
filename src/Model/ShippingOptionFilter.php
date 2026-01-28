@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingOptionFilter Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,13 +63,13 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
         'fromPostalCode' => 'string',
         'toPostalCode' => 'string',
         'toServicePointId' => 'int',
-        'parcels' => '\Toppy\Sendcloud\Model\ShippingOptionFilterParcelsInner[]',
-        'functionalities' => \Toppy\Sendcloud\Model\CarrierShippingFunctionalities::class,
+        'parcels' => '\Toppy\Sendcloud\V3\Model\ShippingOptionFilterParcelsInner[]',
+        'functionalities' => \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities::class,
         'carrierCode' => 'string',
         'contractId' => 'int',
         'shippingProductCode' => 'string',
         'shippingOptionCode' => 'string',
-        'leadTime' => \Toppy\Sendcloud\Model\LeadTimeFilter::class,
+        'leadTime' => \Toppy\Sendcloud\V3\Model\LeadTimeFilter::class,
         'calculateQuotes' => 'bool'
     ];
 
@@ -514,7 +514,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\ShippingOptionFilterParcelsInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingOptionFilterParcelsInner[]|null
      */
     public function getParcels()
     {
@@ -524,7 +524,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ShippingOptionFilterParcelsInner[]|null $parcels List of parcels in a shipment.
+     * @param \Toppy\Sendcloud\V3\Model\ShippingOptionFilterParcelsInner[]|null $parcels List of parcels in a shipment.
      *
      * @return self
      */
@@ -542,7 +542,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets functionalities
      *
-     * @return \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null
+     * @return \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null
      */
     public function getFunctionalities()
     {
@@ -552,7 +552,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets functionalities
      *
-     * @param \Toppy\Sendcloud\Model\CarrierShippingFunctionalities|null $functionalities functionalities
+     * @param \Toppy\Sendcloud\V3\Model\CarrierShippingFunctionalities|null $functionalities functionalities
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets leadTime
      *
-     * @return \Toppy\Sendcloud\Model\LeadTimeFilter|null
+     * @return \Toppy\Sendcloud\V3\Model\LeadTimeFilter|null
      */
     public function getLeadTime()
     {
@@ -699,7 +699,7 @@ class ShippingOptionFilter implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets leadTime
      *
-     * @param \Toppy\Sendcloud\Model\LeadTimeFilter|null $leadTime leadTime
+     * @param \Toppy\Sendcloud\V3\Model\LeadTimeFilter|null $leadTime leadTime
      *
      * @return self
      */

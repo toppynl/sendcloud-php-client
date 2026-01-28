@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ParcelTrackingCreateRequest Class Doc Comment
  *
  * @category Class
  * @description The Parcel Tracking Create Request object
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,17 +60,17 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'announcedAt' => '\DateTime',
-        'details' => \Toppy\Sendcloud\Model\ParcelDetailCreateRequest::class,
-        'fromAddress' => \Toppy\Sendcloud\Model\ParcelTrackingAddress::class,
-        'insurance' => \Toppy\Sendcloud\Model\Insurance::class,
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItem[]',
-        'measurements' => \Toppy\Sendcloud\Model\Measurement::class,
-        'returnPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
-        'shipment' => \Toppy\Sendcloud\Model\ShipmentCreateRequest::class,
+        'details' => \Toppy\Sendcloud\V3\Model\ParcelDetailCreateRequest::class,
+        'fromAddress' => \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress::class,
+        'insurance' => \Toppy\Sendcloud\V3\Model\Insurance::class,
+        'parcelItems' => '\Toppy\Sendcloud\V3\Model\ParcelItem[]',
+        'measurements' => \Toppy\Sendcloud\V3\Model\Measurement::class,
+        'returnPrice' => \Toppy\Sendcloud\V3\Model\OptionalPrice::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
+        'shipment' => \Toppy\Sendcloud\V3\Model\ShipmentCreateRequest::class,
         'sourceId' => 'string',
-        'toAddress' => \Toppy\Sendcloud\Model\ParcelTrackingAddress::class,
-        'trackingNumber' => \Toppy\Sendcloud\Model\TrackingNumberCreateRequest::class
+        'toAddress' => \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress::class,
+        'trackingNumber' => \Toppy\Sendcloud\V3\Model\TrackingNumberCreateRequest::class
     ];
 
     /**
@@ -408,7 +408,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets details
      *
-     * @return \Toppy\Sendcloud\Model\ParcelDetailCreateRequest|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelDetailCreateRequest|null
      */
     public function getDetails()
     {
@@ -418,7 +418,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets details
      *
-     * @param \Toppy\Sendcloud\Model\ParcelDetailCreateRequest|null $details details
+     * @param \Toppy\Sendcloud\V3\Model\ParcelDetailCreateRequest|null $details details
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets fromAddress
      *
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingAddress
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress
      */
     public function getFromAddress()
     {
@@ -446,7 +446,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets fromAddress
      *
-     * @param \Toppy\Sendcloud\Model\ParcelTrackingAddress $fromAddress fromAddress
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress $fromAddress fromAddress
      *
      * @return self
      */
@@ -464,7 +464,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets insurance
      *
-     * @return \Toppy\Sendcloud\Model\Insurance|null
+     * @return \Toppy\Sendcloud\V3\Model\Insurance|null
      */
     public function getInsurance()
     {
@@ -474,7 +474,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets insurance
      *
-     * @param \Toppy\Sendcloud\Model\Insurance|null $insurance insurance
+     * @param \Toppy\Sendcloud\V3\Model\Insurance|null $insurance insurance
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelItem[]|null
      */
     public function getParcelItems()
     {
@@ -502,7 +502,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems List of items / products that the parcel contains
+     * @param \Toppy\Sendcloud\V3\Model\ParcelItem[]|null $parcelItems List of items / products that the parcel contains
      *
      * @return self
      */
@@ -520,7 +520,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets measurements
      *
-     * @return \Toppy\Sendcloud\Model\Measurement|null
+     * @return \Toppy\Sendcloud\V3\Model\Measurement|null
      */
     public function getMeasurements()
     {
@@ -530,7 +530,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets measurements
      *
-     * @param \Toppy\Sendcloud\Model\Measurement|null $measurements measurements
+     * @param \Toppy\Sendcloud\V3\Model\Measurement|null $measurements measurements
      *
      * @return self
      */
@@ -548,7 +548,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets returnPrice
      *
-     * @return \Toppy\Sendcloud\Model\OptionalPrice|null
+     * @return \Toppy\Sendcloud\V3\Model\OptionalPrice|null
      */
     public function getReturnPrice()
     {
@@ -558,7 +558,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets returnPrice
      *
-     * @param \Toppy\Sendcloud\Model\OptionalPrice|null $returnPrice returnPrice
+     * @param \Toppy\Sendcloud\V3\Model\OptionalPrice|null $returnPrice returnPrice
      *
      * @return self
      */
@@ -583,7 +583,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith
      */
     public function getShipWith()
     {
@@ -593,7 +593,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith $shipWith shipWith
      *
      * @return self
      */
@@ -611,7 +611,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets shipment
      *
-     * @return \Toppy\Sendcloud\Model\ShipmentCreateRequest
+     * @return \Toppy\Sendcloud\V3\Model\ShipmentCreateRequest
      */
     public function getShipment()
     {
@@ -621,7 +621,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets shipment
      *
-     * @param \Toppy\Sendcloud\Model\ShipmentCreateRequest $shipment shipment
+     * @param \Toppy\Sendcloud\V3\Model\ShipmentCreateRequest $shipment shipment
      *
      * @return self
      */
@@ -667,7 +667,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets toAddress
      *
-     * @return \Toppy\Sendcloud\Model\ParcelTrackingAddress
+     * @return \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress
      */
     public function getToAddress()
     {
@@ -677,7 +677,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets toAddress
      *
-     * @param \Toppy\Sendcloud\Model\ParcelTrackingAddress $toAddress toAddress
+     * @param \Toppy\Sendcloud\V3\Model\ParcelTrackingAddress $toAddress toAddress
      *
      * @return self
      */
@@ -695,7 +695,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets trackingNumber
      *
-     * @return \Toppy\Sendcloud\Model\TrackingNumberCreateRequest
+     * @return \Toppy\Sendcloud\V3\Model\TrackingNumberCreateRequest
      */
     public function getTrackingNumber()
     {
@@ -705,7 +705,7 @@ class ParcelTrackingCreateRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets trackingNumber
      *
-     * @param \Toppy\Sendcloud\Model\TrackingNumberCreateRequest $trackingNumber trackingNumber
+     * @param \Toppy\Sendcloud\V3\Model\TrackingNumberCreateRequest $trackingNumber trackingNumber
      *
      * @return self
      */

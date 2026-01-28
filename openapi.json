@@ -15,16 +15,12 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3",
-    "x-generated": "2026-01-28T14:24:12Z"
+    "x-generated": "2026-01-28T14:57:32Z"
   },
   "servers": [
     {
-      "url": "https://account.sendcloud.com",
-      "description": "Production"
-    },
-    {
       "url": "https://panel.sendcloud.sc/api/v3",
-      "description": "Sendcloud Production"
+      "description": "Production"
     }
   ],
   "security": [

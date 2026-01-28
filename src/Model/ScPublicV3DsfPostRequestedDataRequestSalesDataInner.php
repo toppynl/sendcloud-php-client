@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ScPublicV3DsfPostRequestedDataRequestSalesDataInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class ScPublicV3DsfPostRequestedDataRequestSalesDataInner implements ModelInterf
         'productDescription' => 'string',
         'quantity' => 'int',
         'sellingPrice' => 'float',
-        'currency' => \Toppy\Sendcloud\Model\CurrencyType::class,
+        'currency' => \Toppy\Sendcloud\V3\Model\CurrencyType::class,
         'taxRate' => 'float'
     ];
 
@@ -396,7 +396,7 @@ class ScPublicV3DsfPostRequestedDataRequestSalesDataInner implements ModelInterf
     /**
      * Gets currency
      *
-     * @return \Toppy\Sendcloud\Model\CurrencyType
+     * @return \Toppy\Sendcloud\V3\Model\CurrencyType
      */
     public function getCurrency()
     {
@@ -406,7 +406,7 @@ class ScPublicV3DsfPostRequestedDataRequestSalesDataInner implements ModelInterf
     /**
      * Sets currency
      *
-     * @param \Toppy\Sendcloud\Model\CurrencyType $currency currency
+     * @param \Toppy\Sendcloud\V3\Model\CurrencyType $currency currency
      *
      * @return self
      */

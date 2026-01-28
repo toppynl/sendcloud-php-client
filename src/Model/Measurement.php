@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * Measurement Class Doc Comment
  *
  * @category Class
  * @description This object provides essential information for accurate packing, shipping, and inventory management
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
       * @var string[]
       */
     protected static $openAPITypes = [
-        'dimension' => \Toppy\Sendcloud\Model\Dimension::class,
-        'weight' => \Toppy\Sendcloud\Model\Weight::class,
-        'volume' => \Toppy\Sendcloud\Model\Volume::class
+        'dimension' => \Toppy\Sendcloud\V3\Model\Dimension::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'volume' => \Toppy\Sendcloud\V3\Model\Volume::class
     ];
 
     /**
@@ -277,7 +277,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets dimension
      *
-     * @return \Toppy\Sendcloud\Model\Dimension|null
+     * @return \Toppy\Sendcloud\V3\Model\Dimension|null
      */
     public function getDimension()
     {
@@ -287,7 +287,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets dimension
      *
-     * @param \Toppy\Sendcloud\Model\Dimension|null $dimension dimension
+     * @param \Toppy\Sendcloud\V3\Model\Dimension|null $dimension dimension
      *
      * @return self
      */
@@ -305,7 +305,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getWeight()
     {
@@ -315,7 +315,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $weight weight
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets volume
      *
-     * @return \Toppy\Sendcloud\Model\Volume|null
+     * @return \Toppy\Sendcloud\V3\Model\Volume|null
      */
     public function getVolume()
     {
@@ -343,7 +343,7 @@ class Measurement implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets volume
      *
-     * @param \Toppy\Sendcloud\Model\Volume|null $volume volume
+     * @param \Toppy\Sendcloud\V3\Model\Volume|null $volume volume
      *
      * @return self
      */

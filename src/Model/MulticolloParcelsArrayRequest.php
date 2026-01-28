@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * MulticolloParcelsArrayRequest Class Doc Comment
  *
  * @category Class
  * @description Multicollo parcels array model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MulticolloParcelsArrayRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'parcels' => '\Toppy\Sendcloud\Model\ParcelCommon[]'
+        'parcels' => '\Toppy\Sendcloud\V3\Model\ParcelCommon[]'
     ];
 
     /**
@@ -273,7 +273,7 @@ class MulticolloParcelsArrayRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCommon[]|null
+     * @return \Toppy\Sendcloud\V3\Model\ParcelCommon[]|null
      */
     public function getParcels()
     {
@@ -283,7 +283,7 @@ class MulticolloParcelsArrayRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCommon[]|null $parcels Represent each package of the shipment.  There is a restriction to a maximum number of percels per shipment.   * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment  Note: each carrier can have a lower than the max number of parcels limit per shipment.
+     * @param \Toppy\Sendcloud\V3\Model\ParcelCommon[]|null $parcels Represent each package of the shipment.  There is a restriction to a maximum number of percels per shipment.   * **sync** announcements : max 15 parcels per shipment * **async** announcements: max 50 parcels per shipment  Note: each carrier can have a lower than the max number of parcels limit per shipment.
      *
      * @return self
      */

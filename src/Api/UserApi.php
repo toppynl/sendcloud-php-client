@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * UserApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class UserApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -173,9 +173,9 @@ class UserApi
      * Retrieve metadata associated with the authentication method
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response
+     * @return \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response
      */
     public function scPublicV3ScpGetUserAuthMetadata()
     {
@@ -189,9 +189,9 @@ class UserApi
      * Retrieve metadata associated with the authentication method
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3ScpGetUserAuthMetadataWithHttpInfo()
     {
@@ -226,7 +226,7 @@ class UserApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
                     $request,
                     $response,
                 );
@@ -247,7 +247,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
+                \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
                 $request,
                 $response,
             );
@@ -255,7 +255,7 @@ class UserApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
+                    \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -297,7 +297,7 @@ class UserApi
      */
     public function scPublicV3ScpGetUserAuthMetadataAsyncWithHttpInfo()
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetUserAuthMetadata200Response::class;
         $request = $this->scPublicV3ScpGetUserAuthMetadataRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

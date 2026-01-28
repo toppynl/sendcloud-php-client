@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,15 +27,15 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
-use \Toppy\Sendcloud\ObjectSerializer;
+namespace Toppy\Sendcloud\V3\Model;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * DeliveryOption Class Doc Comment
  *
  * @category Class
  * @description The options the customer has for returning this parcel:  - &#x60;drop_off_point&#x60;: At a drop-off point - Print at home - &#x60;drop_off_labelless&#x60;: At a drop-off point - No printer needed - &#x60;in_store&#x60;: Return in store - &#x60;pickup&#x60;: Arrange a pick-up
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

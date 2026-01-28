@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\ReturnsApi
+# Toppy\Sendcloud\V3\ReturnsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `scPublicV3ScpGetReturnsGetDetails()`
 
 ```php
-scPublicV3ScpGetReturnsGetDetails($id): \Toppy\Sendcloud\Model\ModelReturn
+scPublicV3ScpGetReturnsGetDetails($id): \Toppy\Sendcloud\V3\Model\ModelReturn
 ```
 
 Retrieve a return
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ModelReturn**](../Model/ModelReturn.md)
+[**\Toppy\Sendcloud\V3\Model\ModelReturn**](../Model/ModelReturn.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpGetReturnsGetReturns()`
 
 ```php
-scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $cursor, $parentParcelStatus, $pageSize): \Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response
+scPublicV3ScpGetReturnsGetReturns($fromDate, $toDate, $cursor, $parentParcelStatus, $pageSize): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response
 ```
 
 Retrieve a list of returns
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpGetReturnsGetReturns200Response**](../Model/ScPublicV3ScpGetReturnsGetReturns200Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpGetReturnsGetReturns200Response**](../Model/ScPublicV3ScpGetReturnsGetReturns200Response.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPatchReturnsCancel()`
 
 ```php
-scPublicV3ScpPatchReturnsCancel($id): \Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response
+scPublicV3ScpPatchReturnsCancel($id): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response
 ```
 
 Request cancellation of a return
@@ -162,12 +162,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpPatchReturnsCancel202Response**](../Model/ScPublicV3ScpPatchReturnsCancel202Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPatchReturnsCancel202Response**](../Model/ScPublicV3ScpPatchReturnsCancel202Response.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostReturnsCreateNewReturn()`
 
 ```php
-scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
+scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
 ```
 
 Create a return
@@ -224,19 +224,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
     $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturn($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
@@ -251,11 +251,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response**](../Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response**](../Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostReturnsCreateNewReturnSynchronously()`
 
 ```php
-scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
+scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response
 ```
 
 Create a return synchronously
@@ -288,19 +288,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
     $result = $apiInstance->scPublicV3ScpPostReturnsCreateNewReturnSynchronously($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
@@ -315,11 +315,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response**](../Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.md)
+[**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturn201Response**](../Model/ScPublicV3ScpPostReturnsCreateNewReturn201Response.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3ScpPostReturnsValidate()`
 
 ```php
-scPublicV3ScpPostReturnsValidate($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\Model\ReturnValidation
+scPublicV3ScpPostReturnsValidate($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest): \Toppy\Sendcloud\V3\Model\ReturnValidation
 ```
 
 Validate a return
@@ -352,19 +352,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
-$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
+$scPublicV3ScpPostReturnsCreateNewReturnRequest = {"from_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"to_address":{"name":"My name","company_name":"Sendcloud","address_line_1":"Stadhuisplein","house_number":"50","postal_code":"1013 AB","city":"Amsterdam","country_code":"NL","phone_number":"+319881729999","email":"test@test.com"},"ship_with":{"type":"shipping_option_code","shipping_option_code":"dpd:return/return","contract":123456},"dimensions":{"height":10,"width":10,"length":10,"unit":"cm"},"weight":{"value":0.4,"unit":"kg"},"collo_count":1,"parcel_items":[{"description":"T-Shirt XL","quantity":1,"weight":{"value":0.4,"unit":"kg"},"value":{"value":6.15,"currency":"EUR"},"hs_code":"6205.20","origin_country":"NL","sku":"TS1234","product_id":"19283"}],"send_tracking_emails":false,"brand_id":1,"total_insured_value":{"value":6.15,"currency":"EUR"},"order_number":"ORD123456","total_order_value":{"value":6.15,"currency":"EUR"},"external_reference":"RET98765","customs_invoice_nr":"test_invoice_123","delivery_option":"drop_off_point"}; // \Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest
 
 try {
     $result = $apiInstance->scPublicV3ScpPostReturnsValidate($sendcloudPartnerId, $scPublicV3ScpPostReturnsCreateNewReturnRequest);
@@ -379,11 +379,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
- **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
+ **scPublicV3ScpPostReturnsCreateNewReturnRequest** | [**\Toppy\Sendcloud\V3\Model\ScPublicV3ScpPostReturnsCreateNewReturnRequest**](../Model/ScPublicV3ScpPostReturnsCreateNewReturnRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ReturnValidation**](../Model/ReturnValidation.md)
+[**\Toppy\Sendcloud\V3\Model\ReturnValidation**](../Model/ReturnValidation.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateLabelsSync Class Doc Comment
  *
  * @category Class
  * @description Payload for creating labels for orders.  Note that if the &#x60;sender_address_id&#x60; is not specified, the API will use the default [sender address](/docs/getting-started/sender-addresses) associated with your account.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,9 +62,9 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
         'integrationId' => 'int',
         'senderAddressId' => 'int',
         'brandId' => 'int',
-        'shipWith' => \Toppy\Sendcloud\Model\ShipWith::class,
+        'shipWith' => \Toppy\Sendcloud\V3\Model\ShipWith::class,
         'order' => 'object',
-        'labelDetails' => \Toppy\Sendcloud\Model\CreateLabelsSyncAllOfLabelDetails::class
+        'labelDetails' => \Toppy\Sendcloud\V3\Model\CreateLabelsSyncAllOfLabelDetails::class
     ];
 
     /**
@@ -400,7 +400,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipWith
      *
-     * @return \Toppy\Sendcloud\Model\ShipWith|null
+     * @return \Toppy\Sendcloud\V3\Model\ShipWith|null
      */
     public function getShipWith()
     {
@@ -410,7 +410,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipWith
      *
-     * @param \Toppy\Sendcloud\Model\ShipWith|null $shipWith shipWith
+     * @param \Toppy\Sendcloud\V3\Model\ShipWith|null $shipWith shipWith
      *
      * @return self
      */
@@ -456,7 +456,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets labelDetails
      *
-     * @return \Toppy\Sendcloud\Model\CreateLabelsSyncAllOfLabelDetails|null
+     * @return \Toppy\Sendcloud\V3\Model\CreateLabelsSyncAllOfLabelDetails|null
      */
     public function getLabelDetails()
     {
@@ -466,7 +466,7 @@ class CreateLabelsSync implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets labelDetails
      *
-     * @param \Toppy\Sendcloud\Model\CreateLabelsSyncAllOfLabelDetails|null $labelDetails labelDetails
+     * @param \Toppy\Sendcloud\V3\Model\CreateLabelsSyncAllOfLabelDetails|null $labelDetails labelDetails
      *
      * @return self
      */

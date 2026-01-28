@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingQuote Class Doc Comment
  *
  * @category Class
  * @description A shipping quote indicates the price to ship a parcel with the shipping option within the mentioned weight range.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class ShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'weight' => \Toppy\Sendcloud\Model\ShippingQuoteWeight::class,
+        'weight' => \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight::class,
         'leadTime' => 'int',
-        'price' => \Toppy\Sendcloud\Model\ShippingQuotePrice::class
+        'price' => \Toppy\Sendcloud\V3\Model\ShippingQuotePrice::class
     ];
 
     /**
@@ -277,7 +277,7 @@ class ShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Gets weight
      *
-     * @return \Toppy\Sendcloud\Model\ShippingQuoteWeight|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight|null
      */
     public function getWeight()
     {
@@ -287,7 +287,7 @@ class ShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Sets weight
      *
-     * @param \Toppy\Sendcloud\Model\ShippingQuoteWeight|null $weight weight
+     * @param \Toppy\Sendcloud\V3\Model\ShippingQuoteWeight|null $weight weight
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class ShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Gets price
      *
-     * @return \Toppy\Sendcloud\Model\ShippingQuotePrice|null
+     * @return \Toppy\Sendcloud\V3\Model\ShippingQuotePrice|null
      */
     public function getPrice()
     {
@@ -343,7 +343,7 @@ class ShippingQuote implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Sets price
      *
-     * @param \Toppy\Sendcloud\Model\ShippingQuotePrice|null $price price
+     * @param \Toppy\Sendcloud\V3\Model\ShippingQuotePrice|null $price price
      *
      * @return self
      */

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V3\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V3\ApiException;
+use Toppy\Sendcloud\V3\Configuration;
+use Toppy\Sendcloud\V3\DebugPlugin;
+use Toppy\Sendcloud\V3\HeaderSelector;
+use Toppy\Sendcloud\V3\FormDataProcessor;
+use Toppy\Sendcloud\V3\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * CarrierSupportContactsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -113,7 +113,7 @@ class CarrierSupportContactsApi
          */
         protected $hostIndex = 0
     ) {
-        $this->config = $configuration ?? (new Configuration())->setHost('https://account.sendcloud.com');
+        $this->config = $configuration ?? (new Configuration())->setHost('https://panel.sendcloud.sc/api/v3');
         $this->requestFactory = $requestFactory ?? Psr17FactoryDiscovery::findRequestFactory();
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
 
@@ -174,7 +174,7 @@ class CarrierSupportContactsApi
      *
      * @param  int $id Support contact id (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -190,7 +190,7 @@ class CarrierSupportContactsApi
      *
      * @param  int $id Support contact id (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -386,9 +386,9 @@ class CarrierSupportContactsApi
      * Retrieve carrier support contacts
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CarrierSupportContact
+     * @return \Toppy\Sendcloud\V3\Model\CarrierSupportContact
      */
     public function scPublicV3DsfGetCarrierSupportContacts()
     {
@@ -402,9 +402,9 @@ class CarrierSupportContactsApi
      * Retrieve carrier support contacts
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CarrierSupportContact, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CarrierSupportContact, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfGetCarrierSupportContactsWithHttpInfo()
     {
@@ -439,7 +439,7 @@ class CarrierSupportContactsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                    \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                     $request,
                     $response,
                 );
@@ -460,7 +460,7 @@ class CarrierSupportContactsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                 $request,
                 $response,
             );
@@ -468,7 +468,7 @@ class CarrierSupportContactsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                    \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -510,7 +510,7 @@ class CarrierSupportContactsApi
      */
     public function scPublicV3DsfGetCarrierSupportContactsAsyncWithHttpInfo()
     {
-        $returnType = \Toppy\Sendcloud\Model\CarrierSupportContact::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class;
         $request = $this->scPublicV3DsfGetCarrierSupportContactsRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -627,11 +627,11 @@ class CarrierSupportContactsApi
      * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
-     * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest patchSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest $patchSupportContactRequest patchSupportContactRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CarrierSupportContact|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CarrierSupportContact|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPatchCarrierSupportContacts($id, $patchSupportContactRequest)
     {
@@ -645,11 +645,11 @@ class CarrierSupportContactsApi
      * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
-     * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CarrierSupportContact|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CarrierSupportContact|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPatchCarrierSupportContactsWithHttpInfo($id, $patchSupportContactRequest)
     {
@@ -685,13 +685,13 @@ class CarrierSupportContactsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                        \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -712,7 +712,7 @@ class CarrierSupportContactsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                 $request,
                 $response,
             );
@@ -721,7 +721,7 @@ class CarrierSupportContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                        \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -729,7 +729,7 @@ class CarrierSupportContactsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -747,7 +747,7 @@ class CarrierSupportContactsApi
      * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
-     * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -768,14 +768,14 @@ class CarrierSupportContactsApi
      * Update a carrier support contact
      *
      * @param  int $id Support contact id (required)
-     * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPatchCarrierSupportContactsAsyncWithHttpInfo($id, $patchSupportContactRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CarrierSupportContact::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class;
         $request = $this->scPublicV3DsfPatchCarrierSupportContactsRequest($id, $patchSupportContactRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -814,7 +814,7 @@ class CarrierSupportContactsApi
      * Create request for operation 'scPublicV3DsfPatchCarrierSupportContacts'
      *
      * @param  int $id Support contact id (required)
-     * @param  \Toppy\Sendcloud\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest $patchSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -918,11 +918,11 @@ class CarrierSupportContactsApi
      *
      * Create carrier support contact
      *
-     * @param  \Toppy\Sendcloud\Model\CreateSupportContactRequest $createSupportContactRequest createSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest $createSupportContactRequest createSupportContactRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CarrierSupportContact|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema
+     * @return \Toppy\Sendcloud\V3\Model\CarrierSupportContact|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema
      */
     public function scPublicV3DsfPostCarrierSupportContacts($createSupportContactRequest)
     {
@@ -935,11 +935,11 @@ class CarrierSupportContactsApi
      *
      * Create carrier support contact
      *
-     * @param  \Toppy\Sendcloud\Model\CreateSupportContactRequest $createSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest $createSupportContactRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CarrierSupportContact|\Toppy\Sendcloud\Model\ErrorsResponseSchema|\Toppy\Sendcloud\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V3\Model\CarrierSupportContact|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema|\Toppy\Sendcloud\V3\Model\ErrorsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV3DsfPostCarrierSupportContactsWithHttpInfo($createSupportContactRequest)
     {
@@ -975,14 +975,14 @@ class CarrierSupportContactsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                        \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                         $request,
                         $response,
                     );
                 case 400:
                 case 409:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $request,
                         $response,
                     );
@@ -1003,7 +1003,7 @@ class CarrierSupportContactsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                 $request,
                 $response,
             );
@@ -1012,7 +1012,7 @@ class CarrierSupportContactsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CarrierSupportContact::class,
+                        \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1020,7 +1020,7 @@ class CarrierSupportContactsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1028,7 +1028,7 @@ class CarrierSupportContactsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ErrorsResponseSchema::class,
+                        \Toppy\Sendcloud\V3\Model\ErrorsResponseSchema::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1045,7 +1045,7 @@ class CarrierSupportContactsApi
      *
      * Create carrier support contact
      *
-     * @param  \Toppy\Sendcloud\Model\CreateSupportContactRequest $createSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest $createSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1065,14 +1065,14 @@ class CarrierSupportContactsApi
      *
      * Create carrier support contact
      *
-     * @param  \Toppy\Sendcloud\Model\CreateSupportContactRequest $createSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest $createSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV3DsfPostCarrierSupportContactsAsyncWithHttpInfo($createSupportContactRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\CarrierSupportContact::class;
+        $returnType = \Toppy\Sendcloud\V3\Model\CarrierSupportContact::class;
         $request = $this->scPublicV3DsfPostCarrierSupportContactsRequest($createSupportContactRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1110,7 +1110,7 @@ class CarrierSupportContactsApi
     /**
      * Create request for operation 'scPublicV3DsfPostCarrierSupportContacts'
      *
-     * @param  \Toppy\Sendcloud\Model\CreateSupportContactRequest $createSupportContactRequest (required)
+     * @param  \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest $createSupportContactRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

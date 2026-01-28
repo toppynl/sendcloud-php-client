@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\DeliveryOptionsApi
+# Toppy\Sendcloud\V3\DeliveryOptionsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `scPublicV3CheckoutApiGetDeliveryOptions()`
 
 ```php
-scPublicV3CheckoutApiGetDeliveryOptions($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata): \Toppy\Sendcloud\Model\DeliveryOptionsResponse
+scPublicV3CheckoutApiGetDeliveryOptions($configurationId, $weightValue, $totalOrderValue, $fromCountryCode, $toCountryCode, $checkoutIdentifierType, $toPostalCode, $parcelLength, $parcelWidth, $parcelHeight, $checkoutMetadata): \Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse
 ```
 
 Retrieve a list of delivery options
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\DeliveryOptionsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\DeliveryOptionsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\DeliveryOptionsResponse**](../Model/DeliveryOptionsResponse.md)
+[**\Toppy\Sendcloud\V3\Model\DeliveryOptionsResponse**](../Model/DeliveryOptionsResponse.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * GlsItRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,13 +58,13 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
       * @var string[]
       */
     protected static $openAPITypes = [
-        'timeSlots' => '\ToppySendcloudModelTimeSlotEndAtRequired[]',
-        'items' => '\Toppy\Sendcloud\Model\BasePickupItem[]',
+        'timeSlots' => '\ToppySendcloudV3ModelTimeSlotEndAtRequired[]',
+        'items' => '\Toppy\Sendcloud\V3\Model\BasePickupItem[]',
         'reference' => 'string',
         'specialInstructions' => 'string',
         'carrierCode' => 'string',
         'contractId' => 'int',
-        'address' => \Toppy\Sendcloud\Model\PickupAddressStateProvinceRequired::class
+        'address' => \Toppy\Sendcloud\V3\Model\PickupAddressStateProvinceRequired::class
     ];
 
     /**
@@ -344,7 +344,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets timeSlots
      *
-     * @return \ToppySendcloudModelTimeSlotEndAtRequired[]|null
+     * @return \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null
      */
     public function getTimeSlots()
     {
@@ -354,7 +354,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets timeSlots
      *
-     * @param \ToppySendcloudModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
+     * @param \ToppySendcloudV3ModelTimeSlotEndAtRequired[]|null $timeSlots Scheduled time slots for the pickup. Note that most carriers only support a single time slot.
      *
      * @return self
      */
@@ -372,7 +372,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\BasePickupItem[]|null
+     * @return \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null
      */
     public function getItems()
     {
@@ -382,7 +382,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
+     * @param \Toppy\Sendcloud\V3\Model\BasePickupItem[]|null $items Items scheduled to be picked up.
      *
      * @return self
      */
@@ -532,7 +532,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets address
      *
-     * @return \Toppy\Sendcloud\Model\PickupAddressStateProvinceRequired
+     * @return \Toppy\Sendcloud\V3\Model\PickupAddressStateProvinceRequired
      */
     public function getAddress()
     {
@@ -542,7 +542,7 @@ class GlsItRequest implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets address
      *
-     * @param \Toppy\Sendcloud\Model\PickupAddressStateProvinceRequired $address address
+     * @param \Toppy\Sendcloud\V3\Model\PickupAddressStateProvinceRequired $address address
      *
      * @return self
      */

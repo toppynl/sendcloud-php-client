@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CancelShipmentStatus Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class CancelShipmentStatus implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => \Toppy\Sendcloud\Model\CancellationStatus::class
+        'data' => \Toppy\Sendcloud\V3\Model\CancellationStatus::class
     ];
 
     /**
@@ -268,7 +268,7 @@ class CancelShipmentStatus implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \Toppy\Sendcloud\Model\CancellationStatus
+     * @return \Toppy\Sendcloud\V3\Model\CancellationStatus
      */
     public function getData()
     {
@@ -278,7 +278,7 @@ class CancelShipmentStatus implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \Toppy\Sendcloud\Model\CancellationStatus $data data
+     * @param \Toppy\Sendcloud\V3\Model\CancellationStatus $data data
      *
      * @return self
      */

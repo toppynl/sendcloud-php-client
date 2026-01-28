@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ShippingQuoteWeight Class Doc Comment
  *
  * @category Class
  * @description Weight range allowed for this qoute.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class ShippingQuoteWeight implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'min' => \Toppy\Sendcloud\Model\Weight::class,
-        'max' => \Toppy\Sendcloud\Model\Weight::class
+        'min' => \Toppy\Sendcloud\V3\Model\Weight::class,
+        'max' => \Toppy\Sendcloud\V3\Model\Weight::class
     ];
 
     /**
@@ -270,7 +270,7 @@ class ShippingQuoteWeight implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets min
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getMin()
     {
@@ -280,7 +280,7 @@ class ShippingQuoteWeight implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets min
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $min min
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $min min
      *
      * @return self
      */
@@ -298,7 +298,7 @@ class ShippingQuoteWeight implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets max
      *
-     * @return \Toppy\Sendcloud\Model\Weight|null
+     * @return \Toppy\Sendcloud\V3\Model\Weight|null
      */
     public function getMax()
     {
@@ -308,7 +308,7 @@ class ShippingQuoteWeight implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets max
      *
-     * @param \Toppy\Sendcloud\Model\Weight|null $max max
+     * @param \Toppy\Sendcloud\V3\Model\Weight|null $max max
      *
      * @return self
      */

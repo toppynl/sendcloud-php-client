@@ -1,6 +1,6 @@
-# Toppy\Sendcloud\CarrierSupportContactsApi
+# Toppy\Sendcloud\V3\CarrierSupportContactsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v3.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CarrierSupportContactsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CarrierSupportContactsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -74,7 +74,7 @@ void (empty response body)
 ## `scPublicV3DsfGetCarrierSupportContacts()`
 
 ```php
-scPublicV3DsfGetCarrierSupportContacts(): \Toppy\Sendcloud\Model\CarrierSupportContact
+scPublicV3DsfGetCarrierSupportContacts(): \Toppy\Sendcloud\V3\Model\CarrierSupportContact
 ```
 
 Retrieve carrier support contacts
@@ -89,12 +89,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CarrierSupportContactsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CarrierSupportContactsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
+[**\Toppy\Sendcloud\V3\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 ## `scPublicV3DsfPatchCarrierSupportContacts()`
 
 ```php
-scPublicV3DsfPatchCarrierSupportContacts($id, $patchSupportContactRequest): \Toppy\Sendcloud\Model\CarrierSupportContact
+scPublicV3DsfPatchCarrierSupportContacts($id, $patchSupportContactRequest): \Toppy\Sendcloud\V3\Model\CarrierSupportContact
 ```
 
 Update a carrier support contact
@@ -148,19 +148,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CarrierSupportContactsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CarrierSupportContactsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Support contact id
-$patchSupportContactRequest = new \Toppy\Sendcloud\Model\PatchSupportContactRequest(); // \Toppy\Sendcloud\Model\PatchSupportContactRequest
+$patchSupportContactRequest = new \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest(); // \Toppy\Sendcloud\V3\Model\PatchSupportContactRequest
 
 try {
     $result = $apiInstance->scPublicV3DsfPatchCarrierSupportContacts($id, $patchSupportContactRequest);
@@ -175,11 +175,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Support contact id |
- **patchSupportContactRequest** | [**\Toppy\Sendcloud\Model\PatchSupportContactRequest**](../Model/PatchSupportContactRequest.md)|  |
+ **patchSupportContactRequest** | [**\Toppy\Sendcloud\V3\Model\PatchSupportContactRequest**](../Model/PatchSupportContactRequest.md)|  |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
+[**\Toppy\Sendcloud\V3\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 ## `scPublicV3DsfPostCarrierSupportContacts()`
 
 ```php
-scPublicV3DsfPostCarrierSupportContacts($createSupportContactRequest): \Toppy\Sendcloud\Model\CarrierSupportContact
+scPublicV3DsfPostCarrierSupportContacts($createSupportContactRequest): \Toppy\Sendcloud\V3\Model\CarrierSupportContact
 ```
 
 Create carrier support contact
@@ -212,18 +212,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V3\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\CarrierSupportContactsApi(
+$apiInstance = new Toppy\Sendcloud\V3\Api\CarrierSupportContactsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$createSupportContactRequest = new \Toppy\Sendcloud\Model\CreateSupportContactRequest(); // \Toppy\Sendcloud\Model\CreateSupportContactRequest
+$createSupportContactRequest = new \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest(); // \Toppy\Sendcloud\V3\Model\CreateSupportContactRequest
 
 try {
     $result = $apiInstance->scPublicV3DsfPostCarrierSupportContacts($createSupportContactRequest);
@@ -237,11 +237,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createSupportContactRequest** | [**\Toppy\Sendcloud\Model\CreateSupportContactRequest**](../Model/CreateSupportContactRequest.md)|  |
+ **createSupportContactRequest** | [**\Toppy\Sendcloud\V3\Model\CreateSupportContactRequest**](../Model/CreateSupportContactRequest.md)|  |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
+[**\Toppy\Sendcloud\V3\Model\CarrierSupportContact**](../Model/CarrierSupportContact.md)
 
 ### Authorization
 

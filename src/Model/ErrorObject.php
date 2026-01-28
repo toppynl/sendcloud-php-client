@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * ErrorObject Class Doc Comment
  *
  * @category Class
  * @description Error in a JSON:API error format
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,12 +60,12 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'links' => \Toppy\Sendcloud\Model\ErrorObjectLinks::class,
+        'links' => \Toppy\Sendcloud\V3\Model\ErrorObjectLinks::class,
         'status' => 'string',
         'code' => 'string',
         'title' => 'string',
         'detail' => 'string',
-        'source' => \Toppy\Sendcloud\Model\ErrorObjectSource::class,
+        'source' => \Toppy\Sendcloud\V3\Model\ErrorObjectSource::class,
         'meta' => 'object'
     ];
 
@@ -358,7 +358,7 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets links
      *
-     * @return \Toppy\Sendcloud\Model\ErrorObjectLinks|null
+     * @return \Toppy\Sendcloud\V3\Model\ErrorObjectLinks|null
      */
     public function getLinks()
     {
@@ -368,7 +368,7 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets links
      *
-     * @param \Toppy\Sendcloud\Model\ErrorObjectLinks|null $links links
+     * @param \Toppy\Sendcloud\V3\Model\ErrorObjectLinks|null $links links
      *
      * @return self
      */
@@ -514,7 +514,7 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets source
      *
-     * @return \Toppy\Sendcloud\Model\ErrorObjectSource|null
+     * @return \Toppy\Sendcloud\V3\Model\ErrorObjectSource|null
      */
     public function getSource()
     {
@@ -524,7 +524,7 @@ class ErrorObject implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets source
      *
-     * @param \Toppy\Sendcloud\Model\ErrorObjectSource|null $source source
+     * @param \Toppy\Sendcloud\V3\Model\ErrorObjectSource|null $source source
      *
      * @return self
      */

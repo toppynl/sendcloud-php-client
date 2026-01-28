@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * GetCustomStatusMappingData Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class GetCustomStatusMappingData implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'integrationId' => 'int',
-        'mapping' => '\Toppy\Sendcloud\Model\GetCustomStatusMappingDataMappingInner[]'
+        'mapping' => '\Toppy\Sendcloud\V3\Model\GetCustomStatusMappingDataMappingInner[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class GetCustomStatusMappingData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets mapping
      *
-     * @return \Toppy\Sendcloud\Model\GetCustomStatusMappingDataMappingInner[]|null
+     * @return \Toppy\Sendcloud\V3\Model\GetCustomStatusMappingDataMappingInner[]|null
      */
     public function getMapping()
     {
@@ -307,7 +307,7 @@ class GetCustomStatusMappingData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets mapping
      *
-     * @param \Toppy\Sendcloud\Model\GetCustomStatusMappingDataMappingInner[]|null $mapping Array containing available shop order statuses mapped onto Sendcloud's internal status category.   - The array contains an object of each of Sendcloud's internal status categories.   - Each of sendcloud's internal status categories will be mapped onto either `AvailableStatus.external_id` or `null`   - Not all `external_ids` in AvailableStatus may be mapped onto Sendcloud's internal status category.   - Two `external_ids` may map onto the same internal status category.   - An invalid mapping is a mapping that points to `external_id` that has been deleted.
+     * @param \Toppy\Sendcloud\V3\Model\GetCustomStatusMappingDataMappingInner[]|null $mapping Array containing available shop order statuses mapped onto Sendcloud's internal status category.   - The array contains an object of each of Sendcloud's internal status categories.   - Each of sendcloud's internal status categories will be mapped onto either `AvailableStatus.external_id` or `null`   - Not all `external_ids` in AvailableStatus may be mapped onto Sendcloud's internal status category.   - Two `external_ids` may map onto the same internal status category.   - An invalid mapping is a mapping that points to `external_id` that has been deleted.
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * CreateDamagedTransactional Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,20 +59,20 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'trackingNumber' => 'string',
-        'contentsSalesPrice' => \Toppy\Sendcloud\Model\ContentsSalesValueField::class,
-        'contentsPurchasePrice' => \Toppy\Sendcloud\Model\ContentsPurchaseValueField::class,
+        'contentsSalesPrice' => \Toppy\Sendcloud\V3\Model\ContentsSalesValueField::class,
+        'contentsPurchasePrice' => \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField::class,
         'contentsDescription' => 'string',
         'parcelExteriorDescription' => 'string',
         'additionalRemarks' => 'string',
-        'customerConfirmation' => \Toppy\Sendcloud\Model\CustomerConfirmationField::class,
-        'salesInvoice' => \Toppy\Sendcloud\Model\SalesInvoiceField::class,
-        'purchaseInvoice' => \Toppy\Sendcloud\Model\PurchaseInvoiceField::class,
-        'exteriorPhoto' => \Toppy\Sendcloud\Model\ExteriorPhotoField::class,
-        'interiorPhoto' => \Toppy\Sendcloud\Model\InteriorPhotoField::class,
-        'damagePhoto1' => \Toppy\Sendcloud\Model\DamagePhoto1Field::class,
-        'damagePhoto2' => \Toppy\Sendcloud\Model\DamagePhoto2Field::class,
-        'packagePhoto' => \Toppy\Sendcloud\Model\PackagePhotoField::class,
-        'entireProductPhoto' => \Toppy\Sendcloud\Model\EntireProductPhotoField::class
+        'customerConfirmation' => \Toppy\Sendcloud\V3\Model\CustomerConfirmationField::class,
+        'salesInvoice' => \Toppy\Sendcloud\V3\Model\SalesInvoiceField::class,
+        'purchaseInvoice' => \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField::class,
+        'exteriorPhoto' => \Toppy\Sendcloud\V3\Model\ExteriorPhotoField::class,
+        'interiorPhoto' => \Toppy\Sendcloud\V3\Model\InteriorPhotoField::class,
+        'damagePhoto1' => \Toppy\Sendcloud\V3\Model\DamagePhoto1Field::class,
+        'damagePhoto2' => \Toppy\Sendcloud\V3\Model\DamagePhoto2Field::class,
+        'packagePhoto' => \Toppy\Sendcloud\V3\Model\PackagePhotoField::class,
+        'entireProductPhoto' => \Toppy\Sendcloud\V3\Model\EntireProductPhotoField::class
     ];
 
     /**
@@ -446,7 +446,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets contentsSalesPrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsSalesValueField
+     * @return \Toppy\Sendcloud\V3\Model\ContentsSalesValueField
      */
     public function getContentsSalesPrice()
     {
@@ -456,7 +456,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets contentsSalesPrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsSalesValueField $contentsSalesPrice contentsSalesPrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsSalesValueField $contentsSalesPrice contentsSalesPrice
      *
      * @return self
      */
@@ -474,7 +474,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets contentsPurchasePrice
      *
-     * @return \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null
+     * @return \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null
      */
     public function getContentsPurchasePrice()
     {
@@ -484,7 +484,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets contentsPurchasePrice
      *
-     * @param \Toppy\Sendcloud\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
+     * @param \Toppy\Sendcloud\V3\Model\ContentsPurchaseValueField|null $contentsPurchasePrice contentsPurchasePrice
      *
      * @return self
      */
@@ -586,7 +586,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets customerConfirmation
      *
-     * @return \Toppy\Sendcloud\Model\CustomerConfirmationField
+     * @return \Toppy\Sendcloud\V3\Model\CustomerConfirmationField
      */
     public function getCustomerConfirmation()
     {
@@ -596,7 +596,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets customerConfirmation
      *
-     * @param \Toppy\Sendcloud\Model\CustomerConfirmationField $customerConfirmation customerConfirmation
+     * @param \Toppy\Sendcloud\V3\Model\CustomerConfirmationField $customerConfirmation customerConfirmation
      *
      * @return self
      */
@@ -614,7 +614,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets salesInvoice
      *
-     * @return \Toppy\Sendcloud\Model\SalesInvoiceField
+     * @return \Toppy\Sendcloud\V3\Model\SalesInvoiceField
      */
     public function getSalesInvoice()
     {
@@ -624,7 +624,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets salesInvoice
      *
-     * @param \Toppy\Sendcloud\Model\SalesInvoiceField $salesInvoice salesInvoice
+     * @param \Toppy\Sendcloud\V3\Model\SalesInvoiceField $salesInvoice salesInvoice
      *
      * @return self
      */
@@ -642,7 +642,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets purchaseInvoice
      *
-     * @return \Toppy\Sendcloud\Model\PurchaseInvoiceField
+     * @return \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField
      */
     public function getPurchaseInvoice()
     {
@@ -652,7 +652,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets purchaseInvoice
      *
-     * @param \Toppy\Sendcloud\Model\PurchaseInvoiceField $purchaseInvoice purchaseInvoice
+     * @param \Toppy\Sendcloud\V3\Model\PurchaseInvoiceField $purchaseInvoice purchaseInvoice
      *
      * @return self
      */
@@ -670,7 +670,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets exteriorPhoto
      *
-     * @return \Toppy\Sendcloud\Model\ExteriorPhotoField
+     * @return \Toppy\Sendcloud\V3\Model\ExteriorPhotoField
      */
     public function getExteriorPhoto()
     {
@@ -680,7 +680,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets exteriorPhoto
      *
-     * @param \Toppy\Sendcloud\Model\ExteriorPhotoField $exteriorPhoto exteriorPhoto
+     * @param \Toppy\Sendcloud\V3\Model\ExteriorPhotoField $exteriorPhoto exteriorPhoto
      *
      * @return self
      */
@@ -698,7 +698,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets interiorPhoto
      *
-     * @return \Toppy\Sendcloud\Model\InteriorPhotoField
+     * @return \Toppy\Sendcloud\V3\Model\InteriorPhotoField
      */
     public function getInteriorPhoto()
     {
@@ -708,7 +708,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets interiorPhoto
      *
-     * @param \Toppy\Sendcloud\Model\InteriorPhotoField $interiorPhoto interiorPhoto
+     * @param \Toppy\Sendcloud\V3\Model\InteriorPhotoField $interiorPhoto interiorPhoto
      *
      * @return self
      */
@@ -726,7 +726,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets damagePhoto1
      *
-     * @return \Toppy\Sendcloud\Model\DamagePhoto1Field
+     * @return \Toppy\Sendcloud\V3\Model\DamagePhoto1Field
      */
     public function getDamagePhoto1()
     {
@@ -736,7 +736,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets damagePhoto1
      *
-     * @param \Toppy\Sendcloud\Model\DamagePhoto1Field $damagePhoto1 damagePhoto1
+     * @param \Toppy\Sendcloud\V3\Model\DamagePhoto1Field $damagePhoto1 damagePhoto1
      *
      * @return self
      */
@@ -754,7 +754,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets damagePhoto2
      *
-     * @return \Toppy\Sendcloud\Model\DamagePhoto2Field
+     * @return \Toppy\Sendcloud\V3\Model\DamagePhoto2Field
      */
     public function getDamagePhoto2()
     {
@@ -764,7 +764,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets damagePhoto2
      *
-     * @param \Toppy\Sendcloud\Model\DamagePhoto2Field $damagePhoto2 damagePhoto2
+     * @param \Toppy\Sendcloud\V3\Model\DamagePhoto2Field $damagePhoto2 damagePhoto2
      *
      * @return self
      */
@@ -782,7 +782,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets packagePhoto
      *
-     * @return \Toppy\Sendcloud\Model\PackagePhotoField
+     * @return \Toppy\Sendcloud\V3\Model\PackagePhotoField
      */
     public function getPackagePhoto()
     {
@@ -792,7 +792,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets packagePhoto
      *
-     * @param \Toppy\Sendcloud\Model\PackagePhotoField $packagePhoto packagePhoto
+     * @param \Toppy\Sendcloud\V3\Model\PackagePhotoField $packagePhoto packagePhoto
      *
      * @return self
      */
@@ -810,7 +810,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets entireProductPhoto
      *
-     * @return \Toppy\Sendcloud\Model\EntireProductPhotoField
+     * @return \Toppy\Sendcloud\V3\Model\EntireProductPhotoField
      */
     public function getEntireProductPhoto()
     {
@@ -820,7 +820,7 @@ class CreateDamagedTransactional implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets entireProductPhoto
      *
-     * @param \Toppy\Sendcloud\Model\EntireProductPhotoField $entireProductPhoto entireProductPhoto
+     * @param \Toppy\Sendcloud\V3\Model\EntireProductPhotoField $entireProductPhoto entireProductPhoto
      *
      * @return self
      */

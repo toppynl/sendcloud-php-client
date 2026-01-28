@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V3\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V3\ObjectSerializer;
 
 /**
  * IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordProvider Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V3
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sender' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'receiver' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'importerOfRecord' => '\Toppy\Sendcloud\Model\TaxNumber[]'
+        'sender' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]',
+        'receiver' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]',
+        'importerOfRecord' => '\Toppy\Sendcloud\V3\Model\TaxNumber[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets sender
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
      */
     public function getSender()
     {
@@ -300,7 +300,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets sender
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $sender sender
+     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $sender sender
      *
      * @return self
      */
@@ -323,7 +323,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets receiver
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
      */
     public function getReceiver()
     {
@@ -333,7 +333,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets receiver
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $receiver receiver
+     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $receiver receiver
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Gets importerOfRecord
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V3\Model\TaxNumber[]|null
      */
     public function getImporterOfRecord()
     {
@@ -366,7 +366,7 @@ class IdentificationNumbersAndCodesRelatedToSenderReceiverAndImporterOfRecordPro
     /**
      * Sets importerOfRecord
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $importerOfRecord importerOfRecord
+     * @param \Toppy\Sendcloud\V3\Model\TaxNumber[]|null $importerOfRecord importerOfRecord
      *
      * @return self
      */
