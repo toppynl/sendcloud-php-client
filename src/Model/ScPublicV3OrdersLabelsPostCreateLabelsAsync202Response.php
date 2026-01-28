@@ -59,7 +59,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
       */
     protected static $openAPITypes = [
         'data' => '\Toppy\Sendcloud\Model\LabelAsync[]',
-        'errors' => '\ToppySendcloudModelErrorObject[]'
+        'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Gets errors
      *
-     * @return \ToppySendcloudModelErrorObject[]|null
+     * @return \Toppy\Sendcloud\Model\ErrorObject[]|null
      */
     public function getErrors()
     {
@@ -318,7 +318,7 @@ class ScPublicV3OrdersLabelsPostCreateLabelsAsync202Response implements ModelInt
     /**
      * Sets errors
      *
-     * @param \ToppySendcloudModelErrorObject[]|null $errors errors
+     * @param \Toppy\Sendcloud\Model\ErrorObject[]|null $errors errors
      *
      * @return self
      */

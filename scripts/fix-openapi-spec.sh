@@ -12,6 +12,7 @@
 # - Removes empty requestBody content
 # - Removes empty component sections
 # - Removes OpenAPI 3.1 specific schema attributes
+# - Simplifies allOf with single ErrorObject $ref to direct $ref
 #
 # Usage: ./scripts/fix-openapi-spec.sh
 #
@@ -104,6 +105,15 @@ jq '
       end
     else
       .
+    end
+  ) |
+
+  # Fix: allOf with single ErrorObject $ref -> direct $ref
+  # This works around OpenAPI Generator bug with namespace escaping
+  walk(
+    if type == "object" and .allOf? and (.allOf | length == 1) and .allOf[0]["$ref"]? == "#/components/schemas/ErrorObject"
+    then { "$ref": "#/components/schemas/ErrorObject" }
+    else .
     end
   ) |
 

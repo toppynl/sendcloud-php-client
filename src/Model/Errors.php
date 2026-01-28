@@ -59,7 +59,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\ToppySendcloudModelErrorObject[]'
+        'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]'
     ];
 
     /**
@@ -263,7 +263,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Gets errors
      *
-     * @return \ToppySendcloudModelErrorObject[]|null
+     * @return \Toppy\Sendcloud\Model\ErrorObject[]|null
      */
     public function getErrors()
     {
@@ -273,7 +273,7 @@ class Errors implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringa
     /**
      * Sets errors
      *
-     * @param \ToppySendcloudModelErrorObject[]|null $errors errors
+     * @param \Toppy\Sendcloud\Model\ErrorObject[]|null $errors errors
      *
      * @return self
      */

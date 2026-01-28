@@ -162,6 +162,15 @@ class ShipmentRequestAsyncTest extends TestCase
     }
 
     /**
+     * Test attribute "validationMethods"
+     */
+    public function testPropertyValidationMethods()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "customsInformation"
      */
     public function testPropertyCustomsInformation()

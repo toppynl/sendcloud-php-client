@@ -68,6 +68,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
         'reference' => 'string',
         'externalReferenceId' => 'string',
+        'validationMethods' => 'string[]',
         'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformation::class,
         'id' => 'string',
         'errors' => '\Toppy\Sendcloud\Model\ErrorObject[]',
@@ -93,6 +94,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => null,
         'reference' => null,
         'externalReferenceId' => null,
+        'validationMethods' => null,
         'customsInformation' => null,
         'id' => null,
         'errors' => null,
@@ -116,6 +118,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => true,
         'reference' => false,
         'externalReferenceId' => false,
+        'validationMethods' => false,
         'customsInformation' => false,
         'id' => false,
         'errors' => false,
@@ -201,6 +204,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => 'total_order_price',
         'reference' => 'reference',
         'externalReferenceId' => 'external_reference_id',
+        'validationMethods' => 'validation_methods',
         'customsInformation' => 'customs_information',
         'id' => 'id',
         'errors' => 'errors',
@@ -224,6 +228,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => 'setTotalOrderPrice',
         'reference' => 'setReference',
         'externalReferenceId' => 'setExternalReferenceId',
+        'validationMethods' => 'setValidationMethods',
         'customsInformation' => 'setCustomsInformation',
         'id' => 'setId',
         'errors' => 'setErrors',
@@ -247,6 +252,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'totalOrderPrice' => 'getTotalOrderPrice',
         'reference' => 'getReference',
         'externalReferenceId' => 'getExternalReferenceId',
+        'validationMethods' => 'getValidationMethods',
         'customsInformation' => 'getCustomsInformation',
         'id' => 'getId',
         'errors' => 'getErrors',
@@ -296,6 +302,19 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
+    public const VALIDATION_METHODS_HERE = 'here';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getValidationMethodsAllowableValues()
+    {
+        return [
+            self::VALIDATION_METHODS_HERE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -321,6 +340,7 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('totalOrderPrice', $data ?? [], null);
         $this->setIfExists('reference', $data ?? [], null);
         $this->setIfExists('externalReferenceId', $data ?? [], null);
+        $this->setIfExists('validationMethods', $data ?? [], null);
         $this->setIfExists('customsInformation', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('errors', $data ?? [], null);
@@ -637,6 +657,44 @@ class SyncShipmentResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
         $this->container['externalReferenceId'] = $externalReferenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets validationMethods
+     *
+     * @return string[]|null
+     */
+    public function getValidationMethods()
+    {
+        return $this->container['validationMethods'];
+    }
+
+    /**
+     * Sets validationMethods
+     *
+     * @param string[]|null $validationMethods A list of additional address validations to apply. At present, the only supported validation service is Here, and it is used exclusively for transactional contracts. To enable this feature, contract_id must be explicitly set and must reference a transactional contract.
+     *
+     * @return self
+     */
+    public function setValidationMethods($validationMethods)
+    {
+        if (is_null($validationMethods)) {
+            throw new \InvalidArgumentException('non-nullable validationMethods cannot be null');
+        }
+
+        $allowedValues = $this->getValidationMethodsAllowableValues();
+        if (array_diff($validationMethods, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'validationMethods', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+
+        $this->container['validationMethods'] = $validationMethods;
 
         return $this;
     }

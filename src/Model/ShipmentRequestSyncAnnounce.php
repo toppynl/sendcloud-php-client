@@ -68,6 +68,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
         'reference' => 'string',
         'externalReferenceId' => 'string',
+        'validationMethods' => 'string[]',
         'customsInformation' => \Toppy\Sendcloud\Model\CustomsInformation::class,
         'labelDetails' => \Toppy\Sendcloud\Model\LabelDetails::class,
         'deliveryDates' => \Toppy\Sendcloud\Model\DeliveryDates::class,
@@ -91,6 +92,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => null,
         'reference' => null,
         'externalReferenceId' => null,
+        'validationMethods' => null,
         'customsInformation' => null,
         'labelDetails' => null,
         'deliveryDates' => null,
@@ -112,6 +114,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => true,
         'reference' => false,
         'externalReferenceId' => false,
+        'validationMethods' => false,
         'customsInformation' => false,
         'labelDetails' => false,
         'deliveryDates' => true,
@@ -195,6 +198,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => 'total_order_price',
         'reference' => 'reference',
         'externalReferenceId' => 'external_reference_id',
+        'validationMethods' => 'validation_methods',
         'customsInformation' => 'customs_information',
         'labelDetails' => 'label_details',
         'deliveryDates' => 'delivery_dates',
@@ -216,6 +220,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => 'setTotalOrderPrice',
         'reference' => 'setReference',
         'externalReferenceId' => 'setExternalReferenceId',
+        'validationMethods' => 'setValidationMethods',
         'customsInformation' => 'setCustomsInformation',
         'labelDetails' => 'setLabelDetails',
         'deliveryDates' => 'setDeliveryDates',
@@ -237,6 +242,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         'totalOrderPrice' => 'getTotalOrderPrice',
         'reference' => 'getReference',
         'externalReferenceId' => 'getExternalReferenceId',
+        'validationMethods' => 'getValidationMethods',
         'customsInformation' => 'getCustomsInformation',
         'labelDetails' => 'getLabelDetails',
         'deliveryDates' => 'getDeliveryDates',
@@ -284,6 +290,19 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         return self::$openAPIModelName;
     }
 
+    public const VALIDATION_METHODS_HERE = 'here';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getValidationMethodsAllowableValues()
+    {
+        return [
+            self::VALIDATION_METHODS_HERE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -309,6 +328,7 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         $this->setIfExists('totalOrderPrice', $data ?? [], null);
         $this->setIfExists('reference', $data ?? [], null);
         $this->setIfExists('externalReferenceId', $data ?? [], null);
+        $this->setIfExists('validationMethods', $data ?? [], null);
         $this->setIfExists('customsInformation', $data ?? [], null);
         $this->setIfExists('labelDetails', $data ?? [], null);
         $this->setIfExists('deliveryDates', $data ?? [], null);
@@ -631,6 +651,44 @@ class ShipmentRequestSyncAnnounce implements ModelInterface, ArrayAccess, \JsonS
         }
 
         $this->container['externalReferenceId'] = $externalReferenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets validationMethods
+     *
+     * @return string[]|null
+     */
+    public function getValidationMethods()
+    {
+        return $this->container['validationMethods'];
+    }
+
+    /**
+     * Sets validationMethods
+     *
+     * @param string[]|null $validationMethods A list of additional address validations to apply. At present, the only supported validation service is Here, and it is used exclusively for transactional contracts. To enable this feature, contract_id must be explicitly set and must reference a transactional contract.
+     *
+     * @return self
+     */
+    public function setValidationMethods($validationMethods)
+    {
+        if (is_null($validationMethods)) {
+            throw new \InvalidArgumentException('non-nullable validationMethods cannot be null');
+        }
+
+        $allowedValues = $this->getValidationMethodsAllowableValues();
+        if (array_diff($validationMethods, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'validationMethods', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+
+        $this->container['validationMethods'] = $validationMethods;
 
         return $this;
     }

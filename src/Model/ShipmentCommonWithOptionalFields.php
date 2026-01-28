@@ -67,7 +67,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => 'string',
         'totalOrderPrice' => \Toppy\Sendcloud\Model\OptionalPrice::class,
         'reference' => 'string',
-        'externalReferenceId' => 'string'
+        'externalReferenceId' => 'string',
+        'validationMethods' => 'string[]'
     ];
 
     /**
@@ -86,7 +87,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => null,
         'totalOrderPrice' => null,
         'reference' => null,
-        'externalReferenceId' => null
+        'externalReferenceId' => null,
+        'validationMethods' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => false,
         'totalOrderPrice' => true,
         'reference' => false,
-        'externalReferenceId' => false
+        'externalReferenceId' => false,
+        'validationMethods' => false
     ];
 
     /**
@@ -182,7 +185,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => 'order_number',
         'totalOrderPrice' => 'total_order_price',
         'reference' => 'reference',
-        'externalReferenceId' => 'external_reference_id'
+        'externalReferenceId' => 'external_reference_id',
+        'validationMethods' => 'validation_methods'
     ];
 
     /**
@@ -199,7 +203,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => 'setOrderNumber',
         'totalOrderPrice' => 'setTotalOrderPrice',
         'reference' => 'setReference',
-        'externalReferenceId' => 'setExternalReferenceId'
+        'externalReferenceId' => 'setExternalReferenceId',
+        'validationMethods' => 'setValidationMethods'
     ];
 
     /**
@@ -216,7 +221,8 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         'orderNumber' => 'getOrderNumber',
         'totalOrderPrice' => 'getTotalOrderPrice',
         'reference' => 'getReference',
-        'externalReferenceId' => 'getExternalReferenceId'
+        'externalReferenceId' => 'getExternalReferenceId',
+        'validationMethods' => 'getValidationMethods'
     ];
 
     /**
@@ -260,6 +266,19 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         return self::$openAPIModelName;
     }
 
+    public const VALIDATION_METHODS_HERE = 'here';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getValidationMethodsAllowableValues()
+    {
+        return [
+            self::VALIDATION_METHODS_HERE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -285,6 +304,7 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         $this->setIfExists('totalOrderPrice', $data ?? [], null);
         $this->setIfExists('reference', $data ?? [], null);
         $this->setIfExists('externalReferenceId', $data ?? [], null);
+        $this->setIfExists('validationMethods', $data ?? [], null);
     }
 
     /**
@@ -587,6 +607,44 @@ class ShipmentCommonWithOptionalFields implements ModelInterface, ArrayAccess, \
         }
 
         $this->container['externalReferenceId'] = $externalReferenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets validationMethods
+     *
+     * @return string[]|null
+     */
+    public function getValidationMethods()
+    {
+        return $this->container['validationMethods'];
+    }
+
+    /**
+     * Sets validationMethods
+     *
+     * @param string[]|null $validationMethods A list of additional address validations to apply. At present, the only supported validation service is Here, and it is used exclusively for transactional contracts. To enable this feature, contract_id must be explicitly set and must reference a transactional contract.
+     *
+     * @return self
+     */
+    public function setValidationMethods($validationMethods)
+    {
+        if (is_null($validationMethods)) {
+            throw new \InvalidArgumentException('non-nullable validationMethods cannot be null');
+        }
+
+        $allowedValues = $this->getValidationMethodsAllowableValues();
+        if (array_diff($validationMethods, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'validationMethods', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+
+        $this->container['validationMethods'] = $validationMethods;
 
         return $this;
     }

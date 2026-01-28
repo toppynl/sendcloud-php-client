@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v3/",
     "x-branch": "v3",
-    "x-generated": "2026-01-27T13:08:09Z"
+    "x-generated": "2026-01-28T13:49:00Z"
   },
   "servers": [
     {
@@ -7690,17 +7690,7 @@
                     "errors": {
                       "type": "array",
                       "items": {
-                        "type": "object",
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/ErrorObject"
-                          }
-                        ],
-                        "required": [
-                          "status",
-                          "code",
-                          "detail"
-                        ]
+                        "$ref": "#/components/schemas/ErrorObject"
                       }
                     }
                   }
@@ -15238,17 +15228,7 @@
           "errors": {
             "type": "array",
             "items": {
-              "type": "object",
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ErrorObject"
-                }
-              ],
-              "required": [
-                "status",
-                "code",
-                "detail"
-              ]
+              "$ref": "#/components/schemas/ErrorObject"
             }
           }
         }
@@ -21864,6 +21844,16 @@
             "description": "An optional reference can be provided by the API user; if included, it must be unique across shipments of the user. Using the same reference more than once will result in a 409 HTTP status code and the associated object being returned.\n",
             "type": "string",
             "example": "unique-value-1234"
+          },
+          "validation_methods": {
+            "type": "array",
+            "description": "A list of additional address validations to apply. At present, the only supported validation service is Here, and it is used exclusively for transactional contracts. To enable this feature, contract_id must be explicitly set and must reference a transactional contract.\n",
+            "items": {
+              "type": "string",
+              "enum": [
+                "here"
+              ]
+            }
           }
         },
         "required": [

@@ -160,4 +160,13 @@ class ShipmentCommonWithOptionalFieldsTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "validationMethods"
+     */
+    public function testPropertyValidationMethods()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }
